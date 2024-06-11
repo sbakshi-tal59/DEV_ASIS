@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendDBMap="http://www.talend.org/dbmap" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" internalId="_iQ9EYEusEeyzOeELBhIYSw" name="siebel_filepath" prompt="siebel_filepath?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_Directory" value="D:\ASIS\Contexts\FAS_DEV\SIEBEL\"/>
+    <contextParameter comment="" internalId="_iQ9EYUusEeyzOeELBhIYSw" name="siebel_misown_database" prompt="siebel_misown_database?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="DMISI1"/>
+    <contextParameter comment="" internalId="_iQ9EYkusEeyzOeELBhIYSw" name="siebel_misown_host" prompt="siebel_misown_host?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="10.96.132.211"/>
+    <contextParameter comment="" internalId="_iQ9EY0usEeyzOeELBhIYSw" name="siebel_misown_password" prompt="siebel_misown_password?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_Password" value="enc:system.encryption.key.v1:ZleD6f8qZRSEMtxlraaACQVwD6/bvidS+FTwzktRM5GIazuNkuU="/>
+    <contextParameter comment="" internalId="_iQ9EZEusEeyzOeELBhIYSw" name="siebel_misown_port" prompt="siebel_misown_port?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="1522"/>
+    <contextParameter comment="" internalId="_iQ9EZUusEeyzOeELBhIYSw" name="siebel_misown_schema" prompt="siebel_misown_schema?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="MISOWN"/>
+    <contextParameter comment="" internalId="_iQ9EZkusEeyzOeELBhIYSw" name="siebel_misown_username" prompt="siebel_misown_username?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="MISOWN"/>
+    <contextParameter comment="" internalId="_iQ9EZ0usEeyzOeELBhIYSw" name="siebel_source_database" prompt="siebel_source_database?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="DSE1E1"/>
+    <contextParameter comment="" internalId="_iQ9EaEusEeyzOeELBhIYSw" name="siebel_source_host" prompt="siebel_source_host?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="10.96.132.197"/>
+    <contextParameter comment="" internalId="_iQ9EaUusEeyzOeELBhIYSw" name="siebel_source_password" prompt="siebel_source_password?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_Password" value="enc:system.encryption.key.v1://yidwE1itruwCogQIHGN54cHL/KG+mw29cHTbIAc7aUmLIsDQ=="/>
+    <contextParameter comment="" internalId="_iQ9EakusEeyzOeELBhIYSw" name="siebel_source_port" prompt="siebel_source_port?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="1522"/>
+    <contextParameter comment="" internalId="_iQ9Ea0usEeyzOeELBhIYSw" name="siebel_source_schema" prompt="siebel_source_schema?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="SIEBEL"/>
+    <contextParameter comment="" internalId="_iQ9EbEusEeyzOeELBhIYSw" name="siebel_source_username" prompt="siebel_source_username?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="MISUSER"/>
+    <contextParameter comment="" internalId="_iQ9EbUusEeyzOeELBhIYSw" name="siebel_staging_database" prompt="siebel_staging_database?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="DMISI1"/>
+    <contextParameter comment="" internalId="_iQ9EbkusEeyzOeELBhIYSw" name="siebel_staging_host" prompt="siebel_staging_host?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="10.96.132.211"/>
+    <contextParameter comment="" internalId="_iQ9Eb0usEeyzOeELBhIYSw" name="siebel_staging_password" prompt="siebel_staging_password?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_Password" value="enc:system.encryption.key.v1:G705Sj2SMhBg90wDdeBKko2iVT7iZj4P2Vps6keZ2Zl4pvGMT6s="/>
+    <contextParameter comment="" internalId="_iQ9EcEusEeyzOeELBhIYSw" name="siebel_staging_port" prompt="siebel_staging_port?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="1522"/>
+    <contextParameter comment="" internalId="_iQ9EcUusEeyzOeELBhIYSw" name="siebel_staging_schema" prompt="siebel_staging_schema?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="SIEBEL_STAGING"/>
+    <contextParameter comment="" internalId="_iQ9EckusEeyzOeELBhIYSw" name="siebel_staging_username" prompt="siebel_staging_username?" promptNeeded="false" repositoryContextId="_iCO8AA7cEeyS9dN0ulUWBg" type="id_String" value="SIEBEL_STAGING"/>
+  </context>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:hESFEmmuEtsMSrGDRu+5nUJsn8qK38NKEiiWV/IY"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;D:/ASIS/Workspace_New_Features/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="JDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:ouufvSQywL7XeESYClAWQw+KxKOds1289RafmC6d"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_-sXZoOVlEeu73vnn6vWu4g" name="DataOperation"/>
+    <routinesParameter id="_-t2nYOVlEeu73vnn6vWu4g" name="Mathematical"/>
+    <routinesParameter id="_-vWcMOVlEeu73vnn6vWu4g" name="Numeric"/>
+    <routinesParameter id="_-w_a8OVlEeu73vnn6vWu4g" name="Relational"/>
+    <routinesParameter id="_-piIEuVlEeu73vnn6vWu4g" name="SQLike"/>
+    <routinesParameter id="_-yeosOVlEeu73vnn6vWu4g" name="StringHandling"/>
+    <routinesParameter id="_-z92cOVlEeu73vnn6vWu4g" name="TalendDataGenerator"/>
+    <routinesParameter id="_-15wIOVlEeu73vnn6vWu4g" name="TalendDate"/>
+    <routinesParameter id="_-44ysOVlEeu73vnn6vWu4g" name="TalendStringUtil"/>
+    <routinesParameter id="_-3Y94OVlEeu73vnn6vWu4g" name="TalendString"/>
+  </parameters>
+  <node componentName="tELTOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="576">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTOracleInput_2"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;MIS_PARAMETERS_SIEBEL&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="context.siebel_misown_schema"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="" name="table1">
+      <column comment="" key="false" length="0" name="LAST_EXTRACT_DATE" nullable="false" originalLength="-1" pattern="&quot;dd-MMM-yyyy HH:mm:ss&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tELTOracleMap" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTOracleMap_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:aogyV08pPqSnfBFpInPyc+uMDKfOK212p84ENTMB"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_sZhhkEuFEeyzOeELBhIYSw-tELTOracleMap_1-PREVIEW.bmp"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="TEXT" name="ACTIVE_DATABASE_DELIMITED_IDENTIFIERS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_ALIAS_IN_OUTPUT_TABLE" show="false" value="true"/>
+    <metadata connector="TABLE" label="S_USER" name="table1">
+      <column comment="" key="false" length="15" name="STG_USER_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STG_LAST_UPDATED" nullable="false" originalLength="-1" pattern="&quot;dd-MMM-yyyy HH:mm:ss&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="STG_STAFF_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendDBMap:DBMapData">
+      <InputTables joinType="NO_JOIN" name="context.siebel_source_schema.S_EVT_ACT" tableName="context.siebel_source_schema.S_EVT_ACT">
+        <DBMapperTableEntries name="STG_USER_ID"/>
+        <DBMapperTableEntries join="true" name="STG_LAST_UPDATED"/>
+        <DBMapperTableEntries name="STG_STAFF_ID"/>
+      </InputTables>
+      <InputTables joinType="INNER_JOIN" name="context.siebel_misown_schema.MIS_PARAMETERS_SIEBEL" tableName="context.siebel_misown_schema.MIS_PARAMETERS_SIEBEL">
+        <DBMapperTableEntries join="true" name="LAST_EXTRACT_DATE"/>
+      </InputTables>
+      <OutputTables name="table1" tableName="S_USER">
+        <DBMapperTableEntries expression="context.siebel_source_schema.S_EVT_ACT.STG_USER_ID " name="STG_USER_ID"/>
+        <DBMapperTableEntries expression="context.siebel_source_schema.S_EVT_ACT.STG_LAST_UPDATED " name="STG_LAST_UPDATED"/>
+        <DBMapperTableEntries expression="context.siebel_source_schema.S_EVT_ACT.STG_STAFF_ID " name="STG_STAFF_ID"/>
+      </OutputTables>
+    </nodeData>
+  </node>
+  <node componentName="tELTOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTOracleInput_1"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;S_EVT_ACT&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="context.siebel_source_schema"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="" name="tELTOracleInput_1">
+      <column comment="" key="false" length="15" name="STG_USER_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STG_LAST_UPDATED" nullable="false" originalLength="-1" pattern="&quot;dd-MMM-yyyy HH:mm:ss&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="STG_STAFF_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tELTOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTOracleOutput_1"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="CHECK" name="USE_WHERE_CONDITIONS_TABLE" show="false" value="false"/>
+    <elementParameter field="MEMO" name="WHERE_CLAUSE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="WHERE conditions table&#10;(for UPDATE and DELETE only)"/>
+    <elementParameter field="TABLE" name="WHERE_CONDITIONS_TABLE" show="false"/>
+    <elementParameter field="CHECK" name="USE_MERGE_UPDATE" show="false" value="false"/>
+    <elementParameter field="TABLE" name="SCHEMA_UPDATE" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_USER_ID"/>
+      <elementValue elementRef="UPDATE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_LAST_UPDATED"/>
+      <elementValue elementRef="UPDATE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_STAFF_ID"/>
+      <elementValue elementRef="UPDATE" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_MERGE_UPDATE_WHERE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="MERGE_UPDATE_WHERE_STRING" show="false" value="&quot; &quot;"/>
+    <elementParameter field="CHECK" name="USE_MERGE_UPDATE_DELETE_WHERE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="MERGE_UPDATE_DELETE_WHERE_STRING" show="false" value="&quot; &quot;"/>
+    <elementParameter field="CHECK" name="USE_MERGE_INSERT" show="false" value="false"/>
+    <elementParameter field="TABLE" name="SCHEMA_INSERT" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_USER_ID"/>
+      <elementValue elementRef="INSERT" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_LAST_UPDATED"/>
+      <elementValue elementRef="INSERT" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_STAFF_ID"/>
+      <elementValue elementRef="INSERT" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_MERGE_INSERT_WHERE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="MERGE_INSERT_WHERE_STRING" show="false" value="&quot; &quot;"/>
+    <elementParameter field="TEXT" name="ELT_TABLE_NAME" value="&quot;S_USER&quot;"/>
+    <elementParameter field="TEXT" name="ELT_SCHEMA_NAME" value="context.siebel_staging_schema"/>
+    <elementParameter field="CHECK" name="IS_TABLE_NAME_VARIABLE" value="false"/>
+    <elementParameter field="CHECK" name="USE_DIFFERENT_TABLE" value="false"/>
+    <elementParameter field="TEXT" name="DIFFERENT_TABLE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id"/>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="TABLE" label="S_USER" name="tELTOracleOutput_1">
+      <column comment="" key="false" length="15" name="STG_USER_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STG_LAST_UPDATED" nullable="false" originalLength="-1" pattern="&quot;dd-MMM-yyyy HH:mm:ss&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="STG_STAFF_ID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="TABLE" label="context.siebel_misown_schema.MIS_PARAMETERS_SIEBEL" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTOracleInput_2" target="tELTOracleMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table1"/>
+  </connection>
+  <connection connectorName="TABLE" label="S_USER" lineStyle="9" metaname="table1" offsetLabelX="0" offsetLabelY="0" source="tELTOracleMap_1" target="tELTOracleOutput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="table1"/>
+  </connection>
+  <connection connectorName="TABLE" label="context.siebel_source_schema.S_EVT_ACT" lineStyle="9" metaname="tELTOracleInput_1" offsetLabelX="0" offsetLabelY="0" source="tELTOracleInput_1" target="tELTOracleMap_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTOracleInput_1"/>
+  </connection>
+  <note opaque="true" posX="608" posY="32" sizeHeight="161" sizeWidth="417" text="Developer: James Adams&#13;&#10;Date: 04-Oct-2021&#13;&#10;JIRA: BM-7662&#13;&#10;Description: Truncate and Insert dat_esar_Activity and &#13;&#10;dat_lima_ExamArchiveLog .Reproduced &#13;&#10;from P_INSERT_LIMA_TO_STAGING_INCRM"/>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tELTOracleInput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c874a102-78d6-4b3c-9af6-2dad478ec4ef"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7g8p6koi8yEnbNrYzGmgpBUd29P/PwFVDOPhQar2GtKiVDLAWBM3m9ltOLQw8bZhPwOD7f6vl8Ya&#13;
+mA/Fq0YpoA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1b197246-599c-453a-91b5-a508c399add0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PUwRQPsrb4bbbikfKPt3g67V7Ik66tUl+1iRZAvJHYdaR7k9gTS+27Bxgyh1Hk6jMRdPmB1nRUAR&#13;
+uRMoxBiMaQ==</DigestValue></Reference></SignedInfo><SignatureValue>irSr9VWNu5Ko0FS9lRNWVqdjZQDOH3fc4xeoPNqMO56DlPQX7tP03HA8ZtCSWHyCK0POowCv5z2+&#13;
+fZG5gfaWsyn/zBZxI+B6fThWog6R3o13lNvGOE6gEI/fLTRuyqabcgJ9zz4p97viUX97hqk4B2gR&#13;
+gH2gKAmr66ueq5XvGdw+CkgXseLobv0Cb7fsrAeqTZiBjjEDReDUX6/Ax0ei7i8TJ2lssQ1YOW5V&#13;
+/Hr2Efzv0abuBGb6whuHc8WaWSjD++vz1Zw3gryzLG0WnVXIEeNOpxxkXacNUbworH0HL1/Flq7N&#13;
+vni126Isv0cUmOXHBsFICOZ+FleyD1ysoP8FSQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1b197246-599c-453a-91b5-a508c399add0" Target="#_c874a102-78d6-4b3c-9af6-2dad478ec4ef"><Timestamp>2024-06-11 09:46:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
