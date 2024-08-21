@@ -2136,6 +2136,96 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tOracleRow" componentVersion="0.102" offsetLabelX="2" offsetLabelY="-8" posX="4384" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.ads_misown_host"/>
+    <elementParameter field="TEXT" name="PORT" value="context.ads_misown_port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.ads_misown_database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.ads_misown_schema"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
+    <elementParameter field="TEXT" name="USER" value="context.ads_misown_username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:2E68f4AP8Z/cycvch4MDPI8W+7Wch4Sf2KeMNAivgoYAWq7NlW0rtccXd2PZSlla4U5mrEwzng=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;MIS_PARAMETERS&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;BEGIN&#13;&#10;&quot;+context.ads_misown_schema+&quot;.ADS_UPDATE_SLOT;&#13;&#10;END;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="USE_NB_LINE" value="NONE"/>
+    <elementParameter field="LABEL" name="USE_NB_LINE_NOTE" value="* Only used if the query is an insert, an update or a delete."/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBSP_ADS_UPDATE_SLOT"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_UPDATE_SLOT&lt;/b&gt;&lt;br&gt;Call ADS_UPDATE_SLOT stored procedure"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBRow_1"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tOracleRow" componentVersion="0.102" offsetLabelX="2" offsetLabelY="-8" posX="4640" posY="480">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_20"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.ads_misown_host"/>
+    <elementParameter field="TEXT" name="PORT" value="context.ads_misown_port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.ads_misown_database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.ads_misown_schema"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
+    <elementParameter field="TEXT" name="USER" value="context.ads_misown_username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:St0ixskMoCK2WPYjiUwD7w+f+mimySccyA7s0OYxkV2ekCZ/L5on06Vy30j9PSCprZMCAoawBw=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;MIS_PARAMETERS&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;BEGIN&#13;&#10;&quot;+context.ads_misown_schema+&quot;.DW_UPDATE_SCHEDULING_ACTIVITY;&#13;&#10;END;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="USE_NB_LINE" value="NONE"/>
+    <elementParameter field="LABEL" name="USE_NB_LINE_NOTE" value="* Only used if the query is an insert, an update or a delete."/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_UPDATE_SCHEDULING_ACTIVITY"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_SCHEDULING_ACTIVITY&lt;/b&gt;&lt;br&gt;Call DW_UPDATE_SCHEDULING_ACTIVITY stored procedure"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBRow_20"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="In_CONTEXT" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tContextLoad_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="In_CONTEXT"/>
@@ -2322,6 +2412,12 @@
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_48" offsetLabelX="0" offsetLabelY="0" source="tDBRow_48" target="tDBRow_49">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk49"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_49" offsetLabelX="0" offsetLabelY="0" source="tDBRow_49" target="tDBRow_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk50"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_1" offsetLabelX="0" offsetLabelY="0" source="tDBRow_1" target="tDBRow_20">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk51"/>
   </connection>
   <note opaque="false" posX="1184" posY="32" sizeHeight="129" sizeWidth="481" text="Developer: James Adams&#13;&#10;Date: 07-Oct-2021&#13;&#10;JIRA: BM-7662&#13;&#10;Description: ADS DW Process Flow.&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 20-Jun-2023&#13;&#10;JIRA: BM-6139&#13;&#10;Description: Add stored procedure calls for ADS &amp; DW Complaint Corres &amp; Complaint Issue&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 24-Jul-2023&#13;&#10;JIRA: BM-10040&#13;&#10;Description: Replaced ADS_UPDATE_DIMS with 5 new procedures&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 19-Sep-2023&#13;&#10;JIRA: BM-10341&#13;&#10;Description: Add stored procedure calls for ADS &amp; DW Appointment Request, Client Contact&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 31-Jul-2024&#13;&#10;JIRA: BM-11442&#13;&#10;Description: v1.3 Add stored procedure calls for ADS &amp; DW Scheduling Activity&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 06-Sep-2024&#13;&#10;JIRA: BM-10936 &#13;&#10;Description: v1.4 CR335 - Tranche 2 - Remove stored procedure calls to DW_UPDATE_TREND_NI, DW_UPDATE_NI_WIP, MED_FW_LOAD_COMPLETE, MED_FW_STG_TO_DAT, ADS_ENABLE_INDEXES, ADS_DISABLE_INDEXES"/>
   <subjob>
@@ -2556,13 +2652,23 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b175f033-4e1b-4fe1-88a6-b667d6a91931"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>84HX4oWQnXnttDtaTR3jQCXWhcEvbd9niQDUGc5zSQKUsUAimzbDwRZjLdZCAE2YAJcSNnk5YOlu&#13;
-jXgP9rXC7w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a5a1bf93-7da2-494c-8638-52441417426c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YeES4n76Jw8+BQiWSUIsNGMoXlv4XtPbTiTBqJ+uM9e+Z/cQZMil5FtwHRodL+eDCx+LfEXVtHRO&#13;
-8y/fseoZ9g==</DigestValue></Reference></SignedInfo><SignatureValue>N7N5VkqeZgMP9nZ2HExpwlYGNoFmQBMki9ArQrFQLabLaPk0i9KR3tQfXGuE39P27lxYPfF7AabM&#13;
-ECBzCZdsr9dL593wCjM6MWu7LkbWR1FCKPvndEwI1x238uM0yWeZr4x94g5ynuG6iSZIMw4Ui5tY&#13;
-FpzAyX3/TOsZnjH+4tHFZe7VGE5/aJHWxQGdj+ynsDpoaaOmXr9DzKqsDCII72Xnxo5WO5R+PubX&#13;
-zooYy9YRPeGAp9rBGC/L4jpV2iwoMsRCqOjBwGRqHqYhdWh2syGf/rK5QflU49dxNb+DaWLSsl3y&#13;
-rsVTtS+CqjmKB8KzQemw4QaQppmAJM/VNQhMww==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_20"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d62b6881-5302-4995-b1ac-d3afc326b96b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gI8rPX6VXRWyi7z1WkNxxExp3naL2TDMD9oIUmdEpA0FtLIV7XVrpKqr/BfrTI82nr5jp6GRQuYB&#13;
+TltmIUBmsQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4f5ef5d2-5812-438b-a354-6a355ef2a901"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lsjcYhNz3Hy4k/ffxdTJnv/wuxJcdV7OP6b/z8EK9o/NIMJv6gvMYuJEKNIQ3I3f67ikKuXlEIr6&#13;
+D65UGSe85w==</DigestValue></Reference></SignedInfo><SignatureValue>parxnSckVNVf2AQ7jbIM+l359xJZ+onkQLv0Dz4rNZ2M/JrRbVysGoWkA3G115bUP4+n/tEOAGAE&#13;
+PPK9WJr7sFKjLPjq0Rbfq21df1fbo9KEUBowczECNwgkDIQfEbqM7T49QZUwbzYd9Ce5b8x8n8B7&#13;
+/Z9gPIXbjmXMiA/IO87AR2ylMztQAccOwicKPs4yZJCRt79y1ZHzGHz+lv7qTy1c0RVVzC00+ZV9&#13;
+ghkT6lXqxNITBfN7lPJSDCbEcP/ATW7GA7icotUCF7e1RwMGIXKR/L9ZyH1T6+GPzTr7xZLFMrGz&#13;
+okIguf1yYoz/hlOU3ZeWCX1sN88isFg+NXbn3w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2584,4 +2690,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a5a1bf93-7da2-494c-8638-52441417426c" Target="#_b175f033-4e1b-4fe1-88a6-b667d6a91931"><Timestamp>2024-08-21 15:18:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4f5ef5d2-5812-438b-a354-6a355ef2a901" Target="#_d62b6881-5302-4995-b1ac-d3afc326b96b"><Timestamp>2024-08-21 15:22:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
