@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" hide="false" name="Default">
-    <contextParameter comment="" internalId="_SvFd4CdNEeyvFL_edckkhw" name="ads_filepath" prompt="ads_filepath?" promptNeeded="false" repositoryContextId="_noPI8CdLEeyvFL_edckkhw" type="id_Directory" value="D:\ASIS\Contexts\FAS_DEV\ADS\"/>
+    <contextParameter comment="" internalId="_SvFd4CdNEeyvFL_edckkhw" name="ads_filepath" prompt="ads_filepath?" promptNeeded="false" repositoryContextId="_noPI8CdLEeyvFL_edckkhw" type="id_Directory" value="D:\ASIS\Contexts\FAS_MO\ADS\"/>
     <contextParameter comment="" internalId="_SvFd4SdNEeyvFL_edckkhw" name="ads_misown_database" prompt="ads_misown_database?" promptNeeded="false" repositoryContextId="_noPI8CdLEeyvFL_edckkhw" type="id_String" value="DMISI1"/>
     <contextParameter comment="" internalId="_SvFd4idNEeyvFL_edckkhw" name="ads_misown_host" prompt="ads_misown_host?" promptNeeded="false" repositoryContextId="_noPI8CdLEeyvFL_edckkhw" type="id_String" value="10.96.132.211"/>
     <contextParameter comment="" internalId="_SvFd4ydNEeyvFL_edckkhw" name="ads_misown_password" prompt="ads_misown_password?" promptNeeded="false" repositoryContextId="_noPI8CdLEeyvFL_edckkhw" type="id_Password" value="enc:system.encryption.key.v1:EAtBjqvuYcxAXsgTWwDrWjga2gArtAKvXLBJrB7ku4TJQlWdfJs="/>
@@ -51,7 +51,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:W+yZaU0ppke1S4L4fN0PSwZhbsHHMaRV6zdW0Bwl"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:NRP+XDmbPxKvjZHOvp/vFESHit2IOci0uVo/HC+Q"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -66,7 +66,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;D:/ASIS/DEV_Workspace/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;D:/ASIS/Development_Workspace/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
@@ -86,7 +86,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:yDOGyALOk+hyDw9sKYdS40OA3BOBriAN1nFkSX6q"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:pW3e7Yu5PSjROaXeDDrsOBVaZjj1KZB3d7Avl1KL"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -508,7 +508,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_ADS_UPDATE_APPOINTMENT"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_UPDATE_APPOINTMENT&lt;/b&gt;&lt;br&gt;Call ADS_UPDATE_APPOINTMENT stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_8"/>
     <metadata connector="REJECT" name="REJECT">
@@ -553,7 +553,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_ADS_UPDATE_FURTHER_EVIDENCE"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_UPDATE_FURTHER_EVIDENCE&lt;/b&gt;&lt;br&gt;Call ADS_UPDATE_FURTHER_EVIDENCE stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_9"/>
     <metadata connector="REJECT" name="REJECT">
@@ -598,7 +598,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_ADS_UPDATE_MEDICAL_OUTPUT"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_UPDATE_MEDICAL_OUTPUT&lt;/b&gt;&lt;br&gt;Call ADS_UPDATE_MEDICAL_OUTPUT stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_10"/>
     <metadata connector="REJECT" name="REJECT">
@@ -868,7 +868,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_ADS_UPDATE_REFERRAL_2"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_UPDATE_REFERRAL_2&lt;/b&gt;&lt;br&gt;Call ADS_UPDATE_REFERRAL_2 stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_16"/>
     <metadata connector="REJECT" name="REJECT">
@@ -958,7 +958,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_UPDATE_AUDIT"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_AUDIT&lt;/b&gt;&lt;br&gt;Call DW_UPDATE_AUDIT stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_18"/>
     <metadata connector="REJECT" name="REJECT">
@@ -1003,7 +1003,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_UPDATE_TREND"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_TREND&lt;/b&gt;&lt;br&gt;Call DW_UPDATE_TREND stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_19"/>
     <metadata connector="REJECT" name="REJECT">
@@ -1048,7 +1048,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_UPDATE_REFERRAL"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_REFERRAL&lt;/b&gt;&lt;br&gt;Call DW_UPDATE_REFERRAL stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_21"/>
     <metadata connector="REJECT" name="REJECT">
@@ -1093,7 +1093,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_UPDATE_APPOINTMENT"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_APPOINTMENT&lt;/b&gt;&lt;br&gt;Call DW_UPDATE_APPOINTMENT stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_22"/>
     <metadata connector="REJECT" name="REJECT">
@@ -1138,7 +1138,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_UPDATE_REFERRAL_HISTORY"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_REFERRAL_HISTORY&lt;/b&gt;&lt;br&gt;Call DW_UPDATE_REFERRAL_HISTORY stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_23"/>
     <metadata connector="REJECT" name="REJECT">
@@ -1183,7 +1183,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_UPDATE_WIP"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_WIP&lt;/b&gt;&lt;br&gt;Call DW_UPDATE_WIP stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_25"/>
     <metadata connector="REJECT" name="REJECT">
@@ -1228,7 +1228,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_UPDATE_WIP_SUMMARY"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_WIP_SUMMARY&lt;/b&gt;&lt;br&gt;Call DW_UPDATE_WIP_SUMMARY stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_26"/>
     <metadata connector="REJECT" name="REJECT">
@@ -1273,7 +1273,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_UPDATE_REFERRAL_VOLUMES"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_REFERRAL_VOLUMES&lt;/b&gt;&lt;br&gt;Call DW_UPDATE_REFERRAL_VOLUMES stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_27"/>
     <metadata connector="REJECT" name="REJECT">
@@ -1318,7 +1318,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_UPDATE_SL_PERFORMANCE"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_SL_PERFORMANCE&lt;/b&gt;&lt;br&gt;Call DW_UPDATE_SL_PERFORMANCE stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_28"/>
     <metadata connector="REJECT" name="REJECT">
@@ -1363,7 +1363,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_DIM_UPDATE_PRACTITIONER_TYPE"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DIM_UPDATE_PRACTITIONER_TYPE&lt;/b&gt;&lt;br&gt;Call DIM_UPDATE_PRACTITIONER_TYPE stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_29"/>
     <metadata connector="REJECT" name="REJECT">
@@ -1408,7 +1408,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_UPDATE_CUSTOMER_CONSTRAINT"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_CUSTOMER_CONSTRAINT&lt;/b&gt;&lt;br&gt;Call DW_UPDATE_CUSTOMER_CONSTRAINT stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_30"/>
     <metadata connector="REJECT" name="REJECT">
@@ -1435,7 +1435,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;BEGIN&#13;&#10;&quot;+context.ads_misown_schema+&quot;.DW_GLOBALSCAPE_EXPORT;&#13;&#10;END;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;BEGIN&#13;&#10;&quot;+context.ads_misown_schema+&quot;.COGNOS_START_TIGGER;&#13;&#10;END;&quot;"/>
     <elementParameter field="CLOSED_LIST" name="USE_NB_LINE" value="NONE"/>
     <elementParameter field="LABEL" name="USE_NB_LINE_NOTE" value="* Only used if the query is an insert, an update or a delete."/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
@@ -1452,8 +1452,8 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_GLOBALSCAPE_EXPORT"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBSP_COGNOS_START_TIGGER"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;COGNOS_START_TIGGER&lt;/b&gt;&lt;br&gt;Call COGNOS_START_TIGGER stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_31"/>
     <metadata connector="REJECT" name="REJECT">
@@ -1498,7 +1498,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_MIS_UPDATE_ERROR_SUMMARY"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;MIS_UPDATE_ERROR_SUMMARY&lt;/b&gt;&lt;br&gt;Call MIS_UPDATE_ERROR_SUMMARY stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_32"/>
     <metadata connector="REJECT" name="REJECT">
@@ -1543,7 +1543,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_VAL_UPDATE_SQL_OUTPUT_RESULTS"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_ENABLE_INDEXES&lt;/b&gt;&lt;br&gt;Call ADS_ENABLE_INDEXES stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;VAL_UPDATE_SQL_OUTPUT_RESULTS&lt;/b&gt;&lt;br&gt;Call VAL_UPDATE_SQL_OUTPUT_RESULTS stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_33"/>
     <metadata connector="REJECT" name="REJECT">
@@ -2419,7 +2419,7 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_1" offsetLabelX="0" offsetLabelY="0" source="tDBRow_1" target="tDBRow_20">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk51"/>
   </connection>
-  <note opaque="false" posX="1184" posY="32" sizeHeight="129" sizeWidth="481" text="Developer: James Adams&#13;&#10;Date: 07-Oct-2021&#13;&#10;JIRA: BM-7662&#13;&#10;Description: ADS DW Process Flow.&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 20-Jun-2023&#13;&#10;JIRA: BM-6139&#13;&#10;Description: Add stored procedure calls for ADS &amp; DW Complaint Corres &amp; Complaint Issue&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 24-Jul-2023&#13;&#10;JIRA: BM-10040&#13;&#10;Description: Replaced ADS_UPDATE_DIMS with 5 new procedures&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 19-Sep-2023&#13;&#10;JIRA: BM-10341&#13;&#10;Description: Add stored procedure calls for ADS &amp; DW Appointment Request, Client Contact&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 31-Jul-2024&#13;&#10;JIRA: BM-11442&#13;&#10;Description: v1.3 Add stored procedure calls for ADS &amp; DW Scheduling Activity&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 06-Sep-2024&#13;&#10;JIRA: BM-10936 &#13;&#10;Description: v1.4 CR335 - Tranche 2 - Remove stored procedure calls to DW_UPDATE_TREND_NI, DW_UPDATE_NI_WIP, MED_FW_LOAD_COMPLETE, MED_FW_STG_TO_DAT, ADS_ENABLE_INDEXES, ADS_DISABLE_INDEXES"/>
+  <note opaque="false" posX="1184" posY="32" sizeHeight="129" sizeWidth="481" text="Developer: James Adams&#13;&#10;Date: 07-Oct-2021&#13;&#10;JIRA: BM-7662&#13;&#10;Description: ADS DW Process Flow.&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 20-Jun-2023&#13;&#10;JIRA: BM-6139&#13;&#10;Description: Add stored procedure calls for ADS &amp; DW Complaint Corres &amp; Complaint Issue&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 24-Jul-2023&#13;&#10;JIRA: BM-10040&#13;&#10;Description: Replaced ADS_UPDATE_DIMS with 5 new procedures&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 19-Sep-2023&#13;&#10;JIRA: BM-10341&#13;&#10;Description: Add stored procedure calls for ADS &amp; DW Appointment Request, Client Contact&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 31-Jul-2024&#13;&#10;JIRA: BM-11442&#13;&#10;Description: v1.3 Add stored procedure calls for ADS &amp; DW Scheduling Activity&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 06-Sep-2024&#13;&#10;JIRA: BM-10936 &#13;&#10;Description: v1.4 CR335 - Tranche 2 - Remove stored procedure calls to DW_UPDATE_TREND_NI, DW_UPDATE_NI_WIP, MED_FW_LOAD_COMPLETE, MED_FW_STG_TO_DAT, ADS_ENABLE_INDEXES, ADS_DISABLE_INDEXES, DW_GLOBA:SCAPE_EXPORT&#13;&#10;Added COGNOS_START_TIGGER procedure call"/>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
@@ -2662,13 +2662,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d62b6881-5302-4995-b1ac-d3afc326b96b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gI8rPX6VXRWyi7z1WkNxxExp3naL2TDMD9oIUmdEpA0FtLIV7XVrpKqr/BfrTI82nr5jp6GRQuYB&#13;
-TltmIUBmsQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4f5ef5d2-5812-438b-a354-6a355ef2a901"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lsjcYhNz3Hy4k/ffxdTJnv/wuxJcdV7OP6b/z8EK9o/NIMJv6gvMYuJEKNIQ3I3f67ikKuXlEIr6&#13;
-D65UGSe85w==</DigestValue></Reference></SignedInfo><SignatureValue>parxnSckVNVf2AQ7jbIM+l359xJZ+onkQLv0Dz4rNZ2M/JrRbVysGoWkA3G115bUP4+n/tEOAGAE&#13;
-PPK9WJr7sFKjLPjq0Rbfq21df1fbo9KEUBowczECNwgkDIQfEbqM7T49QZUwbzYd9Ce5b8x8n8B7&#13;
-/Z9gPIXbjmXMiA/IO87AR2ylMztQAccOwicKPs4yZJCRt79y1ZHzGHz+lv7qTy1c0RVVzC00+ZV9&#13;
-ghkT6lXqxNITBfN7lPJSDCbEcP/ATW7GA7icotUCF7e1RwMGIXKR/L9ZyH1T6+GPzTr7xZLFMrGz&#13;
-okIguf1yYoz/hlOU3ZeWCX1sN88isFg+NXbn3w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7b2824da-49a9-4e18-a06b-988ff1c833e9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ThXFh33h8VV+8gEpuiCVxCrYDnGTUDHnuLPS1okYbfV2Kw+gxDZFyrJMzOJo9v51g3aSjX2PVurI&#13;
+XBjwzWGsLQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e878ffaf-fdc7-45b1-b56d-5102c542664b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2TtHbGyxvadYXK/pWRYYCbnOi4pRqvhZGERtd9FLjv6+PsjlJPGURtD+lPqJ6u0YhKDSBuPu8ngH&#13;
+AdfMMln+jw==</DigestValue></Reference></SignedInfo><SignatureValue>f5nggHFaHDvP3yDHPD6QmeQQzrw9fKP06nqq/NnHLrpV3UJVb9rAThA159XCl9PgRYUbzUjpIx5O&#13;
+6Irw33OwcAY7AJbQbdhguyvUQ2maSBe+ooMVyyU80JsQSIGmmSycNlJ5xNgC63e1Cs7Eu24iR9rA&#13;
+pftzT5hKMMiA0kMVl0RBmOX1SWoMuzF7buZLRZvU8hIOlJ9fGYeDNc468C3XbYlPaWRH1TcXvqdv&#13;
+tHiMs61p9Jb+Cy37IVgGgeBF3AQ94czk2Oqd15OlD7y98lPSPMywiQbKBAQKfQ7DB3bE48a9Fsrk&#13;
+kvD6wJEbdSxVGT4DHnQJZCCpR5znTzNSxOFQig==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2690,4 +2690,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4f5ef5d2-5812-438b-a354-6a355ef2a901" Target="#_d62b6881-5302-4995-b1ac-d3afc326b96b"><Timestamp>2024-08-21 15:22:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e878ffaf-fdc7-45b1-b56d-5102c542664b" Target="#_7b2824da-49a9-4e18-a06b-988ff1c833e9"><Timestamp>2024-10-16 15:26:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
