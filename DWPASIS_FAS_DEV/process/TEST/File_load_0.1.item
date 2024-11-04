@@ -553,40 +553,26 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="copyOfout1">
+    <metadata connector="FLOW" name="out3">
       <column comment="" key="true" length="5" name="Employee_Id" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="40" name="Employee_Name" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="40" name="Designation" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="40" name="Role" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="Date_of_joining" nullable="true" pattern="&quot;dd/MM/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="FLOW" name="copyOfout2">
-      <column comment="" key="true" length="200" name="Employee_Id" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="200" name="Employee_Name" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="200" name="Designation" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="200" name="Role" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="Date_of_joining" nullable="true" pattern="&quot;dd/MM/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="ErrorCode" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="ErrorMessage" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="40" name="Date_of_joining" nullable="true" pattern="&quot;dd/mm/yyyy hh:mm:ss&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables activateCondensedTool="true" name="copyOfout1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row1.Employee_Id " name="Employee_Id" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.Employee_Name " name="Employee_Name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.Designation " name="Designation" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.Role " name="Role" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.TO_DATE(row1.Date_of_joining,&quot;dd/MM/yyyy&quot;) " name="Date_of_joining" nullable="true" type="id_Date"/>
-      </outputTables>
-      <outputTables columnNameFilter="" name="copyOfout2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row1.Employee_Id " name="Employee_Id" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.Employee_Name " name="Employee_Name" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.Designation " name="Designation" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.Role " name="Role" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.TO_DATE(row1.Date_of_joining,&quot;dd/MM/yyyy&quot;) " name="Date_of_joining" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="&quot;1234&quot; " name="ErrorCode" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;File not in correct format&quot; " name="ErrorMessage" nullable="true" type="id_String"/>
+      <outputTables name="out3" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row3.Employee_Id " name="Employee_Id" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Employee_Name " name="Employee_Name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Designation " name="Designation" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Role " name="Role" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row3.Date_of_joining " name="Date_of_joining" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;5678&quot;" name="errorCode" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;File not in correct format&quot;" name="errorMessage" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
         <mapperTableEntries name="Employee_Id" nullable="true" type="id_String"/>
@@ -816,9 +802,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
-  <connection connectorName="FLOW" label="copyOfout2" lineStyle="0" metaname="copyOfout2" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_4">
+  <connection connectorName="FLOW" label="out3" lineStyle="0" metaname="out3" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfout2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out3"/>
   </connection>
   <connection connectorName="FLOW" label="In_CONTEXT" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tContextLoad_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -839,13 +825,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a2b83c56-76b1-4d25-ac9a-3959e15bf287"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jKKcPMfemigZR34k8uz3bj1VvboKiBMuuPO912qA16uAYznMjJWc1+mc2bMkay2ZboERi9cwRZDP&#13;
-6TxkVygsRg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_34e569e7-1757-41fc-b41e-f544cd56ba5b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aLD/eYJwf/c1To/wXh12R0NXJZLDv7tLdHqwxc7uuMu1y9aAdFi7YAS244eEQNgnJPHdIlq/Xiod&#13;
-xWW1DKLEuw==</DigestValue></Reference></SignedInfo><SignatureValue>K74S9sOVqmL0RNWycTwHrDQwID3DMns7LHYDL5cYy4Qs+rhRPwnpQ5WtAMf3Q1dYzATimKd02vio&#13;
-YLhQd7XpFDe97tB8mQ+JHa9b7w7CwK5LxcQzeInjy/fsS12SAgVP2giPhr9/l6QeB/Idw7dnuv/S&#13;
-sJJgg2qlFi6XYXQ0byAOaVa9zt4vAX7Cuo/hUR1lckuOfc7zR0dMvyhs2ht1tiCHlMjUezsKqA69&#13;
-aaAMj/BZtN5A6+9gdk5rZqPoziCT2sPPHCiHQcVYhd3DE+xRy6Rob/5P6tMU/pVH5hnRVm7gyH2+&#13;
-JRle3eXfk5qGUaQWjyZayM7mEcZtF0PmXXF/BA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d495b0f4-e6ed-46ea-b8e1-b0060b0780b8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>IyrkMZ+VFcA3uPfMRnWqlE74EQMGUc5QGh4Y4iUDqTEM7enZNW4+yBBbxyHeCutK5eb6FQ/hIWXQ&#13;
+D7tNKNEYCg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c8e32f76-50ee-406d-b9ea-dcd19e9b7e7f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gqP6HQSHZ4gKY4EurrSYza3hf/wOinrARec42XGP8NSZ8hyzTD3r+6Qp7mdxrzR1l18NC10LfxwA&#13;
+Q2WZXEcrnQ==</DigestValue></Reference></SignedInfo><SignatureValue>MkzTwNaYAkQvKaq6QmPIXcnSXvcM3JJv0AIvD+ysEtw3YWcBQgc7dQ9SkONUqlxfvmbdmourB5dm&#13;
+R4qI5UYoyTbLJ6o3hDyPBFVzafVMSJPw9GdiBlzu+F5MwYXd0BsMSyK+/P1T+m4nerltAq388LSb&#13;
+DbJeLOw3fRGAtHaFFBk/+7mjhnzA0pl7DbAnSICJLfQ9e9dx4kRChYoWNaqFKc9mMYRf8t/O+opV&#13;
+P1MaXVmbt6xzLp2VimOs/6l3wlnnI8oMaHV33M/yLVs3RwNVW0wUuqQHYZ11pTtsNf8bf36tjvCu&#13;
+DQpcevGRL8jlNv6myNyZY7pnIOLY9k7whhagHg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -867,4 +853,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_34e569e7-1757-41fc-b41e-f544cd56ba5b" Target="#_a2b83c56-76b1-4d25-ac9a-3959e15bf287"><Timestamp>2024-11-04 16:19:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c8e32f76-50ee-406d-b9ea-dcd19e9b7e7f" Target="#_d495b0f4-e6ed-46ea-b8e1-b0060b0780b8"><Timestamp>2024-11-04 16:22:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
