@@ -558,7 +558,7 @@
       <column comment="" key="false" length="40" name="Employee_Name" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="40" name="Designation" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="40" name="Role" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="Date_of_joining" nullable="true" pattern="&quot;dd/mm/yyyy hh:mm:ss&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Date_of_joining" nullable="true" pattern="&quot;dd/MM/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
       <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -570,7 +570,7 @@
         <mapperTableEntries expression="row3.Employee_Name " name="Employee_Name" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row3.Designation " name="Designation" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row3.Role " name="Role" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.TO_DATE(row3.Date_of_joining,&quot;dd/MM/yyyy&quot;) " name="Date_of_joining" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.TO_DATE(row3.Date_of_joining,&quot;dd/MM/yyyy&quot;) " name="Date_of_joining" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="&quot;5678&quot;" name="errorCode" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;File not in correct format&quot;" name="errorMessage" nullable="true" type="id_String"/>
       </outputTables>
@@ -670,20 +670,20 @@
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_4">
-      <column comment="" key="true" length="5" name="Employee_Id" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="Employee_Name" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="Designation" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="Role" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="Date_of_joining" nullable="true" pattern="&quot;dd/mm/yyyy hh:mm:ss&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="200" name="Employee_Id" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="Employee_Name" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="Designation" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="Role" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Date_of_joining" nullable="true" pattern="&quot;dd/MM/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
       <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="true" length="5" name="Employee_Id" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="Employee_Name" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="Designation" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="Role" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="40" name="Date_of_joining" nullable="true" pattern="&quot;dd/mm/yyyy hh:mm:ss&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="true" length="200" name="Employee_Id" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="Employee_Name" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="Designation" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="Role" nullable="true" originalLength="40" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="Date_of_joining" nullable="true" pattern="&quot;dd/MM/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
       <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -823,13 +823,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_328988da-b395-4569-8884-a4a4e0d529cc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9uZATKQogotWbMi3G4uc2wItu2qQkDZHhVLZ2amDV9uhICYEX0ER3xl5/j/iYKIzFSv8Xhg+2u5w&#13;
-YPvSZRA9QA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f83d8831-2600-4f36-9927-b9bba2997d0b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JHBbq3W05gJRgLV/FErDVAwv8NqX0O2C+zkKuh8Hj2q5f2jdA5d1tAENyTYzp+Y9ww3d5BOvkqrs&#13;
-hNziSKvDSQ==</DigestValue></Reference></SignedInfo><SignatureValue>lufmZewYNi1UROElwgssPUTy+oqUYhGnbfqNK4FJa40CTOqSyN9FRJdfSvCuOscWrk90iLxkmoAk&#13;
-FHQwus0KCEtxvwRqVp6qLSc188ilvFUECSetd59g5p4lhYsHMrQ8FkX2JIKG0ZMYNSw3oIJ+yxxR&#13;
-GkKUkcRdrO59nYGmr6yFq2/9y6//CoWMh+Wi+9g/i1+BLcp/5Xe1EcTnpKx5E16hoa10I8E40QN2&#13;
-VwjfV5wcrb1XsmWn7h5NRb55qGwyWQettRSdtZWStC6JULtWLD6OKaHLmncg2uRumtGmbD8qErA1&#13;
-oYKPJzokb52m6zm6XSws34Z7ysaW2azOItBJkw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4f5b5c5c-d837-4cc2-b756-4ff77c366b0d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mR0pYy96By2j5aqYp2O+EC3cNZEAexdjUPRpnd8yE6nrkl8lD9qSfBiycZLP2g+srtTYrCdNayw2&#13;
+HYmPcyKZOg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b9fc0495-d979-4adc-b620-f06f6043a111"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XoywHB/uNZ58ADo7h6DbuTi2hjgxh98JE/Vjb+q8YSScA11xiHmv6ARbZgZbxfFsqirKcy6zcw1f&#13;
+r/SXws+meQ==</DigestValue></Reference></SignedInfo><SignatureValue>fIhC+j9gtIx9CAddka/UYG4xcVXOClPKbMyX/MPohSMG6VesfB+yS3+BbjRHIFvgCX2Nqv4JZ017&#13;
+C+HNJwMrDnWhfblAKQk8VVWKNPxjM75JHPLL5RtpViy9D8zGAOGExz7PKRcWfAO73vg+hqQlpV+v&#13;
+NgLlaJHGYcSoRdBULxYgumo27ef0Wym4qk0gpSL+6rAwhzezckOr7b6t+0z7vfwfBMyNki0Z02E0&#13;
+jX9e1Sbm/bUpTZiTl3eSTTSX6cbBsdyCdnpSoGMYtvMu7ynyXOUViV+HRF5NtiCXeBmnF10jHpVy&#13;
+yey+zeAoZKMP5lgTkjK9X5Rl5oyGO2aUGvsIvg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -851,4 +851,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f83d8831-2600-4f36-9927-b9bba2997d0b" Target="#_328988da-b395-4569-8884-a4a4e0d529cc"><Timestamp>2024-11-04 16:23:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b9fc0495-d979-4adc-b620-f06f6043a111" Target="#_4f5b5c5c-d837-4cc2-b756-4ff77c366b0d"><Timestamp>2024-11-04 16:25:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
