@@ -300,7 +300,7 @@
   <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="0">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.ads_filepath+&quot;ADS_Context.xlsx&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.api_filepath+&quot;API_Context.xlsx&quot;"/>
     <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:cktJOxlFVtSvqFYlIYFvTw8PB/MOr8Bf52osLUQo29qPurz9Hp0vCXfz"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
@@ -343,8 +343,8 @@
     <elementParameter field="CHECK" name="INCLUDE_PHONETICRUNS" show="false" value="true"/>
     <elementParameter field="CHECK" name="CONFIGURE_INFLATION_RATIO" value="false"/>
     <elementParameter field="TEXT" name="INFLATION_RATIO" show="false" value=""/>
-    <elementParameter field="TEXT" name="LABEL" value="tFD_ADS_CONTEXT"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_CONTEXT&lt;/b&gt;&lt;br&gt;ADS_Context.xlsx"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFD_API_CONTEXT"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;API_CONTEXT&lt;/b&gt;&lt;br&gt;API_Context.xlsx"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileInputExcel_1">
       <column comment="" key="false" length="-1" name="key" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -366,8 +366,8 @@
     <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="true"/>
     <elementParameter field="CHECK" name="DISABLE_INFO" value="true"/>
     <elementParameter field="CHECK" name="DIEONERROR" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="tFD_ADS_CONTEXT"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_CONTEXT&lt;/b&gt;&lt;br&gt;Load ADS_Context.xlsx"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFD_API_CONTEXT"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;API_CONTEXT&lt;/b&gt;&lt;br&gt;Load API_Context.xlsx"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tContextLoad_1">
       <column defaultValue="" key="false" length="255" name="key" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -407,13 +407,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d7d11ddf-62aa-4adf-ac9b-2711f41c4634"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bl1yA5dx5Pm9C17KAYpBA6TwXPFwnPj82SNXi0/MNPxmnzEbdKwrpTTod6XQ2Hy+gI23lwEfkQqY&#13;
-aPybhtfPTA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5853b347-d0e7-4562-986f-96edcd184747"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>npQ47i3Q3++XgcKf8ZZiv3DsmzFHgiUVcE3kKh2LjQ558OJWf1sVTAvRnen2IIB9g2CgmaQYU+yH&#13;
-0J6pSnMv4w==</DigestValue></Reference></SignedInfo><SignatureValue>NRy/ZKmzUh3pRe7RTjiOOZT74TINMZGisksT4Y4ffSmAFBsqjO7AujhWDO+v6zHmEQs+YnQI+5L8&#13;
-tOeeQKKVSTjhUbZpQ3DmMyOAHlKkiVhXoUij5329ea8hiM6bIQR08PnDXmFzYQm5iecaE7dYk9Mm&#13;
-T/kGc86Wol8Eoq+KzHf0bov2Eg2oCD0gjL1Uy8WVD4xrqkY/WYyQ0evHrpjkC51nOmV0Cb9pJM+x&#13;
-R55cLWMAFJy0ncPpCjxBYA0SZB4qg8VlfJ1jcI3cW2Uxn6Cd5IVAl5z2OKrr4qI/BL66vlLbQTZA&#13;
-mgJ4gc+hapD0CV/aeAUct/pempnMTDLuIwAdFQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6208fe42-bb45-4658-a6b3-c2b83c005179"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7RgB8fAzdJ6A8CZpThYfShHseocZhsjRTiwAH/Gh3sx1WSp7vXwmwy5zzoYuwJ482R+c3gQSvs8T&#13;
+d0fNmQ2b1A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_de9580b4-4d12-420a-a445-177270a8f3c3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lN+4bSrv19gqgw8RO94QjAUV/yqPjWX+AgpDIQPtWU8h60Nl+sYSUrca07MWCPwdmqrl5a2wx0m0&#13;
+E995sFxDRw==</DigestValue></Reference></SignedInfo><SignatureValue>aXvT+RV2m+EzS44jMpXrcoE4DqjgVBAdbEXNr1AU5Dk2sZ6pYHbxBbHnqQaaPGSpHTAYOGfThwpM&#13;
+cVUy9Ce5fAf0aiC0a2imIcvh44qWHXZjIqKpYJwgP4fY1NI5DxlD+3hCr+sBBAlWZdpFa7qjQEPq&#13;
+zxFyhNyRXCOhw0UqZXOKMloO08s4zpLjB4aM6VpYerI3XZu6Nwk6BBXmXhH4FlC3VH0AwdMyo9Bc&#13;
+dRB+Hlzu+7EWhN1ZOUyEqQklcwdx9EuEDocFFIchufQTEwXpxzCPLOFkjWzlvuRVVXug5yYm4+F0&#13;
+IAEkYuC4xqYDkm57RccVSxrtuVgyr4NAAXF6ow==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -435,4 +435,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5853b347-d0e7-4562-986f-96edcd184747" Target="#_d7d11ddf-62aa-4adf-ac9b-2711f41c4634"><Timestamp>2024-11-25 10:01:11</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_de9580b4-4d12-420a-a445-177270a8f3c3" Target="#_6208fe42-bb45-4658-a6b3-c2b83c005179"><Timestamp>2024-11-25 10:17:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
