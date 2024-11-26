@@ -112,7 +112,7 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
   </parameters>
-  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="160">
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;D:/Globalscape_Inbound&quot;"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
@@ -134,7 +134,7 @@
     <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
@@ -210,7 +210,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tUnite" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="160">
+  <node componentName="tUnite" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tUnite_1"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tUnite_1">
@@ -221,7 +221,7 @@
       <column comment="" key="false" length="5" name="OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="160">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -243,7 +243,7 @@
       <column comment="" key="false" length="5" name="STG_OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="out1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row2.MONTH " name="STG_MONTH" nullable="true" type="id_String"/>
@@ -261,7 +261,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="160">
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -336,18 +336,18 @@
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
-      <column comment="" key="false" length="7" name="STG_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_SICK_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_ANNUAL_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="STG_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_SICK_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_ANNUAL_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="7" name="STG_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_SICK_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_ANNUAL_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="7" name="STG_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_SICK_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_ANNUAL_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -429,6 +429,91 @@
       <column defaultValue="" key="false" length="255" name="value" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
+    <elementParameter field="TEXT" name="NB_ROWS" show="false" value="1"/>
+    <elementParameter field="TABLE" name="VALUES" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_TYPE"/>
+      <elementValue elementRef="ARRAY" value="&quot;API_TO_STG_PEOPLE_ABSENCE&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LOAD_GROUP"/>
+      <elementValue elementRef="ARRAY" value="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OWB_MAPPING_NAME"/>
+      <elementValue elementRef="ARRAY" value="StringHandling.DQUOTE(&quot;API_TO_STG_PEOPLE_ABSENCE&quot; )"/>
+    </elementParameter>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="TEXT" name="LABEL" value="tRG_MIS_START_TIME"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;MIS_START_TIME&lt;/b&gt;&lt;br&gt;Create MIS_START_TIME row"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRowGenerator_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="LOAD_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;API_TO_STG_PEOPLE_ABSENCE\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="LOAD_GROUP" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;...&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;customize parameter&quot;,&quot;PARAMETER_VALUE&quot;:&quot;1 &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;&quot;}"/>
+      </column>
+      <column comment="" defaultValue="" key="false" length="-1" name="OWB_MAPPING_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true">
+        <additionalField key="FUNCTION_INFO" value="{&quot;NAME&quot;:&quot;DQUOTE&quot;,&quot;PARAMETERS&quot;:[{&quot;PARAMETER_NAME&quot;:&quot;string&quot;,&quot;PARAMETER_VALUE&quot;:&quot;\&quot;API_TO_STG_PEOPLE_ABSENCE\&quot; &quot;}],&quot;PARAMETER_CLASS_NAME&quot;:&quot;StringHandling&quot;}"/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_1"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.cms_misown_host"/>
+    <elementParameter field="TEXT" name="PORT" value="context.cms_misown_port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.cms_misown_database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.cms_misown_schema"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
+    <elementParameter field="TEXT" name="USER" value="context.cms_misown_username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:zACG1ANv93mmte3HT2B321k/0eGupT7yZd+zAavir9yIo2MdWwx8OXXXpWwNPQZk6g4CDpMaOA=="/>
+    <elementParameter field="TEXT" name="SP_NAME" value="&quot;MIS_UPDATE_INT_HIST_START_TIME&quot;"/>
+    <elementParameter field="CHECK" name="IS_FUNCTION" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RETURN" show="false" value="LOAD_TYPE"/>
+    <elementParameter field="CLOSED_LIST" name="RETURN_BDTYPE" show="false" value="AUTOMAPPING"/>
+    <elementParameter field="TABLE" name="SP_ARGS">
+      <elementValue elementRef="COLUMN" value="LOAD_TYPE"/>
+      <elementValue elementRef="TYPE" value="IN"/>
+      <elementValue elementRef="DBTYPE" value="AUTOMAPPING"/>
+      <elementValue elementRef="ISCUSTOME" value="false"/>
+      <elementValue elementRef="CUSTOME_TYPE" value="STRUCT"/>
+      <elementValue elementRef="CUSTOMENAME" value=""/>
+      <elementValue elementRef="COLUMN" value="LOAD_GROUP"/>
+      <elementValue elementRef="TYPE" value="IN"/>
+      <elementValue elementRef="DBTYPE" value="AUTOMAPPING"/>
+      <elementValue elementRef="ISCUSTOME" value="false"/>
+      <elementValue elementRef="CUSTOME_TYPE" value="STRUCT"/>
+      <elementValue elementRef="CUSTOMENAME" value=""/>
+      <elementValue elementRef="COLUMN" value="OWB_MAPPING_NAME"/>
+      <elementValue elementRef="TYPE" value="IN"/>
+      <elementValue elementRef="DBTYPE" value="AUTOMAPPING"/>
+      <elementValue elementRef="ISCUSTOME" value="false"/>
+      <elementValue elementRef="CUSTOME_TYPE" value="STRUCT"/>
+      <elementValue elementRef="CUSTOMENAME" value=""/>
+    </elementParameter>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="NLS_LANGUAGE" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="NLS_TERRITORY" value="NONE"/>
+    <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBSP_MIS_UPDATE_INT_HIST_START_TIME"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;MIS_INTERFACE_HISTORY&lt;/b&gt;&lt;br&gt;Insert MIS_START_TIME into MIS_INTERFACE_HISTORY"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBSP_1">
+      <column comment="" key="false" length="200" name="LOAD_TYPE" nullable="true" originalLength="200" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LOAD_GROUP" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="OWB_MAPPING_NAME" nullable="true" originalLength="80" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileInputDelimited_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
@@ -481,8 +566,15 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="In_CONTEXT"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tFileList_1">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tRowGenerator_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="ln_MIS_START_TIME" lineStyle="0" metaname="tRowGenerator_1" offsetLabelX="0" offsetLabelY="0" source="tRowGenerator_1" target="tDBSP_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_MIS_START_TIME"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRowGenerator_1" offsetLabelX="0" offsetLabelY="0" source="tRowGenerator_1" target="tFileList_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
@@ -496,13 +588,20 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8dd8e49c-73d6-41cf-8374-fe00294e72de"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HYOz1CclAMLQKGhqy91STs1V0m/FHEVvYjVdW8108NI6wIDM3lJFFk1gyhmZRknFG+5P2ReGFtJB&#13;
-QAD4IXibYA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_10062169-604c-45a8-a087-851271af097e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bddq2I6r4IbE59LVWROhknIV+W98+Sn26xkWcfIyBEWN9T1TYyYPZrBnwG4ep0aF7LG5VUZ21Hp7&#13;
-DaUpkinzLg==</DigestValue></Reference></SignedInfo><SignatureValue>pKpd2pfKObhs4nk/3w4ZxOnTR+/P9RPlvk91ZebdDAMdJcgr7ruS8GhVfe6jiw01R6buzaApC8Zm&#13;
-4oOv8jjmvlZ6effdOiNAnM+xJG8rErilDVyhTX/gUHAW2tZff3mGeVO2Q+d278MuijS9H/nQXrKi&#13;
-4VButGVcjlTrECk27fo+FR3qE576hjUoQHH4VlYlhWodXigYP1sKf9bngZpQkWGi1YwBQU1jnhOJ&#13;
-/PdlsaxSnImzj9Z5MKDBZoMWGJ0MER7zxjVFdtbJBokJoyYzhT3KVYpwuzVCalZlAhIkzq+JYdHf&#13;
-m+mbyeY8vHrbiSqVHRy7CkMdulgs0YN5Qd8Cmw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Insert MIS_START_TIME into MIS_INTERFACE_HISTORY for current job"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d22118d5-4c97-4c42-8f56-41408a80dc1c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xMhwrQrDxMCjqgXVvuTtUm0uh9xeSPZR9dw2pooMCUDiNsNt1pX2EK2lu7/Tv98hOpZzg2tQNrwu&#13;
+N9GazddObQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_306f9dd8-ae8d-45f4-bc1d-dae55448839d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kyYN9cYZ09nnLjR2oWsLNYEpZJuC7OADor/hY3dfxDPrOmPZs601f3hia3mj4jQbIHgrQfICU0aI&#13;
+BTHuL/laAw==</DigestValue></Reference></SignedInfo><SignatureValue>YdZBqxNX0PLNH/Yu/cnpiClIBln3hpB4KhRgrVaXmfqGzCoRkzJ8V//Hrs+eEVW/XbuiEu1CQYJn&#13;
+bFiLX3VilWP4Wa0djZenKRX7PnggzdeibHopAqpam+LCBgUlAFV34GLK4daInA/wOajriTjZqtzE&#13;
++TfKXyyIp1Ee/DM8nJBVkfaE4pq1cy9qJcvkViXdLeMvjGL49LNeC6ZX9191PiaY+uXVVkNTkOZY&#13;
+WpP/MyG3gV1st39dTqxNk48KZtO7AvAmwxdrSVjgRUHWbLB7pYrWeIYhtnMREvOu7H21ZSJFw76E&#13;
+uNBQXYfgzxPT6/9adGtKYoHgjDe6cMTZKKuz/A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -524,4 +623,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_10062169-604c-45a8-a087-851271af097e" Target="#_8dd8e49c-73d6-41cf-8374-fe00294e72de"><Timestamp>2024-11-26 11:22:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_306f9dd8-ae8d-45f4-bc1d-dae55448839d" Target="#_d22118d5-4c97-4c42-8f56-41408a80dc1c"><Timestamp>2024-11-26 11:26:39</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
