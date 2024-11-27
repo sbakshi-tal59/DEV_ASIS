@@ -233,6 +233,7 @@
       <column comment="" key="false" length="5" name="STG_SICK_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="STG_ANNUAL_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="STG_OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="STG_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -243,6 +244,7 @@
         <mapperTableEntries expression="row1.SICK_LEAVE_DAYS " name="STG_SICK_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="row1.ANNUAL_LEAVE_DAYS " name="STG_ANNUAL_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="row1.OTHER_LEAVE_DAYS " name="STG_OTHER_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="&quot;Absence&quot;" name="STG_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="MONTH" nullable="true" type="id_String"/>
@@ -313,6 +315,11 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_SOURCE_FILE_NAME"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
@@ -334,6 +341,7 @@
       <column comment="" key="false" length="5" name="STG_SICK_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="STG_ANNUAL_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="STG_OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="STG_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="7" name="STG_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -341,6 +349,7 @@
       <column comment="" key="false" length="5" name="STG_SICK_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="STG_ANNUAL_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="STG_OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="STG_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -530,6 +539,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="STG_MONTH"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STG_SOURCE_FILE_NAME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
@@ -567,13 +579,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5828c841-241a-46b3-a3d3-2f827a54bf19"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>a/phsbqnj5uMx8svLvm7DE9y5BQxCcL9iXLZvQ/CKRhTcB4VT8bVMHaDBSo1MoYbmSc5Q3PVoWVg&#13;
-Yr5s4sm/Ug==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a8b23ae0-98b7-460e-8844-8dc8ee540670"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XTKO7UdyhArmWGnTDuN5m+tuT28cCLNMP3hqOOTyM7u8E19fotQLmgLs2+2GWTZkUed2VnvpvCRr&#13;
-LTzVK4shrw==</DigestValue></Reference></SignedInfo><SignatureValue>c/OxJYjjkz+xkNXIaykt3YOrdsTYRQ1IMItwYFURqNgKcKQ2LUDcp9Ci0N9avg4TRwpca2wsRoYl&#13;
-d2MAL+xrMfPalWTuG3NVc4A2LjNaeoc9/QH10abBl4BFYMcLbxZRJ2/5YkShD/9F1KMb1nERvngo&#13;
-pihON2BS4xnatZUOhB8AgOwojPnnHyWokiNAdis3RTIPIhmgTZQxwk+gyacqcOVgJH8Ahe1hVOC4&#13;
-OCZm2lpdwrBQlL22X60QnkuFyzUT2rcVUdcUJ/O19kd9bqwIWr6ker2TGd8ilo1SAtSZP12c2ksS&#13;
-yoUKRpBDhX7D6Ymu7taaQFi4TGWOZAi+OCC4NA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9e0f0dbf-8538-488a-967f-0d9ebfdb6b27"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JdSBf+j/bruankC7EzQIOOMdmk3zDRat77/E8O+83VlZfgkoILuWTGvIOApS9PkKkFLZOOMBDLRf&#13;
+CmxpZCugzA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_88e186f1-a35d-4e5a-b433-1f80c4e5d2ae"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2qxzzb8/LUHsWswnL3n6zFraOqnCa2xm6aLaA/XuWM1OwIBfVLm2oeaM2Rvx41cse2vjt/wzDLlX&#13;
+T3gActYuyQ==</DigestValue></Reference></SignedInfo><SignatureValue>R0rg3hJKgu393l1sVli2jBN/0sGb4yUixA7INA5uTHeo6UR4LfJaNJwd1dymkIJaJqXPSqv0H4G9&#13;
+alLTKRr/BV00IwryCT2fIcaWQ0DFKsioCB251sTRuwImdnNyDsXoXXNVav7eWJ32P2wi8lWfrLIY&#13;
+i+L9ZJd3eevQeGru9COBGll79v9wZDi7B3PPYCgmwszj2rF/w+2Rj0Q6jt6mHCtd2+b3Nw9Owj0N&#13;
+ypA5heVqq4T9CkAcEnoumDbGkZJBhBUDCeQelQaFnuCnuk4pOZzPPoIzeiSmUnWn3YKyK8IJx8i2&#13;
+anFn4h8iePtv/zYf739K/94csmxVlDHmgEp3SA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -595,4 +607,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a8b23ae0-98b7-460e-8844-8dc8ee540670" Target="#_5828c841-241a-46b3-a3d3-2f827a54bf19"><Timestamp>2024-11-27 12:44:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_88e186f1-a35d-4e5a-b433-1f80c4e5d2ae" Target="#_9e0f0dbf-8538-488a-967f-0d9ebfdb6b27"><Timestamp>2024-11-27 12:46:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
