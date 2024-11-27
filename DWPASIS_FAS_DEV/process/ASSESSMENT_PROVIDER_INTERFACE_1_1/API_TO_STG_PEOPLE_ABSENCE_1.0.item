@@ -240,7 +240,9 @@
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
-      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <varTables name="Var" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20) = 'Capita_GB'?4:(StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20) = 'Capita_NI'?7) " name="var1" type="id_Integer"/>
+      </varTables>
       <outputTables name="out1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.MONTH " name="STG_MONTH" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.COLLEAGUE_PRN " name="STG_COLLEAGUE_PRN" nullable="true" type="id_String"/>
@@ -250,7 +252,7 @@
         <mapperTableEntries expression="StringHandling.LEFT((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;)) " name="STG_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)); " name="STG_FILE_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)); " name="STG_LOAD_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20) = 'Capita_GB'?4:(StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20) = 'Capita_NI'?7) " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20) = 'Capita_GB'?4:(StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20) = 'Capita_NI'?7)  Var.var1 " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="MONTH" nullable="true" type="id_String"/>
@@ -615,13 +617,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b8a00bc5-3e57-4309-8797-5e6dda3a9c18"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>99OqLcvic/0lBGIRrGB5w9eu0oiHUa9s5GGSg7LBBZrNbwkCkGHDw068aFLrsOfjgszJLN37s3iW&#13;
-2WM+3xTp4Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7393efc2-e3e3-499c-a2fa-710c625c0a90"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Q0U6F80QmoMzxVhZ3o/9GtFzHaPFmA3Mb6ZZ8TcXmzqGP/zreX2UVFO4yZjsWxuct5LxPwoesaYL&#13;
-6mSoO/TpEQ==</DigestValue></Reference></SignedInfo><SignatureValue>EnMLtdLtSYdo8/fRsri3ji3Cd4JFwbRTM8pi6lt5WQASRpUz/1F+/uSaRjumKUCzPbNzrJ6r4its&#13;
-NYlpmohmUOJG9mdTh0gwNloIpx9MbVTbIYYLgmbH/jpEtMpSbgxdFzOJwVsJxvcEGag21nOYVErM&#13;
-LOaxsqf0c4aVfvqzUaYzBxK929WtpaVodJs6tO8bmvIBKfgmLwdsuH1p0o+WfTrYljma9T5W8VPU&#13;
-oeb6puozcoTG6/cGSpJflZSCff6ithQJQFd60dom23FcOIGcwzJuAb3cTFM17zq64NNKJz7tZZWS&#13;
-OuFRXoF47OphP0PByswAMwsoeZ/Qc26j2NwEgA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5156f1cb-c963-4b25-8a09-2afba2674578"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>46Cyo+CxGNbhoB7AsA4WeeNg8cwE26jIWDpW/0BPEcmiLB0btcYJ3PyItHSCBwsze7+PI6nWU9gh&#13;
+q1pb845b9g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2ef40eab-dc5e-4a74-ac48-c16fc37d4dcb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>v3bE0GpptzJTA88fo/YRgeq83eS6gp9I5Cg4Fa0w5g9BDIResfhBeaVJtAWlOJWoIqElsMKtwyDQ&#13;
+CzijQ3xt2w==</DigestValue></Reference></SignedInfo><SignatureValue>XFgo/dgDxQc06Ak+inje6W5JCz7LFRqtlUu+Y1hMIWaFwGuMDhijbOfuGbp4WClwomAyG3zpGCqC&#13;
+Aj6WYeSCuhL7i4V+WhBMeyBHRl2Ckmhza0EHPzioS+ikrg7cG5C+tPvF0fAcGbqEHXcod2gY1Dq+&#13;
+2vWviQEyjYi+wOuiHhtttjcY3jh6MKG2BNA76DFlYnM1pNz/Zb0hG3akFU2u5Zz8gJdwDUqtQ5oW&#13;
+kgiw09EtpQ9gYFXfe24XJrlI0nBy2KC9jmvir+FY2BDjSAiOVtqhGXOdpgS6HVwCrCmqpvoIfTHr&#13;
+3izj4dFCsGap7TR1HZuykoZWvgT9PXCZ6D2Fbw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -643,4 +645,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7393efc2-e3e3-499c-a2fa-710c625c0a90" Target="#_b8a00bc5-3e57-4309-8797-5e6dda3a9c18"><Timestamp>2024-11-27 15:30:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2ef40eab-dc5e-4a74-ac48-c16fc37d4dcb" Target="#_5156f1cb-c963-4b25-8a09-2afba2674578"><Timestamp>2024-11-27 15:31:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
