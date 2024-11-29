@@ -634,7 +634,7 @@
       <column key="false" length="4000" name="AUD_ERROR_DESCRIPTION" nullable="true" originalLength="4000" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_ERROR_FIELD_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_ERROR_FIELD_VALUE" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="AUD_ORACLE_ERROR_CODE" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="AUD_ORACLE_ERROR_CODE" nullable="true" originalLength="10" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
@@ -811,7 +811,7 @@
       <column key="false" length="4000" name="AUD_ERROR_DESCRIPTION" nullable="true" originalLength="4000" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_ERROR_FIELD_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_ERROR_FIELD_VALUE" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="AUD_ORACLE_ERROR_CODE" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="AUD_ORACLE_ERROR_CODE" nullable="true" originalLength="10" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
@@ -828,7 +828,7 @@
       <column key="false" length="4000" name="AUD_ERROR_DESCRIPTION" nullable="true" originalLength="4000" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_ERROR_FIELD_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_ERROR_FIELD_VALUE" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="AUD_ORACLE_ERROR_CODE" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="AUD_ORACLE_ERROR_CODE" nullable="true" originalLength="10" pattern="" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -1110,13 +1110,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_12a381c7-0765-4fc2-8e90-54690ab9b801"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ttzHW1rT23IfTXvUplAvoatXA79963PgRtI2+SNvKr3g+V6243W/1a72kf2bCEBrsh9serElrqLk&#13;
-ACdZfnX7Mg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5a47f6ae-dbf5-4718-a5b8-a1dcb7a04ed8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sR2LULJOAG6wZe+/KK2IunpF5LUcjAvnIlaY30FOxnrqDSqs4zIqWaXRrgb7sC5WLYZ6AXDZ1+DD&#13;
-B27nMV1KFg==</DigestValue></Reference></SignedInfo><SignatureValue>ogm29csL5v+6UT7ey6O8LNIUGhHZXFhS50eP6lkCrtDYviuO3S96zVPlDN4YZiPuJ9EYU+KKXbzK&#13;
-i7v1GfH12hOQJeEkDcr/b1tEjuawVR5Ef1YADb3Ze1dCiCvBbSaYpBETr5GNjvNKqQVsI7FK1vUQ&#13;
-gun+qn5bPuuBUgZndiGGnWzU7hXwBePRD+2eRP9HQaydVjTEEgzab/Ed6bKViR0HHXMFfM6mOm56&#13;
-kPAydIH71ndbB0NuqQ5kqMm2/he3ktVYqtDb808Puzo8VXHVkwnPRUZMpp0oUFQIvgzo3sBs7pJZ&#13;
-jwscA0RZq8NVt8dJu7mH6W5fgn6YpKBZefdU/w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fd5b0663-4824-43aa-8b6a-f3815aa46b3e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qC5AiLQpqGjGnDzkSJkJI7Un1BJl3ieJk8RZt8TiyELZ8SBdn3eRatV3dImI4MjHP3tGK2lsnhHa&#13;
+JgWotfmg4A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5798e706-035c-461e-a761-49b79d1dd57b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>epZJEERAk2uOXKtwQHolKiCjDkAjJnaV6PYI0WtEjvnINRaKRxSBS+GFl5JQ7eXel0X5SoXTbXQI&#13;
+GOQnYsMElQ==</DigestValue></Reference></SignedInfo><SignatureValue>GbvPZ5da+U/BWZBsGRST9Y8e18UfuwvZ1pdHlOhZCWJZcvbIJzyDtMRU2f8Bjn10h0SfeOnHI2mR&#13;
+5tMMB7cEhoIFxAH3sR2hX5mO66Qq8F2WwqRQc6hnOFGElc+vADGXsze+kEIWITLYuRvmBkniZvxv&#13;
+FlVQFq3G3WIH8r/gSkwNTlpiUzKLrkF4eeSjwd8PeH6VCQsJkgPnZNjg0Yea6UAHY/DHyNMiXx8r&#13;
+CYXpkunaJT/kft46YsuBBkdrmaE7zZGa6UYSKk4weU2fj6vKBtvcPeQL24mn1Q+S+k9FsI+Rs20b&#13;
+s0tWqx8PmTjf7Z4MmbjPZUHwBK9yGXdnAXeFqQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1138,4 +1138,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5a47f6ae-dbf5-4718-a5b8-a1dcb7a04ed8" Target="#_12a381c7-0765-4fc2-8e90-54690ab9b801"><Timestamp>2024-11-29 12:42:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5798e706-035c-461e-a761-49b79d1dd57b" Target="#_fd5b0663-4824-43aa-8b6a-f3815aa46b3e"><Timestamp>2024-11-29 12:44:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
