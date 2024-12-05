@@ -133,7 +133,7 @@
     <elementParameter field="TEXT" name="EXCLUDEFILEMASK" show="false" value="&quot;*.txt&quot;"/>
     <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tFILELIST_ABSENCE"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILELIST&lt;/b&gt;&lt;br&gt;Gets a list of files"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILELIST_ABSENCE&lt;/b&gt;&lt;br&gt;Gets a list of files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="384">
@@ -195,7 +195,7 @@
     <elementParameter field="CHECK" name="USE_HEADER_AS_IS" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="LABEL" value="tFILE_ABSENCE"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILE FORMAT&lt;/b&gt;&lt;br&gt;Specifies the File Format"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILE_ABSENCE&lt;/b&gt;&lt;br&gt;Specifies the File Format"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileInputDelimited_1">
       <column comment="" key="false" length="7" name="MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -228,7 +228,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="T_FILE_ABSENCE_FILE_ERROR"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;File Format Error&lt;/b&gt;&lt;br&gt;Traps File Format Errors"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ABSENCE_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps File Format Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_AUD_PEOPLE_ABSENCE1">
       <column comment="" key="false" length="4000" name="AUD_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -278,7 +278,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="224">
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -499,7 +499,7 @@
     <elementParameter field="CHECK" name="CHECK_STRING_BY_BYTE_LENGTH" value="false"/>
     <elementParameter field="TEXT" name="CHARSET" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="LABEL" value="tSCHEMA_ABSENCE_CHECK"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;Schema Check&lt;/b&gt;&lt;br&gt;Schema Check for Abence"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;SCHEMA_ABSENCE_CHECK&lt;/b&gt;&lt;br&gt;Schema Check for Abence"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSchemaComplianceCheck_1">
       <column comment="" key="false" length="7" name="MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -533,7 +533,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tMAP_ABSENCE"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;Absence&lt;/b&gt;&lt;br&gt;Transformations for Absence"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ABSENCE&lt;/b&gt;&lt;br&gt;Transformations for Absence"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_STG_PEOPLE_ABSENCE">
       <column comment="" key="false" length="7" name="STG_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -663,7 +663,7 @@
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBO_STG_PEOPLE_ABSENCE"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;Absence&lt;/b&gt;&lt;br&gt;Insert into Absence Table"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;STG_PEOPLE_ABSENCE&lt;/b&gt;&lt;br&gt;Insert into STG_PEOPLE_ABSENCE Table"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_4">
       <column comment="" key="false" length="7" name="STG_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -704,7 +704,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="T_FILE_ABSENCE_FILE_ERROR"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;Schema Error&lt;/b&gt;&lt;br&gt;Traps Length Mismatch Errors"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ABSENCE_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps Length Mismatch Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_AUD_PEOPLE_ABSENCE2">
       <column comment="" key="false" length="4000" name="AUD_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1198,13 +1198,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fe480e34-45f1-43c7-9a47-e8f0d06e7ea3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>r35IqRGOs19kZ0jvScFiNewBjAGggBbp6LRLheU2wz5lRk2JFDlD0tyK5lWWNtcj+Rzuiovwd693&#13;
-WZo79pIV7g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1abd2323-5000-4bd4-9e3b-edb52a48985e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6VIHYkMj5WwcUUVaX5Uu8HbAm68yLjtDGIt50uhUBSZtoqkJjiCD/4aEBaTu80I78d1JjUbgAKri&#13;
-k2EsSDJ77Q==</DigestValue></Reference></SignedInfo><SignatureValue>E0Od+q4QZJjvNMoZjh5p1n3zHPkrC1cGz/B24PPaAZes8X7EsIvxLMovNBq3F/XLb1Y9+KOriBfj&#13;
-fWhBbQHVVrYYi9VhsPTBpEQIvelVM76uNO6+l0lNxjf4k+Ze+Tgrr7skiYHyLF0wAa/rux5KcdiY&#13;
-9jo8IJFhgnDPSIXByryxWN4qgnot/O5+7o3yCP5zf5Y2VYy+Bg76Ug7vZfEdGhc3pZeYTl6CWVJP&#13;
-RpusHKRgqMMSUo2vYln2XB73d4nnJL3pj0l1CxkbaOTtWP82ZJeMJPKPS8O2Sx8ZNyKmyRpwKlnC&#13;
-cV+8NMlmcPWZcuUjcB43OgcJ39hi7KH2gLaCnA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_41c4b0cf-2fac-41f8-a2e8-c128ef5082d2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>olKMgT3tUbVPPTvT5d2T7a/+P0oqQZRbQeTV++N948BNp8sv9OFn2Oy6f6FO0qb65NXRkh/laN+m&#13;
+y10DwaGf9w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bc3c5a2e-4c43-4a43-a231-92fbd24f4ca6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Wbkc0/P3+cTrTAMvL0L+olkhlJlSY6ICzaFI0/M/a8KnjSaAPbY4+2BpqoSmjqj3AcelV3btqSL7&#13;
+s8ftaVEJmA==</DigestValue></Reference></SignedInfo><SignatureValue>dnKeB5ud5oAZY4zNeujcrUVrTk1VocXKaGYzeMBFyyb8jeBsgyjEEtQx+e4d010ev8DbAq7PCl7F&#13;
+eW88u9rZ8Iz/qsjSB+7T1GV35hFtfA+DOeAr1D5GOV1oAUQCnHqo0WArN4p2OiAgIem6F0Ygn38m&#13;
+K5hZ0obi09XT6je/DWN6P0J0t/FB75WtV13UhkJg4CzMpAWlkO6RMZqknhwmvB3/chmKtCIYUI04&#13;
+0n/rtppJ5Z8dYY0eLhS/wOkWIlXjP2H8WH2ZDjpnmR+oaHicyedU9rW/sH7YHBF8PSBMy617tv5J&#13;
+cUThfayg9DYEx4N5eaVqyUP14oo2dJ5yfeUn7w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1226,4 +1226,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1abd2323-5000-4bd4-9e3b-edb52a48985e" Target="#_fe480e34-45f1-43c7-9a47-e8f0d06e7ea3"><Timestamp>2024-12-05 10:49:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bc3c5a2e-4c43-4a43-a231-92fbd24f4ca6" Target="#_41c4b0cf-2fac-41f8-a2e8-c128ef5082d2"><Timestamp>2024-12-05 10:55:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
