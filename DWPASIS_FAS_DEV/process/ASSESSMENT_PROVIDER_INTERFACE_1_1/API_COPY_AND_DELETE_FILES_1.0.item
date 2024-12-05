@@ -119,6 +119,7 @@
     <elementParameter field="TEXT" name="EXCLUDEFILEMASK" show="false" value="&quot;*.txt&quot;"/>
     <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tFILELIST"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILELIST&lt;/b&gt;&lt;br&gt;Gets a list of files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="96">
@@ -136,6 +137,7 @@
     <elementParameter field="CHECK" name="FORCE_COPY_DELETE" value="false"/>
     <elementParameter field="CHECK" name="PRESERVE_LAST_MODIFIED_TIME" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="TFILECOPY_TO_ARCHIVE"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILECOPY_TO_ARCHIVE_&lt;/b&gt;&lt;br&gt;Copies files to Archive folder and deletes from Source folder"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileCopy_1">
       <column comment="" key="false" length="7" name="STG_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -160,13 +162,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cdba7766-3c57-4a8b-919f-90435ae600d8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1RbNKpnopx3+UHx7L4Do8SpH5EGFl0/b8oHprvcoFgbbDiO1ahVgZ7vG0xUX8/sRsPOnuTll7idx&#13;
-K1sPk8Fh4g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a1975900-da32-42b9-80c9-0ab9636cb684"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KuDCDWhR2YVuMTGE2IfYSthxPWqpRyjcoa7gjJ7dNEyvrhuQTXnuATVls7dRf4elgBNp2kqT9ge9&#13;
-EBt+8K3itw==</DigestValue></Reference></SignedInfo><SignatureValue>EF1xSYJL3jMHbQvVV396GOY/DhD1JADgFd4WUsRWwSNreLNbGqb1QuXQKDGdM13d9D3i/9ZOKjuU&#13;
-8AndVsjr52AV0UZzUHTgpAJWQUAlXdiGGy26amiLIZAKkeZRm6WwjJlvJzIDVG8RSbYIL0NaHESt&#13;
-qwdDUGBJIw1rFJcPpeKQi8lxp+A+znvWT0LlQFNwohFFIFcXV6KBYBohwNKPLKhS0CzMu1BV1KAv&#13;
-sXthZSqVaOBIn+566FPqK6pJTfbVjsrjQHndk2XNQmiG4siYftGHI0zgwgXK2Yd5keBiSwXnB3av&#13;
-lgfAJUgA4Uwc2MbrGg/4xVxpB4CRQddlCQGvRQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_da1074db-81bb-47e4-8cea-bc84b4325d94"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>si+JMAYU1ihEbtD6AECZ8olfzpl2QSmFgb6XbZfVaJTPfCU5xIU/mVPhJB09NOimyhyM0rRSRxdC&#13;
+iMSDm4jwmQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fbecbc24-53da-4ed8-96a2-5d0f3732aee5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>chIZnD4dCjQvuHeBXxVXJumktiRKSpcZ8+kc29JuqjkI0mvgeUFxLKtNDhTuR6mP+WSiMz5MqWQG&#13;
+o3qe9+hGnA==</DigestValue></Reference></SignedInfo><SignatureValue>QUungNHVetoWONOHME7JfX3Mf52YcngP7uxjW60nBk9DzTLskXWqD3WUepTui4Mw8dKph09/muUR&#13;
+/w97yysIE9s9mBaOfie2p/tJc+SYo0hLhnAePdAtZXFmPJbUA2Cc2iOMt0xMhSmjPjKEvxpERvfM&#13;
+zd7ZgjsWkE2vAEAcOLi4456RtviI0521wGDt0bpeFyzE1JfWQVEnAet17wbgd96MiRMAwZCWdtzS&#13;
+9bIpX1Ba6JdmVOVedKlL448kkcehJgRxZpFIh54mbc9j0fWcbcw6+Ko1y9AmTR5K8lYFv96PUfe9&#13;
+y65tetnSKWXA8LLCLPvChBDETrYu62To6/p/QQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -188,4 +190,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a1975900-da32-42b9-80c9-0ab9636cb684" Target="#_cdba7766-3c57-4a8b-919f-90435ae600d8"><Timestamp>2024-12-05 11:10:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fbecbc24-53da-4ed8-96a2-5d0f3732aee5" Target="#_da1074db-81bb-47e4-8cea-bc84b4325d94"><Timestamp>2024-12-05 13:01:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
