@@ -430,7 +430,7 @@
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_ROTA_ACTUAL"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_ABSENCE&lt;/b&gt;&lt;br&gt;Inserts File Format Errors in AUD_PEOPLE_ABSENCE table"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_ROTA_ACTUAL&lt;/b&gt;&lt;br&gt;Inserts File Format Errors in AUD_PEOPLE_ROTA_ACTUAL table"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_2">
       <column comment="" key="false" length="-1" name="AUD_ROTA_DATE" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
@@ -545,7 +545,7 @@
     <elementParameter field="CHECK" name="CHECK_STRING_BY_BYTE_LENGTH" value="false"/>
     <elementParameter field="TEXT" name="CHARSET" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="LABEL" value="tSCC_SCHEMA_CHECK"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;SCHEMA_ABSENCE_CHECK&lt;/b&gt;&lt;br&gt;Schema Check for Abence"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;SCHEMA_ROTA_ACTUAL_CHECK&lt;/b&gt;&lt;br&gt;Schema Check for Rota Actual"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSchemaComplianceCheck_1">
       <column comment="" key="false" length="-1" name="ROTA_DATE" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
@@ -582,29 +582,33 @@
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
-    <elementParameter field="TEXT" name="LABEL" value="tMAP_ABSENCE"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ABSENCE&lt;/b&gt;&lt;br&gt;Transformations for Absence"/>
+    <elementParameter field="TEXT" name="LABEL" value="tMAP_ROTA_ACTUAL"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ROTA_ACTUAL&lt;/b&gt;&lt;br&gt;Transformations for Rota Actual"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_STG_PEOPLE_ABSENCE">
-      <column comment="" key="false" length="7" name="STG_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_ROTA_DATE" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_SICK_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_ANNUAL_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_ACTIVITY_TRANSACTION_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_ACTIVITY_TASK" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="STG_ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="STG_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_STG_PEOPLE_ABSENCE" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.ROTA_DATE " name="STG_MONTH" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_ABSENCE.ROTA_DATE " name="STG_ROTA_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_tMAP_ABSENCE.COLLEAGUE_PRN " name="STG_COLLEAGUE_PRN" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.ACTIVITY_TRANSACTION_ID " name="STG_SICK_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.START_TIME " name="STG_ANNUAL_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.END_TIME " name="STG_OTHER_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_ABSENCE.ACTIVITY_TRANSACTION_ID " name="STG_ACTIVITY_TRANSACTION_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_ABSENCE.START_TIME " name="STG_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_ABSENCE.END_TIME " name="STG_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_ABSENCE.ACTIVITY_TASK " name="STG_ACTIVITY_TASK" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_ABSENCE.ACTIVITY_FTE " name="STG_ACTIVITY_FTE" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="StringHandling.LEFT((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;)) " name="STG_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;, StringHandling.RIGHT(StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;),10),8)); " name="STG_FILE_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)); " name="STG_LOAD_DATE" nullable="true" type="id_Date"/>
@@ -636,7 +640,7 @@
     <elementParameter field="TEXT" name="TABLESCHEMA" value="context.api_staging_schema"/>
     <elementParameter field="TEXT" name="USER" value="context.api_staging_username"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:5zsfIfmb+vG3B773cf+dbFoozg9jjB4JwGyHA6h4M6p0UGBUqAoKrmcgi50+cq+IgYos+mLb3BE="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;STG_PEOPLE_ABSENCE1&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;STG_PEOPLE_ROTA_ACTUAL1&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
@@ -656,7 +660,7 @@
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="STG_MONTH"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_ROTA_DATE"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -666,17 +670,27 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STG_SICK_LEAVE_DAYS"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_ACTIVITY_TRANSACTION_ID"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STG_ANNUAL_LEAVE_DAYS"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_START_TIME"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="STG_OTHER_LEAVE_DAYS"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_END_TIME"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_ACTIVITY_TASK"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_ACTIVITY_FTE"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -714,26 +728,30 @@
     <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="tDBO_STG_PEOPLE_ABSENCE"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;STG_PEOPLE_ABSENCE&lt;/b&gt;&lt;br&gt;Insert into STG_PEOPLE_ABSENCE Table"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBO_STG_PEOPLE_ROTA_ACTUAL"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;STG_PEOPLE_ROTA_ACTUAL&lt;/b&gt;&lt;br&gt;Insert into STG_PEOPLE_ROTA_ACTUAL Table"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_4">
-      <column comment="" key="false" length="7" name="STG_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_ROTA_DATE" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_SICK_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_ANNUAL_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_ACTIVITY_TRANSACTION_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_ACTIVITY_TASK" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="STG_ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="STG_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="7" name="STG_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_ROTA_DATE" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_SICK_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_ANNUAL_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_ACTIVITY_TRANSACTION_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_ACTIVITY_TASK" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="5" name="STG_ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="STG_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
@@ -756,7 +774,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tMap_FILE_SCHEMA_ERRORS"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ABSENCE_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps Length Mismatch Errors"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ROTA_ACTUAL_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps Length Mismatch Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_AUD_PEOPLE_ABSENCE2">
       <column comment="" key="false" length="-1" name="AUD_ROTA_DATE" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
@@ -945,8 +963,8 @@
     <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_ABSENCE"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_ABSENCE&lt;/b&gt;&lt;br&gt;Inserts Length Mismatch Errors in AUD_PEOPLE_ABSENCE table"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_ROTA_ACTUAL"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_ROTA_ACTUAL&lt;/b&gt;&lt;br&gt;Inserts Length Mismatch Errors in AUD_PEOPLE_ROTA_ACTUAL table"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
       <column comment="" key="false" length="-1" name="AUD_ROTA_DATE" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
@@ -1301,6 +1319,26 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Length_Rejections"/>
   </connection>
   <connection connectorName="FLOW" label="ln_STG_PEOPLE_ABSENCE" lineStyle="0" metaname="ln_STG_PEOPLE_ABSENCE" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="STG_START_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STG_END_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STG_ACTIVITY_FTE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STG_ACTIVITY_TRANSACTION_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STG_ROTA_DATE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STG_ACTIVITY_TASK"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_STG_PEOPLE_ABSENCE"/>
   </connection>
@@ -1396,13 +1434,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7dddd24e-ba8b-4632-9635-1dcad09d51c7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+973+m4UOFNNbCFb7e7v8ItApqRq/8SyQvMCKF0A2Umi0DbmPlaRmXKOFrkJItjHazBM5Ff1tvKj&#13;
-Zg1xBa6AgQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_93250a9e-5dfa-426e-8246-d790eaa10fdb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>h0/hRhIVp7orF9s95x4kEsIDqyUdIR1ekN269Tlc7ByEBSz9IqCsa5ivUCsKKNL7oaALMBI+92uw&#13;
-sXQcrk1vvA==</DigestValue></Reference></SignedInfo><SignatureValue>haUN5Lt4FnYh90QlA56D8JTQh0bkrLyS/V7DLPWvmlr5k2RJNXEbnlZw7ttfUAZUWTFxQosYV2MZ&#13;
-+MkMYOyMb/QNcAg+wuZ562B7syUrXvBcA8wLrgFwLqT9omw5Zf5mNq+Gk4G67/U5LX8D56E/QsJs&#13;
-c/vjCu78xmHYqjn25EV+ht8h1J6r0ybgwfiCc76sadGoKtLj0Ng66mOx/T25f6dVK+lZh8sj5FQw&#13;
-ybfSpcSFPeag6weXbZMe5t620d8HRi+M6mNIy6nFoTYzdarcyabqsZY0glG9ays+hJx31GCjFVTZ&#13;
-clUNnrUM3RZPgJfD0mixp9oDU5GjSlUqvU24Lg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_032a17b1-318c-4e65-8f29-ed217f99fadc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xzuLwP7KcexeR8uj4uOO7gzr+aqQom4+vZBEEMpkPInwwvyHuYTCKBDEeT1ZA6eEDHQH+nlvbIr3&#13;
+6w2kUxz6RQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1b411e81-630a-4522-bbd8-979de4c9b9a7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Nm9Y1ZhPM1VftLlUHidd8kgbrdcdksvL+y7xYCrXR8+YM6xZPzZd+KJYJZpcrZ+j/O1DwT9fwC7i&#13;
+ab67AhS5ew==</DigestValue></Reference></SignedInfo><SignatureValue>CNhJEd/mWZ/XR+jmQFUKmWROdwbx9gjm6I7fQy2OXeIkZ6v/vjlqPFFrOAILa6Hn3821lcwxaSn4&#13;
+hK4AVgd4Rjis13vH6vvyS1kf6GJbHRfG+8yVKLQipzE3FbkVUMRSykzerVzMJhUTW9x2WClFpS7k&#13;
+4HK4X822m++IOAMFNUbUA/b0GpvcwxFlpfaatia8XFGz74ogcJYhDHNR20OYC8izC4k4aAcjOxRD&#13;
++C1LfEUnr6b6RVZoKAjmIERm/b7DOiBBVrvJ/5vkhj/VnsWGhN/1JUnYuTSXqqnm3GfyFgg+Kfdv&#13;
+Uftd9mGjUc7zLOSONsRaMIw+smGiPH3WFYDc9A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1424,4 +1462,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_93250a9e-5dfa-426e-8246-d790eaa10fdb" Target="#_7dddd24e-ba8b-4632-9635-1dcad09d51c7"><Timestamp>2024-12-11 10:53:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1b411e81-630a-4522-bbd8-979de4c9b9a7" Target="#_032a17b1-318c-4e65-8f29-ed217f99fadc"><Timestamp>2024-12-11 10:58:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
