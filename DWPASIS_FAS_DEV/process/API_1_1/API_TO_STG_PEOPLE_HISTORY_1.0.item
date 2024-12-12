@@ -453,11 +453,48 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;HISTORY_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps File Format Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_AUD_PEOPLE_ABSENCE1">
-      <column comment="" key="false" length="4000" name="AUD_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_SICK_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_ANNUAL_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_TITLE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_FORENAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_SURNAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_SITE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_COMPANY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_LINE_MANAGER" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_FTE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_REGISTERED_BODY" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_LEAVING_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_LEAVING_REASON_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_MON_START_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_MON_END_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_TUE_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_TUE_START_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_TUE_END_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_WED_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_WED_START_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_WED_END_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_THU_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_THU_START_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_THU_END_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_FRI_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_FRI_START_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_FRI_END_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_SAT_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_SAT_START_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_SAT_END_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_SUN_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_SUN_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_SUN_END_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_TRAINING_COMPLETION_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_EXPERIENCE_COHORT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_VA_APPROVAL" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_TA_APPROVAL" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_F2F_APPROVAL" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_PBA_APPROVAL" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_EFFECTIVE_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
@@ -473,11 +510,48 @@
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_AUD_PEOPLE_ABSENCE1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="ln_Format_Rejections.MONTH " name="AUD_MONTH" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.COLLEAGUE_ID " name="AUD_COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_Format_Rejections.COLLEAGUE_PRN " name="AUD_COLLEAGUE_PRN" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_Format_Rejections.SICK_LEAVE_DAYS " name="AUD_SICK_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_Format_Rejections.ANNUAL_LEAVE_DAYS " name="AUD_ANNUAL_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_Format_Rejections.OTHER_LEAVE_DAYS " name="AUD_OTHER_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Format_Rejections.TITLE " name="AUD_TITLE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.FORENAME " name="AUD_FORENAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.SURNAME " name="AUD_SURNAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.SITE_ID " name="AUD_SITE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Format_Rejections.COMPANY_ID " name="AUD_COMPANY_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Format_Rejections.LINE_MANAGER " name="AUD_LINE_MANAGER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.FTE " name="AUD_FTE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Format_Rejections.JOB_ROLE_ID " name="AUD_JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Format_Rejections.START_DATE " name="AUD_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ln_Format_Rejections.REGISTERED_BODY " name="AUD_REGISTERED_BODY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.LEAVING_DATE " name="AUD_LEAVING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ln_Format_Rejections.LEAVING_REASON_ID " name="AUD_LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Format_Rejections.MON_WORKING_HOURS " name="AUD_MON_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Format_Rejections.MON_START_TIME " name="AUD_MON_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.MON_END_TIME " name="AUD_MON_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.TUE_WORKING_HOURS " name="AUD_TUE_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Format_Rejections.TUE_START_TIME " name="AUD_TUE_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.TUE_END_TIME " name="AUD_TUE_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.WED_WORKING_HOURS " name="AUD_WED_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Format_Rejections.WED_START_TIME " name="AUD_WED_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.WED_END_TIME " name="AUD_WED_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.THU_WORKING_HOURS " name="AUD_THU_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Format_Rejections.THU_START_TIME " name="AUD_THU_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.THU_END_TIME " name="AUD_THU_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.FRI_WORKING_HOURS " name="AUD_FRI_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Format_Rejections.FRI_START_TIME " name="AUD_FRI_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.FRI_END_TIME " name="AUD_FRI_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.SAT_WORKING_HOURS " name="AUD_SAT_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Format_Rejections.SAT_START_TIME " name="AUD_SAT_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.SAT_END_TIME " name="AUD_SAT_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.SUN_WORKING_HOURS " name="AUD_SUN_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Format_Rejections.SUN_START_TIME " name="AUD_SUN_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.SUN_END_TIME " name="AUD_SUN_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.TRAINING_COMPLETION_DATE " name="AUD_TRAINING_COMPLETION_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ln_Format_Rejections.EXPERIENCE_COHORT_ID " name="AUD_EXPERIENCE_COHORT_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Format_Rejections.VA_APPROVAL " name="AUD_VA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.TA_APPROVAL " name="AUD_TA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.F2F_APPROVAL " name="AUD_F2F_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.PBA_APPROVAL " name="AUD_PBA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Format_Rejections.EFFECTIVE_START_DATE " name="AUD_EFFECTIVE_START_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="StringHandling.LEFT((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;)) " name="AUD_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;, StringHandling.RIGHT(StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;),10),8)); " name="AUD_FILE_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)); " name="AUD_LOAD_DATE" nullable="true" type="id_Date"/>
@@ -1554,6 +1628,129 @@
       <elementValue elementRef="TRACE_COLUMN" value="AUD_ERROR_FIELD_VALUE"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_SUN_START_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_TUE_END_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_FRI_WORKING_HOURS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_TRAINING_COMPLETION_DATE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_MON_START_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_EFFECTIVE_START_DATE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_SURNAME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_LINE_MANAGER"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_LEAVING_DATE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_THU_WORKING_HOURS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_SAT_START_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_SITE_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_SUN_WORKING_HOURS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_COMPANY_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_WED_END_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_TA_APPROVAL"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_TUE_WORKING_HOURS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_FRI_START_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_REGISTERED_BODY"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_VA_APPROVAL"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_LEAVING_REASON_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_JOB_ROLE_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_START_DATE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_WED_WORKING_HOURS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_WED_START_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_COLLEAGUE_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_TITLE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_FTE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_MON_END_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_F2F_APPROVAL"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_THU_START_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_EXPERIENCE_COHORT_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_SAT_WORKING_HOURS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_THU_END_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_SAT_END_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_SUN_END_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_MON_WORKING_HOURS"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_FORENAME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_TUE_START_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_FRI_END_TIME"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="AUD_PBA_APPROVAL"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_AUD_PEOPLE_ABSENCE1"/>
@@ -1647,13 +1844,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ab3cbcca-51d9-4660-b32e-c6a6c6f5de65"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KC9eQ4XhXohWHKm5Fb+TvAu3SF8icwTmMDKgCrFhraxTRfnKjejelPfto/9rmAoAKVOaUFCCuAGA&#13;
-wBFPk6wZYg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fa9c20b9-8a6a-404c-bd1b-88622d25740d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Pmece4q1ps0khKxFoxG4TnGtSLJQ+uiMeJcF3nLHEv+0B5EC19LCrJE7TYhPTsupqRBDgj1Q1EZH&#13;
-DQH8FO1k0w==</DigestValue></Reference></SignedInfo><SignatureValue>jbKPBffaPMGcnCRQ5LAMFPxaJMREH8+ciIJj4IJxYNR+Hzap9CR/2YbZ1MtZ7O+hfNBBo1t5fb7K&#13;
-CpnpwiNcRv1kAChdkP3iy0e0LN5YbV4iufC4j2EvXK6XjeRwfmI3Oe7xl8XtV5BsHx1XuQzfcJ8L&#13;
-45btR8u9H3cNAI8FPnYo63k1nehb6R0eXfLsTOEr4zAMEKofL4KRyGFXGdtq51g1D+HADMsSOYxg&#13;
-HGkwaPP2JsYvuygC39xVuSG/G1MSoYKsMYKl4xxR/L7sLyIDjXOLXGrfrCaLNtpQHito+wv5UaZ+&#13;
-QEMOz+gRhw8eRpYTN9s+l5jzVdp7kmJ5AMK9gA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7f0655c4-34a8-4e24-9ef5-894b9e096cbd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>N5xveOQZ1c98rIl8O+c3Ay9fp6gk5sJrz3NZ/4Ih0HvxgMianGfdofHAm4H5wmdDCNLFRGAtP/aC&#13;
+s9FjoTp28w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5716d16c-96c4-4830-b1af-761c86371657"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>iiPQp4qy993jWUxFA+9ar9Yodq709T7p7y3ICrw6RMUGytR6cTPCnkKPElGfgZyqMG2C96urwEIB&#13;
+suqkGHzhig==</DigestValue></Reference></SignedInfo><SignatureValue>Tv5i+F/lodcdZIuFXYxzwVNO1dJ1VGudlJICIcH/NKpUYMOyk4GB07kdDVzwM1StiXrpmKTbIGdt&#13;
+opjqYoNoCY0EgWexn+8eQKGOmFj8QLyMK/CnGq2ODDpdUc0fnzfW3mPGEZ4bLoYoc8AthZykdaef&#13;
+GuD6KwZrAhqnt/WU9fP5IqhiBSwZEsyELzZCVdU64eN5eC+VP25pE1shlHSeexNRI1iUsGSFrAfD&#13;
+xWZ/xkR8mqeqJTk/eM804C1FTBVKWQq+TXAx3r5CJct3GxDtk+OxbvpJY3JQ7/l1amXbtmfSLgLM&#13;
+Y/tXQviZUsgNPh4Rx+7vEWw2xJh9yRqMh92qUg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1675,4 +1872,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fa9c20b9-8a6a-404c-bd1b-88622d25740d" Target="#_ab3cbcca-51d9-4660-b32e-c6a6c6f5de65"><Timestamp>2024-12-12 11:20:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5716d16c-96c4-4830-b1af-761c86371657" Target="#_7f0655c4-34a8-4e24-9ef5-894b9e096cbd"><Timestamp>2024-12-12 11:51:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
