@@ -1038,7 +1038,7 @@
     <elementParameter field="RADIO" name="CHECK_ALL" value="true"/>
     <elementParameter field="RADIO" name="CUSTOMER" value="false"/>
     <elementParameter field="TABLE" name="CHECKCOLS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="MONTH"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COLLEAGUE_ID"/>
       <elementValue elementRef="SELECTED_TYPE" value="String"/>
       <elementValue elementRef="DATEPATTERN" value=""/>
       <elementValue elementRef="NULLABLE" value="false"/>
@@ -1048,17 +1048,202 @@
       <elementValue elementRef="DATEPATTERN" value=""/>
       <elementValue elementRef="NULLABLE" value="false"/>
       <elementValue elementRef="MAX_LENGTH" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SICK_LEAVE_DAYS"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TITLE"/>
       <elementValue elementRef="SELECTED_TYPE" value="String"/>
       <elementValue elementRef="DATEPATTERN" value=""/>
       <elementValue elementRef="NULLABLE" value="false"/>
       <elementValue elementRef="MAX_LENGTH" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ANNUAL_LEAVE_DAYS"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FORENAME"/>
       <elementValue elementRef="SELECTED_TYPE" value="String"/>
       <elementValue elementRef="DATEPATTERN" value=""/>
       <elementValue elementRef="NULLABLE" value="false"/>
       <elementValue elementRef="MAX_LENGTH" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="OTHER_LEAVE_DAYS"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SURNAME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SITE_ID"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COMPANY_ID"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LINE_MANAGER"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FTE"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="JOB_ROLE_ID"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="START_DATE"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="REGISTERED_BODY"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LEAVING_DATE"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LEAVING_REASON_ID"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MON_WORKING_HOURS"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MON_START_TIME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MON_END_TIME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TUE_WORKING_HOURS"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TUE_START_TIME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TUE_END_TIME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WED_WORKING_HOURS"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WED_START_TIME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WED_END_TIME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="THU_WORKING_HOURS"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="THU_START_TIME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="THU_END_TIME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FRI_WORKING_HOURS"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FRI_START_TIME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FRI_END_TIME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAT_WORKING_HOURS"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAT_START_TIME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAT_END_TIME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUN_WORKING_HOURS"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUN_START_TIME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUN_END_TIME"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TRAINING_COMPLETION_DATE"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EXPERIENCE_COHORT_ID"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VA_APPROVAL"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TA_APPROVAL"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F2F_APPROVAL"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PBA_APPROVAL"/>
+      <elementValue elementRef="SELECTED_TYPE" value="String"/>
+      <elementValue elementRef="DATEPATTERN" value=""/>
+      <elementValue elementRef="NULLABLE" value="false"/>
+      <elementValue elementRef="MAX_LENGTH" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EFFECTIVE_START_DATE"/>
       <elementValue elementRef="SELECTED_TYPE" value="String"/>
       <elementValue elementRef="DATEPATTERN" value=""/>
       <elementValue elementRef="NULLABLE" value="false"/>
@@ -1077,15 +1262,89 @@
     <elementParameter field="CHECK" name="EMPTY_IS_NULL" show="false" value="false"/>
     <elementParameter field="CHECK" name="ALL_EMPTY_ARE_NULL" value="true"/>
     <elementParameter field="TABLE" name="EMPTY_NULL_TABLE" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="MONTH"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COLLEAGUE_ID"/>
       <elementValue elementRef="EMPTY_NULL" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="COLLEAGUE_PRN"/>
       <elementValue elementRef="EMPTY_NULL" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="SICK_LEAVE_DAYS"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TITLE"/>
       <elementValue elementRef="EMPTY_NULL" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ANNUAL_LEAVE_DAYS"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FORENAME"/>
       <elementValue elementRef="EMPTY_NULL" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="OTHER_LEAVE_DAYS"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SURNAME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SITE_ID"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COMPANY_ID"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LINE_MANAGER"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FTE"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="JOB_ROLE_ID"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="START_DATE"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="REGISTERED_BODY"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LEAVING_DATE"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LEAVING_REASON_ID"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MON_WORKING_HOURS"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MON_START_TIME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MON_END_TIME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TUE_WORKING_HOURS"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TUE_START_TIME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TUE_END_TIME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WED_WORKING_HOURS"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WED_START_TIME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WED_END_TIME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="THU_WORKING_HOURS"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="THU_START_TIME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="THU_END_TIME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FRI_WORKING_HOURS"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FRI_START_TIME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FRI_END_TIME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAT_WORKING_HOURS"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAT_START_TIME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAT_END_TIME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUN_WORKING_HOURS"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUN_START_TIME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUN_END_TIME"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TRAINING_COMPLETION_DATE"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EXPERIENCE_COHORT_ID"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VA_APPROVAL"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TA_APPROVAL"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F2F_APPROVAL"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PBA_APPROVAL"/>
+      <elementValue elementRef="EMPTY_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EFFECTIVE_START_DATE"/>
       <elementValue elementRef="EMPTY_NULL" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="CHECK_STRING_BY_BYTE_LENGTH" value="false"/>
@@ -1094,19 +1353,93 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;SCHEMA_HISTORY_CHECK&lt;/b&gt;&lt;br&gt;Schema Check for History"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSchemaComplianceCheck_1">
-      <column comment="" key="false" length="7" name="MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="SICK_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="ANNUAL_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TITLE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="FORENAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SURNAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SITE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="COMPANY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="LINE_MANAGER" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FTE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="REGISTERED_BODY" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LEAVING_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LEAVING_REASON_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="MON_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="MON_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TUE_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="TUE_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="TUE_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WED_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="WED_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="WED_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="THU_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="THU_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="THU_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FRI_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="FRI_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="FRI_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SAT_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SAT_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SAT_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SUN_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SUN_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SUN_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TRAINING_COMPLETION_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EXPERIENCE_COHORT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="VA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="F2F_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PBA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EFFECTIVE_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <metadata connector="OTHER" name="OTHER"/>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="7" name="MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="SICK_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="ANNUAL_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TITLE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="FORENAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SURNAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SITE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="COMPANY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="LINE_MANAGER" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FTE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="REGISTERED_BODY" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LEAVING_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LEAVING_REASON_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="MON_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="MON_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TUE_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="TUE_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="TUE_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WED_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="WED_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="WED_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="THU_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="THU_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="THU_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FRI_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="FRI_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="FRI_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SAT_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SAT_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SAT_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SUN_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SUN_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SUN_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TRAINING_COMPLETION_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EXPERIENCE_COHORT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="VA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="F2F_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PBA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EFFECTIVE_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -1139,7 +1472,7 @@
       <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_STG_PEOPLE_ABSENCE" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ln_tMAP_ABSENCE.MONTH " name="STG_MONTH" nullable="true" type="id_String"/>
@@ -1153,11 +1486,48 @@
         <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?3:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?4:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?5:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?6:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?7:-1 " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_tMAP_ABSENCE" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="MONTH" nullable="true" type="id_String"/>
+        <mapperTableEntries name="COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="COLLEAGUE_PRN" nullable="true" type="id_String"/>
-        <mapperTableEntries name="SICK_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="ANNUAL_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="OTHER_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="TITLE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="FORENAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SURNAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SITE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="COMPANY_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="LINE_MANAGER" nullable="true" type="id_String"/>
+        <mapperTableEntries name="FTE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="REGISTERED_BODY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="LEAVING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="MON_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="MON_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="MON_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TUE_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="TUE_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TUE_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="WED_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="WED_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="WED_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="THU_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="THU_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="THU_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="FRI_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="FRI_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="FRI_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SAT_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="SAT_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SAT_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SUN_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="SUN_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SUN_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TRAINING_COMPLETION_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="EXPERIENCE_COHORT_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="VA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="F2F_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PBA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="EFFECTIVE_START_DATE" nullable="true" type="id_Date"/>
       </inputTables>
     </nodeData>
   </node>
@@ -1304,6 +1674,43 @@
       <column comment="" key="false" length="-1" name="AUD_SICK_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ANNUAL_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_OTHER_LEAVE_DAYS" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn1" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn3" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn4" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn5" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn6" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn7" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn8" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn9" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn10" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn11" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn12" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn13" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn14" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn15" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn16" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn17" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn18" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn19" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn20" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn21" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn22" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn23" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn24" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn25" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn26" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn27" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn28" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn29" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn30" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn31" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn32" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn33" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn34" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn35" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn36" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
@@ -1316,14 +1723,51 @@
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_AUD_PEOPLE_ABSENCE2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="ln_Length_Rejections.MONTH " name="AUD_MONTH" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Length_Rejections.COLLEAGUE_ID " name="AUD_MONTH" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Length_Rejections.COLLEAGUE_PRN " name="AUD_COLLEAGUE_PRN" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_Length_Rejections.SICK_LEAVE_DAYS " name="AUD_SICK_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_Length_Rejections.ANNUAL_LEAVE_DAYS " name="AUD_ANNUAL_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_Length_Rejections.OTHER_LEAVE_DAYS " name="AUD_OTHER_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Length_Rejections.TITLE " name="AUD_SICK_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Length_Rejections.FORENAME " name="AUD_ANNUAL_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Length_Rejections.SURNAME " name="AUD_OTHER_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_Length_Rejections.SITE_ID " name="newColumn" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn1" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn2" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn3" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn4" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn5" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn6" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn7" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn8" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn9" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn10" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn11" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn12" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn13" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn14" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn15" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn16" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn17" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn18" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn19" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn20" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn21" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn22" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn23" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn24" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn25" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn26" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn27" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn28" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn29" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn30" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn31" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn32" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn33" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn34" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn35" nullable="true" type="id_String"/>
+        <mapperTableEntries name="newColumn36" nullable="true" type="id_String"/>
         <mapperTableEntries expression="StringHandling.LEFT((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;)) " name="AUD_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;, StringHandling.RIGHT(StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;),10),8)); " name="AUD_FILE_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)); " name="AUD_LOAD_DATE" nullable="true" type="id_Date"/>
@@ -1336,11 +1780,48 @@
         <mapperTableEntries name="AUD_ORACLE_ERROR_DESC" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_Length_Rejections" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="MONTH" nullable="true" type="id_String"/>
+        <mapperTableEntries name="COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="COLLEAGUE_PRN" nullable="true" type="id_String"/>
-        <mapperTableEntries name="SICK_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="ANNUAL_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries name="OTHER_LEAVE_DAYS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="TITLE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="FORENAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SURNAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SITE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="COMPANY_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="LINE_MANAGER" nullable="true" type="id_String"/>
+        <mapperTableEntries name="FTE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="REGISTERED_BODY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="LEAVING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="MON_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="MON_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="MON_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TUE_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="TUE_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TUE_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="WED_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="WED_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="WED_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="THU_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="THU_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="THU_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="FRI_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="FRI_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="FRI_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SAT_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="SAT_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SAT_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SUN_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="SUN_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SUN_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TRAINING_COMPLETION_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="EXPERIENCE_COHORT_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="VA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="F2F_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PBA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="EFFECTIVE_START_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries name="errorCode" nullable="true" type="id_String"/>
         <mapperTableEntries name="errorMessage" nullable="true" type="id_String"/>
       </inputTables>
@@ -2052,6 +2533,117 @@
       <elementValue elementRef="TRACE_COLUMN" value="AUD_ERROR_FIELD_VALUE"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn19"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn18"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn17"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn16"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn15"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn14"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn36"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn13"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn35"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn12"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn34"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn11"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn33"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn10"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn32"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn31"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn30"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn4"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn5"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn29"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn28"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn27"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn26"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn25"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn24"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn23"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn22"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn21"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn20"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn8"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn9"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn6"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn7"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_AUD_PEOPLE_ABSENCE2"/>
@@ -2103,13 +2695,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_68665944-f8d6-4ccb-8587-ca55a60e507f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vld1lzQfRJ9qzMmpxNr90EFQ35d9jp/QmQN+NvB6I9uB2zWajsoZL5MA4MG833reYLiRV2xFOPXt&#13;
-KcikuojdBA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5aa103f0-54c2-4c0f-9266-f2b6507f498b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/GgsuuTwYR1xv1VsjEsbEu8pZlpw979bV17t6jrNM1wscN9GrpY7Jf99cSUnDKIHrCrg77/WoCBC&#13;
-P0ZLJt7vKg==</DigestValue></Reference></SignedInfo><SignatureValue>DIm3luK1YPn/uF2WnAtXcQRKKu3HsPFMSL9IOlFzKN9JcoGDDx203uZYI8+pUP/Y4/Y1k4W3a74X&#13;
-Xpp87Ap6VGfxoc3ujz5F//4uM55iv6X8ZO48jS/jma6enAEOBLgeeACFkmvQ+fxm98+KIVYFzKPa&#13;
-jm7AbCTV7/Q1gGoVFzzvLc0XsGWvFOhjZiGTEp+/bNVNRuj0E6u3qGpFlbrZ9gG8OhQ0BqFdvicO&#13;
-t3KRb0zU/CU8asWpRKTXoM1fpuyJ5b3b+CbOQ2VQtjE0HxXdaq6NIFewNOnHYGFlveGC6JqcNntx&#13;
-TOcEnSIpcGYSW+f5MexhoXqPHlvWX8+UnyKz4w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fcb30b8e-0638-4424-8eed-cf986fd5e1f2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3ECxlr53O7Fayn2XgbYGezxFqnnycnH3R9zAimzxblSRVnAklyvxcuCyNnokCMtK7Pp9orsCJnlV&#13;
+fksx10i72g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5934f368-7551-4c4f-befd-43f5c8954d2e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ykv8DEVHWqo2y+O4KnpgkjBZkUaOdjCXuuZ5hmerRUtac8EYv22E+WMC+QBr3K3YJDHxrSkMVyr2&#13;
+10t92hoPJg==</DigestValue></Reference></SignedInfo><SignatureValue>MYWkMjja/HimXpRAjHXngwqDYcYu2TByrzSqrowWn1ClvnUx0llFREXf7Y8wJtWPROmc5DnRB3J4&#13;
+JvQp64iBZZDMdegKobwRdATFHQFAxaDqxHJadFFIBNhtsBDlmCr9Jc6n8gkmGVJaVrqKyWmtm0SY&#13;
+t5+dsFC6iZvxHnyO7ZF1LdP7GJshxBvfIKfD/9Vwmx1rop6jlzm4pgGEKPPOhnYtIcOz8ChUGJL9&#13;
+DU45dSb3NWcdHTenBy5QBx2CAqGS4ZCNta7uxzmnik8i6vExbUaFJWm9hLAMn5SDo3zJpLhbSijh&#13;
+bPw/x8YtMZagHdTjMcboBYNDQvDzhOdaxF1eOg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2131,4 +2723,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5aa103f0-54c2-4c0f-9266-f2b6507f498b" Target="#_68665944-f8d6-4ccb-8587-ca55a60e507f"><Timestamp>2024-12-12 11:52:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5934f368-7551-4c4f-befd-43f5c8954d2e" Target="#_fcb30b8e-0638-4424-8eed-cf986fd5e1f2"><Timestamp>2024-12-12 11:56:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
