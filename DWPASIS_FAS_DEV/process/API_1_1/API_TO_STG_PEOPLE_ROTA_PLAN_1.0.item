@@ -599,7 +599,7 @@
       <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_STG_PEOPLE_ABSENCE" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ln_tMAP_ABSENCE.ROTA_DATE " name="STG_ROTA_DATE" nullable="true" type="id_Date"/>
@@ -1023,7 +1023,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="out1">
       <column comment="" key="false" length="50" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
@@ -1031,8 +1031,8 @@
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="out1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) " name="AUD_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.STG_FILE_DATE " name="AUD_FILE_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row1.STG_SOURCE_FILE_NAME " name="AUD_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) " name="AUD_SOURCE_FILE_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="row1.STG_LOAD_DATE " name="AUD_LOAD_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="row1.STG_ASSESSMENT_PROVIDER_ID " name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
       </outputTables>
@@ -1091,7 +1091,7 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_FILE_DATE"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_SOURCE_FILE_DATE"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -1124,13 +1124,13 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_3">
       <column comment="" key="false" length="50" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="50" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -1572,13 +1572,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_eb0b8e62-aace-45c4-bea5-fad3dc361acc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>a95+NwscjgZ00aYWrCLsjxTUdv+xkFXwsnUsNz79k9jWkpquldc74bD+OGKXuQz9So6URm7fQmQv&#13;
-gfoKLkxkiQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fcbc4c7e-1c03-4165-bd54-1fb42f0d58ce"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zFdYXCtaHQ5JcDf0I9hjBrK/FVE8udT3JyFIDJlg7OOV/J9cwKqU0OF83jzrRZ0AGicYlingcnab&#13;
-ImfsZZ+scA==</DigestValue></Reference></SignedInfo><SignatureValue>MQvIRna/4brEJMoFT+2JZp4vaLOwOAaRQ92W4FMXuYBLwGgg+5CZh+Cqz7jcUb6df+t03YuwhsXJ&#13;
-H28Rp2t0OH2Ou0xBe4Z3OdIFl3Ufmv9tJY9VKp5veMy/9G3XOPe1l/gsCsH3O20t145bDauByrGd&#13;
-z+elRcK4hcXDMR60pjWJXgS/0wj/gHVYdPznNcqjM/RKWgk/o05Ltbn7bsG6Le5Av8oYuR/X0zH5&#13;
-NlVkgNvhrg/RNdJCTZV0qR8g8mc17E4BedCNgIZtpNqGVaZZcRJyBkEyGqUpUWw+Fe7gFQ/VThRy&#13;
-ws+n8TitFDtDCxyRFJiYRBbeVf2iKfoO5LcSBg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_27070fe8-5dfb-46ab-9ece-8d8d3565a398"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>w5e9XrJod8iONdSHK3V6dUGY+YGf/LVPi96jxbgo3+xqqrB2DKeXZDAGm4jch2y2pLVbVs3Rq5CT&#13;
+qyw6sPXVUg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a88c1ff0-7b50-40f1-afe4-019d1c5f5496"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>K3/BlmqSmp1/76AWiRXCdOkuYfva6pxikmm8qTDFTNsIzHJXkspNnM7bvylXD7AC6LeAL5HiOxKw&#13;
+YuyRXl5ibg==</DigestValue></Reference></SignedInfo><SignatureValue>aXu+7djL18i1dzZebvOwtLbi5oDS4Z0d5pl+oKVK4WnPS49lkM0LA8opNx+KNv97SEbRZL5OaIXf&#13;
+1aqAXDD65LzMhI++XxNgOhVu3erITGWEYYQQMILV5YB0Pp60cU6mbJ+FcDcxzhnSljTFlDGTRWuu&#13;
+3G4etZLvsPa19znMZdNdNtgxWdwbf88RpYF31MwfDRwb/Ss07dJCGYr2Cq+LYbS/AAfCRw7Qbxgq&#13;
+n6iaQ+bfz+1wRhKmJ6ZL7X8zSzyXJNU/TlMka/d7sYPDwTcctK4hvFF3PO83QvV4+Ewq2jTyTaPz&#13;
+m+3CcglW9GTXuHu30hiz1/i/YduTuyn0g+a1Vg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1600,4 +1600,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fcbc4c7e-1c03-4165-bd54-1fb42f0d58ce" Target="#_eb0b8e62-aace-45c4-bea5-fad3dc361acc"><Timestamp>2024-12-12 16:26:16</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a88c1ff0-7b50-40f1-afe4-019d1c5f5496" Target="#_27070fe8-5dfb-46ab-9ece-8d8d3565a398"><Timestamp>2024-12-12 17:21:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
