@@ -16,7 +16,7 @@
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="32"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="36"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
@@ -112,7 +112,7 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
   </parameters>
-  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="256">
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;D:/Globalscape_Inbound&quot;"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
@@ -139,7 +139,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILELIST&lt;/b&gt;&lt;br&gt;Gets a list of files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileProperties" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="256">
+  <node componentName="tFileProperties" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileProperties_2"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="MD5" value="false"/>
@@ -154,7 +154,7 @@
       <column defaultValue="" key="false" length="20" name="mtime_string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="256">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -196,7 +196,7 @@
       <column defaultValue="" key="false" length="20" name="mtime_string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="128">
+  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_1"/>
     <elementParameter field="TEXT" name="NB_ROWS" show="false" value="1"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
@@ -223,7 +223,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="128">
+  <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -281,7 +281,7 @@
       <column comment="" key="false" length="80" name="OWB_MAPPING_NAME" nullable="true" originalLength="80" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="512">
+  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_2"/>
     <elementParameter field="TEXT" name="NB_ROWS" show="false" value="1"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
@@ -298,7 +298,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="512">
+  <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -342,7 +342,7 @@
       <column comment="" key="false" length="200" name="LOAD_TYPE" nullable="true" originalLength="200" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="384">
+  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -406,7 +406,7 @@
       <column defaultValue="" key="false" length="20" name="mtime_string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="384">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -596,13 +596,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0a470525-0ef5-4112-8fc1-a036233531e2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WsWdlzVy/t0eicmZpNnOlkzRMbI5LahSp8QTfsUBPr+ZY3zCA+j5l7ZFCUCW9EE0D8lUlE6i4N+R&#13;
-lIj4JTQ2FQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_32d7ade2-260a-4a3a-9ca9-c460d322314b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dBSgyRTUkXVBKSlNGE4+zqRdfGlprBd2euFF2SZ+yjxSRQ0WFv7NhwDwOh1Sm4v3szsGhhkLo7TI&#13;
-i+0tb2cwzA==</DigestValue></Reference></SignedInfo><SignatureValue>muuZquUyxSl//cuepWUvKh0KWqSDItSbchxEy+gIYs4At+kW7CbHDnKBBn5Y74DmapPwPpkEq8wh&#13;
-QyYhASK8H9vw1C5xTmj5dqnBjC60qFxCkXih8myQR2ICWcVxkpKXmo05jUkkrF7YUBdPklkl3pST&#13;
-5eeOhNvtCeBJPf1jT0Xv070VP9rCNB+ucZI8L7Xasg+ovGuPvSNBshzUWxq809egPcD1WpKWzHcO&#13;
-cWdM4OiUr7qxACq6Z63o6rHOoh+69uaSM/uJBPG/4Pe4dWorlgmvlYVpoSmsBqX1wwvDmuJeSHCe&#13;
-NCCRtsqZTn1chVHcyn0IzAbBreVXsuZqV74cJA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_66296412-c009-45a6-8f9a-c11bdbd39e07"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OVvLzY9w6QzX8z9d7KTh6XzLZTx3wFjgRruTXR0x0vGj1NQmfq50I6j76TuqDV+IDgq4epYFXJQ3&#13;
+QutTxtpjug==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b1799061-d339-467b-945a-03155a64c698"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gXYikbgIeXJjLWYmkzb+lHBLKNLmIn0seNrh0z433Gyirtna4WbXKTYjuXCAreZXoSIQfzQ/w9OM&#13;
+erEY527jpQ==</DigestValue></Reference></SignedInfo><SignatureValue>olJl25cOyMqS7qS2W9og3P1SxSaOsl3bMF0FKw10GbbBGEhogXyflABgHuyTq1+CaSE01sdOKXfq&#13;
+ZxTFtrOh/qmRsUSMaWTfa4YzrGpJ/dPzTvy3mh7WtY1iI3bwIZie7FgWF1/ET3wzlZ4aFy1zJyC7&#13;
+s8iBgPxEU4kgZC7lA2Ly6luD+fTKQBBI2r5BFyZ8S+1fduEksFNfPuvZdqt7poXkIZk0BfsZstlv&#13;
+nS2pdOnhxkP7iHS8ZAqMzaTo/IoBk+W3Fn7VtpXrhLZ4qGUvfkYx0SZUtnrnsJ4b866VY+jXoL8l&#13;
+6quYhGaUpZQZ8/uNyT8/62VNhQF8pjQwm0Sd9w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -624,4 +624,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_32d7ade2-260a-4a3a-9ca9-c460d322314b" Target="#_0a470525-0ef5-4112-8fc1-a036233531e2"><Timestamp>2024-12-12 17:01:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b1799061-d339-467b-945a-03155a64c698" Target="#_66296412-c009-45a6-8f9a-c11bdbd39e07"><Timestamp>2024-12-12 17:04:23</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
