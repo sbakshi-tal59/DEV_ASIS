@@ -167,14 +167,18 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="out1">
       <column key="false" length="255" name="basename" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="calc_on_file" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_of_file" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="current_file" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="out1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.basename " name="basename" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="(StringHandling.RIGHT(&#13;&#10;StringHandling.SUBSTR(&#13;&#10;((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),&#13;&#10;StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;),&#13;&#10; &quot;_&quot;),&#13;&#10;10),&#13;&#10;8)) == &quot;20241212&quot; ? ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) :null " name="newColumn" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(StringHandling.RIGHT(&#13;&#10;StringHandling.SUBSTR(&#13;&#10;((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),&#13;&#10;StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;),&#13;&#10; &quot;_&quot;),&#13;&#10;10),&#13;&#10;8)) == &quot;20241212&quot; ? ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) :null " name="calc_on_file" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(StringHandling.RIGHT(&#13;&#10;StringHandling.SUBSTR(&#13;&#10;((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),&#13;&#10;StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;),&#13;&#10; &quot;_&quot;),&#13;&#10;10),&#13;&#10;8)) " name="date_of_file" nullable="true" type="id_String"/>
+        <mapperTableEntries name="current_file" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="abs_path" nullable="true" type="id_String"/>
@@ -203,7 +207,11 @@
     <elementParameter field="TABLE" name="LENGTHS" show="false">
       <elementValue elementRef="SCHEMA_COLUMN" value="basename"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="calc_on_file"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="date_of_file"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="current_file"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
@@ -211,7 +219,9 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_1">
       <column key="false" length="255" name="basename" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="calc_on_file" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="date_of_file" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="current_file" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="160">
@@ -451,7 +461,13 @@
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tLogRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
-      <elementValue elementRef="TRACE_COLUMN" value="newColumn"/>
+      <elementValue elementRef="TRACE_COLUMN" value="calc_on_file"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="current_file"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="date_of_file"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
@@ -505,13 +521,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0002b815-43f5-4bcf-b3ba-6004d62efecf"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FpaXc4pnpIv9XgZxAsJYSLm3bZVGfk2yzRfzcO8Vd+jbnGvWvhKSW2D4qykEXdQBv7pdi2Jl6Tm1&#13;
-6bNeTBANNg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a04e660c-695e-4af8-874f-0bcd38367b5c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>AxMpXNMHXEnwjjEzGa8D3TFuXLXNv6YSxU+U0MCPlBEddG+iH6NE2G8bXc4iOAIt8bkTv/Vs5Hx8&#13;
-Jepqxwce/A==</DigestValue></Reference></SignedInfo><SignatureValue>Ov/1iJGLIkVDQp4YGtZCSRLK4Yr6B4mYT5aqjKt331TdnmXm5/7jzwHfZ2t59xu9iz2KlxtjTnX6&#13;
-i0LNLrd19b8FK8gIKG+xMdsacuSibkeqLHD0MJtBlxvzUoiTLnGdoBIxRQmpvAOmr9MF9djcdbqR&#13;
-8+h09pnZCBD5SpHOvP/IT/By9yw7Kve+61eqVAi3uzO+a7rVpuG89nxDotWBa0tFbE08ZozSFvAF&#13;
-kXKn0GPPIN2JhqfpGXOTs/yI/dYgNsNp1+cS3uDdn1ircNiZ3/L/XyPA9DQ1gu4j2KKV6pbk+QYz&#13;
-gV5cL7qugv3Ki0ntq5+wDixLWRAowfmdAq6uzA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_21ae5624-005e-49b9-ac68-3a146a3ea6e5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>niG00bUMs/ReAsy4UapMVt3U3wMKkExxcJQUMWzNaqXDEHhqZlu5Uf2NQDGJjX4BtxCfyc4Gu3Vn&#13;
+93gRiHU3hQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8acb358c-c4f0-460b-8047-612c2e9b6665"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>60Disd8hGUm3f6EB/tJeBMKJWWbj0vzDxu5WP8Jfw2NxQuhLZmyUzOAv55rLmwnHWx/NdNrnVs0e&#13;
+U/mWQo65XA==</DigestValue></Reference></SignedInfo><SignatureValue>baTNqb5nx+xLGEc25fvFM3OkYJTApn0l4XpvsTEmKyonhmVe1tnDvAHRcTZEn6INFNTZnH+M6rsy&#13;
+5I/3+a3URt00y4TbBeTHGqPCwhagfnZwz0jYyVXsv6pwt3l+6SpV36gEdqJnzLyDHFKHteHQ/t+/&#13;
+wwlqYwlE2LxO8ghaoXtiAxQ0FUd5zmnC1VX3aWvzlmBViD7hAQTyYCGFVbKOgr68CPCEerrSy24R&#13;
+9etEiZjHZqaoc3C+NxXyO6IBXQL2P5I/RDMPTCfwRxR1Ojd15mom+lkZVnZ/IAfn7/VwJQEg1Tu1&#13;
+etixDhoXFi98GwC09DRF72K66TQOJDQTI7y7Fw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -533,4 +549,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a04e660c-695e-4af8-874f-0bcd38367b5c" Target="#_0002b815-43f5-4bcf-b3ba-6004d62efecf"><Timestamp>2024-12-13 12:50:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8acb358c-c4f0-460b-8047-612c2e9b6665" Target="#_21ae5624-005e-49b9-ac68-3a146a3ea6e5"><Timestamp>2024-12-13 12:54:04</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
