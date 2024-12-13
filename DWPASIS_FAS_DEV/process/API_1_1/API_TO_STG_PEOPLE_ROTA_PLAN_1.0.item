@@ -1022,19 +1022,15 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="out1">
-      <column comment="" key="false" length="50" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="AUD_SOURCE_FILE_DATE" nullable="true" originalLength="50" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="true" length="50" name="MIS_CHANNEL_ID" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="MIS_UP_TO_DATE" nullable="true" originalLength="50" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="out1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row1.STG_SOURCE_FILE_NAME " name="AUD_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="StringHandling.RIGHT(&#13;&#10;StringHandling.SUBSTR(&#13;&#10;((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),&#13;&#10;StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;),&#13;&#10; &quot;_&quot;),&#13;&#10;10),&#13;&#10;8); " name="AUD_SOURCE_FILE_DATE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.STG_LOAD_DATE " name="AUD_LOAD_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row1.STG_ASSESSMENT_PROVIDER_ID " name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="IF((row1.STG_ASSESSMENT_PROVIDER_ID == '2')? 'API_CGB_RP':NULL) " name="MIS_CHANNEL_ID" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.RIGHT(&#13;&#10;StringHandling.SUBSTR(&#13;&#10;((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),&#13;&#10;StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;),&#13;&#10; &quot;_&quot;),&#13;&#10;10),&#13;&#10;8); " name="MIS_UP_TO_DATE" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="STG_ROTA_DATE" nullable="true" type="id_Date"/>
@@ -1058,18 +1054,18 @@
     <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
     <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HOST" value="context.api_staging_host"/>
-    <elementParameter field="TEXT" name="PORT" value="context.api_staging_port"/>
+    <elementParameter field="TEXT" name="HOST" value="context.api_misown_host"/>
+    <elementParameter field="TEXT" name="PORT" value="context.api_misown_port"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.api_staging_database"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.api_misown_database"/>
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="TABLESCHEMA" value="context.api_staging_schema"/>
-    <elementParameter field="TEXT" name="USER" value="context.api_staging_username"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:9CzpAB47fRu+yNMNhcLXqj/a156bV4kWYLQt3HnBHNUlb3ZprxfpgUAZYuZ0W5PPLUM56JV0Q3s="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;AUD_FILE_LOADED&quot;"/>
+    <elementParameter field="TEXT" name="TABLESCHEMA" value="context.api_misown_schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.api_misown_username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:iHeoDVaCYsrvGyi/Ix8MRskBjpIcmAZVOpp1h7cBw+n0IWub0MmqhO3z0v3OfP/0FkZCXb97dw=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;MIS_CHANNEL_DATE&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
     <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
-    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="UPDATE"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -1086,22 +1082,12 @@
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_SOURCE_FILE_NAME"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MIS_CHANNEL_ID"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_SOURCE_FILE_DATE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_LOAD_DATE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_ASSESSMENT_PROVIDER_ID"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MIS_UP_TO_DATE"/>
       <elementValue elementRef="UPDATE_KEY" value="false"/>
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
@@ -1123,16 +1109,12 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;SAUD_FILE_LOADED&lt;/b&gt;&lt;br&gt;Insert into AUD_FILE_LOADED Table"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_3">
-      <column comment="" key="false" length="50" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="AUD_SOURCE_FILE_DATE" nullable="true" originalLength="50" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="true" length="50" name="MIS_CHANNEL_ID" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="MIS_UP_TO_DATE" nullable="true" originalLength="50" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="50" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="AUD_SOURCE_FILE_DATE" nullable="true" originalLength="50" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="true" length="50" name="MIS_CHANNEL_ID" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="MIS_UP_TO_DATE" nullable="true" originalLength="50" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -1522,6 +1504,14 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_AUD_PEOPLE_ABSENCE2"/>
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tDBOutput_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="MIS_CHANNEL_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="MIS_UP_TO_DATE"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
   </connection>
@@ -1572,13 +1562,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_44edba13-0f39-40c3-b81c-a2a74743ff3c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jWMqtusJDz0DDG7HDjxaTEro65wrgvcJwRpNF1vq5k80HSN/IHF2DOKr3P0QhgStkzgK3dxgx65X&#13;
-vECzECLlig==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cd6c3e4a-78f2-4c3e-b9fd-d4be848455aa"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>a186OemzcZhFQ/64xU9djwGDZtVCT0GWyxNkleksGQrMn8YrdOOKIXVUqE4KcGUNZV42CUfqu7jQ&#13;
-VZKBgGKMoA==</DigestValue></Reference></SignedInfo><SignatureValue>SL80MM2nJBY0sEPKKCH52s9DiA8eoLeCBcDaurg0/mkACa+PkN3CvMpfqZhJ2ozdfDdG7wiYnGi7&#13;
-jW8icbrkzx8dsU5kFlkjqrh8ExSwxNfYtzEma2jC5o5xUOMkc9aZ3anQJLiHAC0A8uw86vdfX5bc&#13;
-DligjyRo/mm+naVfMufYk335TLVndajGKV1V+c8BtLVSqSeONjOiIpQ5UwYuFGLgLXZaB9l7x+gF&#13;
-UbFPS0deFqeH/aMoDuh2Q8/jHZFu6SxpF0NrneXtnIfuAtDzQXFbAEU5ayX9f2Qx16QjWLkrEhP9&#13;
-yYYNDUIwQUR2BBnluqSvFdWRg/sJskQwFyYd8w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e24a8b54-986d-43fb-9eb8-cc43ac422cb3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pLRzevSqgaR9Ly3XARmyRSRjJ8XMlPJ7UX9P6sA2vTz8eIx9xrzE5CHokvAPrZ/h0uUyMqQUI9us&#13;
+SEzxRSPepg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_307c48de-d618-4d2e-854c-65d1ee7e1e75"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZE4orx/4ywJGTC4QGhYQ3juNXEQwC74g98PtxcaU/p1b1ZvGunDNCeMrQanw5HYecW4/z+Fj9REw&#13;
+ih6pCIIr6A==</DigestValue></Reference></SignedInfo><SignatureValue>P456cmC94TqLBwEypw0RT2t2Z/nk1ue01uzLCN2MY7uSoJQGm2ahIQqUQhJTbBkqxhhuSGJB7ZDy&#13;
+p7Zhk3oS24ycz0lELsRAh0qp9Zm0BOkKThxGiYtprPpE2jN0rfED8a5iUJ+9Jtm/58twNHMJtPLa&#13;
+3WV1N+cUdceVq1SRA8Uqwaigz/7++9NNFD5yo7lRqmm8RbXSqsOoHFE3dGYUKLRsRHVJ8EJnkQUJ&#13;
+3jOWXGTEwj0X8iYd64tc4k1wuvo5LKb4xSGDtmTJ4/dRalOAIrj66Oxu9ksEjgToBFvpIFbgxx6Y&#13;
+nvAoY/BvGPZDSMt3iMzXESjQULt0Y+l7enEAJA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1600,4 +1590,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cd6c3e4a-78f2-4c3e-b9fd-d4be848455aa" Target="#_44edba13-0f39-40c3-b81c-a2a74743ff3c"><Timestamp>2024-12-13 10:25:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_307c48de-d618-4d2e-854c-65d1ee7e1e75" Target="#_e24a8b54-986d-43fb-9eb8-cc43ac422cb3"><Timestamp>2024-12-13 12:15:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
