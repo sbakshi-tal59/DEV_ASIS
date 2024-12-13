@@ -169,14 +169,16 @@
       <column key="false" length="255" name="basename" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="calc_on_file" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_of_file" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="calc_2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="out1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.basename " name="basename" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="(StringHandling.RIGHT(&#13;&#10;StringHandling.SUBSTR(&#13;&#10;((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),&#13;&#10;StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;),&#13;&#10; &quot;_&quot;),&#13;&#10;10),&#13;&#10;8)).greater(&quot;20241212&quot;) ? ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) :&quot;NO&quot; " name="calc_on_file" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="(StringHandling.RIGHT(&#13;&#10;StringHandling.SUBSTR(&#13;&#10;((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),&#13;&#10;StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;),&#13;&#10; &quot;_&quot;),&#13;&#10;10),&#13;&#10;8)).equals(&quot;20241212&quot;) ? ((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)) :&quot;NO&quot; " name="calc_on_file" nullable="true" type="id_String"/>
         <mapperTableEntries expression="(StringHandling.RIGHT(&#13;&#10;StringHandling.SUBSTR(&#13;&#10;((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),&#13;&#10;StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;),&#13;&#10; &quot;_&quot;),&#13;&#10;10),&#13;&#10;8)) " name="date_of_file" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="if ((StringHandling.RIGHT(&#13;&#10;StringHandling.SUBSTR(&#13;&#10;((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),&#13;&#10;StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;),&#13;&#10; &quot;_&quot;),&#13;&#10;10),&#13;&#10;8))&gt;&quot;20241212&quot;) {&#13;&#13;&#10;&quot;YES&quot;&#13;&#13;&#10;} else {&#13;&#13;&#10;    &quot;NO&quot;&#13;&#13;&#10;} " name="calc_2" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="abs_path" nullable="true" type="id_String"/>
@@ -209,6 +211,8 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="date_of_file"/>
       <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="calc_2"/>
+      <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
@@ -217,6 +221,7 @@
       <column key="false" length="255" name="basename" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="calc_on_file" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="date_of_file" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="calc_2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="160">
@@ -465,6 +470,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="date_of_file"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="calc_2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
@@ -516,13 +524,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f7901295-96b9-4077-b012-31ea3852280d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>P8EJmhE4bWJcQ/32PZcGW+Ly+7nz2IS/m2kcgTVveXxoV5UnhaxeU3UrqAglMtH1YA7gp9xTXDAo&#13;
-0DEYVSWq8Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4fca98b0-e86f-4ff4-b8e3-0cf0f879553b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>va7e3oQvojcyO9jXMC2wRrMWTill0EMyoJJZCnIDhfTeahYeBXqZEksBZatkzGAjlZu18Vgb0U+s&#13;
-daNkPbUgQg==</DigestValue></Reference></SignedInfo><SignatureValue>iBfDzwwAtj3lDlrQrez1cwc1sOYByaLOswSEHynVsR2hw4OCf3yjau6a2R1FKnq8ACi4/A4rfVzm&#13;
-VtpKELMaa8HiJ9QAaqP3UcwnLjj6yBbDMLSEg9vJ7p4gLhRG2ERVvJaQTaS58g94BJxRdJCPjV/c&#13;
-HOF74LBCNwXB2MxDhYzxoHPKezfnrIafF1/zbrIui2a/tUmAH+PWcVdLZ/uT7lMcWfXprjSyQ912&#13;
-N/xc/O9QW3K2JX8Yu2pW+4EmcPqGZpZIKB4tcHEOEKDvXsrZf2NkjFY1QeGLV+q3ONw7vZ6103mD&#13;
-BxEMqVf+jQWbSi4KvyMIgkZNK/SkPgJ2UZo62w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0f85e169-9c3d-4fa9-9e0e-2784b212d49e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lF3S9V69NKqfxhbwxG1U43qNatVN+LgB4UoIbPbgCY77G+LAsZTqn/0UvOBNRp3zWlWCmNYNl+Yb&#13;
+jFzCjUfPtA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_65728616-05c4-4f26-b3a0-1738b114e8a9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OjKvgH5n0miW2aBcv+o9M+vzkDOl8q/K/140liIiopDRpsMLDOGDrUKMhvcgfGWSQ9WigM7TJ8VO&#13;
+TR+VZPvYSw==</DigestValue></Reference></SignedInfo><SignatureValue>WDcXn8dTFtgTkp0snKQXNzrvhvJvPHEXSXM5k0CtZdTlb1GmzAxqhrf/b2hVVFaTWDDfyaeIVlfl&#13;
+ajyvCaA+LPRbkZPvedL/W7vyIr6ZEcU+wQ81runk78zX3lmN2HDwoWxNoNuTjjkYh51nhEoQxg+b&#13;
+Sa9i9KPxO7Hkc8il9EYqPQ8A0j3tsDkkCeCTuBiLcpqued84Q+Skl16jPT1Xs1sWhiXTxjOoa/dS&#13;
+hbl9Ug5GK3cWaM/L62CZUaBghcnwownxkcCy+OQZ2Gvva4flFexHvFGns2iVV0jdwf/Xw+80tYXd&#13;
+wewsj3W29tJdUk6EVRT4i+zchyEXo6L3CcGLXQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -544,4 +552,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4fca98b0-e86f-4ff4-b8e3-0cf0f879553b" Target="#_f7901295-96b9-4077-b012-31ea3852280d"><Timestamp>2024-12-13 13:00:29</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_65728616-05c4-4f26-b3a0-1738b114e8a9" Target="#_0f85e169-9c3d-4fa9-9e0e-2784b212d49e"><Timestamp>2024-12-13 13:03:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
