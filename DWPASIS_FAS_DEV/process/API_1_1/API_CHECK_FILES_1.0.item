@@ -112,7 +112,7 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
   </parameters>
-  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="416">
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;D:/Globalscape_Inbound&quot;"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
@@ -121,10 +121,10 @@
     <elementParameter field="CHECK" name="ERROR" value="false"/>
     <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
     <elementParameter field="TABLE" name="FILES">
-      <elementValue elementRef="FILEMASK" value="&quot;Absence*.csv&quot;"/>
-      <elementValue elementRef="FILEMASK" value="&quot;Rota Actual*.csv&quot;"/>
+      <elementValue elementRef="FILEMASK" value=""/>
+      <elementValue elementRef="FILEMASK" value=""/>
       <elementValue elementRef="FILEMASK" value="&quot;Rota Plan*.csv&quot;"/>
-      <elementValue elementRef="FILEMASK" value="&quot;History*.csv&quot;"/>
+      <elementValue elementRef="FILEMASK" value=""/>
     </elementParameter>
     <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
     <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
@@ -139,7 +139,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILELIST&lt;/b&gt;&lt;br&gt;Gets a list of files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileProperties" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="416">
+  <node componentName="tFileProperties" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileProperties_2"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="MD5" value="false"/>
@@ -154,7 +154,7 @@
       <column key="false" length="20" name="mtime_string" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="384" posY="416">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="384" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -188,7 +188,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="416">
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="320">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
@@ -498,13 +498,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1be59d7a-eea7-42a3-928d-8f03ee4f3637"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5IRFFYGx0oTjoeQHZY1vyaVyV4mTHOEa1GRD0SjXSj6Zf0gbXLX+lxMmTvAp4P4/2QCNVNmV0TSS&#13;
-IueArSVUhw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_513cb43e-c0d1-4fed-b86b-a121b3ef0e02"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GMtr2CMBilQ+TYxgPyti8K5Z0Z4WB0NAi8rI36seYxOQD3GNJIHxZvikBLkp+GXYbeXZZwrWxHhg&#13;
-wOFp+Mu2Bw==</DigestValue></Reference></SignedInfo><SignatureValue>TyWbSYZpYM0kJ0EJGXcSyCg3z3JcFF/wQ0GKD91IwrnNYvQGg7Elbv91z+0agjm+iPSHQQFI83no&#13;
-sJcEh9WvP3obgCqKH/6fV17jq9C8G1PLrIzcI9OLEybaEKyVQBVpedQTVEP9O+O6LQlWWduPej+a&#13;
-GGqE1V+Ji9P7KDG1LPgTo1CYbxey0+qXKDmd1letisyut0yikbPQJsMas66MNgQlbNVYozKg1oZk&#13;
-HcPStwQPka3G1+z/VCFPWdnlWNqmdX3/L4Xt5lnrZ/stA+9X404VeTBCZbEEsRJanZxzT9Toz0Qa&#13;
-bDfKHThnz9Zkk6zGaetB2v8iAjTLcHAIfHyD8g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_71f94911-275d-4042-9149-0cdb74a477aa"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/6aBgznLq+cKUoNDRarfDeeDJZcEiVvx5UaYKJLdfVT1l+xdZwG6WlgVHsDBe4rT7F7zc0TTjHGQ&#13;
+oSCSFHenWg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_119d2889-e88d-4811-b4f1-b22dbe28b016"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3GOmm2y6kTYxjY7c5FKMWJlduWd6ulWSAldIJ3fWBLv9QXUjwehxxnqUidhLppPuV5tdcPDLUeLI&#13;
+upyciJ6PaQ==</DigestValue></Reference></SignedInfo><SignatureValue>D13rLJKEyS39jyhSgbsvC7zV1Bq6MK7L5XkrUh9Sbma2xpO1tStcZdbDLDrqj1SHBFCy82mdgC4N&#13;
+lKgSEAfe420JvHJDrmKfLPNeOpaKfyoLvBkDWMI5lF9IC+MuSs5MFAJqWdp0L6aU3TIDNBbuT4OY&#13;
+YseuqoAbMDPd65fgmvR8JXIBNNkEtMeScN3PggaaVao9uxLTdRHUgGBD4Or2rR/Mvy0BxB7/tO5+&#13;
+YrB9bEmhpalY1/Wspm7nkTKeNhk6Gq43MFi01mYoEwBDCnZ4qc/KeRGP3t9xiLzllTUUjnhm5+JU&#13;
+W02j1aMm9MlAcQl3dxlYsC0ucZ98IyQJSOqf+w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -526,4 +526,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_513cb43e-c0d1-4fed-b86b-a121b3ef0e02" Target="#_1be59d7a-eea7-42a3-928d-8f03ee4f3637"><Timestamp>2024-12-13 10:36:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_119d2889-e88d-4811-b4f1-b22dbe28b016" Target="#_71f94911-275d-4042-9149-0cdb74a477aa"><Timestamp>2024-12-13 10:51:19</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
