@@ -170,7 +170,7 @@
     <metadata connector="FLOW" name="out1">
       <column key="false" length="255" name="Provider" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="calc1" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Cond_1" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Cond_1" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Source" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="calc_2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -182,7 +182,7 @@
       <outputTables name="out1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20) " name="Provider" nullable="true" type="id_String"/>
         <mapperTableEntries expression="(StringHandling.RIGHT(&#13;&#10;StringHandling.SUBSTR(&#13;&#10;((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),&#13;&#10;StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;),&#13;&#10; &quot;_&quot;),&#13;&#10;10),&#13;&#10;8)).compareTo((String) globalMap.get(&quot;API_SER_RP&quot;)) " name="calc1" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)&#13;&#10;&amp;&amp;&#13;&#10;StringHandling.LEFT((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;)).equals(&quot;Rota Plan&quot;)&#10;?&#13;(StringHandling.RIGHT(StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;),10),8)).compareTo((String) globalMap.get(&quot;API_SER_RP&quot;))&#10;:1 " name="Cond_1" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)&#13;&#10;&amp;&amp;&#13;&#10;StringHandling.LEFT((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;)).equals(&quot;Rota Plan&quot;)&#10;?&#13;(StringHandling.RIGHT(StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;),10),8)).compareTo((String) globalMap.get(&quot;API_SER_RP&quot;))&#10;:1 " name="Cond_1" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="StringHandling.LEFT((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;)) " name="Source" nullable="true" type="id_String"/>
         <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)&#13;&#10;||&#13;&#10;StringHandling.LEFT((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;)).equals(&quot;Rota Plan&quot;)?&#13;&#10;(StringHandling.RIGHT(StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;),10),8)).compareTo((String) globalMap.get(&quot;API_SER_RP&quot;)):1 " name="calc_2" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="(String) globalMap.get(&quot;API_SER_RP&quot;) " name="newColumn" nullable="true" type="id_String"/>
@@ -234,7 +234,7 @@
     <metadata connector="FLOW" name="tLogRow_1">
       <column key="false" length="255" name="Provider" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="calc1" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Cond_1" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Cond_1" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Source" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="calc_2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -735,13 +735,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_760cd646-c306-45e9-b965-a2e9473978a6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>m7a52f8ZRUU/DdmmUAZS8pZg+IqowAlSxAfz2EqvwBB8++gOWjuPjWMXA3RP+McF6qQTyZYuoYHF&#13;
-xaRdbDPasw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_77eef58b-77fa-4812-ada4-bcd9c3bce1a5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8pTiDW03c7xRSn5iEaiUVwXeZ6KoWk0ZWFv+cZvxGj+I52hKI3YJcz7wC/Q5cXe7eAt2GBrD0Uhf&#13;
-Y2wTUIHopw==</DigestValue></Reference></SignedInfo><SignatureValue>YN51FwLZ2Rbj/3JBn0Ha79rkGo42o+raCT575ffdpV1enZDl6j2v/khaB7CM+kDIOw1w1go79gLp&#13;
-M3lmkrSFJQp/bY685leVlh/fiIRZEYffQOV2dsoNBoHQDP3mVGBbjiEqkU9Su8IPRuncvlLkMeI7&#13;
-hxwEzRj2KfeD1TgvS7bKePPCekdNrEZbjABgGD1JE9o+8skanBNd2Ou51AFz0VP//9z+bgqjuceA&#13;
-zdswD7aX0AY9YYuZbux//w5rwl6M0FuizFnpSZK4e2h27S8AfUXcdpw6ZFyMxpqoms+iQDy5cvSn&#13;
-R4kllLkKoYVQc2gPMzUZmz2m5JzOcYl+PFZJVw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c33189a9-38ec-4129-b349-4bd6199e7a3c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ESBK8tJohwW+/fhpOBsCcchaMrzofQ91lLpsZKljN8/Q5229T9raWkgR7cEtlNpp+ymdNqWvL2Mp&#13;
+uDeAadSArg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d797818f-77fe-4bfe-a0e1-aa5579c7f49a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fSqTMRcGpVDaOAISO1IsAwUQTDr2P38lxuuVhqhrgyqd8+zz9P8Bnid8whfybXCjtA3pC+e38mMc&#13;
+tRboQk3ahA==</DigestValue></Reference></SignedInfo><SignatureValue>ExdnH4QMN2q0ehyTeaGieEMNCTWVoAiBILXGl+u+HzkPxlb1gLnYLx588asB1tG6IRhCY5osP0Bx&#13;
+Z1zH88Fwj+zq6FptC9ZYTb/PcP3Wd7bKO4lo+WWP1f6vqnnIHR410izu+JvIUqLGP/NwHan5oKG0&#13;
+dI0bffibV0AJZ16lC+GTULqHprrRpVlW+DaYBPmhCgBjudolabim13ZcN9ctb8WI/ZMZ/hQQoAaR&#13;
+gzndBvRlzRHpkIxQt6fjzjUy9dsmM2b4vKgoAKNnqNpfg8Dmoi9W/GGgHV6zBEU6+nKozbDSJ9p+&#13;
+HwbWtyWF7QMWYnYbQKW7lUW1WjpWgy+OTo8xow==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -763,4 +763,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_77eef58b-77fa-4812-ada4-bcd9c3bce1a5" Target="#_760cd646-c306-45e9-b965-a2e9473978a6"><Timestamp>2024-12-17 16:05:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d797818f-77fe-4bfe-a0e1-aa5579c7f49a" Target="#_c33189a9-38ec-4129-b349-4bd6199e7a3c"><Timestamp>2024-12-17 16:06:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
