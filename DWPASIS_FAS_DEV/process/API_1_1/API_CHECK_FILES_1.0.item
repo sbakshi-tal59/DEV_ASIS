@@ -500,7 +500,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_SER_RP') AS API_SER_RP,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_SER_RA') AS API_SER_RA&#13;&#10;FROM DUAL&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_CGB_AB') AS API_CGB_AB,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_CGB_HI') AS API_CGB_HI,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_CGB_RA') AS API_CGB_RA,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_CGB_RP') AS API_CGB_RP,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_CNI_AB') AS API_CNI_AB,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_CNI_HI') AS API_CNI_HI,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_CNI_RA') AS API_CNI_RA,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_CNI_RP') AS API_CNI_RP,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_ING_AB') AS API_ING_AB,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_ING_HI') AS API_ING_HI,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_ING_RA') AS API_ING_RA,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_ING_RP') AS API_ING_RP,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_MAX_AB') AS API_MAX_AB,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_MAX_HI') AS API_MAX_HI,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_MAX_RA') AS API_MAX_RA,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_MAX_RP') AS API_MAX_RP,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_SER_AB') AS API_SER_AB,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_SER_HI') AS API_SER_HI,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_SER_RA') AS API_SER_RA,&#13;&#10;(SELECT TO_CHAR(MIS_UP_TO_DATE,'yyyymmdd') FROM MISOWN.MIS_CHANNEL_DATE WHERE MIS_CHANNEL_ID = 'API_SER_RP') AS API_SER_RP&#13;&#10;FROM DUAL&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -519,6 +519,42 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="API_SER_RA"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn2"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn3"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn4"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn5"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn6"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn7"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn8"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn9"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn10"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn11"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn12"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn13"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn14"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn15"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn16"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="newColumn17"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
@@ -526,6 +562,24 @@
     <metadata connector="FLOW" name="tDBInput_1">
       <column comment="" key="false" length="-1" name="API_SER_RP" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="API_SER_RA" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn1" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn2" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn3" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn4" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn5" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn6" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn7" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn8" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn9" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn10" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn11" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn12" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn13" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn14" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn15" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn16" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="newColumn17" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="192" posY="288">
@@ -610,6 +664,57 @@
       <elementValue elementRef="TRACE_COLUMN" value="newColumn"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn17"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn16"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn15"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn14"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn13"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn12"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn11"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn10"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn8"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn9"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn6"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn7"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn4"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn5"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn2"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="newColumn1"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
@@ -658,13 +763,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6dca2ba9-ccb8-4795-9d56-421ecb3580bc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>EyD/Md3FZ6c7hTNUsvH2hCCOBgbojh8L9JkNZBRa06h1DR1eC3SUL2v8j2LWyrLBfzujWGLWyERT&#13;
-Xeai7p/tVA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b50a53db-379a-4322-b8d6-0e7a06c62d3b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3yy58S2t//C/f1uHW8xGsAXqI6mjosE7Sllrb4Marx5eg//Evsl0aRH+JUQb/SDNFrrN1UiGDxl/&#13;
-vSCc+CDlSg==</DigestValue></Reference></SignedInfo><SignatureValue>HVmPThbh4pEw7LDKZ2T4Z3G37Hg8G/4J5v5kkb+3cQmcq3ZEdUJoPL09tLR5A0pa7wuOc5hRp5To&#13;
-Lx23Q5iZ2OXfPWzUj2Q3RqVw0m5ZC9dCvOSweNDNM0ZPBKlJARevwNKAyLM6w6rd5PjGQQxwcR2w&#13;
-5hQxYghn3Sbg5zrsL3dGOdw2GpQBlpw2rA/zkvUtatZiLXORm95l7kBnrODNQuZF0DJC8UWXOFC+&#13;
-XfTnqAWaDS6W8pSpl0VEdje+TQEHN5EouyT7Xh6bwDycjNZQXfgJgV6WKrKYeTzBLwEjJv5j7Sxx&#13;
-AdOgNjxMRMj8k93muhml2Oyxf6wy7iVYg8Rtew==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7082cffc-044a-41f1-8675-b8e6a763ecdc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8Z6KUOrGbRXYsbqD3c1Q5uB2LeHbazfrdu/+e1/ExI9rpDG3/y7qVEqVOPmlau6+nwSg9N475FuW&#13;
++u/J5Fdb3g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_644f0185-5846-478c-b52c-d63431786465"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>q3iDVs+yzX0jw88aLiFNXPp3opcxm+uGpuLysRMahWRnJqk0RyxmcwLLlcqN42U4lR7umdZbZVhP&#13;
+fIEMX6bFPg==</DigestValue></Reference></SignedInfo><SignatureValue>brHDdQdlBKy5SzBDCwAZYNvXRtHpNKHuyIV4XumaXddYc+Pi2QGU9AN2fs2bef957Y0MfuInJQ4i&#13;
+fnM3UE/s2O8EoBcegCrCRZXndqov9x+gHEHDfqPOmoQztJX3QnLKJzlS849KPTonyVaTyFH4Gt9O&#13;
+fEj0Tr4ogQnvuuk7ieyJ+rlC+IC/w5OPRgooepRcfH+8D8BrrJd7P+3McWxyMTTmdDQRqiydQOVo&#13;
+rQ8QeoAnkxWNnsnAyUdID2fM+TCYrbwyH82HWIK9VueoNiksSkOwqZfERmHdf/Dl9vaKIFJ1Rp5P&#13;
+vVqO+zPBJ/KSRl9IeJ3DbM2HD0nTm4i0ZpQ02Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -686,4 +791,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b50a53db-379a-4322-b8d6-0e7a06c62d3b" Target="#_6dca2ba9-ccb8-4795-9d56-421ecb3580bc"><Timestamp>2024-12-17 14:32:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_644f0185-5846-478c-b52c-d63431786465" Target="#_7082cffc-044a-41f1-8675-b8e6a763ecdc"><Timestamp>2024-12-17 14:40:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
