@@ -140,6 +140,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileProperties_2"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="MD5" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFileProperties"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileProperties_2">
       <column key="false" length="255" name="abs_path" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -164,6 +165,7 @@
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="tMap_CALC_LOAD_FILES"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="out1">
       <column key="false" length="255" name="basename" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -202,6 +204,7 @@
     </elementParameter>
     <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" show="false" value="calc2=-1"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFilterRow_FILES"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_6">
       <column key="false" length="255" name="basename" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -558,6 +561,7 @@
     </elementParameter>
     <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDB_FILE_DATES"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_1">
       <column comment="" key="false" length="-1" name="API_CGB_AB" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -586,6 +590,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFlowToIterate_1"/>
     <elementParameter field="CHECK" name="DEFAULT_MAP" value="true"/>
     <elementParameter field="TABLE" name="MAP" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFlow_Iterate"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowToIterate_1"/>
   </node>
@@ -593,6 +598,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_2"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;API_CGB_AB&quot;, ((String)row3.API_CGB_AB));&#10;globalMap.put(&quot;API_CGB_HI&quot;, ((String)row3.API_CGB_HI));&#10;globalMap.put(&quot;API_CGB_RA&quot;, ((String)row3.API_CGB_RA));&#10;globalMap.put(&quot;API_CGB_RP&quot;, ((String)row3.API_CGB_RP));&#10;globalMap.put(&quot;API_CNI_AB&quot;, ((String)row3.API_CNI_AB));&#10;globalMap.put(&quot;API_CNI_HI&quot;, ((String)row3.API_CNI_HI));&#10;globalMap.put(&quot;API_CNI_RA&quot;, ((String)row3.API_CNI_RA));&#10;globalMap.put(&quot;API_CNI_RP&quot;, ((String)row3.API_CNI_RP));&#10;globalMap.put(&quot;API_ING_AB&quot;, ((String)row3.API_ING_AB));&#10;globalMap.put(&quot;API_ING_HI&quot;, ((String)row3.API_ING_HI));&#10;globalMap.put(&quot;API_ING_RA&quot;, ((String)row3.API_ING_RA));&#10;globalMap.put(&quot;API_ING_RP&quot;, ((String)row3.API_ING_RP));&#10;globalMap.put(&quot;API_MAX_AB&quot;, ((String)row3.API_MAX_AB));&#10;globalMap.put(&quot;API_MAX_HI&quot;, ((String)row3.API_MAX_HI));&#10;globalMap.put(&quot;API_MAX_RA&quot;, ((String)row3.API_MAX_RA));&#10;globalMap.put(&quot;API_MAX_RP&quot;, ((String)row3.API_MAX_RP));&#10;globalMap.put(&quot;API_SER_AB&quot;, ((String)row3.API_SER_AB));&#10;globalMap.put(&quot;API_SER_HI&quot;, ((String)row3.API_SER_HI));&#10;globalMap.put(&quot;API_SER_RA&quot;, ((String)row3.API_SER_RA));&#10;globalMap.put(&quot;API_SER_RP&quot;, ((String)row3.API_SER_RP));"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="tJAVA_PARAMETER_SET"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_2">
       <column comment="" key="false" length="-1" name="FILE_DATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -766,13 +772,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5d30d411-1013-409b-b7dd-1c46b6a130b7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vV7Zj9JMrHrSxS44KkauqdgHxjWPyGbM35b1oqyA4kvkZta1LBGW2mp/OWpwEomHJbFlFms4TvGd&#13;
-xbUdHLgD7A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_75e9b552-7740-4b5e-8720-1df06c5f5207"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ExLmsSxbnTfBetR0r6O/hyjK0u5WEfSny4Kk/E6f6+AwBWd0lY+E4pXACUjiCPmx8XoYaC+096am&#13;
-rr+eRWNDUw==</DigestValue></Reference></SignedInfo><SignatureValue>CK921GZnpFdqz/nMEppTge0QzXoJPOXglquy2w6IGgay0+GXAW5mfxz37u+s5SV3Muz2AqsjmC+V&#13;
-fiUQ6SzAqvieHb6JQG/HFOm0wT+s0Gc40VyWGO+ud2cqJsKyDIw6fE4BOziWVIvS3NzOIWedXMVg&#13;
-006B+7HNhyoOiMw8btVWVRHCrh0OUJO/t3EuRtoVObVkgjeBpLzaeBRB6BeADeK8jhLa9K869Zaj&#13;
-GMXdT71pCFpxGE85cRfHpJHMjWzl0Meew+i9hGj7ZV+F4Hapqhr7qhsST38Ddzsq8FiuVGFWZGII&#13;
-lZy/xgnfg/F8CaEXbfjX5cSgP21pTsDoJE1ATg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f9059b51-52b3-4ebf-b8cb-ad2031822d33"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>I1A1nqsLfyfYDbY7BJ3J4qw5y1IiNXtoPGgVHsE2SRzoeAz9qdfGQV6+uFK6FAHO897Gfzf0RMDU&#13;
+41dhdsKCng==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ee4504d8-85d3-43ae-9a4e-6ad259d7db5c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WpmgY572Z/p8/Wg4YKlduokegxqEQDtrcdtrqQ52ExsMeZJcfV+3HGk/ViZLFvmr2EWTjnBfPjbq&#13;
+jjiXaUBTqQ==</DigestValue></Reference></SignedInfo><SignatureValue>bywcrcxJXjQ2zskaetXXUCiFEpUJeT5Gc/zxRk0NuKEByXY96WTIS12fZPaiO6X5c2QkVjq6pbcL&#13;
+F/mNXrWxgfFM7YaU34A8rwTEp/28QbpTwOCVqFMZZvMUcuDwcxE/KB791ceKOWBnUY/fz151S/AX&#13;
+4nwS14Sn0SwJktU714mKFHujl6V8Hay7qtZWhECjuy4uCBZCRWOTyfCEty0/hVzCOA7tO9vvN612&#13;
+sbBHB3iebGfUKuxCD57F+PmM6T+TQk6bK727YZWSw1mEdyNoQG/mH/t16gPdOCoApWunQPwt/xdw&#13;
+YS6I8fusdhO8YoyfcEYeD+1cLB8jl3ZR/g6vHg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -794,4 +800,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_75e9b552-7740-4b5e-8720-1df06c5f5207" Target="#_5d30d411-1013-409b-b7dd-1c46b6a130b7"><Timestamp>2024-12-17 15:03:56</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ee4504d8-85d3-43ae-9a4e-6ad259d7db5c" Target="#_f9059b51-52b3-4ebf-b8cb-ad2031822d33"><Timestamp>2024-12-17 15:13:13</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
