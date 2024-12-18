@@ -779,7 +779,7 @@
     <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_ABSENCE"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_HISTORY"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_3">
       <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -878,7 +878,7 @@
     <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_ABSENCE"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_ROTA_ACTUAL"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_4">
       <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -977,7 +977,7 @@
     <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_ABSENCE"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_ROTA_PLAN"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_5">
       <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -1343,105 +1343,6 @@
       <column comment="" key="false" length="-1" name="FILE_DATE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="960" posY="704">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
-    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HOST" value="context.api_staging_host"/>
-    <elementParameter field="TEXT" name="PORT" value="context.api_staging_port"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.api_staging_database"/>
-    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="TABLESCHEMA" value="context.api_staging_schema"/>
-    <elementParameter field="TEXT" name="USER" value="context.api_staging_username"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:UwV/LmcN+HzGQYFzI9qOOurGoYswz/H2tY2enfn/79VuxGEw2KMl8Bs+B5LV0PK2kxsF++bFxFY="/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;AUD_PEOPLE_ABSENCE_ERR_LOG&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
-    <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
-    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
-    <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
-    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" show="false" value="false"/>
-    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
-    <elementParameter field="TABLE" name="ADD_COLS"/>
-    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
-    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_SOURCE_FILE_NAME"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_FILE_DATE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_LOAD_DATE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_ASSESSMENT_PROVIDER_ID"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_ERROR_TYPE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_ERROR_DESCRIPTION"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
-    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
-    <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_UPPERCASE" value="false"/>
-    <elementParameter field="CHECK" name="CONTAIN_BLOB_FROM_OTHER_DB" value="false"/>
-    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
-    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
-    <elementParameter field="CHECK" name="USE_BATCH_AND_USE_CONN" show="false" value="false"/>
-    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
-    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
-    <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
-    <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
-    <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_ABSENCE"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBOutput_2">
-      <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_ERROR_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_ERROR_DESCRIPTION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_ERROR_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_ERROR_DESCRIPTION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileProperties_2">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
@@ -1682,18 +1583,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_33054110-855f-4463-bb3b-5ddb4b577252"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fVnJmn7YxNwEPHg2n24h3P8IeKjTHJWBjJfj+Eto2bknBhfd6OT4XA6+pCUU/sM0fGGEDn8g2Cgk&#13;
-JUlcpzjD0w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5be4dbfe-f815-4ce8-827a-4268059b70b0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oMU1wRYVh8zBzG0QufzEDB8cjFLXkc4Q+06++SOILw3GmCQFvyDr8WqulP22vnzHxZm7k1+vDhbu&#13;
-sNvbXN2dEA==</DigestValue></Reference></SignedInfo><SignatureValue>aLnUjnzLqSuEUiJs8R0yXSZk9ctG+FORGeJGIneM7uuaKsnpdr8Otj0idjd0032Q09N8C8DkFbKj&#13;
-c7Yz398uevsUrOFIhStR6O7mesQbksXSXB58NKpy9Xi6fy9doLwhwlfYVoZsHQLZLuKzO4Vl5QO1&#13;
-x53qgsycEgQZz2GDPSPDJeD5gfLnewMVY13FyKdir9ffghnwWjOlO8l6KBNol8+c1C+f/GE6x3aP&#13;
-zKD0YVj/iHxWp418mg4lKR0WmIXqNSJX+dh82M6ny/m8K/8abfOFQtyMTZKeOiTLf5apBqCvdwNK&#13;
-CRLONyhcQ8BLMz7eEbS8qENNPSmHReGfzO72aw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a1743e90-7bb6-4385-8ca9-530f469a9004"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SHmiFEwdrdv++DTjGSYLEx2bk1+cYpiItPEWGdDmIghl8g+Lr6AKNQYYH0/2hUrCHoQOIDobFJ2J&#13;
+ze9gXZaYIQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2624f830-17fc-4940-866f-4b0df59f03d4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LwdW8sNHVBBCB0dF2tsSHqm6PW6cbdfOrdYybPOPjM+OWihlJF1krMbBF7GrMLuhJ9BDCwrhezgn&#13;
+6dAvxi8/Jg==</DigestValue></Reference></SignedInfo><SignatureValue>YfXQoD/P+5UzwaweACcEFphE1uI6+rvGSH5FspHfJpVxTKKHKUJKYo+wusjOtxoMUANTwtZaL7d8&#13;
+nsB2PsYUUxRyzjiA//T0Bhsvyu+uvKuYhERaWqrRzEQ/JNNcltYmpk1bbZhBx3REtW1QKqg7mFEJ&#13;
+1bNRKe1p6TWiHU6ju/OGFLmhi6KvPyZ9qHbedMRB3g3hAahZBe5q/uthGsFHqVKDjd+vfBBndbi4&#13;
+MDlFeaBk/VIG9wUg4iwwjQgMxK//lsfYeCgImm1mY6fjSGTzvx41ZlfW/aRomplLGuA8PTcakWYu&#13;
+R/RckeqdJSb2AqPxiztWib8NVpQrxdhFczAA5A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1715,4 +1611,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5be4dbfe-f815-4ce8-827a-4268059b70b0" Target="#_33054110-855f-4463-bb3b-5ddb4b577252"><Timestamp>2024-12-18 10:53:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2624f830-17fc-4940-866f-4b0df59f03d4" Target="#_a1743e90-7bb6-4385-8ca9-530f469a9004"><Timestamp>2024-12-18 10:54:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
