@@ -1431,7 +1431,6 @@
       <column comment="" key="false" length="-1" name="Directory" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Prefix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Suffix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Actual_Suffix" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -1444,8 +1443,7 @@
         <mapperTableEntries expression=" Var.vSource " name="Source" nullable="true" type="id_String"/>
         <mapperTableEntries expression="Var.vDirectory.contains(&quot;Archive&quot;)&#13;&#10;?&#13;&#10;&quot;Archive&quot;&#13;&#10;:&#13;&#10;&quot;Source&quot; " name="Directory" type="id_String"/>
         <mapperTableEntries expression="StringHandling.LEFT(Var.vFile, StringHandling.INDEX(Var.vFile, &quot;_&quot;)).equals(&quot;Absence&quot;)&#13;&#10;||&#13;&#10;StringHandling.LEFT(Var.vFile, StringHandling.INDEX(Var.vFile, &quot;_&quot;)).equals(&quot;History&quot;) &#10;||&#10;StringHandling.LEFT(Var.vFile, StringHandling.INDEX(Var.vFile, &quot;_&quot;)).equals(&quot;Rota Actual&quot;)&#10;||&#10;StringHandling.LEFT(Var.vFile, StringHandling.INDEX(Var.vFile, &quot;_&quot;)).equals(&quot;Rota Plan&quot;)&#10;?&#10;&quot;File Prefix OK&quot;&#10;:&#10;&quot;File Prefix NOT OK&quot; " name="Prefix" type="id_String"/>
-        <mapperTableEntries expression="StringHandling.RIGHT(Var.vFile, StringHandling.INDEX(Var.vFile, &quot;_&quot;)).matches(&quot;\d{6}&quot;)&#13;&#10;||&#13;&#10;StringHandling.RIGHT(Var.vFile, StringHandling.INDEX(Var.vFile, &quot;_&quot;)).matches(&quot;\d{6}&quot;)&#13;&#10;||&#13;&#10;StringHandling.RIGHT(Var.vFile, StringHandling.INDEX(Var.vFile, &quot;_&quot;)).matches(&quot;\d{6}&quot;)&#13;&#10;||&#13;&#10;StringHandling.RIGHT(Var.vFile, StringHandling.INDEX(Var.vFile, &quot;_&quot;)).matches(&quot;\d{6}&quot;)&#13;&#10;?&#13;&#10;&quot;File Suffix OK&quot;&#13;&#10;:&#13;&#10;&quot;File Suffix NOT OK&quot; " name="Suffix" type="id_String"/>
-        <mapperTableEntries expression="StringHandling.RIGHT(Var.vFile, StringHandling.INDEX(Var.vFile, &quot;_&quot;)) " name="Actual_Suffix" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.RIGHT(Var.vFile, StringHandling.INDEX(Var.vFile, &quot;_&quot;)) " name="Suffix" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row9" sizeState="INTERMEDIATE">
         <mapperTableEntries name="abs_path" nullable="true" type="id_String"/>
@@ -1475,21 +1473,18 @@
       <column comment="" key="false" length="-1" name="Directory" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Prefix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Suffix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Actual_Suffix" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FILTER" name="FILTER">
       <column comment="" key="false" length="-1" name="Source" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Directory" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Prefix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Suffix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Actual_Suffix" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="Source" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Directory" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Prefix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Suffix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Actual_Suffix" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
@@ -1515,8 +1510,6 @@
       <elementValue elementRef="LENGTH" value="10"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Suffix"/>
       <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Actual_Suffix"/>
-      <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
@@ -1526,7 +1519,6 @@
       <column comment="" key="false" length="-1" name="Directory" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Prefix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Suffix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Actual_Suffix" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileProperties_2">
@@ -1829,13 +1821,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_982effee-d104-4e73-a95e-c174eb9beb76"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LhXDkfzqYbu4smuYyps+6NqfoRlLbFfWdt+p+vLs8AC7ZA9p9meIsQzfPt+lvEhtW4Z0Pr3V+uUS&#13;
-1lZ+cFpdBg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_929b2758-e645-491c-9020-b9227ec6ae2e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>mLjx7RQTp4cfaDh97zZPDJ04vL5dhFH2SZJBGlunWf7JVx1PhF26Tk5FSCeofpKS677JLIhcXpiB&#13;
-aIh6910QLA==</DigestValue></Reference></SignedInfo><SignatureValue>ce3J0uxQxsuK8c/C/vduwh1rDRHdz2XdHGLcEGqJidCtSqcSt/VaGyZJLq6K+ZGhf9BtcDARGkUI&#13;
-xDG9qxhAap8sH49yA6x35bsh2Sx9DPnUZvo3jpZ4Gq24co+xBHtFnq9RtQ6T+4HLie3lGnkOXkn9&#13;
-h6oYfvWV14EbNG0rgtW79rVltej4wTn0vRQfBcRVoFgYsGmQ71/5BYFMXQG/o+g7MWaZSZn3UVE9&#13;
-RQ5HiGsbIUMZsw365sehjTaKwE6ylnMdK24YNhh79WO/Oy9BssglAwpen2TgtqRbVOy4waAk+zl0&#13;
-1sUmQ6l+uyQosQYYost0CYKVyZMp4j25oVdaqA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7a5a3d86-b242-4052-be9e-9ed72dd311fb"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>HAY60jt2mdRkTUSqICDI2nuo0Yf9v7Lwv61FWacebI3W+1/O8ix7+r3FssrqDnkTxrDW866IbdIY&#13;
+3r9GslWnoQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dbfbe190-a9ee-4ad6-897f-b650a53fbe95"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fe6EY/4mIX+WvhyezxxZdBPmP7ERHJQVr1BlJgNX6vWes3pdtekSL9h9C8ayY2XLdYzoOHdTaJNL&#13;
+VwvPpAl1pA==</DigestValue></Reference></SignedInfo><SignatureValue>Dt8hnpzonJn2J8NOTqIL3YPxIYs/4v3Ozy9h1tE4agwiUx7gTfjQQF7rblbFoPAQoCYwd0oleBmw&#13;
+seFiWHX45qezHx1QSA37fpAsH8snwYUBXyrMqj+z53yIvyDIksDISzrdcofQ5OFfk7UY8XW7d8zg&#13;
++7DUBOfEXOiAUnbJcMrd3GM9BE6Yk5oqlux4IbIzFU3q9gG8mP2I9aLLnVULS3jgSGHtf7gI5to9&#13;
+muG1mnNrAyic+GXgi5OLQwFEpY3Sod38UBf8/nV6YXOjoKrfTkkNslSg7okqINdNQZCDdm1T6/o9&#13;
+1nayVNd6NiahaJctfs3mbj+JO29U6Hz1PnaXMg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1857,4 +1849,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_929b2758-e645-491c-9020-b9227ec6ae2e" Target="#_982effee-d104-4e73-a95e-c174eb9beb76"><Timestamp>2024-12-19 15:59:15</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dbfbe190-a9ee-4ad6-897f-b650a53fbe95" Target="#_7a5a3d86-b242-4052-be9e-9ed72dd311fb"><Timestamp>2024-12-19 16:03:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
