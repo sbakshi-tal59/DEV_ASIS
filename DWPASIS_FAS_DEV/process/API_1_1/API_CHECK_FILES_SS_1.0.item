@@ -1552,6 +1552,176 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="832" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_3"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEDIRECTORY&quot;))+&quot;/&quot;+((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;))"/>
+    <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+    <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" show="false" value="&quot;D:/ASIS/Development_Workspace&quot;"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEDIRECTORY&quot;)),1,23) + &quot;Archive/&quot; + StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEDIRECTORY&quot;)),24,20)"/>
+    <elementParameter field="CHECK" name="RENAME" value="true"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="row12.Assessment_Provider+&quot;_ERR_&quot;+TalendDate.getDate(&quot;yyyyMMdd_HHmmss&quot;)+&quot;_&quot;+((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;))"/>
+    <elementParameter field="CHECK" name="REMOVE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="REPLACE_FILE" value="false"/>
+    <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="false"/>
+    <elementParameter field="CHECK" name="FAILON" value="false"/>
+    <elementParameter field="CHECK" name="FORCE_COPY_DELETE" value="false"/>
+    <elementParameter field="CHECK" name="PRESERVE_LAST_MODIFIED_TIME" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFC_COPY_TO_ARCHIVE"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileCopy_3">
+      <column comment="" key="false" length="-1" name="Source" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Directory" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prefix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prefix_Check" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Suffix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Suffix_Check" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Suffix_Check_LEN" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="992" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_10"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_Gfy-wL6_Ee-OgYLcFLoN6A-tMap_9-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="tMap_ERROR_FILES"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="copyOfcopyOfln_ABSENCE_ERR">
+      <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_ERROR_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_ERROR_DESCRIPTION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="copyOfcopyOfln_ABSENCE_ERR" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row14.File_Name " name="AUD_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)) " name="AUD_FILE_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;))" name="AUD_LOAD_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row14.Assessment_Provider " name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="&quot;Incorrect File Name&quot; " name="AUD_ERROR_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;The file name is in an incorrect format. It should contain an underscore.&quot; " name="AUD_ERROR_DESCRIPTION" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row14" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="Source" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Directory" type="id_String"/>
+        <mapperTableEntries name="Prefix" type="id_String"/>
+        <mapperTableEntries name="Prefix_Check" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Suffix" type="id_String"/>
+        <mapperTableEntries name="Suffix_Check" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Suffix_Check_LEN" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="544">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_6"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.api_staging_host"/>
+    <elementParameter field="TEXT" name="PORT" value="context.api_staging_port"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.api_staging_database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TABLESCHEMA" value="context.api_staging_schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.api_staging_username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:5jP9R716g0WvysyiUWOD2FDkGuE7X2MJ9glCRaHNKS4KDX2KeFtyMyRnTSPs2/lCLpsVzuu7X8g="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;AUD_PEOPLE_ABSENCE_ERR_LOG&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="NONE"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
+    <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_SOURCE_FILE_NAME"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_FILE_DATE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_LOAD_DATE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_ASSESSMENT_PROVIDER_ID"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_ERROR_TYPE"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="AUD_ERROR_DESCRIPTION"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_UPPERCASE" value="false"/>
+    <elementParameter field="CHECK" name="CONTAIN_BLOB_FROM_OTHER_DB" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="CHECK" name="USE_BATCH_AND_USE_CONN" show="false" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
+    <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
+    <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_ABSENCE"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_6">
+      <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_ERROR_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_ERROR_DESCRIPTION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_ERROR_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_ERROR_DESCRIPTION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_3"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;D:/Globalscape_Inbound&quot;"/>
@@ -2108,6 +2278,18 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row10"/>
   </connection>
+  <connection connectorName="FILTER" label="row15" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_43" target="tFileCopy_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row15"/>
+  </connection>
+  <connection connectorName="FLOW" label="row14" lineStyle="0" metaname="tFileCopy_3" offsetLabelX="0" offsetLabelY="0" source="tFileCopy_3" target="tMap_10">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row14"/>
+  </connection>
+  <connection connectorName="FLOW" label="copyOfcopyOfln_ABSENCE_ERR" lineStyle="0" metaname="copyOfcopyOfln_ABSENCE_ERR" offsetLabelX="0" offsetLabelY="0" source="tMap_10" target="tDBOutput_6">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfcopyOfln_ABSENCE_ERR"/>
+  </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_3" offsetLabelX="0" offsetLabelY="0" source="tFileList_3" target="tFileProperties_3">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
@@ -2200,13 +2382,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_20138b68-ac7e-4704-abbf-c0f206ae75f9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>awqmrrXXph0KYZLJOzQX2nazirf5n47lsdxt2DIM7Vpzxy6RAWD6ZQBhvFHAyxcfktABsbw6AR8g&#13;
-EnkhGyBsiA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0faca17e-9a9b-4eb2-88aa-5e3e2c9de6f7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>oK01MULlsddSt7JqKjuQff3QjQQw0rYBPdHf2MJKklKZZ6z4RVj9cI/BPQ3cJH2sJe9YhfbRLuQy&#13;
-yTwcRunJqQ==</DigestValue></Reference></SignedInfo><SignatureValue>BnTEF4/EUP6Q9TR1vvXmhaWQDXj9wN0Q28Pqjt2c58Z9FyoqwE7n3VDHgU2KX58mGRtWnzFJZ9RC&#13;
-vm+n4jWWSk1kHEe7I6xbNLi9zy0J94LbyfQJczw4qf3xnwRqpiVfSMh87l4Szlu3geHyt1b4GqnM&#13;
-kJQ4UaD8zEVTfLORYMRMktxFZgyuLeDIXysZ4urzdl2D4oh3B3OiMYmAfxIqFWNWS6t/e0ZJOXZP&#13;
-MqUMr/ToDnyazcTi8SLEIKrSovHgTufwC+1pCP4xVE57V6p0UPKFX6VVOGRzAXkGDpqkZTf0Ze3b&#13;
-014mtDWN6g5+wOX4Ot6C6pLgisWu1DMexS+8mw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0a816c1e-0551-46b2-b3db-4faa96a14cc9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OTs9BvQ5ftxxV63sGRaH91PaRHFCIBJy0FlULTLr7aMExayPV0aG1/SB+bGR64AK1Dgkn69RSmqS&#13;
+KA4ZT8w1aA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d3baafad-0b34-431e-85ff-922719944545"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2z1iHZwEV4F1k32hmgZNS5eUijG2UudIoFYyBWnLvFNXVnnsVGcKVKu5G5x5luCBQdoGiN6/soYz&#13;
+fxVWvxayKw==</DigestValue></Reference></SignedInfo><SignatureValue>eR0GihVVVtHKbZ5ogqXMTWNLRKvLyDE6aZPFH+kc92CYYRSkwEB/3fuz2BmN9DDYUaZ8O51b4Bhz&#13;
+s2QwXf1P5jqYuWNH2iYg84YnD8e4ScMJt4CczWs85aKmlP17nv1r6RbRV522JQOBU56UJ2hZZVN6&#13;
+f7iFWoorn3SUtv8PTOj5j46j+mpnPdTjzB3SvR8JbF38lYYTraPEVuMjWbuxaLeydFLIfXXS9fnD&#13;
+FuDL+7T7CYNKDV6D/k8bxlXVgy6RPr3K9u5DT07vx4OfcmXLTbEeLThNow3tQ5bxPw5AS2hgklSP&#13;
+tVlSkOulALunKCOPYVjj3hDSrHNLo3mOb59MsQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2228,4 +2410,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0faca17e-9a9b-4eb2-88aa-5e3e2c9de6f7" Target="#_20138b68-ac7e-4704-abbf-c0f206ae75f9"><Timestamp>2024-12-20 12:10:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d3baafad-0b34-431e-85ff-922719944545" Target="#_0a816c1e-0551-46b2-b3db-4faa96a14cc9"><Timestamp>2024-12-20 12:11:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
