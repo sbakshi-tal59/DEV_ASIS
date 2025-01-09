@@ -170,6 +170,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tMap_CALC_LOAD_FILES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Calculates Load Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="out1">
       <column key="false" length="255" name="Provider" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -213,6 +214,7 @@
     <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" show="false" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
     <elementParameter field="TEXT" name="LABEL" value="tFR_FILTER_OLD_FILES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILTER&lt;/b&gt;&lt;br&gt;Filters Old files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_9">
       <column key="false" length="255" name="Provider" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -255,6 +257,7 @@
     <elementParameter field="CHECK" name="FORCE_COPY_DELETE" value="false"/>
     <elementParameter field="CHECK" name="PRESERVE_LAST_MODIFIED_TIME" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tFC_COPY_TO_ARCHIVE"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILE_COPY&lt;/b&gt;&lt;br&gt;Copy_To_Archive_Folder"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileCopy_1">
       <column key="false" length="255" name="Provider" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -279,6 +282,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tMap_SPLIT_SOURCE"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;SPLIT_SOURCE"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="Absense">
       <column comment="" key="false" length="-1" name="File_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -353,6 +357,7 @@
     <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" show="false" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
     <elementParameter field="TEXT" name="LABEL" value="tFR_FILTER_ABSENCE"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILTER&lt;/b&gt;&lt;br&gt;Filters Absence Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_19">
       <column comment="" key="false" length="-1" name="File_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -386,6 +391,7 @@
     <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" show="false" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
     <elementParameter field="TEXT" name="LABEL" value="tFR_FILTER_HISTORY"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILTER&lt;/b&gt;&lt;br&gt;Filters History Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_20">
       <column comment="" key="false" length="-1" name="File_Name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -419,6 +425,7 @@
     <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" show="false" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
     <elementParameter field="TEXT" name="LABEL" value="tFR_FILTER_ROTA_ACTUAL"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;Filter&lt;/b&gt;&lt;br&gt;Filters Rota Actual Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_21">
       <column comment="" key="false" length="-1" name="File_Name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -452,6 +459,7 @@
     <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" show="false" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
     <elementParameter field="TEXT" name="LABEL" value="tFR_FILTER_ROTA_PLAN"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILTER&lt;/b&gt;&lt;br&gt;Filters Rota Plan Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_22">
       <column comment="" key="false" length="-1" name="File_Name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -487,6 +495,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tMap_ABSENCE_FILES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Filters Absence Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_ABSENCE_ERR">
       <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -594,6 +603,7 @@
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_ABSENCE"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_ABSENCE&lt;/b&gt;&lt;br&gt;Inserts records in AUD_PEOPLE_ABSENCE"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
       <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -628,6 +638,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tMap_HISTORY_FILES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Filters History Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_HISTORY_ERR">
       <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -670,6 +681,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tMap_ROTA_ACTUAL_FILES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Filters Rota Actual Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_ROTA_ACTUAL_ERR">
       <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -712,6 +724,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tMap_ROTA_PLAN_FILES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Filters Rota Plan Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_ROTA_PLAN_ERR">
       <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -819,6 +832,7 @@
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_HISTORY"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_HISTORY&lt;/b&gt;&lt;br&gt;Inserts records in AUD_PEOPLE_HISTORY"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_3">
       <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -918,6 +932,7 @@
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_ROTA_ACTUAL"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_ROTA_ACTUAL&lt;/b&gt;&lt;br&gt;Inserts records in AUD_PEOPLE_ROTA_ACTUAL"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_4">
       <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -1017,6 +1032,7 @@
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_ROTA_PLAN"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_ROTA_PLAN&lt;/b&gt;&lt;br&gt;Inserts records in AUD_PEOPLE_ROTA_PLAN"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_5">
       <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -2427,13 +2443,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c6d7e7c5-10fe-4e49-9779-021e012c0cf2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5kk7iz0jEbC2AHq3IHogYGpCl2Cv8gXhC24HCGNycoF75iFO1uBtbv8j2x8tH6D97d1vPn+Z5CcC&#13;
-55MJhBvUTQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5bf10106-6c03-4459-9d7c-2b43ca5f9f88"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>C8OlkXUXtBgJy7OO26AH/qFy0Sieirf8lz72xWvlCaq5yQYYuKZNLzBWehOHyGmQ60CVD6lXGgaV&#13;
-1G7DxfyhpA==</DigestValue></Reference></SignedInfo><SignatureValue>JdynC/BXub5os4a5IoV6ZsSa/BsSg9tXWa8y1Fs6H5CbkU2+Iad5kMK0qx2D7W6o+hUcVX3NNmzD&#13;
-BL+m7f2yL5JloNehSURqPqCEjCtt/nFmYQdw28saN2jF4lc11CuVh1hEo/NlWK3S9HjSKfmdumuw&#13;
-NFux6k11M9r1g2giYEg+o+CHEIeinLEVsVyczPY1VvRhGWScf8+DMDoyM7oCjs2bkamyULky14+8&#13;
-cNVR4EOEWh0lgxB24RalAHWqJG5b61Or/xHw33pFIbApyGyaRI3G5Il7R0KK/E2HMMqLYObMER4B&#13;
-JrPmt/N+saqRj4OvEKsiqKx7j+/YD4XIwVWptg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0c03fff2-da45-47b5-bb03-2f144caf5998"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sEvD4tUqj0T+6rnbFPPgBcEcQVVLrFZhNTYZuKhqCL3BaiaHFqLJS1KYbUd7CSxq6RrZ+9iTBZYv&#13;
+t4PkrA3pwQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_294feeb9-d990-4827-ad34-0c8c094a3d31"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Aww6l4V9CAeCHfkOTUpt/zh9Jcm3XJPby/usZEcjlcMsaKRUmvzThvlc5OfaEQN3w20slOMgJjWq&#13;
+aDlNKT4/vg==</DigestValue></Reference></SignedInfo><SignatureValue>pyHZWvZJUyPPs+xNMR22iWdaso3Rhq++lItq86/jNY1/zQqBGT6NBQf3EZjLqhh8qAPl8XpCguWa&#13;
+oAWHjysF/ZXuJtHkibRkS/YGlFyDoIV51gtjfHWzIVFGXyrO8eUi+eyMxdQ1wRbE4eer1OXKy4V7&#13;
+E+TNXerwv0IAP+cVoDN3c7rZVrro16zJRW903ZhK7f6K/y31m6oZSNJH/jOwNdV/MsMe/7mSipjq&#13;
+afoSn618S2+Gdh0RPSSKbPblzSpoLvk2Vr2J0dvXSEfduTJgk/0FOp3C4WNJrs72G2pppOQplx4S&#13;
+JNf6cpo6kbONiFb1pIWAzer+Hh3bW1sUj0Yf9Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2455,4 +2471,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5bf10106-6c03-4459-9d7c-2b43ca5f9f88" Target="#_c6d7e7c5-10fe-4e49-9779-021e012c0cf2"><Timestamp>2025-01-09 09:00:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_294feeb9-d990-4827-ad34-0c8c094a3d31" Target="#_0c03fff2-da45-47b5-bb03-2f144caf5998"><Timestamp>2025-01-09 09:20:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
