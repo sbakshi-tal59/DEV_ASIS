@@ -1392,7 +1392,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_2"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;API_CGB_AB&quot;, ((String)row3.API_CGB_AB));&#10;globalMap.put(&quot;API_CGB_HI&quot;, ((String)row3.API_CGB_HI));&#10;globalMap.put(&quot;API_CGB_RA&quot;, ((String)row3.API_CGB_RA));&#10;globalMap.put(&quot;API_CGB_RP&quot;, ((String)row3.API_CGB_RP));&#10;globalMap.put(&quot;API_CNI_AB&quot;, ((String)row3.API_CNI_AB));&#10;globalMap.put(&quot;API_CNI_HI&quot;, ((String)row3.API_CNI_HI));&#10;globalMap.put(&quot;API_CNI_RA&quot;, ((String)row3.API_CNI_RA));&#10;globalMap.put(&quot;API_CNI_RP&quot;, ((String)row3.API_CNI_RP));&#10;globalMap.put(&quot;API_ING_AB&quot;, ((String)row3.API_ING_AB));&#10;globalMap.put(&quot;API_ING_HI&quot;, ((String)row3.API_ING_HI));&#10;globalMap.put(&quot;API_ING_RA&quot;, ((String)row3.API_ING_RA));&#10;globalMap.put(&quot;API_ING_RP&quot;, ((String)row3.API_ING_RP));&#10;globalMap.put(&quot;API_MAX_AB&quot;, ((String)row3.API_MAX_AB));&#10;globalMap.put(&quot;API_MAX_HI&quot;, ((String)row3.API_MAX_HI));&#10;globalMap.put(&quot;API_MAX_RA&quot;, ((String)row3.API_MAX_RA));&#10;globalMap.put(&quot;API_MAX_RP&quot;, ((String)row3.API_MAX_RP));&#10;globalMap.put(&quot;API_SER_AB&quot;, ((String)row3.API_SER_AB));&#10;globalMap.put(&quot;API_SER_HI&quot;, ((String)row3.API_SER_HI));&#10;globalMap.put(&quot;API_SER_RA&quot;, ((String)row3.API_SER_RA));&#10;globalMap.put(&quot;API_SER_RP&quot;, ((String)row3.API_SER_RP));"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;API_CGB_AB&quot;, ((String)ln_FILE_DATES.API_CGB_AB));&#10;globalMap.put(&quot;API_CGB_HI&quot;, ((String)ln_FILE_DATES.API_CGB_HI));&#10;globalMap.put(&quot;API_CGB_RA&quot;, ((String)ln_FILE_DATES.API_CGB_RA));&#10;globalMap.put(&quot;API_CGB_RP&quot;, ((String)ln_FILE_DATES.API_CGB_RP));&#10;globalMap.put(&quot;API_CNI_AB&quot;, ((String)ln_FILE_DATES.API_CNI_AB));&#10;globalMap.put(&quot;API_CNI_HI&quot;, ((String)ln_FILE_DATES.API_CNI_HI));&#10;globalMap.put(&quot;API_CNI_RA&quot;, ((String)ln_FILE_DATES.API_CNI_RA));&#10;globalMap.put(&quot;API_CNI_RP&quot;, ((String)ln_FILE_DATES.API_CNI_RP));&#10;globalMap.put(&quot;API_ING_AB&quot;, ((String)ln_FILE_DATES.API_ING_AB));&#10;globalMap.put(&quot;API_ING_HI&quot;, ((String)ln_FILE_DATES.API_ING_HI));&#10;globalMap.put(&quot;API_ING_RA&quot;, ((String)ln_FILE_DATES.API_ING_RA));&#10;globalMap.put(&quot;API_ING_RP&quot;, ((String)ln_FILE_DATES.API_ING_RP));&#10;globalMap.put(&quot;API_MAX_AB&quot;, ((String)ln_FILE_DATES.API_MAX_AB));&#10;globalMap.put(&quot;API_MAX_HI&quot;, ((String)ln_FILE_DATES.API_MAX_HI));&#10;globalMap.put(&quot;API_MAX_RA&quot;, ((String)ln_FILE_DATES.API_MAX_RA));&#10;globalMap.put(&quot;API_MAX_RP&quot;, ((String)ln_FILE_DATES.API_MAX_RP));&#10;globalMap.put(&quot;API_SER_AB&quot;, ((String)ln_FILE_DATES.API_SER_AB));&#10;globalMap.put(&quot;API_SER_HI&quot;, ((String)ln_FILE_DATES.API_SER_HI));&#10;globalMap.put(&quot;API_SER_RA&quot;, ((String)ln_FILE_DATES.API_SER_RA));&#10;globalMap.put(&quot;API_SER_RP&quot;, ((String)ln_FILE_DATES.API_SER_RP));"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="tJAVA_PARAMETER_SET"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;JAVA_PARAMETER_SET&lt;/b&gt;&lt;br&gt;Assigns values to MIS_CHANNEL_DATE entries"/>
@@ -1824,7 +1824,7 @@
     <elementParameter field="TEXT" name="LABEL" value="tMap_CALC_LOAD_FILES"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;tMap&lt;/b&gt;&lt;br&gt;Calculates Load Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="copyOfout2">
+    <metadata connector="FLOW" name="ln_Calc_Load_Files">
       <column comment="" key="false" length="-1" name="File_Name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Check" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Directory" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1832,19 +1832,19 @@
       <column comment="" key="false" length="-1" name="vDirectory" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="((String)globalMap.get(&quot;tFileList_3_CURRENT_FILE&quot;)) " name="vFile" type="id_String"/>
         <mapperTableEntries expression="((String)globalMap.get(&quot;tFileList_3_CURRENT_FILEDIRECTORY&quot;)) " name="vDirectory" type="id_String"/>
       </varTables>
-      <outputTables name="copyOfout2" sizeState="INTERMEDIATE">
+      <outputTables name="ln_Calc_Load_Files" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="Var.vFile " name="File_Name" nullable="true" type="id_String"/>
         <mapperTableEntries expression="Var.vFile.contains(&quot;_&quot;)&#13;&#10;?&#13;&#10;&quot;Yes&quot;&#13;&#10;:&#10;&quot;No&quot; " name="Check" type="id_String"/>
         <mapperTableEntries expression="Var.vDirectory.contains(&quot;Archive&quot;)&#13;&#10;?&#13;&#10;&quot;Archive&quot;&#13;&#10;:&#13;&#10;&quot;Source&quot; " name="Directory" type="id_String"/>
         <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_3_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?3:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_3_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?4:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_3_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?5:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_3_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?6:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_3_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?7:-1 " name="Assessment_Provider" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="Var.vDirectory " name="vDirectory" type="id_String"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row11" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_FileProperties" sizeState="INTERMEDIATE">
         <mapperTableEntries name="abs_path" nullable="true" type="id_String"/>
         <mapperTableEntries name="dirname" nullable="true" type="id_String"/>
         <mapperTableEntries name="basename" nullable="true" type="id_String"/>
@@ -1903,7 +1903,7 @@
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" show="false" value="&quot;D:/ASIS/Development_Workspace&quot;"/>
     <elementParameter field="DIRECTORY" name="DESTINATION" value="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_3_CURRENT_FILEDIRECTORY&quot;)),1,23) + &quot;Archive/&quot; + StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_3_CURRENT_FILEDIRECTORY&quot;)),24,20)"/>
     <elementParameter field="CHECK" name="RENAME" value="true"/>
-    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="row12.Assessment_Provider+&quot;_ERR_&quot;+TalendDate.getDate(&quot;yyyyMMdd_HHmmss&quot;)+&quot;_&quot;+((String)globalMap.get(&quot;tFileList_3_CURRENT_FILE&quot;))"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="ln_Filter_Archive.Assessment_Provider+&quot;_ERR_&quot;+TalendDate.getDate(&quot;yyyyMMdd_HHmmss&quot;)+&quot;_&quot;+((String)globalMap.get(&quot;tFileList_3_CURRENT_FILE&quot;))"/>
     <elementParameter field="CHECK" name="REMOVE_FILE" value="true"/>
     <elementParameter field="CHECK" name="REPLACE_FILE" value="false"/>
     <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="false"/>
@@ -1949,14 +1949,14 @@
       <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_UNDERSCORE_ERR" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row13.File_Name " name="AUD_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_Copy_Archive.File_Name " name="AUD_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)) " name="AUD_FILE_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;))" name="AUD_LOAD_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row13.Assessment_Provider " name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="ln_Copy_Archive.Assessment_Provider " name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="&quot;Incorrect File Name&quot; " name="AUD_ERROR_TYPE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;The file name is in an incorrect format. It should contain an underscore.&quot; " name="AUD_ERROR_DESCRIPTION" nullable="true" type="id_String"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row13" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_Copy_Archive" sizeState="INTERMEDIATE">
         <mapperTableEntries name="File_Name" nullable="true" type="id_String"/>
         <mapperTableEntries name="Check" type="id_String"/>
         <mapperTableEntries name="Directory" type="id_String"/>
@@ -2216,7 +2216,7 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tRowGenerator_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tFlowToIterate_1">
+  <connection connectorName="FLOW" label="ln_FILE_DATES" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tFlowToIterate_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="API_CGB_HI"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -2280,7 +2280,7 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_FILE_DATES"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tFileList_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk7"/>
@@ -2359,11 +2359,11 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_3" offsetLabelX="0" offsetLabelY="0" source="tFileList_3" target="tFileList_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk6"/>
   </connection>
-  <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tFileProperties_3" offsetLabelX="0" offsetLabelY="0" source="tFileProperties_3" target="tMap_8">
+  <connection connectorName="FLOW" label="ln_FileProperties" lineStyle="0" metaname="tFileProperties_3" offsetLabelX="0" offsetLabelY="0" source="tFileProperties_3" target="tMap_8">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row11"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_FileProperties"/>
   </connection>
-  <connection connectorName="FLOW" label="copyOfout2" lineStyle="0" metaname="copyOfout2" offsetLabelX="0" offsetLabelY="0" source="tMap_8" target="tFilterRow_35">
+  <connection connectorName="FLOW" label="ln_Calc_Load_Files" lineStyle="0" metaname="ln_Calc_Load_Files" offsetLabelX="0" offsetLabelY="0" source="tMap_8" target="tFilterRow_35">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="Assessment_Provider"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -2379,15 +2379,15 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfout2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Calc_Load_Files"/>
   </connection>
-  <connection connectorName="FILTER" label="row12" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_35" target="tFileCopy_2">
+  <connection connectorName="FILTER" label="ln_Filter_Archive" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_35" target="tFileCopy_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row12"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Filter_Archive"/>
   </connection>
-  <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tFileCopy_2" offsetLabelX="0" offsetLabelY="0" source="tFileCopy_2" target="tMap_9">
+  <connection connectorName="FLOW" label="ln_Copy_Archive" lineStyle="0" metaname="tFileCopy_2" offsetLabelX="0" offsetLabelY="0" source="tFileCopy_2" target="tMap_9">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row13"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Copy_Archive"/>
   </connection>
   <connection connectorName="FLOW" label="ln_UNDERSCORE_ERR" lineStyle="0" metaname="ln_UNDERSCORE_ERR" offsetLabelX="4" offsetLabelY="4" source="tMap_9" target="tDBOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2443,13 +2443,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0c03fff2-da45-47b5-bb03-2f144caf5998"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sEvD4tUqj0T+6rnbFPPgBcEcQVVLrFZhNTYZuKhqCL3BaiaHFqLJS1KYbUd7CSxq6RrZ+9iTBZYv&#13;
-t4PkrA3pwQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_294feeb9-d990-4827-ad34-0c8c094a3d31"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Aww6l4V9CAeCHfkOTUpt/zh9Jcm3XJPby/usZEcjlcMsaKRUmvzThvlc5OfaEQN3w20slOMgJjWq&#13;
-aDlNKT4/vg==</DigestValue></Reference></SignedInfo><SignatureValue>pyHZWvZJUyPPs+xNMR22iWdaso3Rhq++lItq86/jNY1/zQqBGT6NBQf3EZjLqhh8qAPl8XpCguWa&#13;
-oAWHjysF/ZXuJtHkibRkS/YGlFyDoIV51gtjfHWzIVFGXyrO8eUi+eyMxdQ1wRbE4eer1OXKy4V7&#13;
-E+TNXerwv0IAP+cVoDN3c7rZVrro16zJRW903ZhK7f6K/y31m6oZSNJH/jOwNdV/MsMe/7mSipjq&#13;
-afoSn618S2+Gdh0RPSSKbPblzSpoLvk2Vr2J0dvXSEfduTJgk/0FOp3C4WNJrs72G2pppOQplx4S&#13;
-JNf6cpo6kbONiFb1pIWAzer+Hh3bW1sUj0Yf9Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_db6e69c6-3eab-408e-b03e-cfe700fb4105"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3WGjtNJwgF6JhvrC9DJJ3pYifRNTbKyXlmjBR41j5eTShw9bQgQGTW9elfinF0UFUD6w9LuXon6D&#13;
+ySf71OIeCA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fe4426ed-51e9-42cf-805d-3e24e67bf96a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>41CZ7OXzeyNM2SChtO8sZNyHmLrEyqSjo6cOmgkpVBYB5VGbW8piSAuFzHUAtkVqLdu5De2OZJ+c&#13;
+++aiVu1bpQ==</DigestValue></Reference></SignedInfo><SignatureValue>VC6Qc7llAMBkyJT/ngBdqqZNjUhmQsxShxYDYq3NIYaMlRqt1C343RA/JAkPbkbpEWgwcIR66NSF&#13;
+DxZ6veNBV8tcogSYwkxJsF8DUQ69uGkaCwOCwtuK5iDWsxYJrBD4KKjaWuHbs4x1bRAniEfwlfCk&#13;
+C4DChlKl2gHcCeZ0g1LykvQXaE+jNxdllb5iRe6A6T/r83by0z1nLPo4X3nicT4m5JCc8ffDdnx4&#13;
+zwzGqPAjWfvQxNRXGuaRRtfM9w7eDHoGYwzFSjKczq25SDq6XtrRTHodwDZQUhlFhj81KIvbYsVJ&#13;
+OTs+drRTvzfLb0IMLNBc6zBkEWrnk2y1uAzWfw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2471,4 +2471,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_294feeb9-d990-4827-ad34-0c8c094a3d31" Target="#_0c03fff2-da45-47b5-bb03-2f144caf5998"><Timestamp>2025-01-09 09:20:03</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fe4426ed-51e9-42cf-805d-3e24e67bf96a" Target="#_db6e69c6-3eab-408e-b03e-cfe700fb4105"><Timestamp>2025-01-09 10:21:25</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
