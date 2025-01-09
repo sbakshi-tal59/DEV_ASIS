@@ -144,6 +144,7 @@
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="MD5" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tFileProperties"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FileProperties&lt;/b&gt;&lt;br&gt;File Properties"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileProperties_2">
       <column key="false" length="255" name="abs_path" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1411,6 +1412,7 @@
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="MD5" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tFileProperties"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILEPROPERTIES&lt;/b&gt;&lt;br&gt;Lists the File properties"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileProperties_1">
       <column key="false" length="255" name="abs_path" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1436,6 +1438,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tMap_CALC_LOAD_FILES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Calculates Load Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="out2">
       <column comment="" key="false" length="-1" name="Source" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1487,6 +1490,7 @@
     <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" show="false" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
     <elementParameter field="TEXT" name="LABEL" value="tFR_FILTER_ARCHIVE"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILTER_ARCHIVE&lt;/b&gt;&lt;br&gt;Filters out the Archive folder"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_28">
       <column comment="" key="false" length="-1" name="Source" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1540,6 +1544,7 @@
     <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
     <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" show="false" value="// code sample : use input_row to define the condition.&#10;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#10;// replace the following expression by your own filter condition &#10;input_row.columnName1.equals(input_row.columnName2)&#10;&#9;&#9;&#9;"/>
     <elementParameter field="TEXT" name="LABEL" value="tFR_FILTER_ERRORS"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILTER_ERRORS&lt;/b&gt;&lt;br&gt;Filters the Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_43">
       <column comment="" key="false" length="-1" name="Source" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1588,6 +1593,7 @@
     <elementParameter field="CHECK" name="FORCE_COPY_DELETE" value="false"/>
     <elementParameter field="CHECK" name="PRESERVE_LAST_MODIFIED_TIME" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tFC_COPY_TO_ARCHIVE"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FC_COPY_TO_ARCHIVE&lt;/b&gt;&lt;br&gt;Copies to Archive Folder"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileCopy_3">
       <column comment="" key="false" length="-1" name="Source" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1614,6 +1620,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tMap_ERROR_FILES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Copies Error Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_NAME_ERR">
       <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1725,6 +1732,7 @@
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBO_AUD_PEOPLE_ABSENCE"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_ABSENCE&lt;/b&gt;&lt;br&gt;Inserts Error records in AUD_PEOPLE_ABSENCE"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_6">
       <column comment="" key="false" length="-1" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -1808,7 +1816,7 @@
       <column comment="" key="false" length="-1" name="vDirectory" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables name="Var" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="((String)globalMap.get(&quot;tFileList_3_CURRENT_FILE&quot;)) " name="vFile" type="id_String"/>
         <mapperTableEntries expression="((String)globalMap.get(&quot;tFileList_3_CURRENT_FILEDIRECTORY&quot;)) " name="vDirectory" type="id_String"/>
@@ -1922,7 +1930,7 @@
       <column comment="" key="false" length="-1" name="AUD_ERROR_DESCRIPTION" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_UNDERSCORE_ERR" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row13.File_Name " name="AUD_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
@@ -2419,13 +2427,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_baeebde4-3bca-4939-b12f-a299f7e543ac"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SDQ0qU0VIPb3Xkl8Z+jw9uiEbJ/4qsBCYWIA0UeeOAY62fk73VAZWR+JegRW1G1d3Hf3vEvyHr3a&#13;
-D65bTe1Pgw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a7a42083-891c-4015-8b5d-f560a1b3ee71"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5G/MpzOz9VcG2WxcfV8sc11gB4Wfx54QtWRtbtQfgJpimRtw74qVJqpan2R2ebe86JmD9162iFIs&#13;
-Oeduv4O2jQ==</DigestValue></Reference></SignedInfo><SignatureValue>WVkmhoGpsUGG4cohN1iewh1diwDB7KShjBRXeF65OeYU4ooU2Z/7agMbuix4SwPNj4ERuvCPaxOn&#13;
-QvWV9u4TxtoT3fmK0tx2dJPu1vYIR0I58hmm+vNssZFL3jQ8V4T3Cp+e+OotvoHt4AAY7hoRq378&#13;
-0f/eRQgSLoL6ekxhdITMJFYXpNh/1mCrCWqsYraBZkE9CAFnvQfShijsT340uOWeCdqea0QBSvpP&#13;
-xg/wXup6GPEbrWis6rAivrJRo3k3QJ5oyPlxH9n/uBXMQcYE83XvMoAzFqu/JM6XWplxFNUXs5cy&#13;
-zpx0cE4JsTlp2C8+pXQ3YPxTMOvo7BksqhZikA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c6d7e7c5-10fe-4e49-9779-021e012c0cf2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5kk7iz0jEbC2AHq3IHogYGpCl2Cv8gXhC24HCGNycoF75iFO1uBtbv8j2x8tH6D97d1vPn+Z5CcC&#13;
+55MJhBvUTQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5bf10106-6c03-4459-9d7c-2b43ca5f9f88"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>C8OlkXUXtBgJy7OO26AH/qFy0Sieirf8lz72xWvlCaq5yQYYuKZNLzBWehOHyGmQ60CVD6lXGgaV&#13;
+1G7DxfyhpA==</DigestValue></Reference></SignedInfo><SignatureValue>JdynC/BXub5os4a5IoV6ZsSa/BsSg9tXWa8y1Fs6H5CbkU2+Iad5kMK0qx2D7W6o+hUcVX3NNmzD&#13;
+BL+m7f2yL5JloNehSURqPqCEjCtt/nFmYQdw28saN2jF4lc11CuVh1hEo/NlWK3S9HjSKfmdumuw&#13;
+NFux6k11M9r1g2giYEg+o+CHEIeinLEVsVyczPY1VvRhGWScf8+DMDoyM7oCjs2bkamyULky14+8&#13;
+cNVR4EOEWh0lgxB24RalAHWqJG5b61Or/xHw33pFIbApyGyaRI3G5Il7R0KK/E2HMMqLYObMER4B&#13;
+JrPmt/N+saqRj4OvEKsiqKx7j+/YD4XIwVWptg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2447,4 +2455,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a7a42083-891c-4015-8b5d-f560a1b3ee71" Target="#_baeebde4-3bca-4939-b12f-a299f7e543ac"><Timestamp>2025-01-06 16:20:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5bf10106-6c03-4459-9d7c-2b43ca5f9f88" Target="#_c6d7e7c5-10fe-4e49-9779-021e012c0cf2"><Timestamp>2025-01-09 09:00:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
