@@ -585,7 +585,7 @@
     <elementParameter field="TEXT" name="LABEL" value="tMAP_ROTA_PLAN"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ROTA_PLAN&lt;/b&gt;&lt;br&gt;Transformations for Rota Plan"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="ln_STG_PEOPLE_ABSENCE">
+    <metadata connector="FLOW" name="ln_STG_PEOPLE_ROTA_PLAN">
       <column comment="" key="false" length="-1" name="STG_ROTA_DATE" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_ACTIVITY_TRANSACTION_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -601,20 +601,20 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="ln_STG_PEOPLE_ABSENCE" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.ROTA_DATE " name="STG_ROTA_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.COLLEAGUE_PRN " name="STG_COLLEAGUE_PRN" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.ACTIVITY_TRANSACTION_ID " name="STG_ACTIVITY_TRANSACTION_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.START_TIME " name="STG_START_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.END_TIME " name="STG_END_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.ACTIVITY_TASK " name="STG_ACTIVITY_TASK" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.ACTIVITY_FTE " name="STG_ACTIVITY_FTE" nullable="true" type="id_BigDecimal"/>
+      <outputTables name="ln_STG_PEOPLE_ROTA_PLAN" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="ln_tMAP_ROTA_PLAN.ROTA_DATE " name="STG_ROTA_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ln_tMAP_ROTA_PLAN.COLLEAGUE_PRN " name="STG_COLLEAGUE_PRN" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_ROTA_PLAN.ACTIVITY_TRANSACTION_ID " name="STG_ACTIVITY_TRANSACTION_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_ROTA_PLAN.START_TIME " name="STG_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_ROTA_PLAN.END_TIME " name="STG_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_ROTA_PLAN.ACTIVITY_TASK " name="STG_ACTIVITY_TASK" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_ROTA_PLAN.ACTIVITY_FTE " name="STG_ACTIVITY_FTE" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="StringHandling.LEFT((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;)) " name="STG_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;, StringHandling.RIGHT(StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;),10),8)); " name="STG_FILE_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)); " name="STG_LOAD_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?3:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?4:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?5:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?6:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?7:-1 " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_tMAP_ABSENCE" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_tMAP_ROTA_PLAN" sizeState="INTERMEDIATE">
         <mapperTableEntries name="ROTA_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries name="COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries name="ACTIVITY_TRANSACTION_ID" nullable="true" type="id_BigDecimal"/>
@@ -1021,19 +1021,20 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tMap_CHANNEL_DATE"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Obtains File Date"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="out1">
+    <metadata connector="FLOW" name="ln_MIS_CHANNEL_DATE">
       <column comment="" key="true" length="50" name="MIS_CHANNEL_ID" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="MIS_UP_TO_DATE" nullable="true" originalLength="50" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="out1" sizeState="INTERMEDIATE">
+      <outputTables name="ln_MIS_CHANNEL_DATE" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?&quot;API_MAX_RP&quot;:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?&quot;API_CGB_RP&quot;:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?&quot;API_SER_RP&quot;:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?&quot;API_ING_RP&quot;:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?&quot;API_CNI_RP&quot;:null " name="MIS_CHANNEL_ID" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.STG_FILE_DATE " name="MIS_UP_TO_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ln_CHANNEL_DATE.STG_FILE_DATE " name="MIS_UP_TO_DATE" nullable="true" type="id_Date"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_CHANNEL_DATE" sizeState="INTERMEDIATE">
         <mapperTableEntries name="STG_ROTA_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries name="STG_COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries name="STG_ACTIVITY_TRANSACTION_ID" nullable="true" type="id_BigDecimal"/>
@@ -1107,7 +1108,7 @@
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBO_MIS_CHANNEL_DATE"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;SAUD_FILE_LOADED&lt;/b&gt;&lt;br&gt;Insert into AUD_FILE_LOADED Table"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;MIS_CHANNEL_DATE&lt;/b&gt;&lt;br&gt;Updates date in MIS_CHANNEL_DATE"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_3">
       <column comment="" key="true" length="50" name="MIS_CHANNEL_ID" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -1351,7 +1352,7 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tRowGenerator_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk3"/>
   </connection>
-  <connection connectorName="FLOW" label="ln_TSCHEMA_ABSENCE" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFileInputDelimited_1" target="tSchemaComplianceCheck_1">
+  <connection connectorName="FLOW" label="ln_TSCHEMA_ROTA_PLAN" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tFileInputDelimited_1" target="tSchemaComplianceCheck_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="ACTIVITY_TASK"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1361,7 +1362,7 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_TSCHEMA_ABSENCE"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_TSCHEMA_ROTA_PLAN"/>
   </connection>
   <connection connectorName="REJECT" label="ln_Format_Rejections" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tFileInputDelimited_1" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1415,7 +1416,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_AUD_PEOPLE_ROTA_PLAN1"/>
   </connection>
-  <connection connectorName="FLOW" label="ln_tMAP_ABSENCE" lineStyle="0" metaname="tSchemaComplianceCheck_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSchemaComplianceCheck_1" target="tMap_1">
+  <connection connectorName="FLOW" label="ln_tMAP_ROTA_PLAN" lineStyle="0" metaname="tSchemaComplianceCheck_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSchemaComplianceCheck_1" target="tMap_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="ACTIVITY_TASK"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1425,13 +1426,13 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_tMAP_ABSENCE"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_tMAP_ROTA_PLAN"/>
   </connection>
   <connection connectorName="REJECT" label="ln_Length_Rejections" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSchemaComplianceCheck_1" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Length_Rejections"/>
   </connection>
-  <connection connectorName="FLOW" label="ln_STG_PEOPLE_ABSENCE" lineStyle="0" metaname="ln_STG_PEOPLE_ABSENCE" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_4">
+  <connection connectorName="FLOW" label="ln_STG_PEOPLE_ROTA_PLAN" lineStyle="0" metaname="ln_STG_PEOPLE_ROTA_PLAN" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_4">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="STG_START_TIME"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1453,11 +1454,11 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_STG_PEOPLE_ABSENCE"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_STG_PEOPLE_ROTA_PLAN"/>
   </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBOutput_4" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_4" target="tMap_4">
+  <connection connectorName="FLOW" label="ln_CHANNEL_DATE" lineStyle="0" metaname="tDBOutput_4" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_4" target="tMap_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_CHANNEL_DATE"/>
   </connection>
   <connection connectorName="FLOW" label="ln_AUD_PEOPLE_ROTA_PLAN2" lineStyle="0" metaname="ln_AUD_PEOPLE_ROTA_PLAN2" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tDBOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -1504,7 +1505,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_AUD_PEOPLE_ROTA_PLAN2"/>
   </connection>
-  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tDBOutput_3">
+  <connection connectorName="FLOW" label="ln_MIS_CHANNEL_DATE" lineStyle="0" metaname="ln_MIS_CHANNEL_DATE" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tDBOutput_3">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="MIS_CHANNEL_ID"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1514,7 +1515,7 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_MIS_CHANNEL_DATE"/>
   </connection>
   <connection connectorName="FLOW" label="In_CONTEXT" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tContextLoad_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1563,13 +1564,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a6fc665d-9822-4920-a740-34a770276bfb"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qiFGkyUmehkd5z2CAMTcVYGZbdOtN1DVWvQRh/8zzClBTjJhIRR7KkIjFCy8yqkF2UaEaw+YASMK&#13;
-PcNjy5miwA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_777300af-6a09-41c1-a679-62b3d4cc4b63"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ybOtS+uWpKOfkzeaWmbjCL8Ecd/pfCgCr4aS5hsdeO3rT1vZh1/9XGYGGT36KoewghMg3PT0NRez&#13;
-tYnp0OKcWg==</DigestValue></Reference></SignedInfo><SignatureValue>LDKufYa/mM3XcVi20Co/1tKIhFGvi7kTE/hRB9Qv0qoEicYKQHCtnWXV9f9HJRlRqOfUOl1fe8yP&#13;
-q2LRaErHzKpAnr8qxypCqPEeFTiLj92iipfITpIS2bQNP8ZzH6HJvIt1brjYgPaamOcVY+v5HEmf&#13;
-zp+AxvprehmAZx/X50n6TeZO6f50omrBJkKJ+XiTwcDCQA3F4VOZrNVRHrYGUuexczZBdomHIijX&#13;
-F51BFGnCcV92aDgIUknkkq7OeX6JO6dMO/B+QszBuVW2sCn1zEaujJxbxwx4MA5Tb6MZdjAiVTwK&#13;
-ok79Ubm/WmzZsFre1n5ZKyJuZK3BTHVSZ4jd5Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e4cbaec0-1da9-40c2-8ba8-27f98018891b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RQvCz2gtEe+Oe4oopgLUJa+zEJGkd/xB1UruRf+BBSwsoqspRiEG5AtInMavc9JTpAg2aXi6fs70&#13;
+cja0nSQR/w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c00058f4-2717-46b3-91e0-de37db64130e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>iKItcZjYhC644WiQCXslyu3Qy+Z521Of0UqnB+ApgDjiWEvRH6dJrlplVDIyLOxYsu+u3/oWtO8d&#13;
+SVj78Bx6zw==</DigestValue></Reference></SignedInfo><SignatureValue>mW/DJ8KQe1uhSJKg5XZhfpC68zRLrjOHmX9mTEPXDNLyI541eTn5sMoKEqugwJ/n7NP8oxSPNw0c&#13;
+u4JG1TcxRgRZVcdkHa6SwxoOa8cMHSsvuzPF2M/R66NXBnpcQ829qnA83v3xLPQMpfCLP/I9Jgm9&#13;
+P69LLZvjTDpd9Mztx0jtxNil3P5nMRwx5zl29EZ5f5brzetb+xVPKNw95gQiOOeEAJEpGob+Ggbq&#13;
+14m3/1BQa8Lh6lDLaf2z1buzwpaEjelCtF4PRWZwjbD24QHoYsftyjtiWmjeoHdH/udRCt5Jx8Dv&#13;
++Ngf/3s2aH5w2uKWqW7i2jR7iAMT9DD8+N/hEQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1591,4 +1592,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_777300af-6a09-41c1-a679-62b3d4cc4b63" Target="#_a6fc665d-9822-4920-a740-34a770276bfb"><Timestamp>2025-01-10 11:06:11</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c00058f4-2717-46b3-91e0-de37db64130e" Target="#_e4cbaec0-1da9-40c2-8ba8-27f98018891b"><Timestamp>2025-01-10 11:10:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
