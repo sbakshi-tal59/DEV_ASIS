@@ -242,7 +242,7 @@
     <elementParameter field="TEXT" name="LABEL" value="tMap_FILE_ERRORS"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ROTA_PLAN_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps File Format Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="ln_AUD_PEOPLE_ABSENCE1">
+    <metadata connector="FLOW" name="ln_AUD_PEOPLE_ROTA_PLAN1">
       <column comment="" key="false" length="-1" name="AUD_ROTA_DATE" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ACTIVITY_TRANSACTION_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -264,7 +264,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="ln_AUD_PEOPLE_ABSENCE1" sizeState="INTERMEDIATE">
+      <outputTables name="ln_AUD_PEOPLE_ROTA_PLAN1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ln_Format_Rejections.ROTA_DATE " name="AUD_ROTA_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_Format_Rejections.COLLEAGUE_PRN " name="AUD_COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Format_Rejections.ACTIVITY_TRANSACTION_ID " name="AUD_ACTIVITY_TRANSACTION_ID" nullable="true" type="id_BigDecimal"/>
@@ -776,7 +776,7 @@
     <elementParameter field="TEXT" name="LABEL" value="tMap_SCHEMA_ERRORS"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ROTA_PLAN_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps Length Mismatch Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="ln_AUD_PEOPLE_ABSENCE2">
+    <metadata connector="FLOW" name="ln_AUD_PEOPLE_ROTA_PLAN2">
       <column comment="" key="false" length="-1" name="AUD_ROTA_DATE" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ACTIVITY_TRANSACTION_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -798,7 +798,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="ln_AUD_PEOPLE_ABSENCE2" sizeState="INTERMEDIATE">
+      <outputTables name="ln_AUD_PEOPLE_ROTA_PLAN2" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ln_Length_Rejections.ROTA_DATE " name="AUD_ROTA_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_Length_Rejections.COLLEAGUE_PRN " name="AUD_COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Length_Rejections.ACTIVITY_TRANSACTION_ID " name="AUD_ACTIVITY_TRANSACTION_ID" nullable="true" type="id_BigDecimal"/>
@@ -1367,7 +1367,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Format_Rejections"/>
   </connection>
-  <connection connectorName="FLOW" label="ln_AUD_PEOPLE_ABSENCE1" lineStyle="0" metaname="ln_AUD_PEOPLE_ABSENCE1" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_2">
+  <connection connectorName="FLOW" label="ln_AUD_PEOPLE_ROTA_PLAN1" lineStyle="0" metaname="ln_AUD_PEOPLE_ROTA_PLAN1" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tDBOutput_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="AUD_SOURCE_FILE_NAME"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1413,7 +1413,7 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_AUD_PEOPLE_ABSENCE1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_AUD_PEOPLE_ROTA_PLAN1"/>
   </connection>
   <connection connectorName="FLOW" label="ln_tMAP_ABSENCE" lineStyle="0" metaname="tSchemaComplianceCheck_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSchemaComplianceCheck_1" target="tMap_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -1459,7 +1459,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="FLOW" label="ln_AUD_PEOPLE_ABSENCE2" lineStyle="0" metaname="ln_AUD_PEOPLE_ABSENCE2" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tDBOutput_1">
+  <connection connectorName="FLOW" label="ln_AUD_PEOPLE_ROTA_PLAN2" lineStyle="0" metaname="ln_AUD_PEOPLE_ROTA_PLAN2" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tDBOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="AUD_SOURCE_FILE_NAME"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -1502,7 +1502,7 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_AUD_PEOPLE_ABSENCE2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_AUD_PEOPLE_ROTA_PLAN2"/>
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tDBOutput_3">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -1538,7 +1538,7 @@
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Insert Absence csv Files into STG_PEOPLE_ROTA_PLAN"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Insert Rota Plan csv Files into STG_PEOPLE_ROTA_PLAN"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
@@ -1563,13 +1563,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0013e996-0155-4715-9c4d-5728b35d3473"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aYv+RVhehH1hkA78Ca0Bf5MzTwUhLLM9bSvE1E4B1UBN3aRDx5eHeHXTy/UmUuOMKYnogtjS6zw8&#13;
-v6KbT3U5MQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e46d8140-2a22-49ac-b8dc-3733a0ab7238"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MlruEd/H1wlj6KaSiXz9LzjWFfPesV8fZuvLfGH0PfzLKRavpkGsZNuNLkE/yzFfXKll2ZrTRTlh&#13;
-ramLbR6zlg==</DigestValue></Reference></SignedInfo><SignatureValue>hXdwM3KFqbQe5Ioi479new/PKFAMbW5vUR9kvsWfB17vCV7FGQP8+fce3RseX5VZNuLnR6P47wfc&#13;
-VvagkiqLWAJHH13iTX+yOgBNoPbJSXaplukrs0A3exW4t98OQ+3nV8Y68Abfw49YEynFEqALIvoM&#13;
-hPCETmcajR6RJLp97drX0KBthzgRFX1kGQWp16vfvPbHONZ9feqILYQ5ZQLSvHQYayzjidcM0BAQ&#13;
-UZimP6Xn9he2wlguExSS3Sj5+mSp7s6DjkWZ99Cyu8rHeYfoQZcW54YLvZJJaxCo81A3hxFQJp+q&#13;
-RdklgOccE6T/v/wtB5O3Y3hT7p2M+NCiYo7HlA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a6fc665d-9822-4920-a740-34a770276bfb"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qiFGkyUmehkd5z2CAMTcVYGZbdOtN1DVWvQRh/8zzClBTjJhIRR7KkIjFCy8yqkF2UaEaw+YASMK&#13;
+PcNjy5miwA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_777300af-6a09-41c1-a679-62b3d4cc4b63"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ybOtS+uWpKOfkzeaWmbjCL8Ecd/pfCgCr4aS5hsdeO3rT1vZh1/9XGYGGT36KoewghMg3PT0NRez&#13;
+tYnp0OKcWg==</DigestValue></Reference></SignedInfo><SignatureValue>LDKufYa/mM3XcVi20Co/1tKIhFGvi7kTE/hRB9Qv0qoEicYKQHCtnWXV9f9HJRlRqOfUOl1fe8yP&#13;
+q2LRaErHzKpAnr8qxypCqPEeFTiLj92iipfITpIS2bQNP8ZzH6HJvIt1brjYgPaamOcVY+v5HEmf&#13;
+zp+AxvprehmAZx/X50n6TeZO6f50omrBJkKJ+XiTwcDCQA3F4VOZrNVRHrYGUuexczZBdomHIijX&#13;
+F51BFGnCcV92aDgIUknkkq7OeX6JO6dMO/B+QszBuVW2sCn1zEaujJxbxwx4MA5Tb6MZdjAiVTwK&#13;
+ok79Ubm/WmzZsFre1n5ZKyJuZK3BTHVSZ4jd5Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1591,4 +1591,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e46d8140-2a22-49ac-b8dc-3733a0ab7238" Target="#_0013e996-0155-4715-9c4d-5728b35d3473"><Timestamp>2024-12-20 14:37:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_777300af-6a09-41c1-a679-62b3d4cc4b63" Target="#_a6fc665d-9822-4920-a740-34a770276bfb"><Timestamp>2025-01-10 11:06:11</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
