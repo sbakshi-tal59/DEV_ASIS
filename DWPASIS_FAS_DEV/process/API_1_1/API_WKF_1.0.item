@@ -679,41 +679,6 @@
     <metadata connector="FLOW" name="tDBSP_9"/>
   </node>
   <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="800">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_10"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
-    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HOST" value="context.api_misown_host"/>
-    <elementParameter field="TEXT" name="PORT" value="context.api_misown_port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.api_misown_database"/>
-    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.api_misown_schema"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
-    <elementParameter field="TEXT" name="USER" value="context.api_misown_username"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:VIzNyG4LmZwSnqjEqI2vogc6JHfgaMXsupphfXZdZqS6D7aUHYGOg+BxZuDDNhqn/EVmYVDIsg=="/>
-    <elementParameter field="TEXT" name="SP_NAME" value="&quot;DW_UPDATE_PEOPLE_ERROR&quot;"/>
-    <elementParameter field="CHECK" name="IS_FUNCTION" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="RETURN" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="RETURN_BDTYPE" show="false" value="AUTOMAPPING"/>
-    <elementParameter field="TABLE" name="SP_ARGS"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CLOSED_LIST" name="NLS_LANGUAGE" value="NONE"/>
-    <elementParameter field="CLOSED_LIST" name="NLS_TERRITORY" value="NONE"/>
-    <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_UPDATE_PEOPLE_ERROR"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_PEOPLE_ERROR&lt;/b&gt;&lt;br&gt;Calls DW_UPDATE_PEOPLE_ERROR Procedure"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBSP_10"/>
-  </node>
-  <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="448" posY="800">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_11"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -748,7 +713,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBSP_11"/>
   </node>
-  <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="800">
+  <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="800">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_12"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -782,6 +747,40 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_STAFFING&lt;/b&gt;&lt;br&gt;Calls DW_UPDATE_STAFFING Procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBSP_12"/>
+  </node>
+  <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="800">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_10"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.api_misown_host"/>
+    <elementParameter field="TEXT" name="PORT" value="context.api_misown_port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.api_misown_database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.api_misown_schema"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
+    <elementParameter field="TEXT" name="USER" value="context.api_misown_username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:8GgcX6mLq9qR3QFAINmLKe4tSrVPFtCYvbP7RjiNXDiwNfdIpP+kDCJTp1u7e/xABsuTpbuckw=="/>
+    <elementParameter field="TEXT" name="SP_NAME" value="MIS_UPDATE_ERROR_SUMMARY_API"/>
+    <elementParameter field="CHECK" name="IS_FUNCTION" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RETURN" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="RETURN_BDTYPE" show="false" value="AUTOMAPPING"/>
+    <elementParameter field="TABLE" name="SP_ARGS"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="NLS_LANGUAGE" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="NLS_TERRITORY" value="NONE"/>
+    <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="MIS_UPDATE_ERROR_SUMMARY_API"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;MIS_UPDATE_ERROR_SUMMARY_API&lt;/b&gt;&lt;br&gt;Calls MIS_UPDATE_ERROR_SUMMARY_API Procedure"/>
+    <metadata connector="FLOW" name="tDBSP_10"/>
   </node>
   <connection connectorName="FLOW" label="In_CONTEXT" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tContextLoad_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -823,7 +822,7 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBSP_5" offsetLabelX="0" offsetLabelY="0" source="tDBSP_5" target="tDBSP_9">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk12"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBSP_6" offsetLabelX="0" offsetLabelY="0" source="tDBSP_6" target="tDBSP_10">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBSP_6" offsetLabelX="0" offsetLabelY="0" source="tDBSP_6" target="tDBSP_11">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk16"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBSP_7" offsetLabelX="0" offsetLabelY="0" source="tDBSP_7" target="tDBSP_6">
@@ -835,11 +834,11 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBSP_9" offsetLabelX="0" offsetLabelY="0" source="tDBSP_9" target="tDBSP_8">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk13"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBSP_10" offsetLabelX="0" offsetLabelY="0" source="tDBSP_10" target="tDBSP_11">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk17"/>
-  </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBSP_11" offsetLabelX="0" offsetLabelY="0" source="tDBSP_11" target="tDBSP_12">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk18"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBSP_12" offsetLabelX="0" offsetLabelY="0" source="tDBSP_12" target="tDBSP_10">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk17"/>
   </connection>
   <note opaque="true" posX="512" posY="32" sizeHeight="97" sizeWidth="481" text="Developer: Shaili Bakshi&#13;&#10;Date: 04-Dec-2024&#13;&#10;JIRA: BM-12329&#13;&#10;Description: API MISOWN Load Process Flow.">
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
@@ -930,11 +929,6 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_10"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_11"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
@@ -944,13 +938,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3c5782e6-bfd4-4a71-b489-7c15b6e06f96"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3T2N513mnplzTKeb83QENFQim463dwoWEDJjjC/U5mjFwZGmqk4IX7URcXG7Yox8Abh7sKHOXSUO&#13;
-WuDhusQOAQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9654d2cd-4451-46eb-82c0-78338a88bf7e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1aYUzxxCzUis7hLIs6jZU2c5vkYFw0lh0Dmnu+iLFU4il90u9NgugUnSB8dS1NhIkkkAesKl6FIe&#13;
-8BPHbEMFtg==</DigestValue></Reference></SignedInfo><SignatureValue>E5yfOs/FmuT3YyXv/SkgW7nk41tSXY+Aaew5fvVEN3Cvp1JT3pFpIbANB/6Qg7xIM5afsL9RUbGP&#13;
-8PsxXK74Jt8+76OCQMJu/ZwZzwmva82TFqfoIT6T+MT1NGmcJoNNfJDt8niqDUwZRdmpPuBngKzU&#13;
-T/l8+NLGJ9OOPdSRHsXYKznYFSLxh5JPge2cKPKz8IEUAo92vTCV7G7FQbvXg2cpe4sizP/hjsY1&#13;
-mm5LhUkVLS0QzrFwyhu/upfuaGNThNQ/V/SBcaNidumL+dTZ4iAGufrdMgWRo0sK2DQX1ARezb1u&#13;
-fw6npyfDwQGVRiumkEepDokIw/zETD2PunJ45A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_10"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_27f0ac98-644e-416d-93a3-34699e37dc01"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aGn4rYEjpwUQFOo415sJh9WjMCtr4tD1wcnY4u4mxfVOG2xKvKER8J/2Zdf1wXax5ccmfxIMiTF0&#13;
+ueL3DoET7w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_eebc6ce5-98ad-44d0-be33-00b0e1e215ab"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3bq0Vl9eqk9jzj433GSRmqNmRVlmFvN3Kv2YGt9CaAUa43xhSVOnb2NABxSFQggEuoQ1NF91Wh3c&#13;
+e7YgBBe/ug==</DigestValue></Reference></SignedInfo><SignatureValue>RzBw435sdaX2Av9qBWEct+6YUAzgB2wyr2z/My6KFvyP0Ku/3LSB0FTj4JsOVzAyiiDzHKYQCE9o&#13;
+ndSHu2B/jdXLOifiT5ee7jZLSRmmlH/vhznpsvMpc8qhW6NY0qUIXF0Ratvg5S1Gi78WnrCT6Xuj&#13;
+bOXQXRmF3g/JTOW0v8XC1souN5XJW1LOlyG1S8yj0vASON89v9dgWgpSdWn5Jf+5VOF/iCVm51cC&#13;
+UnZrEDnzidYN4Y/9343Q2WznPtc6PazvYsoYBSYHd0XWbJwuyyJq2LaWoMbTlF2IW4kQ6CA4NwXZ&#13;
+Cr6Y2nm4Nm+RxtS2CTJ6Ujz0+M/pcSPVbgq1KQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -972,4 +971,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9654d2cd-4451-46eb-82c0-78338a88bf7e" Target="#_3c5782e6-bfd4-4a71-b489-7c15b6e06f96"><Timestamp>2025-01-13 11:50:06</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_eebc6ce5-98ad-44d0-be33-00b0e1e215ab" Target="#_27f0ac98-644e-416d-93a3-34699e37dc01"><Timestamp>2025-01-13 17:37:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
