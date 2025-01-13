@@ -1460,7 +1460,7 @@
     <elementParameter field="TEXT" name="LABEL" value="tMAP_HISTORY"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;HISTORY&lt;/b&gt;&lt;br&gt;Transformations for History"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="ln_STG_PEOPLE_ABSENCE">
+    <metadata connector="FLOW" name="ln_STG_PEOPLE_HISTORY">
       <column comment="" key="false" length="-1" name="STG_COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STG_TITLE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1511,55 +1511,55 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="ln_STG_PEOPLE_ABSENCE" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.COLLEAGUE_ID " name="STG_COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.COLLEAGUE_PRN " name="STG_COLLEAGUE_PRN" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.TITLE " name="STG_TITLE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.FORENAME " name="STG_FORENAME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.SURNAME " name="STG_SURNAME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.SITE_ID " name="STG_AP_PRACTITIONER_SITE_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.COMPANY_ID " name="STG_COMPANY_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.LINE_MANAGER " name="STG_LINE_MANAGER" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.FTE " name="STG_FTE" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.JOB_ROLE_ID " name="STG_JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.START_DATE " name="STG_START_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.REGISTERED_BODY " name="STG_REGISTERED_BODY" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.LEAVING_DATE " name="STG_LEAVING_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.LEAVING_REASON_ID " name="STG_LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.MON_WORKING_HOURS " name="STG_MON_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.MON_START_TIME " name="STG_MON_START_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.MON_END_TIME " name="STG_MON_END_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.TUE_WORKING_HOURS " name="STG_TUE_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.TUE_START_TIME " name="STG_TUE_START_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.TUE_END_TIME " name="STG_TUE_END_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.WED_WORKING_HOURS " name="STG_WED_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.WED_START_TIME " name="STG_WED_START_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.WED_END_TIME " name="STG_WED_END_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.THU_WORKING_HOURS " name="STG_THU_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.THU_START_TIME " name="STG_THU_START_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.THU_END_TIME " name="STG_THU_END_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.FRI_WORKING_HOURS " name="STG_FRI_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.FRI_START_TIME " name="STG_FRI_START_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.FRI_END_TIME " name="STG_FRI_END_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.SAT_WORKING_HOURS " name="STG_SAT_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.SAT_START_TIME " name="STG_SAT_START_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.SAT_END_TIME " name="STG_SAT_END_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.SUN_WORKING_HOURS " name="STG_SUN_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.SUN_START_TIME " name="STG_SUN_START_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.SUN_END_TIME " name="STG_SUN_END_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.TRAINING_COMPLETION_DATE " name="STG_TRAINING_COMPLETION_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.EXPERIENCE_COHORT_ID " name="STG_EXPERIENCE_COHORT_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.VA_APPROVAL " name="STG_VA_APPROVAL" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.TA_APPROVAL " name="STG_TA_APPROVAL" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.F2F_APPROVAL " name="STG_F2F_APPROVAL" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.PBA_APPROVAL " name="STG_PBA_APPROVAL" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.EFFECTIVE_START_DATE " name="STG_EFFECTIVE_START_DATE" nullable="true" type="id_Date"/>
+      <outputTables name="ln_STG_PEOPLE_HISTORY" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="ln_tMAP_HISTORY.COLLEAGUE_ID " name="STG_COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.COLLEAGUE_PRN " name="STG_COLLEAGUE_PRN" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.TITLE " name="STG_TITLE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.FORENAME " name="STG_FORENAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.SURNAME " name="STG_SURNAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.SITE_ID " name="STG_AP_PRACTITIONER_SITE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.COMPANY_ID " name="STG_COMPANY_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.LINE_MANAGER " name="STG_LINE_MANAGER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.FTE " name="STG_FTE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.JOB_ROLE_ID " name="STG_JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.START_DATE " name="STG_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.REGISTERED_BODY " name="STG_REGISTERED_BODY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.LEAVING_DATE " name="STG_LEAVING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.LEAVING_REASON_ID " name="STG_LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.MON_WORKING_HOURS " name="STG_MON_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.MON_START_TIME " name="STG_MON_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.MON_END_TIME " name="STG_MON_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.TUE_WORKING_HOURS " name="STG_TUE_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.TUE_START_TIME " name="STG_TUE_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.TUE_END_TIME " name="STG_TUE_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.WED_WORKING_HOURS " name="STG_WED_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.WED_START_TIME " name="STG_WED_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.WED_END_TIME " name="STG_WED_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.THU_WORKING_HOURS " name="STG_THU_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.THU_START_TIME " name="STG_THU_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.THU_END_TIME " name="STG_THU_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.FRI_WORKING_HOURS " name="STG_FRI_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.FRI_START_TIME " name="STG_FRI_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.FRI_END_TIME " name="STG_FRI_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.SAT_WORKING_HOURS " name="STG_SAT_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.SAT_START_TIME " name="STG_SAT_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.SAT_END_TIME " name="STG_SAT_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.SUN_WORKING_HOURS " name="STG_SUN_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.SUN_START_TIME " name="STG_SUN_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.SUN_END_TIME " name="STG_SUN_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.TRAINING_COMPLETION_DATE " name="STG_TRAINING_COMPLETION_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.EXPERIENCE_COHORT_ID " name="STG_EXPERIENCE_COHORT_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.VA_APPROVAL " name="STG_VA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.TA_APPROVAL " name="STG_TA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.F2F_APPROVAL " name="STG_F2F_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.PBA_APPROVAL " name="STG_PBA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="ln_tMAP_HISTORY.EFFECTIVE_START_DATE " name="STG_EFFECTIVE_START_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="StringHandling.LEFT((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;)) " name="STG_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;, StringHandling.RIGHT(StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;),10),8)); " name="STG_FILE_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)); " name="STG_LOAD_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?3:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?4:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?5:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?6:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?7:-1 " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_tMAP_ABSENCE" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_tMAP_HISTORY" sizeState="INTERMEDIATE">
         <mapperTableEntries name="COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries name="TITLE" nullable="true" type="id_String"/>
@@ -2597,18 +2597,18 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tMap_CHANNEL_DATE"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="out1">
+    <metadata connector="FLOW" name="ln_MIS_CHANNEL_DATE">
       <column comment="" key="true" length="-1" name="MIS_CHANNEL_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="MIS_UP_TO_DATE" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="out1" sizeState="INTERMEDIATE">
+      <outputTables name="ln_MIS_CHANNEL_DATE" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?&quot;API_MAX_HI&quot;:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?&quot;API_CGB_HI&quot;:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?&quot;API_SER_HI&quot;:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?&quot;API_ING_HI&quot;:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?&quot;API_CNI_HI&quot;:null " name="MIS_CHANNEL_ID" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row1.STG_FILE_DATE " name="MIS_UP_TO_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="ln_CHANNEL_DATE.STG_FILE_DATE " name="MIS_UP_TO_DATE" nullable="true" type="id_Date"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_CHANNEL_DATE" sizeState="INTERMEDIATE">
         <mapperTableEntries name="STG_COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="STG_COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries name="STG_TITLE" nullable="true" type="id_String"/>
@@ -3234,15 +3234,15 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_AUD_PEOPLE_HISTORY1"/>
   </connection>
-  <connection connectorName="FLOW" label="ln_tMAP_ABSENCE" lineStyle="0" metaname="tSchemaComplianceCheck_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSchemaComplianceCheck_1" target="tMap_1">
+  <connection connectorName="FLOW" label="ln_tMAP_HISTORY" lineStyle="0" metaname="tSchemaComplianceCheck_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSchemaComplianceCheck_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_tMAP_ABSENCE"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_tMAP_HISTORY"/>
   </connection>
   <connection connectorName="REJECT" label="ln_Length_Rejections" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSchemaComplianceCheck_1" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Length_Rejections"/>
   </connection>
-  <connection connectorName="FLOW" label="ln_STG_PEOPLE_ABSENCE" lineStyle="0" metaname="ln_STG_PEOPLE_ABSENCE" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_4">
+  <connection connectorName="FLOW" label="ln_STG_PEOPLE_HISTORY" lineStyle="0" metaname="ln_STG_PEOPLE_HISTORY" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_4">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="STG_MON_START_TIME"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -3369,11 +3369,11 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_STG_PEOPLE_ABSENCE"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_STG_PEOPLE_HISTORY"/>
   </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBOutput_4" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_4" target="tMap_6">
+  <connection connectorName="FLOW" label="ln_CHANNEL_DATE" lineStyle="0" metaname="tDBOutput_4" offsetLabelX="0" offsetLabelY="0" source="tDBOutput_4" target="tMap_6">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_CHANNEL_DATE"/>
   </connection>
   <connection connectorName="FLOW" label="ln_AUD_PEOPLE_HISTORY2" lineStyle="0" metaname="ln_AUD_PEOPLE_HISTORY2" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tDBOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
@@ -3636,9 +3636,9 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_AUD_PEOPLE_HISTORY2"/>
   </connection>
-  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_6" target="tDBOutput_3">
+  <connection connectorName="FLOW" label="ln_MIS_CHANNEL_DATE" lineStyle="0" metaname="ln_MIS_CHANNEL_DATE" offsetLabelX="0" offsetLabelY="0" source="tMap_6" target="tDBOutput_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_MIS_CHANNEL_DATE"/>
   </connection>
   <connection connectorName="FLOW" label="In_CONTEXT" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tContextLoad_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -3687,13 +3687,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e9840c8f-4933-4e90-9d2f-caadfb051d79"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>iKVAR03dVLzWSiOuAi8VqEwW/QszDRXNiDMkf8NTa5vn0iEQJmJbfvGjIM0frmwCIwrA07v13vwr&#13;
-HYUjU11MKA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a0aba883-384e-4fb3-a4aa-2bdd506b017d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>IIIJuPyd5D/HFOQmDyOuCosZiGqN2/0eRTEKzwO4xS7QRzWISfCs4oWz7APmwD9JcaWUUh8o/eO7&#13;
-nn50T3ICzg==</DigestValue></Reference></SignedInfo><SignatureValue>gXOms05jHWCRn84Bt98F0uZRQ7TP04o0vlHmDjfJaGtkNMVwjZ+h3PttVGKweq3QETyBhM12WiQl&#13;
-ULMIZ5Op12qtHEZOv+qP9h/qN12C8/VxVWnId9W3PiQuTeDBpWEBSA4cSXuxW9G28qkkIcR+5BpL&#13;
-iUVUz/tJJyPKwPr8g+FOxe8tjMEV7sSLlharSh1ZG9ZIeQAItSYGV0ES8P0NMS4BWXMFZ2MiuEcd&#13;
-WucEWsQ6dQCqiO7vWz3LCspa3/bXzQRMzN+jWCGQSqpEinND5IiC8E8fVsjt4KB9b0vyepkJHsc8&#13;
-Ui0sBASDQC82cWOHUEOsOMieo97ddYGcXy8Czw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8904d0ed-6356-436d-86a1-683a61e89573"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>54JUemZO5iYsaSQZtGWnbSOiIMSR8c5/NIGKiKVplaVcYTEqGDx2bGM+n6WFaccuXQ/QzZnjKLFC&#13;
+rPeoKpMkMA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ee277a90-5873-4693-8e1e-5d79103f5643"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DDFgGJLbcW0zqUY6CbafmolS2K5Ur51cgIgVYv/TyTn4sFWgOiByCoRAcaMROwdlEEEJg2+accgt&#13;
+OQ+AsE0pyw==</DigestValue></Reference></SignedInfo><SignatureValue>CNq2A96524kaxh8hbJ7OB/U6Xe1UyCWdnOJ6n0Dix9++qjcv+BRPaTuo7ziKX1cDxaPuUst4nQQD&#13;
+fyT26gh3ZNmytHE8zE1eps2TxkZCo1YlWA16bNXrNUHvYGTevO2hiWvcfSVBvPRpA3RCsXlqXB/c&#13;
++tWSkGzKWCibuAKZcs43mUiQwd7vnLBmaFSE43kpK6Sf4lFOLFkYMWqdfnfgJHOX0Ua4i45xRzMo&#13;
+up83BlKlKJ2+ZYf35uQYEMLq96VpkQ/g+GmTR6Lxr+rM24viGQaCYl0I7CNBMJ6FbIJL5s9LJD7D&#13;
+GAbzgp09gaWhpUAY6ht0w+bVLd+zQIaQkubQsA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3715,4 +3715,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a0aba883-384e-4fb3-a4aa-2bdd506b017d" Target="#_e9840c8f-4933-4e90-9d2f-caadfb051d79"><Timestamp>2025-01-13 08:21:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ee277a90-5873-4693-8e1e-5d79103f5643" Target="#_8904d0ed-6356-436d-86a1-683a61e89573"><Timestamp>2025-01-13 08:24:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
