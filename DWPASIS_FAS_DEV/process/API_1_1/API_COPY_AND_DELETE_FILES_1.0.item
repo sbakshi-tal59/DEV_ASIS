@@ -12,7 +12,7 @@
     <contextParameter comment="" internalId="_pFWKKbMREe-TFtugt47Zjw" name="api_misown_schema" prompt="api_misown_schema?" promptNeeded="false" repositoryContextId="__A8kMKsNEe-l9L7ZLGI_GA" type="id_String" value="MISOWN"/>
     <contextParameter comment="" internalId="_pFWKKrMREe-TFtugt47Zjw" name="api_misown_username" prompt="api_misown_username?" promptNeeded="false" repositoryContextId="__A8kMKsNEe-l9L7ZLGI_GA" type="id_String" value="MISOWN"/>
     <contextParameter comment="" internalId="_pFWKK7MREe-TFtugt47Zjw" name="api_misown_password" prompt="api_misown_password?" promptNeeded="false" repositoryContextId="__A8kMKsNEe-l9L7ZLGI_GA" type="id_Password" value="enc:system.encryption.key.v1:2dnH2UbU1+1qF8uhYXofSb939iD+q+HlTrfBwhKZB82cZ48mvRw="/>
-    <contextParameter comment="" internalId="_pFWKLLMREe-TFtugt47Zjw" name="api_filepath" prompt="api_filepath?" promptNeeded="false" repositoryContextId="__A8kMKsNEe-l9L7ZLGI_GA" type="id_Directory" value="D:\ASIS\Contexts\FAS_DEV\API\"/>
+    <contextParameter comment="" internalId="_pFWKLLMREe-TFtugt47Zjw" name="api_filepath" prompt="api_filepath?" promptNeeded="false" repositoryContextId="__A8kMKsNEe-l9L7ZLGI_GA" type="id_Directory" value="D:\ASIS\Contexts\FAS_INT\API\"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
@@ -57,7 +57,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:W+yZaU0ppke1S4L4fN0PSwZhbsHHMaRV6zdW0Bwl"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:hzsOOhjRvFpm9fNXuCzbVZkdtWSpf6S7Jns6vbtu"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -72,7 +72,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;D:/ASIS/DEV_Workspace/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;D:/ASIS/Development_Workspace/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
@@ -92,7 +92,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:yDOGyALOk+hyDw9sKYdS40OA3BOBriAN1nFkSX6q"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Y+R8Yj7LHHpauqCDlqVh91d79yMc8QTdOEoOv+mb"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -340,6 +340,8 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileProperties_1"/>
     <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="CHECK" name="MD5" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFP_ARCHIVE_FILES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILE_PROPERTIES&lt;/b&gt;&lt;br&gt;Move Files to Archive folder"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileProperties_1">
       <column key="false" length="255" name="abs_path" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -364,17 +366,19 @@
     <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="tMap_FILE_DATES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Gets the File Date"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="out1">
+    <metadata connector="FLOW" name="ln_File_dates">
       <column defaultValue="" key="false" length="20" name="mtime" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="out1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row1.mtime " name="mtime" nullable="true" type="id_Long"/>
+      <outputTables name="ln_File_dates" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="ln_Archive_Files.mtime " name="mtime" nullable="true" type="id_Long"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_Archive_Files" sizeState="INTERMEDIATE">
         <mapperTableEntries name="abs_path" nullable="true" type="id_String"/>
         <mapperTableEntries name="dirname" nullable="true" type="id_String"/>
         <mapperTableEntries name="basename" nullable="true" type="id_String"/>
@@ -390,7 +394,9 @@
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS"/>
     <elementParameter field="CHECK" name="USE_ADVANCED" value="true"/>
-    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="(TalendDate.getCurrentDate().getTime()-(out1.mtime+86400000*7))&gt;0"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="(TalendDate.getCurrentDate().getTime()-(ln_File_dates.mtime+86400000*7))&gt;0"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFR_FILTER_OLD_FILES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILTER&lt;/b&gt;&lt;br&gt;Filter Files more than 7 days old"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFilterRow_6">
       <column defaultValue="" key="false" length="20" name="mtime" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
@@ -412,6 +418,8 @@
     <elementParameter field="CHECK" name="FOLDER" value="false"/>
     <elementParameter field="CHECK" name="FOLDER_FILE" value="false"/>
     <elementParameter field="LABEL" name="NOTE" value="*Note &quot;CURRENT_STATUS&quot; including:&#10;&quot;File (or path) deleted.&quot;&#10;&quot;No file (or path) deleted.&quot;&#10;&quot;File (or path) does not exist or is invalid.&quot;"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFileDelete"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILEDELETE&lt;/b&gt;&lt;br&gt;Deletes files from Archive folder"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileDelete_1">
       <column defaultValue="" key="false" length="20" name="mtime" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Long" usefulColumn="true"/>
@@ -444,17 +452,17 @@
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate2"/>
   </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileProperties_1" offsetLabelX="0" offsetLabelY="0" source="tFileProperties_1" target="tMap_1">
+  <connection connectorName="FLOW" label="ln_Archive_Files" lineStyle="0" metaname="tFileProperties_1" offsetLabelX="0" offsetLabelY="0" source="tFileProperties_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Archive_Files"/>
   </connection>
-  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFilterRow_6">
+  <connection connectorName="FLOW" label="ln_File_dates" lineStyle="0" metaname="ln_File_dates" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFilterRow_6">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_File_dates"/>
   </connection>
-  <connection connectorName="FILTER" label="row2" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_6" target="tFileDelete_1">
+  <connection connectorName="FILTER" label="ln_Filter_old_files" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_6" target="tFileDelete_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Filter_old_files"/>
   </connection>
   <note opaque="false" posX="608" posY="64" sizeHeight="161" sizeWidth="417" text="Developer: Shaili Bakshi&#13;&#10;Date: 05-Dec-2024&#13;&#10;JIRA: BM-12332&#13;&#10;Description: Copy Flat files to Individual Provider folders in Archive folder and delete flat files from Source Folder&#13;&#10;"/>
   <subjob>
@@ -485,13 +493,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_505dfb66-1611-409b-a21c-0d8cdb887c0e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>w1tENSgQNUyUEs4UAIYRhYx2dyx35e4GOgjWdh2hvZZmg92yIAir5g/iWolfXGLyh6d8YSu28y02&#13;
-uBJ4qdNJpA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a9cde7db-b2b4-4f53-8826-d066398c2c47"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1D8j3H5XWIVqFJDft0+2l6kJU2fN7j7bNvrSzqhoLnkjsjIZNmE1HTHHPRMvsaqdIcOZL1KUDOIP&#13;
-6p2gVCuCeA==</DigestValue></Reference></SignedInfo><SignatureValue>D9D9AED7ExOScGv/pk9m+tRQH2HTrHYvlH/yh/qZ+MlnSXp52+un7mzeYkcOg862YzQIargjrhNR&#13;
-wxXSw0HsP19orWGKiBkYFAUbMf2GKyZ4+X5OeibN/lVz0j3JJBEKhSmCk3BujvQCU14T1y1NLzaA&#13;
-LYJbhO24VO1Wdkp8Rn9T6O60Rn7P37GfEpSPFG6bC+BRzqg3dLtyZ1T90rtiCug1pIYdzEmq+mWR&#13;
-WaIkg9l/rSyZoo6ufFbfhteknirzEdXuvWzQVYGb8BQyZw5Lwq6fzbm4XCD/rizRsr7P48fEDCjw&#13;
-Iw3AhgeKFahPCzo0xND8RNFG3Ckozyrl6/Vs4g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_acbacb0c-eeb7-4f4f-8cbc-236d5761ffb6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>95HMg8l9TFBMb3x1ldIc4JQr/tFxwQFzdD48uNCrrBTBLoH2EhpbKhSSzh8NJEeOeb/gvVPb3BBx&#13;
+WCgKTyBX7w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_15d7cabd-3b2c-4615-852f-1bae87ea0a19"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>H276b6aq6cyVDDvdBJtnt0xKb+onRX267gLQsBx9C1YYHHzm8UPv/4pswaojLoB13BsuQ+PTVqKQ&#13;
+QPcDPmv0Vg==</DigestValue></Reference></SignedInfo><SignatureValue>oj6bpwbnQYLg9bQHp0KkbKTNkuj7zOf0N+X6GOdZUxK7INRkEmSNCpeZOO5xQgLmcEo3jRw70RUt&#13;
+CPpClZFfLlSwotvPhDH8Nd145Hc1cDAS661h2i+WBirhDt2T7vVfct1I/OG8rsYAfLnbR5Kegqcj&#13;
+q//RTFcV6qPsuV/b/h2zVXaXn6NCowo+1roVjmNRyXqbPyz/TAPmxcNwGCZEmSiD8v45GcyvULIp&#13;
+jKfGMicRDlpfag+yT5+MyBq4HjZyUMuQ/duMfr+1DP9yroS3IajxqwzUoagaY9noamA/wy5iH5wx&#13;
+Rw4WHfWYGBzfFMwb4JV8AWo6yTJDBpRoZIhJQQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -513,4 +521,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a9cde7db-b2b4-4f53-8826-d066398c2c47" Target="#_505dfb66-1611-409b-a21c-0d8cdb887c0e"><Timestamp>2024-12-18 13:57:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_15d7cabd-3b2c-4615-852f-1bae87ea0a19" Target="#_acbacb0c-eeb7-4f4f-8cbc-236d5761ffb6"><Timestamp>2025-01-13 11:48:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
