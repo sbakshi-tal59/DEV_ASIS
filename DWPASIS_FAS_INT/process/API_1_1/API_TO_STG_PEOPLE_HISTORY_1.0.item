@@ -507,7 +507,7 @@
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_AUD_PEOPLE_HISTORY1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ln_Format_Rejections.COLLEAGUE_ID " name="AUD_COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
@@ -520,7 +520,7 @@
         <mapperTableEntries expression="ln_Format_Rejections.LINE_MANAGER " name="AUD_LINE_MANAGER" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Format_Rejections.FTE " name="AUD_FTE" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_Format_Rejections.JOB_ROLE_ID " name="AUD_JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_Format_Rejections.START_DATE " name="AUD_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TalendDate.TO_DATE(ln_Format_Rejections.START_DATE,&quot;dd/MM/yyyy&quot;) " name="AUD_START_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_Format_Rejections.REGISTERED_BODY " name="AUD_REGISTERED_BODY" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Format_Rejections.LEAVING_DATE " name="AUD_LEAVING_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_Format_Rejections.LEAVING_REASON_ID " name="AUD_LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
@@ -2056,7 +2056,7 @@
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_AUD_PEOPLE_HISTORY2" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ln_Length_Rejections.COLLEAGUE_ID " name="AUD_COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
@@ -2069,7 +2069,7 @@
         <mapperTableEntries expression="ln_Length_Rejections.LINE_MANAGER " name="AUD_LINE_MANAGER" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Length_Rejections.FTE " name="AUD_FTE" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_Length_Rejections.JOB_ROLE_ID " name="AUD_JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="ln_Length_Rejections.START_DATE " name="AUD_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TalendDate.TO_DATE(ln_Length_Rejections.START_DATE,&quot;dd/MM/yyyy&quot;) " name="AUD_START_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_Length_Rejections.REGISTERED_BODY " name="AUD_REGISTERED_BODY" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Length_Rejections.LEAVING_DATE " name="AUD_LEAVING_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_Length_Rejections.LEAVING_REASON_ID " name="AUD_LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
@@ -3689,13 +3689,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f38ad1ed-a978-4b9c-aedd-f02b7a03a233"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2pQ0fDdDVNBtO5vlbt5CJR8xRmdbCTPCeJiMm9IA9Gd21+TEg6VjgMjxKa0yFKOGE6BXVWs2tEef&#13;
-exWhG5d/bw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3afdcc0d-398d-4117-8b92-470d4fad0700"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4XvzrJ5xfO2bFRi5CnTOUe28ieV5MP2QlWONkkz8+cyl3m5eEO77H7/H8XAlha2klyc/0p0j4mNc&#13;
-s7tQJEK+QA==</DigestValue></Reference></SignedInfo><SignatureValue>Ue/GgIQ0dBI1xtTTC410Cp6dYjtViK5HyH0QAMTiPvApxUt1eJ9WcC1OeNKnesx6U7G9v2LRCjYL&#13;
-hmdMG1I5f0PBHKr0u24ZXXzf4ejW2ktldzZSnnIgXFvbFnaqkiLqCzZOd48ndwAnfZC5ky4rA5O7&#13;
-Hotcpr1SGXgrXnGXJEo3Id23sGDR+qYhtV1vtYN4e+deKK/mokCwCgJgh+vSHbH7nMXAEiEmXekP&#13;
-XJ60WADyLjQYhrMVlsYtOMTTxH8Xhj+FeKG+C6w6W0pDuHf6xhYYYGoEg6GmLXdRKOgmkNI3Bx8m&#13;
-DDDLOg14mnqKMA8TRiVL3J4j4i3DwTQ7OX1iDg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6bce832c-cd00-438e-93da-9ef07d021d34"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>h8dqBnjaN1VQDHS2svIDP7VCu5qqrfgZ+Oq+2xvsUhV2O2k2xrOjXzk3Lxh24Rf0FQ7h+olAsq+T&#13;
+On0yIKbcyw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ddf1028a-d79a-4b00-b2f5-7def55e8cae2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZdFzQkOE3UopbnQUny+udOzZBaVz4OK9gtSREIPtZPoRVbZuc1XLdExIFBL+gyNK4w8RLMxKxkq0&#13;
+9ce/dzATNA==</DigestValue></Reference></SignedInfo><SignatureValue>YoGBy78Kz3TrT7FcE78V1YCc8Ak2j8vsOCDis6upZ7TeOycbc7Q/mAO3KvAtobRdyc0a+HeTAIMM&#13;
+Rq02NgrkQPHArG7O+KUwzWe5QUnOxg6FvT0F+B82dDz92k/PFbLyAxcSybRg5ehJP+/HMaw3352Z&#13;
+936/Wz6kK0lCHXF5qBk+e3oiVUWy0D/2TQp79sVkHIxCaF1SZYJqmjQHSVaIUKxQ0n/6leC3toKG&#13;
+2XTEY856MGb8f/cvuCRoCZIpuEfkTyyTYkpR42t2W+Em4rParvZ2HAm4yPMxNGD7P5tRF47x0Sd5&#13;
+LGfL1e0BmBrruu9uOl6YNfyspKeiJ+EaauuTew==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3717,4 +3717,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3afdcc0d-398d-4117-8b92-470d4fad0700" Target="#_f38ad1ed-a978-4b9c-aedd-f02b7a03a233"><Timestamp>2025-02-03 12:56:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ddf1028a-d79a-4b00-b2f5-7def55e8cae2" Target="#_6bce832c-cd00-438e-93da-9ef07d021d34"><Timestamp>2025-02-03 12:59:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
