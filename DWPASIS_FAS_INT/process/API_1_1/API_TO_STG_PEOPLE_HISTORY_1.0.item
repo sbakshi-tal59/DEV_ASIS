@@ -358,7 +358,7 @@
       <column comment="" key="false" length="-1" name="JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="START_DATE" nullable="true" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="REGISTERED_BODY" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="LEAVING_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LEAVING_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LEAVING_REASON_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="MON_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -402,7 +402,7 @@
       <column comment="" key="false" length="-1" name="JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="START_DATE" nullable="true" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="REGISTERED_BODY" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="LEAVING_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LEAVING_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LEAVING_REASON_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="MON_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -522,7 +522,7 @@
         <mapperTableEntries expression="ln_Format_Rejections.JOB_ROLE_ID " name="AUD_JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="TalendDate.TO_DATE(ln_Format_Rejections.START_DATE,&quot;dd/MM/yyyy&quot;) " name="AUD_START_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_Format_Rejections.REGISTERED_BODY " name="AUD_REGISTERED_BODY" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_Format_Rejections.LEAVING_DATE " name="AUD_LEAVING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TalendDate.TO_DATE(ln_Format_Rejections.LEAVING_DATE,&quot;dd/MM/yyyy&quot;) " name="AUD_LEAVING_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_Format_Rejections.LEAVING_REASON_ID " name="AUD_LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_Format_Rejections.MON_WORKING_HOURS " name="AUD_MON_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_Format_Rejections.MON_START_TIME " name="AUD_MON_START_TIME" nullable="true" type="id_String"/>
@@ -576,7 +576,7 @@
         <mapperTableEntries name="JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="START_DATE" nullable="true" type="id_String"/>
         <mapperTableEntries name="REGISTERED_BODY" nullable="true" type="id_String"/>
-        <mapperTableEntries name="LEAVING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="LEAVING_DATE" nullable="true" type="id_String"/>
         <mapperTableEntries name="LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="MON_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="MON_START_TIME" nullable="true" type="id_String"/>
@@ -1365,7 +1365,7 @@
       <column comment="" key="false" length="-1" name="JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="START_DATE" nullable="true" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="REGISTERED_BODY" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="LEAVING_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LEAVING_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LEAVING_REASON_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="MON_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1410,7 +1410,7 @@
       <column comment="" key="false" length="-1" name="JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="START_DATE" nullable="true" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="REGISTERED_BODY" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="LEAVING_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LEAVING_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="LEAVING_REASON_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="MON_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1473,7 +1473,7 @@
       <column comment="" key="false" length="-1" name="STG_JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="0" name="STG_START_DATE" nullable="true" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STG_REGISTERED_BODY" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_LEAVING_DATE" nullable="true" originalLength="5" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STG_LEAVING_DATE" nullable="true" originalLength="5" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_LEAVING_REASON_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="STG_MON_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -1524,7 +1524,7 @@
         <mapperTableEntries expression="ln_tMAP_HISTORY.JOB_ROLE_ID " name="STG_JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="TalendDate.TO_DATE(ln_tMAP_HISTORY.START_DATE,&quot;dd/MM/yyyy&quot;) " name="STG_START_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_tMAP_HISTORY.REGISTERED_BODY " name="STG_REGISTERED_BODY" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_tMAP_HISTORY.LEAVING_DATE " name="STG_LEAVING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TalendDate.TO_DATE(ln_tMAP_HISTORY.LEAVING_DATE,&quot;dd/MM/yyyy&quot;) " name="STG_LEAVING_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_tMAP_HISTORY.LEAVING_REASON_ID " name="STG_LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_tMAP_HISTORY.MON_WORKING_HOURS " name="STG_MON_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_tMAP_HISTORY.MON_START_TIME " name="STG_MON_START_TIME" nullable="true" type="id_String"/>
@@ -1572,7 +1572,7 @@
         <mapperTableEntries name="JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="START_DATE" nullable="true" type="id_String"/>
         <mapperTableEntries name="REGISTERED_BODY" nullable="true" type="id_String"/>
-        <mapperTableEntries name="LEAVING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="LEAVING_DATE" nullable="true" type="id_String"/>
         <mapperTableEntries name="LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="MON_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="MON_START_TIME" nullable="true" type="id_String"/>
@@ -1887,100 +1887,100 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;STG_PEOPLE_HISTORY&lt;/b&gt;&lt;br&gt;Insert into STG_PEOPLE_HISTORY Table"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_4">
-      <column comment="" key="false" length="-1" name="STG_COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_TITLE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_FORENAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_SURNAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_AP_PRACTITIONER_SITE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_COMPANY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_LINE_MANAGER" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_FTE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="STG_START_DATE" nullable="true" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_REGISTERED_BODY" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_LEAVING_DATE" nullable="true" originalLength="5" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_LEAVING_REASON_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_MON_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_MON_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_TUE_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_TUE_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_TUE_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_WED_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_WED_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_WED_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_THU_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_THU_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_THU_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_FRI_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_FRI_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_FRI_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_SAT_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_SAT_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_SAT_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_SUN_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_SUN_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_SUN_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_TRAINING_COMPLETION_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_EXPERIENCE_COHORT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_VA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_TA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_F2F_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_PBA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_EFFECTIVE_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="STG_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_TITLE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_FORENAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_SURNAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_AP_PRACTITIONER_SITE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_COMPANY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_LINE_MANAGER" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_FTE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STG_START_DATE" nullable="true" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_REGISTERED_BODY" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STG_LEAVING_DATE" nullable="true" originalLength="5" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_LEAVING_REASON_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_MON_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_MON_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_TUE_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_TUE_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_TUE_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_WED_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_WED_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_WED_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_THU_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_THU_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_THU_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_FRI_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_FRI_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_FRI_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_SAT_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_SAT_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_SAT_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_SUN_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_SUN_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_SUN_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_TRAINING_COMPLETION_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_EXPERIENCE_COHORT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_VA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_TA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_F2F_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_PBA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_EFFECTIVE_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="STG_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="-1" name="STG_COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_TITLE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_FORENAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_SURNAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_AP_PRACTITIONER_SITE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_COMPANY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_LINE_MANAGER" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_FTE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="STG_START_DATE" nullable="true" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_REGISTERED_BODY" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_LEAVING_DATE" nullable="true" originalLength="5" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_LEAVING_REASON_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_MON_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_MON_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_TUE_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_TUE_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_TUE_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_WED_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_WED_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_WED_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_THU_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_THU_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_THU_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_FRI_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_FRI_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_FRI_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_SAT_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_SAT_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_SAT_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_SUN_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_SUN_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="5" name="STG_SUN_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_TRAINING_COMPLETION_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_EXPERIENCE_COHORT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_VA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_TA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_F2F_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="STG_PBA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_EFFECTIVE_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="STG_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_TITLE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_FORENAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_SURNAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_AP_PRACTITIONER_SITE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_COMPANY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_LINE_MANAGER" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_FTE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STG_START_DATE" nullable="true" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_REGISTERED_BODY" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STG_LEAVING_DATE" nullable="true" originalLength="5" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_LEAVING_REASON_ID" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_MON_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_MON_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_TUE_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_TUE_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_TUE_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_WED_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_WED_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_WED_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_THU_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_THU_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_THU_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_FRI_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_FRI_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_FRI_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_SAT_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_SAT_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_SAT_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_SUN_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_SUN_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_SUN_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_TRAINING_COMPLETION_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_EXPERIENCE_COHORT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_VA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_TA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_F2F_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_PBA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_EFFECTIVE_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="STG_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -2071,7 +2071,7 @@
         <mapperTableEntries expression="ln_Length_Rejections.JOB_ROLE_ID " name="AUD_JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="TalendDate.TO_DATE(ln_Length_Rejections.START_DATE,&quot;dd/MM/yyyy&quot;) " name="AUD_START_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_Length_Rejections.REGISTERED_BODY " name="AUD_REGISTERED_BODY" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_Length_Rejections.LEAVING_DATE " name="AUD_LEAVING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TalendDate.TO_DATE(ln_Length_Rejections.LEAVING_DATE,&quot;dd/MM/yyyy&quot;) " name="AUD_LEAVING_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_Length_Rejections.LEAVING_REASON_ID " name="AUD_LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_Length_Rejections.MON_WORKING_HOURS " name="AUD_MON_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_Length_Rejections.MON_START_TIME " name="AUD_MON_START_TIME" nullable="true" type="id_String"/>
@@ -2125,7 +2125,7 @@
         <mapperTableEntries name="JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="START_DATE" nullable="true" type="id_String"/>
         <mapperTableEntries name="REGISTERED_BODY" nullable="true" type="id_String"/>
-        <mapperTableEntries name="LEAVING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="LEAVING_DATE" nullable="true" type="id_String"/>
         <mapperTableEntries name="LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="MON_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="MON_START_TIME" nullable="true" type="id_String"/>
@@ -3689,13 +3689,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6bce832c-cd00-438e-93da-9ef07d021d34"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>h8dqBnjaN1VQDHS2svIDP7VCu5qqrfgZ+Oq+2xvsUhV2O2k2xrOjXzk3Lxh24Rf0FQ7h+olAsq+T&#13;
-On0yIKbcyw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ddf1028a-d79a-4b00-b2f5-7def55e8cae2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZdFzQkOE3UopbnQUny+udOzZBaVz4OK9gtSREIPtZPoRVbZuc1XLdExIFBL+gyNK4w8RLMxKxkq0&#13;
-9ce/dzATNA==</DigestValue></Reference></SignedInfo><SignatureValue>YoGBy78Kz3TrT7FcE78V1YCc8Ak2j8vsOCDis6upZ7TeOycbc7Q/mAO3KvAtobRdyc0a+HeTAIMM&#13;
-Rq02NgrkQPHArG7O+KUwzWe5QUnOxg6FvT0F+B82dDz92k/PFbLyAxcSybRg5ehJP+/HMaw3352Z&#13;
-936/Wz6kK0lCHXF5qBk+e3oiVUWy0D/2TQp79sVkHIxCaF1SZYJqmjQHSVaIUKxQ0n/6leC3toKG&#13;
-2XTEY856MGb8f/cvuCRoCZIpuEfkTyyTYkpR42t2W+Em4rParvZ2HAm4yPMxNGD7P5tRF47x0Sd5&#13;
-LGfL1e0BmBrruu9uOl6YNfyspKeiJ+EaauuTew==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6755faf9-b285-4634-9df7-6825e99df997"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XKFrCnTCfmXKePaZjJwQgADcd2WbinHq2aKQKnayc5yts/81njK3TZyLveLmvnnaKjFHG0cOmUyf&#13;
+qDTY91Xfig==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b6f254ae-c1df-4b1d-8ce0-93e69755a74d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SXBan/vAzfEOV7FO9aApSh5CsPQORNZQ733xCYQ5HbHSzQg32/qLuegflhUaF4fJ+3M/yTp3hbCg&#13;
+dNVw8M5eIQ==</DigestValue></Reference></SignedInfo><SignatureValue>CFw0sxlmYE3MYI1D8JnaUfxXkvqoF5VNm0XgsJO2JLEoQiB1MKpj+Ev1Na/QsJ7mpjrU18oIGtHl&#13;
+7hymKMIDW9g/4jWEaVm2mXksPxhmMsGKUovupia7CueDhnmpVSNVOLAdTFKCjldeM8DfcZJroXVQ&#13;
+kUQcuQNuhNAOKyTyjdsq9vFC7i7C68C5aKnkQIwUaplHQmuTUTFlthDoRN0TnMvPr4xS66DmaKsx&#13;
+i6nzjjh8SMs/tR3ateHzbmjoVJ+VxsYb2kctAxml1Dr3kJjAPdLmtm3EXK9xTlMXIZD8xYLy5stN&#13;
+ecCZRxKz0l9FMpeZ5D7VhUv/b0hBTlxuIlFlDA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3717,4 +3717,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ddf1028a-d79a-4b00-b2f5-7def55e8cae2" Target="#_6bce832c-cd00-438e-93da-9ef07d021d34"><Timestamp>2025-02-03 12:59:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b6f254ae-c1df-4b1d-8ce0-93e69755a74d" Target="#_6755faf9-b285-4634-9df7-6825e99df997"><Timestamp>2025-02-03 13:31:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
