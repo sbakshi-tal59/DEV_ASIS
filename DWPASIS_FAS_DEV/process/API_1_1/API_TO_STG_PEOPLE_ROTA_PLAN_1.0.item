@@ -212,7 +212,7 @@
       <column comment="" key="false" length="5" name="START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ACTIVITY_TASK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="false" length="-1" name="ROTA_DATE" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -221,7 +221,7 @@
       <column comment="" key="false" length="5" name="START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ACTIVITY_TASK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -249,7 +249,7 @@
       <column comment="" key="false" length="4000" name="AUD_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ACTIVITY_TASK_ID" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="38" name="AUD_ACTIVITY_FTE" nullable="true" originalLength="38" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_ACTIVITY_FTE" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
@@ -262,7 +262,7 @@
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_AUD_PEOPLE_ROTA_PLAN1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="TalendDate.TO_DATE(ln_Format_Rejections.ROTA_DATE,&quot;dd/MM/yyyy&quot;) " name="AUD_ROTA_DATE" nullable="true" type="id_Date"/>
@@ -439,7 +439,7 @@
       <column comment="" key="false" length="4000" name="AUD_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ACTIVITY_TASK_ID" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="38" name="AUD_ACTIVITY_FTE" nullable="true" originalLength="38" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_ACTIVITY_FTE" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
@@ -458,7 +458,7 @@
       <column comment="" key="false" length="4000" name="AUD_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ACTIVITY_TASK_ID" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="38" name="AUD_ACTIVITY_FTE" nullable="true" originalLength="38" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_ACTIVITY_FTE" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
@@ -554,7 +554,7 @@
       <column comment="" key="false" length="5" name="START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ACTIVITY_TASK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
     </metadata>
     <metadata connector="OTHER" name="OTHER"/>
     <metadata connector="REJECT" name="REJECT">
@@ -564,7 +564,7 @@
       <column comment="" key="false" length="5" name="START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ACTIVITY_TASK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -592,14 +592,14 @@
       <column comment="" key="false" length="5" name="STG_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="STG_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_ACTIVITY_TASK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="STG_ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="STG_ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="STG_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_STG_PEOPLE_ROTA_PLAN" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="TalendDate.TO_DATE(ln_tMAP_ROTA_PLAN.ROTA_DATE,&quot;dd/MM/yyyy&quot;) " name="STG_ROTA_DATE" nullable="true" type="id_Date"/>
@@ -738,7 +738,7 @@
       <column comment="" key="false" length="5" name="STG_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="STG_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_ACTIVITY_TASK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="STG_ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="STG_ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="STG_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
@@ -751,7 +751,7 @@
       <column comment="" key="false" length="5" name="STG_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="STG_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_ACTIVITY_TASK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="STG_ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="STG_ACTIVITY_FTE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="STG_SOURCE_FILE_NAME" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
@@ -783,7 +783,7 @@
       <column comment="" key="false" length="4000" name="AUD_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ACTIVITY_TASK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="38" name="AUD_ACTIVITY_FTE" nullable="true" originalLength="38" pattern="" precision="2" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="AUD_ACTIVITY_FTE" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
@@ -796,7 +796,7 @@
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_AUD_PEOPLE_ROTA_PLAN2" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="TalendDate.TO_DATE(ln_Length_Rejections.ROTA_DATE,&quot;dd/MM/yyyy&quot;) " name="AUD_ROTA_DATE" nullable="true" type="id_Date"/>
@@ -973,7 +973,7 @@
       <column comment="" key="false" length="4000" name="AUD_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ACTIVITY_TASK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="38" name="AUD_ACTIVITY_FTE" nullable="true" originalLength="38" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="AUD_ACTIVITY_FTE" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
@@ -992,7 +992,7 @@
       <column comment="" key="false" length="4000" name="AUD_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ACTIVITY_TASK_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="38" name="AUD_ACTIVITY_FTE" nullable="true" originalLength="38" pattern="" precision="2" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="AUD_ACTIVITY_FTE" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
@@ -1564,13 +1564,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_24e9f622-e700-4059-8ff1-6b2fe0b95c3f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OgSUje6M1hwb19Z7OstaxruT8FDUzSARvj1GVuduRilaGCQMnknJTUrh0UeaHIh7lRBhM7+CZ3Qs&#13;
-4UbFnSNeFw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_66594feb-dcbc-4f01-a836-40923a4101c6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PZpZ1NCTMdjfPcO6XczqCIrHieKwrbSAsD5dlYK+GoiiXLAS+TrZS8HuToWCmKg3WxfTZcW3YLON&#13;
-WUlb3JGRpg==</DigestValue></Reference></SignedInfo><SignatureValue>R4H3GdfQqKG5KJb9ier66014XPNuiXIRl/PSzzQJGSDYwnZXV45u2sETFX1kX45CyZqlokj9cRMv&#13;
-wRlrKG8FKa8Kv7kGa7DaozuwDxUqaU2x3xka/iHmN3pq0rlhdTMXmWrvsDHcmzGJ0FgEGxyQRMpZ&#13;
-5oyAfqif6k67jsGKZSUfD7kA9s4pZfxE18HPrc540pXMpWXNSxhR8F8y9fCsCHjI7c5D9loWpYtw&#13;
-odVusBXc1x80Oop2hpQUHTq++3r59/mZOdLu2sZXbFZ2cb1GzxxrUPPk7JI/iDbwEBcvUsw+gPIt&#13;
-XZNzPsaNGIZkeNArBGNZTp91VdKZRRpW5CLC6A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9c5a55eb-e798-419f-aaf9-3adf727eebda"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>RqyM3Yk1uSAwSjVdq4LZUQbztXm/Q2gg4tgKRT+JqwuRJs0QJHEkWuTxGDKlpml6lsr0TnJHYRZl&#13;
+hvqAfURfZA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_babfd5e0-1eff-448b-bfe3-64eb95d3a183"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ANDGemGdzosZvvwPeYwhG/GDL9JI0cE4U1D+JEhf+IrlJIySFawa4ShHtuEXSMG6PBBsI/L/bVjt&#13;
+m7CWCFWkhg==</DigestValue></Reference></SignedInfo><SignatureValue>YG5LOQYUuI2HzM+4on9E19SBbfe52WptgbK4DHNVHWDTOx1R4ua7lExWEc4SP+0WfDnzNpv5KNQc&#13;
+4vIiGN1sx57arVdfJDFtaG72khy9y7XX4g+guizkHAF7TMeySRQaelGv/6jNfryvjTUG02ZpssaI&#13;
+CO44mPLuHrTDxR4AcERS8XRYMzva36shgY9APPbL0dn+Yln1VWLaXI/pA7IK8E1vrWdVPWToApmH&#13;
+mhTZipNuGLt4SJFWDt98vGsbaGPpP26wMJOQu9t4WZRpufoF/UDpBACQLn3066VowP1gKq3/7F2o&#13;
+/oDxs6lRbvS9n0uYZmZ6qlbhdLJqRHZQensuQA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1592,4 +1592,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_66594feb-dcbc-4f01-a836-40923a4101c6" Target="#_24e9f622-e700-4059-8ff1-6b2fe0b95c3f"><Timestamp>2025-02-05 11:08:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_babfd5e0-1eff-448b-bfe3-64eb95d3a183" Target="#_9c5a55eb-e798-419f-aaf9-3adf727eebda"><Timestamp>2025-02-25 12:41:42</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
