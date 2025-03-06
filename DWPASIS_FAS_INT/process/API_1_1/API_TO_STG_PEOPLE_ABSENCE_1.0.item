@@ -12,7 +12,7 @@
     <contextParameter comment="" internalId="_yhxb2asPEe-l9L7ZLGI_GA" name="api_misown_schema" prompt="api_misown_schema?" promptNeeded="false" repositoryContextId="__A8kMKsNEe-l9L7ZLGI_GA" type="id_String" value="MISOWN"/>
     <contextParameter comment="" internalId="_yhxb2qsPEe-l9L7ZLGI_GA" name="api_misown_username" prompt="api_misown_username?" promptNeeded="false" repositoryContextId="__A8kMKsNEe-l9L7ZLGI_GA" type="id_String" value="MISOWN"/>
     <contextParameter comment="" internalId="_yhxb26sPEe-l9L7ZLGI_GA" name="api_misown_password" prompt="api_misown_password?" promptNeeded="false" repositoryContextId="__A8kMKsNEe-l9L7ZLGI_GA" type="id_Password" value="enc:system.encryption.key.v1:R7zl1UFoGrB6GAfgMohxByMIfW7zFFEldh55xnWMIYemCbl1zbc="/>
-    <contextParameter comment="" internalId="_yhxb3KsPEe-l9L7ZLGI_GA" name="api_filepath" prompt="api_filepath?" promptNeeded="false" repositoryContextId="__A8kMKsNEe-l9L7ZLGI_GA" type="id_Directory" value="D:\ASIS\Contexts\FAS_INT\API\"/>
+    <contextParameter comment="" internalId="_yhxb3KsPEe-l9L7ZLGI_GA" name="api_filepath" prompt="api_filepath?" promptNeeded="false" repositoryContextId="__A8kMKsNEe-l9L7ZLGI_GA" type="id_Directory" value="D:\ASIS\Contexts\FAS_DEV\API\"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
@@ -57,7 +57,7 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:hzsOOhjRvFpm9fNXuCzbVZkdtWSpf6S7Jns6vbtu"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:W+yZaU0ppke1S4L4fN0PSwZhbsHHMaRV6zdW0Bwl"/>
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
@@ -72,7 +72,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;D:/ASIS/Development_Workspace/.metadata&quot;"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;D:/ASIS/DEV_Workspace/.metadata&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
@@ -92,7 +92,7 @@
     <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:Y+R8Yj7LHHpauqCDlqVh91d79yMc8QTdOEoOv+mb"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:yDOGyALOk+hyDw9sKYdS40OA3BOBriAN1nFkSX6q"/>
     <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
@@ -198,14 +198,14 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILE_ABSENCE&lt;/b&gt;&lt;br&gt;Specifies the File Format"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileInputDelimited_1">
-      <column comment="" key="false" length="7" name="MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="OTHER_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="7" name="MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -231,7 +231,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ABSENCE_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps File Format Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_AUD_PEOPLE_ABSENCE1">
-      <column comment="" key="false" length="4000" name="AUD_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -251,7 +251,7 @@
       <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_AUD_PEOPLE_ABSENCE1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="ln_Format_Rejections.MONTH " name="AUD_MONTH" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.TO_DATE(ln_Format_Rejections.MONTH,&quot;dd/MM/yyyy&quot;) " name="AUD_MONTH" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_Format_Rejections.COLLEAGUE_PRN " name="AUD_COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Format_Rejections.SICK_LEAVE " name="AUD_SICK_LEAVE" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_Format_Rejections.ANNUAL_LEAVE " name="AUD_ANNUAL_LEAVE" nullable="true" type="id_BigDecimal"/>
@@ -405,7 +405,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_ABSENCE&lt;/b&gt;&lt;br&gt;Inserts File Format Errors in AUD_PEOPLE_ABSENCE table"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_2">
-      <column comment="" key="false" length="4000" name="AUD_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
@@ -422,7 +422,7 @@
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="4000" name="AUD_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
@@ -502,7 +502,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;SCHEMA_ABSENCE_CHECK&lt;/b&gt;&lt;br&gt;Schema Check for Abence"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tSchemaComplianceCheck_1">
-      <column comment="" key="false" length="7" name="MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -510,7 +510,7 @@
     </metadata>
     <metadata connector="OTHER" name="OTHER"/>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="7" name="MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -536,7 +536,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ABSENCE&lt;/b&gt;&lt;br&gt;Transformations for Absence"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_STG_PEOPLE_ABSENCE">
-      <column comment="" key="false" length="7" name="STG_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STG_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -550,7 +550,7 @@
       <uiProperties/>
       <varTables name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_STG_PEOPLE_ABSENCE" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="ln_tMAP_ABSENCE.MONTH " name="STG_MONTH" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.TO_DATE(ln_tMAP_ABSENCE.MONTH,&quot;dd/MM/yyyy&quot;) " name="STG_MONTH" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_tMAP_ABSENCE.COLLEAGUE_PRN " name="STG_COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_tMAP_ABSENCE.SICK_LEAVE " name="STG_SICK_LEAVE" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_tMAP_ABSENCE.ANNUAL_LEAVE " name="STG_ANNUAL_LEAVE" nullable="true" type="id_BigDecimal"/>
@@ -666,7 +666,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;STG_PEOPLE_ABSENCE&lt;/b&gt;&lt;br&gt;Insert into STG_PEOPLE_ABSENCE Table"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_4">
-      <column comment="" key="false" length="7" name="STG_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STG_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
@@ -677,7 +677,7 @@
       <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="7" name="STG_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="STG_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STG_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
@@ -707,7 +707,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ABSENCE_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps Length Mismatch Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_AUD_PEOPLE_ABSENCE2">
-      <column comment="" key="false" length="4000" name="AUD_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -727,7 +727,7 @@
       <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_AUD_PEOPLE_ABSENCE2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="ln_Length_Rejections.MONTH " name="AUD_MONTH" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.TO_DATE(ln_Length_Rejections.MONTH,&quot;dd/MM/yyyy&quot;) " name="AUD_MONTH" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_Length_Rejections.COLLEAGUE_PRN " name="AUD_COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Length_Rejections.SICK_LEAVE " name="AUD_SICK_LEAVE" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_Length_Rejections.ANNUAL_LEAVE " name="AUD_ANNUAL_LEAVE" nullable="true" type="id_BigDecimal"/>
@@ -881,7 +881,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_ABSENCE&lt;/b&gt;&lt;br&gt;Inserts Length Mismatch Errors in AUD_PEOPLE_ABSENCE table"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
-      <column comment="" key="false" length="4000" name="AUD_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
@@ -898,7 +898,7 @@
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="4000" name="AUD_MONTH" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
@@ -945,7 +945,7 @@
         <mapperTableEntries expression="ln_CHANNEL_DATE.STG_FILE_DATE " name="MIS_UP_TO_DATE" nullable="true" type="id_Date"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_CHANNEL_DATE" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="STG_MONTH" nullable="true" type="id_String"/>
+        <mapperTableEntries name="STG_MONTH" nullable="true" type="id_Date"/>
         <mapperTableEntries name="STG_COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries name="STG_SICK_LEAVE" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="STG_ANNUAL_LEAVE" nullable="true" type="id_BigDecimal"/>
@@ -1415,13 +1415,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b832e7b1-4afe-40fd-9d32-e90ec790a93d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KSwe/vNxfaapTs1Qpu21eRFojDKabKO+0culBgPWvbD0pxNtm6BcpdWvyi35x0pCezFOEemEPpqt&#13;
-2AWTZ5lLTw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0f8bbae7-4250-4350-aa42-5e97355b5ff0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>s6PAL0cUDdcYg7HC+nTPn79Zzb9QAo+7dri4eqMI7NQdN68LsFHn1VvZG/C+p5DsQawiaheRnYo7&#13;
-hkSTVG1lBw==</DigestValue></Reference></SignedInfo><SignatureValue>Nx0hiuqQsYCl5creqjrFb+ADR7xazBiw3lbvfsBJSgd0T1JAgCw+Llz829FoixyLiKEH8/KdQc2x&#13;
-NuypEoV86XuBBM4jNQkxOWBtJHj8DIICJRs4i2VE0HLj5HuS3mtaE7QcM6F0pDLTUdV2E8tv8aOK&#13;
-CCrJqDl0BK1gP1zr94DlgMh8e5YJgw0cjI+heZGE1JO0s0lW8W4GPmo20i98qi6lE6grfOdAVO3C&#13;
-hC095SsNLwPnaOpWyLlrQgcsbZPu41RB5CCodaLwtx4Xc3jsqwlaVyoMvHe43ycfwljp+zxnhOFh&#13;
-vmqOna9UG+uODLwmNoTIEana3Zmism3IShcAWg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5ee4d216-8419-4500-b288-c63511aeb49f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hsUky6v4lSp8wvuXqGLMiMrM1F8l3vrbmYPuhZWCyvlFBk4We5J5DN35E3sez7nRNdPUMLZSIF4n&#13;
+8DcqHZ7SZg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3685ec5c-5e81-4d39-8927-46577917fcb5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DIMuj1zz/fdUZY2lv3OYnbCU/O8EuUIP75dLnDHn1NO9+s/ke0Da9b7OO17eG4gtR0dOV5plpKpb&#13;
+f3Z0mX7Nww==</DigestValue></Reference></SignedInfo><SignatureValue>debMKChMV8xO3JpiYwTHrs3+Fp6Fx3IXIjIvsBzES4CLXNSCked8MoI+ugrVG0zl6GpUc/hSmf6C&#13;
+S9HLkC7Xqt+4h7AY2ZiHQGie0/bCmyHZt4KD4UpfNfrVB2lcNOe572nW+btjDEfqj2fcl9jw8I9+&#13;
+BCLJvxdSG59h82odEyfxFl32CdVZeRGqxo6F7zTCg0oieXCvcxIRufpYuLFvXk0TgNEzIiBn4Y9R&#13;
+BxUuw7vEIHkAZqB3WCawgPWbskZ7aEeuXLuaRRIIY9q1r24TXt2KNN0gC2BZx/EbwunAIiWtI4a8&#13;
+yaMfuPXvJ2Y4N2za1Ulu3PyLBZLHFAXVtfJIgA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1443,4 +1443,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0f8bbae7-4250-4350-aa42-5e97355b5ff0" Target="#_b832e7b1-4afe-40fd-9d32-e90ec790a93d"><Timestamp>2025-02-25 15:06:11</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3685ec5c-5e81-4d39-8927-46577917fcb5" Target="#_5ee4d216-8419-4500-b288-c63511aeb49f"><Timestamp>2025-03-06 13:45:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
