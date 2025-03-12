@@ -4670,13 +4670,36 @@
     <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
     <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_PERSONAL_CAPABILITY_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_PERSON_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_CAPABILITY_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_CREATED_ON"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_CREATED_BY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_LAST_UPDATED_ON"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_LAST_UPDATED_BY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBI_STG_D_PERSONAL_CAPABILITY"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;STG_D_USER&lt;/b&gt;&lt;br&gt;Read STG_D_USER records"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBInput_3"/>
+    <metadata connector="FLOW" name="tDBInput_3">
+      <column comment="" key="false" length="38" name="STG_PERSONAL_CAPABILITY_ID" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="38" name="STG_PERSON_ID" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="38" name="STG_CAPABILITY_ID" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_CREATED_ON" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="STG_CREATED_BY" nullable="true" originalLength="20" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_LAST_UPDATED_ON" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="STG_LAST_UPDATED_BY" nullable="true" originalLength="20" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
   </node>
   <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="-20" offsetLabelY="-5" posX="576" posY="2624">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_19"/>
@@ -4712,7 +4735,43 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
-    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_PERSONAL_CAPABILITY_ID"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_PERSON_ID"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_CAPABILITY_ID"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_CREATED_ON"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_CREATED_BY"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_LAST_UPDATED_ON"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STG_LAST_UPDATED_BY"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
     <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_UPPERCASE" value="false"/>
@@ -4728,8 +4787,23 @@
     <elementParameter field="TEXT" name="LABEL" value="tDBO_MSD_D_PERSONAL_CAPABILITY "/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;MSD_D_USER&lt;/b&gt;&lt;br&gt;Update/Insert into MSD_D_USER"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBOutput_19"/>
+    <metadata connector="FLOW" name="tDBOutput_19">
+      <column comment="" key="false" length="38" name="STG_PERSONAL_CAPABILITY_ID" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="38" name="STG_PERSON_ID" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="38" name="STG_CAPABILITY_ID" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_CREATED_ON" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="STG_CREATED_BY" nullable="true" originalLength="20" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_LAST_UPDATED_ON" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="STG_LAST_UPDATED_BY" nullable="true" originalLength="20" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+    </metadata>
     <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="38" name="STG_PERSONAL_CAPABILITY_ID" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="38" name="STG_PERSON_ID" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="38" name="STG_CAPABILITY_ID" nullable="true" originalLength="38" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_CREATED_ON" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="STG_CREATED_BY" nullable="true" originalLength="20" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_LAST_UPDATED_ON" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="STG_LAST_UPDATED_BY" nullable="true" originalLength="20" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -4958,9 +5032,33 @@
       <elementValue elementRef="TRACE_COLUMN" value="MSD_ASSESSMENT_PROVIDER_ID"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STG_CREATED_BY"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STG_CAPABILITY_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STG_LAST_UPDATED_BY"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STG_CREATED_ON"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STG_PERSON_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STG_LAST_UPDATED_ON"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="STG_PERSONAL_CAPABILITY_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_STG_D_PERSONAL_CAPABILITY"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tRowGenerator_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk22"/>
   </connection>
   <note opaque="true" posX="768" posY="128" sizeHeight="97" sizeWidth="481" text="Developer: Shaili Bakshi&#13;&#10;Date: 09-Oct-2019&#13;&#10;JIRA: BM-3873&#13;&#10;Description: Extract MSD Staging Data and insert into EDW MSD Tables.">
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
@@ -5128,13 +5226,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f1adeb96-14a4-4050-be75-d04ce6c1c06f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pxPzX2gzam5N+90JBS9EF250/O8dwmksiA+0E2bF7L5SfVG8Xa7BX9fFg0MDIz1DpTQRDAN62Iae&#13;
-BH4znA7Oyw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9bcdb5f6-5069-472a-9573-6208217ea7c8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/w1JfbYjn6NxTMvz/lHgAjKUJKkW7CFieVJj/mCGjZ2UvnubmSdwoNjys7U/zyhNO0AJcpp03tXm&#13;
-ngrCs3RuJQ==</DigestValue></Reference></SignedInfo><SignatureValue>n8Ca0TguRjCTFs2tzcdBwXbKO3tYnz8scAUz1muwK0KSeFmVvEfUzoPTAtZuv/LpY9mkCRdFDZ07&#13;
-3GL+ZQDdO+7rfuZVhxIEIcuBg4J/c78kIH5JE1GmBzQCMYhtlDhoYYak27jfeCHt4eY69ouPQSj7&#13;
-a5AsCsD8CaGrVDPEvQccaQwPO4PFASAas98XjD7w32Iez9s2NQzCQPDIdfGmsmH2ZTptxZfm69xe&#13;
-Z8qjLCIoqOHNRVsvX9z80kVAWAkVcnKf1YLHv1IAYeQlrLmJzdk0G+5436DW44YMHAV3+pln8egL&#13;
-Rj6Uuz0PhiSrzh4MWp3DLBPkDk/5Y5mhsECj+w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e573939d-7fdf-41a0-a19f-770e582883d7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XzRhMgQVnz080L2G8qLxqjh1yO6miDxU4odAGRmssust1dPf9HhsXMKOklUfShukqUk42OtZppie&#13;
+MHwzNcjtKA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_59118dcf-1db0-436f-9223-304123a3b69c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>as3TjBXkgkIW5PaRpcNBL7lGd8psKzcY8Uf3X3D4Ud2HFzGAn7v2KIl2hpINNvsSuR6gVKNwaw2z&#13;
+gJhjQKiYiA==</DigestValue></Reference></SignedInfo><SignatureValue>mu+oXpbulZ8rOxFd37myLLR3n7dTSCw9KJS4ipeilRoulCyce/Jcq9m4a28SbgKYn7/H0FV3+qVy&#13;
+vnkTrFjkvjyAdzRcZNJxsFGCLWgPcp07X1nzeZoLDLpchyoMu3aMZyYHLqJzfCYM1Ez4ZLm4Yke+&#13;
+SsP2Yi5XFGOMcY+F5Q6eJ4W//Y4t0OIslEWgMTOBhfPQNuWE/YUlcm9YdIo+Sb1+w4xfV98RtKQE&#13;
+pOb+ab+FywLz9JMxqrzBv6e2rggYm42w/W5skJ79aVWm7C8DahpF+8yiYLc7qVHiNJw6L2/0bgRw&#13;
+aHB823A/9qo4BTuHW7oqrYwIixK5bbEYgly1Tg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -5156,4 +5254,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9bcdb5f6-5069-472a-9573-6208217ea7c8" Target="#_f1adeb96-14a4-4050-be75-d04ce6c1c06f"><Timestamp>2025-03-12 15:37:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_59118dcf-1db0-436f-9223-304123a3b69c" Target="#_e573939d-7fdf-41a0-a19f-770e582883d7"><Timestamp>2025-03-12 16:07:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
