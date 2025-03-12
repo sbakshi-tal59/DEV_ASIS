@@ -4651,12 +4651,12 @@
     <elementParameter field="TEXT" name="USER" value="context.msd_staging_username"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:G5AKQqVa4LdWTkTWZFWkum2SF17B0II6kzfRS7Z/6z3Ph9TfVRpEkyFR8Pr/V96b5etkEY1WEmY="/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;STG_D_USER&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;STG_D_PERSONAL_CAPABILITY&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#13;&#10; STG_USER_ID MSD_USER_ID,&#13;&#10; STG_USER_NAME MSD_USER_NAME,&#13;&#10; STG_ENABLED MSD_ENABLED,&#13;&#10; STG_ACTIVE_INDICATOR MSD_ACTIVE_INDICATOR,&#13;&#10; STG_CREATED_ON MSD_CREATED_ON,&#13;&#10; STG_SORT_ORDER MSD_SORT_ORDER,&#13;&#10; STG_SHORT_CODE MSD_SHORT_CODE,&#13;&#10; STG_CREATED_BY MSD_CREATED_BY,&#13;&#10; STG_LAST_UPDATED_ON MSD_LAST_UPDATED_ON,&#13;&#10; STG_LAST_UPDATED_BY MSD_LAST_UPDATED_BY,&#13;&#10; STG_ASSESSMENT_PROVIDER_ID MSD_ASSESSMENT_PROVIDER_ID&#13;&#10;FROM &quot;+context.msd_staging_schema+&quot;.STG_D_USER&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#13;&#10;   stg_personal_capability_id,&#13;&#10;   stg_person_id,&#13;&#10;   stg_capability_id,&#13;&#10;   stg_created_on,&#13;&#10;   stg_created_by,&#13;&#10;   stg_last_updated_on,&#13;&#10;   stg_last_updated_by&#13;&#10;FROM&#13;&#10;   &quot;+context.msd_staging_schema+&quot;.stg_d_personal_capability&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -4670,50 +4670,15 @@
     <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
     <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
-    <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_USER_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_USER_NAME"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_ENABLED"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_ACTIVE_INDICATOR"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_CREATED_ON"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_SORT_ORDER"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_SHORT_CODE"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_CREATED_BY"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_LAST_UPDATED_ON"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_LAST_UPDATED_BY"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_ASSESSMENT_PROVIDER_ID"/>
-      <elementValue elementRef="TRIM" value="false"/>
-    </elementParameter>
+    <elementParameter field="TABLE" name="TRIM_COLUMN"/>
     <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBI_STG_D_PERSONAL_CAPABILITY"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;STG_D_USER&lt;/b&gt;&lt;br&gt;Read STG_D_USER records"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBInput_3">
-      <column comment="" defaultValue="" key="false" length="38" name="MSD_USER_ID" nullable="true" originalLength="38" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="MSD_USER_NAME" nullable="true" originalLength="50" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="MSD_ENABLED" nullable="true" originalLength="3" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="MSD_ACTIVE_INDICATOR" nullable="true" originalLength="3" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="MSD_CREATED_ON" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="38" name="MSD_SORT_ORDER" nullable="true" originalLength="38" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="MSD_SHORT_CODE" nullable="true" originalLength="10" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="MSD_CREATED_BY" nullable="true" originalLength="20" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="MSD_LAST_UPDATED_ON" nullable="true" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="MSD_LAST_UPDATED_BY" nullable="true" originalLength="20" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="MSD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="3" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
-    </metadata>
+    <metadata connector="FLOW" name="tDBInput_3"/>
   </node>
-  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="2624">
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="-20" offsetLabelY="-5" posX="576" posY="2624">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_19"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -4747,63 +4712,7 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
-    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_USER_ID"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_USER_NAME"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_ENABLED"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_ACTIVE_INDICATOR"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_CREATED_ON"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_SORT_ORDER"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_SHORT_CODE"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_CREATED_BY"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_LAST_UPDATED_ON"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_LAST_UPDATED_BY"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="MSD_ASSESSMENT_PROVIDER_ID"/>
-      <elementValue elementRef="UPDATE_KEY" value="false"/>
-      <elementValue elementRef="DELETE_KEY" value="false"/>
-      <elementValue elementRef="UPDATABLE" value="true"/>
-      <elementValue elementRef="INSERTABLE" value="true"/>
-    </elementParameter>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false"/>
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
     <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_UPPERCASE" value="false"/>
@@ -4819,31 +4728,8 @@
     <elementParameter field="TEXT" name="LABEL" value="tDBO_MSD_D_USER"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;MSD_D_USER&lt;/b&gt;&lt;br&gt;Update/Insert into MSD_D_USER"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBOutput_19">
-      <column comment="" defaultValue="" key="true" length="38" name="MSD_USER_ID" nullable="false" originalLength="38" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="MSD_USER_NAME" nullable="true" originalLength="50" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="MSD_ENABLED" nullable="true" originalLength="3" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="MSD_ACTIVE_INDICATOR" nullable="true" originalLength="3" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="MSD_CREATED_ON" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="38" name="MSD_SORT_ORDER" nullable="true" originalLength="38" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="MSD_SHORT_CODE" nullable="true" originalLength="10" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="MSD_CREATED_BY" nullable="true" originalLength="20" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="MSD_LAST_UPDATED_ON" nullable="true" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="MSD_LAST_UPDATED_BY" nullable="true" originalLength="20" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="MSD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="3" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
-    </metadata>
+    <metadata connector="FLOW" name="tDBOutput_19"/>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" defaultValue="" key="true" length="38" name="MSD_USER_ID" nullable="false" originalLength="38" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="MSD_USER_NAME" nullable="true" originalLength="50" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="MSD_ENABLED" nullable="true" originalLength="3" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="MSD_ACTIVE_INDICATOR" nullable="true" originalLength="3" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="MSD_CREATED_ON" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="38" name="MSD_SORT_ORDER" nullable="true" originalLength="38" pattern="" precision="0" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="MSD_SHORT_CODE" nullable="true" originalLength="10" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="MSD_CREATED_BY" nullable="true" originalLength="20" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="0" name="MSD_LAST_UPDATED_ON" nullable="true" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="20" name="MSD_LAST_UPDATED_BY" nullable="true" originalLength="20" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="MSD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="3" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -5242,13 +5128,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c72310ae-d013-4ca3-9f74-9f7fa00e27e4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xfSvF9pVj9gez3L0ogz9wTQt+XtkNS/WPgqcvETPelgKZXrFl/0DSVZp9FjAjvDDhZEn7WUjCREP&#13;
-v1/y5LwIoQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6acaf5e8-7238-4bac-9f94-bd0fd53aa6af"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VmeTJuF3SENnzyCcfQgTUgbyYOeyXD07M/7HX+48k2OeMp/4QKUgvQdulvY8yGItLox8jhL6MyGD&#13;
-zrabXKhMsA==</DigestValue></Reference></SignedInfo><SignatureValue>HtyhrvdbQvELJM2wWJhu0FgfZCPqS2XNhExxfHoqz4uBriqEn9IGQUYtv300EI+/OZCFQiWxGeEt&#13;
-d/qO8OCejdFCru8j9EXeACOhORtrKojtLUzP12kEGdMgd/NmQA7XJA6LbeV2AffZEO5GRP0SYAjL&#13;
-emRPXLDK1OU7nD/Fw9cKqZqV8oDXRrUm5X22w2yh7ON06Fl218q5b41v3PXiChnjUbNhvWTOSS8t&#13;
-6CUmVslJJWg3gJDIl9fYPggyDzn4tPAbcpET0Ha7Bz81b4Xh3YXA5t0uDgs/NhTtdDcN9w3CzNEw&#13;
-0Z5MTBHl5ZmOOETc7B+iGyHRHIRLyRKWFLu9WQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_49548faa-1de6-458a-9db5-9fc3e5055610"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pzA0Rm44gqzTUX+egLGFKuj7nyT4VC6A+IQlVQg9xuZfc/Ib9f8uviIs9QIy27LaBD+zk9wSDBqZ&#13;
+d8pZm6499A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8ab8ff7a-80e2-4f24-81a5-9460d553ae57"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/4YX0lKQ0t1y+apmkSJQ5umtGVwn5ofYfiWBEM78j0+CkjfjZnnMSsRL5iTW2VOjxEkCKd60S4zj&#13;
+dPD7UkRiSw==</DigestValue></Reference></SignedInfo><SignatureValue>UWjpPQJlgtMtrpLzMsZBFmTq3ERZ1fF6Pgji4n3fZ6uJKs+H8VheSvUOnHkOw+/cVGQ41tiMrReb&#13;
+BOyizpweUEBvo3o3h/e66iLyhR8uDlmDtGuqXHb+whilLOnH0YXG5YFTA/K0J48PJkL5X2RRfKEg&#13;
+7Nixl0ZlLIW944GgC0l6/QuDi76g4BlV4mloURLjMqq0qWx76X+AIPInfTe2I8+T+jvTPg2w5cvI&#13;
+CmtD67CGi5TAtqLdJbtWyLoWFTQDrmj/IksMWy2BRuVGTbAPtqSR8EwLISjK8dA79KzvQUJ0yF9z&#13;
+mW2c62YeZOKtxKDR333HEoiFiqWUUXtmZAbRvA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -5270,4 +5156,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6acaf5e8-7238-4bac-9f94-bd0fd53aa6af" Target="#_c72310ae-d013-4ca3-9f74-9f7fa00e27e4"><Timestamp>2025-03-12 15:28:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8ab8ff7a-80e2-4f24-81a5-9460d553ae57" Target="#_49548faa-1de6-458a-9db5-9fc3e5055610"><Timestamp>2025-03-12 15:32:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
