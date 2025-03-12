@@ -783,6 +783,41 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBSP_10"/>
   </node>
+  <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="800">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_13"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SID"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.api_misown_host"/>
+    <elementParameter field="TEXT" name="PORT" value="context.api_misown_port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.api_misown_database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.api_misown_schema"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
+    <elementParameter field="TEXT" name="USER" value="context.api_misown_username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:zzGQFkNpsLr8tF9R/SGqUxrcHs+G1mBT0VY0fq8Na6bhvCZCg2O/msWH1ICnKTZpXc2VOmQtgw=="/>
+    <elementParameter field="TEXT" name="SP_NAME" value="&quot;DW_UPDATE_PEOPLE_FILE_LOG&quot;"/>
+    <elementParameter field="CHECK" name="IS_FUNCTION" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RETURN" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="RETURN_BDTYPE" show="false" value="AUTOMAPPING"/>
+    <elementParameter field="TABLE" name="SP_ARGS"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="NLS_LANGUAGE" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="NLS_TERRITORY" value="NONE"/>
+    <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_UPDATE_PEOPLE_FILE_LOG"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_PEOPLE_FILE_LOG&lt;/b&gt;&lt;br&gt;Calls DW_UPDATE_PEOPLE_FILE_LOG Procedure"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBSP_13"/>
+  </node>
   <connection connectorName="FLOW" label="In_CONTEXT" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tContextLoad_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="In_CONTEXT"/>
@@ -840,6 +875,9 @@
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBSP_12" offsetLabelX="0" offsetLabelY="0" source="tDBSP_12" target="tDBSP_10">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk17"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBSP_10" offsetLabelX="0" offsetLabelY="0" source="tDBSP_10" target="tDBSP_13">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk21"/>
   </connection>
   <note opaque="true" posX="512" posY="32" sizeHeight="97" sizeWidth="481" text="Developer: Shaili Bakshi&#13;&#10;Date: 04-Dec-2024&#13;&#10;JIRA: BM-12329&#13;&#10;Description: API MISOWN Load Process Flow.">
     <elementParameter field="RADIO" name="NOTETXT_LEFT" value="true"/>
@@ -944,13 +982,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_952fc989-6a7b-4b39-9c93-9c44ec0816f0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>uu1fShLikCxcmN0Fb9yZShCoSi+v3DMeWgWxjNB/0tAP2p/HMLr4JenFeCTu84XhhwXd35ujMkg/&#13;
-eT6OUopQRA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4300951a-0487-4d1c-89f2-a663e02dade1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Z+UcFjdt99t15k8p6e7oAbxsNs450XE+h9mXZuG1i1C31F7uZP59NFbewKSEkBraQIP2MVpbYoGg&#13;
-ulDKKW5qwg==</DigestValue></Reference></SignedInfo><SignatureValue>nrZaeIN0Pd1msJsh9KDa7cNT+6tpoj1tuJm312dbCWcCJrUo8SgFoumAmKD+gtKtNbFd4Wb+PlgK&#13;
-8ASeEJoiCcHfh34wMpVJhSeCBv0RQK2og6Ij1GWaZbL/Ml+y9Cow2nx9rTFCpjhe1PspKscB+L91&#13;
-Xe73FZXNiW2ztpi2KxtQZUsjaV5y6z8HTPuhmkVIZ3od9FkN8U0NAUJ83HHgCRGP+RrHjm1Ktnk+&#13;
-5cyZUwtVPyRfwuCE8fsCRLzhA3kiglh89G7nvEq3qnOubToOKudj1zGyn2s/CI1FfHqkXB89Lima&#13;
-iOSf3GiKuIT9vNf853pb+Wska0hTNWPrP1FQ0w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_13"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cf78367a-d799-48e1-bc98-13e5292c87da"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>90RuVu157GasebtbQQGsIgCVBXiSE2a8RSDUI/N5zPra78cBIVDPkoRusJO8D8iURT7yk02fNTQw&#13;
+n5uPrF5zmg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_315d079b-aa63-45b5-af67-71e488263aaa"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FRW21ATdlsItGOJfEIRC5eyJR8zFz4GlB0HQz12lRd2ipXfq9pO5JZwOMG11xJ+SeXbC+dC5DnkA&#13;
+JBEktXKlzA==</DigestValue></Reference></SignedInfo><SignatureValue>ZArVMxlp9vw07H//3WlF8X4zcB1Y09FG3PmbKdbkj9jfWcV2nWy++FLh1ngBuNO8I5QjPZcJWdhm&#13;
+1YBro4DswwGOamIcs2bS3zqS/NrksqwzChlIti/0v9yognAw2AxVqV5lTPuREhNZC5S2WoyYBsuU&#13;
+YnXhWhO4/o0sf52KTQeHl7xkWks0Y8ICsxQyx+Mi5nJbzLbVmMlJycXrjB4VZGGY/75wr+z1U5tq&#13;
+FFjNJKsrlcqea5bDiSY9hIrwyoT08Go7uH7CR+KJAffE0LzNik6pv95fDwyMZxiV5asAutnoghpo&#13;
+u5UYYg/G2yKGuKVODG4sMOWXMdKpIi7AExF4aw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -972,4 +1015,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4300951a-0487-4d1c-89f2-a663e02dade1" Target="#_952fc989-6a7b-4b39-9c93-9c44ec0816f0"><Timestamp>2025-02-03 11:10:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_315d079b-aa63-45b5-af67-71e488263aaa" Target="#_cf78367a-d799-48e1-bc98-13e5292c87da"><Timestamp>2025-03-12 09:24:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
