@@ -231,7 +231,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ABSENCE_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps File Format Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_AUD_PEOPLE_ABSENCE1">
-      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/MM/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -248,7 +248,7 @@
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_AUD_PEOPLE_ABSENCE1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="TalendDate.TO_DATE(ln_Format_Rejections.MONTH,&quot;dd/MM/yyyy&quot;) " name="AUD_MONTH" nullable="true" type="id_Date"/>
@@ -405,7 +405,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_ABSENCE&lt;/b&gt;&lt;br&gt;Inserts File Format Errors in AUD_PEOPLE_ABSENCE table"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_2">
-      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/MM/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
@@ -422,7 +422,7 @@
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/MM/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
@@ -725,7 +725,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ABSENCE_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps Length Mismatch Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_AUD_PEOPLE_ABSENCE2">
-      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/MM/yyyy&quot;" precision="0" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -742,7 +742,7 @@
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_AUD_PEOPLE_ABSENCE2" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="TalendDate.TO_DATE(ln_Length_Rejections.MONTH,&quot;dd/MM/yyyy&quot;) " name="AUD_MONTH" nullable="true" type="id_Date"/>
@@ -899,7 +899,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_ABSENCE&lt;/b&gt;&lt;br&gt;Inserts Length Mismatch Errors in AUD_PEOPLE_ABSENCE table"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
-      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/MM/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
@@ -916,7 +916,7 @@
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
-      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/mm/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="AUD_MONTH" nullable="true" originalLength="7" pattern="&quot;dd/MM/yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="DEC" type="id_BigDecimal" usefulColumn="true"/>
@@ -1543,13 +1543,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_38234aa9-4cfa-45ce-b541-20fc78d6e881"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>da2qKFT7WzPAPA8JwCn/NCdyAUOvyOTZxWo3ZwjiEc4/2z3nB0+c3mU2MUfIEgp5FTSA7y8RcInU&#13;
-SGuupI1NrA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e34d7921-5745-432e-b83c-8fdbf448c07a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>c2KwmY2y7O+jIWazFUQoQm0zT9pkFnmjInGSKdtdFDkgGRRcwRnJG2qk0whpc1lNR9Yy45tvY4TG&#13;
-BK+jgRE++Q==</DigestValue></Reference></SignedInfo><SignatureValue>H4UZGmSLe3GZMIxeG9g51gMD4lm3IFa89To2E+d2UjHzKijPLtKQ3bpp5M1kTNTUjTfxV0SbmZNJ&#13;
-gXxJQRXAXB2gEeOmkeo+Wq8SkYYhBJFKX5fDmnUKqyt94/vFnVe4Kv67SsnkhfcCpCfOUt4MDfn3&#13;
-vGolCeIwX+u+trVRDqg38dkiZqeVqkh0JTFnC8nnTJnfoHci8QYZJsc5R8N4KnTmbO3TiL2Axb84&#13;
-BlNFgW8st14i7x05qdXSBe3CY91GK1tu3eFSfbR+XVR6etp5gg676uRH3vL27YAy3H6KdUrsAXhp&#13;
-YcAlRQvmdhuHMuUxBi6am8RZxQChTyVUrsADkQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ba9f3274-72d3-4a43-82b1-d67429a0860e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FIBZna65dKqO0a8OraOTVaQoN/SNlsS95xlNA6lFt1VPheylttFfnbBFLrD2AokJiOKtxqYpKT6O&#13;
+Y+1eXm9S4Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6adf4919-610e-4257-86c8-dd99e024c97a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dRFLN+rxkcF+KXqWsZ0Bt6Apf/EoCftYwAEixHQAxrpdNGxz5OmQIrVTN9kxLJnXU2gLcgq4FoSy&#13;
+IM2CNSMq9w==</DigestValue></Reference></SignedInfo><SignatureValue>d7dTv0HVTykTIvfjMSSjiDMoxtPqdlDqpbYJBmTBVnVfuVzC2ITawOAwxi1kqtABCG712Z5MvCFS&#13;
+Gp7t8HjDOLmtEcw1Ky3TehU5ar4AZqQVPbp7V86UkCGeV5DpEEL6+RrIoU1LtTSGoeMvi9Y2nZGt&#13;
+KZu7ua0fi93ypludiGoNRFsFkcjl4cWLrMYAqlE2SvukWBurpUki2TngJmY0fBL/h88hDj0AZ3ah&#13;
+3zXkKVFw4Uf8fxLiFbYDMZWn2Cy5cz6mAQwurN/c5gVm4OszS3MxrKqt9FutKMduasjAGxHh7ZRF&#13;
+jDIT2RQC9xWnugTsQbpZHglOfkUIeKSryVnaMg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1571,4 +1571,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e34d7921-5745-432e-b83c-8fdbf448c07a" Target="#_38234aa9-4cfa-45ce-b541-20fc78d6e881"><Timestamp>2025-03-19 12:49:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6adf4919-610e-4257-86c8-dd99e024c97a" Target="#_ba9f3274-72d3-4a43-82b1-d67429a0860e"><Timestamp>2025-03-19 12:50:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
