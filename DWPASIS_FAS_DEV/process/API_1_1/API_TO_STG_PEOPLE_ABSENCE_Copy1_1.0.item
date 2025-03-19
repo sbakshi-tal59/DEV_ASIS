@@ -248,10 +248,10 @@
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_AUD_PEOPLE_ABSENCE1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="TalendDate.TO_DATE(ln_Format_Rejections.MONTH,&quot;dd/MM/yyyy&quot;) " name="AUD_MONTH" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TalendDate.parseDate(&quot;dd/MM/yyyy&quot;, ln_Format_Rejections.MONTH) " name="AUD_MONTH" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_Format_Rejections.COLLEAGUE_PRN " name="AUD_COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Format_Rejections.SICK_LEAVE " name="AUD_SICK_LEAVE" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_Format_Rejections.ANNUAL_LEAVE " name="AUD_ANNUAL_LEAVE" nullable="true" type="id_BigDecimal"/>
@@ -742,10 +742,10 @@
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_AUD_PEOPLE_ABSENCE2" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="TalendDate.TO_DATE(ln_Length_Rejections.MONTH,&quot;dd/MM/yyyy&quot;) " name="AUD_MONTH" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TalendDate.parseDate(&quot;dd/MM/yyyy&quot;, ln_Length_Rejections.MONTH) " name="AUD_MONTH" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_Length_Rejections.COLLEAGUE_PRN " name="AUD_COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Length_Rejections.SICK_LEAVE " name="AUD_SICK_LEAVE" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_Length_Rejections.ANNUAL_LEAVE " name="AUD_ANNUAL_LEAVE" nullable="true" type="id_BigDecimal"/>
@@ -1543,13 +1543,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e1779c14-2776-4cbe-930f-0d3def26e84b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GzVnOFnQQ4ldaCwLJXTr31d3ZP3gx9m1j3YfMRiplDy6ftlHy9x+rDGNQ4hnRCy/yvt683aKF4sG&#13;
-LC1OyO7aVA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_f96cf95d-b54c-4824-b3f3-5a76dd481fb7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gKISQVZZp41L5RlhBcN1v1TM+Km3ormGfCUBKgklV68uwM0auOxyni4R9Sv2YvY2M9tnb5Es/Hkf&#13;
-NxDZMv0u4Q==</DigestValue></Reference></SignedInfo><SignatureValue>n5D/itG0hBBkIKWIfpM9Bkb3RHp9qNmtQyeYnSBWuLs5O+Z38+eNdgqZC3g9Ck0ofkFdcJBPotuL&#13;
-QluOBUVEMwESAFtF9Vcr5gg6ZMHFmjEl9NoYNcc3BMb3DQaswwGdOcYB6JkN+IL18j7wWeylSJk6&#13;
-CExLbOqh2153SteCrmCG/h/LlvES+sYws47dFc0VeXiK6/kd5cHRX2arcqERLG0PZ/9Rj5011BOE&#13;
-7hauFWmPuDJ6FmgXsob/211npgK5DS4+oJIvDyWnhp4oah0huGqF/vHpEHxfYEfcWwBBoljaGunt&#13;
-uUO52auFnIblvEjF6Cx43dAx5rTxMnfvZObNGw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5e7f5d61-20a7-4b78-9e34-9ae8d91f7de3"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZgmbLYpzGwYnONZyNou2wJ2cLglFMOQj2xiaP5ZX3qe5t4neAhU4Zb6hyqYCERm3WnnetYzxPAnR&#13;
+5CiKmip+og==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_72639068-984a-4b12-8a46-b9ffe118846e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>emad7iprDzUZVuj/vYKtWOOVtj1MWz27XBLtpy9sTxOXfuA28db7mzAWvXopoMIALPJ2e/WyFO5W&#13;
+xxnuoRxmjw==</DigestValue></Reference></SignedInfo><SignatureValue>d/81SY0CMXYaR0VWdDDBY89qdQIF5jCc2TcBefutqbQJ5KhpZY+FrLdqDyjWIFtlNW81Ne8I6Z7A&#13;
+WQFvWyj9llTbLPfP4DvZ1Nukt3AN/d27t7LQxnzIeQtIdEntGK2vFfLZoHzjwlPAf9d2O+o0P+/k&#13;
+k3KGl7832I2Y4NXkffZ1nLxhmDgAZuXeNNwbwf+z0d81lZ22VDK9RwRjDvj12nh837r+lUBVVis/&#13;
+ItgXUV5G/b5yv/tOqLSz7RPGh7hFicPyk25gTIi+WIvbU4pHOIPk96jJxryIV0gFUUVyTIykw2ww&#13;
+wlLldxqVjMwX2r16zW00lwf5hvTN5sc0MTfa8A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -1571,4 +1571,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_f96cf95d-b54c-4824-b3f3-5a76dd481fb7" Target="#_e1779c14-2776-4cbe-930f-0d3def26e84b"><Timestamp>2025-03-19 11:18:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_72639068-984a-4b12-8a46-b9ffe118846e" Target="#_5e7f5d61-20a7-4b78-9e34-9ae8d91f7de3"><Timestamp>2025-03-19 11:23:07</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
