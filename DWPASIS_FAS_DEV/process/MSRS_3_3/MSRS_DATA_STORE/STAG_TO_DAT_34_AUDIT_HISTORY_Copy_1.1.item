@@ -305,6 +305,7 @@
       <column comment="" key="false" length="256" name="MSRS_MESSAGE" nullable="true" originalLength="256" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="30" name="MSRS_TABLE_NAME" nullable="true" originalLength="30" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="14" name="MSRS_EVENT_DATETIME_NO" nullable="true" originalLength="14" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="MSRS_REFERRAL_ID" nullable="true" originalLength="30" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -314,11 +315,12 @@
         <mapperTableEntries expression="row1.MSRS_SESSION_ID " name="MSRS_SESSION_ID" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.MSRS_USER_ID " name="MSRS_USER_ID" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.MSRS_EVENT_DATETIME " name="MSRS_EVENT_DATETIME" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="trim(row1.MSRS_ROW_KEY) " name="MSRS_ROW_KEY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.MSRS_ROW_KEY " name="MSRS_ROW_KEY" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.MSRS_PAGE_VIEWED " name="MSRS_PAGE_VIEWED" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.MSRS_MESSAGE " name="MSRS_MESSAGE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.MSRS_TABLE_NAME " name="MSRS_TABLE_NAME" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.MSRS_EVENT_DATETIME_NO " name="MSRS_EVENT_DATETIME_NO" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="trim(row1.MSRS_ROW_KEY) " name="MSRS_REFERRAL_ID" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="MSRS_AUDIT_ID" nullable="true" type="id_String"/>
@@ -413,6 +415,11 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MSRS_REFERRAL_ID"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
@@ -439,6 +446,7 @@
       <column comment="" key="false" length="256" name="MSRS_MESSAGE" nullable="true" originalLength="256" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="30" name="MSRS_TABLE_NAME" nullable="true" originalLength="30" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="14" name="MSRS_EVENT_DATETIME_NO" nullable="true" originalLength="14" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="MSRS_REFERRAL_ID" nullable="true" originalLength="30" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" name="REJECT">
       <column comment="" key="true" length="30" name="MSRS_AUDIT_ID" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -450,6 +458,7 @@
       <column comment="" key="false" length="256" name="MSRS_MESSAGE" nullable="true" originalLength="256" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="30" name="MSRS_TABLE_NAME" nullable="true" originalLength="30" pattern="&quot;dd/mm/yyyy hh:mi:ss&quot;" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="14" name="MSRS_EVENT_DATETIME_NO" nullable="true" originalLength="14" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="MSRS_REFERRAL_ID" nullable="true" originalLength="30" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -615,6 +624,11 @@
     <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value="Restart the Job"/>
   </connection>
   <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tDBOutput_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="MSRS_REFERRAL_ID"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
   </connection>
@@ -661,13 +675,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e83a8021-c7c8-4663-850d-0f9595bdc55d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bP2CKIBK/ZqxtXE5pZcf/CmiWJKdgeFtH6iTjsKQ9dWgEdguBnApVMvkjIs+Smy5kNe2od9ppR9w&#13;
-m7ZY+9PE/A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c1400e7a-e7eb-4bec-902b-e4aaf41c8986"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>F0xV3SydhgXX5v1WD77xrawNI2hJLlVaQbaUJoQ8pZ4kW4um6SlppEm9/J1bPUR29b3cu/mbnU0p&#13;
-awPjc/nfhw==</DigestValue></Reference></SignedInfo><SignatureValue>FIUkHH0K3UdD257nPjV4/IpA1V4XVL1S33SQXMOvL6wgupN8ZHV+27gbeVBTpB1We4ucgaOci0kX&#13;
-tfctBYNUkgB9tGihFNIIWHybyHC8Ftm8ke8hnwochmI7xnkI2F6agcvlTnBUl6snwHQU+hr9+iwF&#13;
-rbXE04qVdiRucwG2NiBkwnTXZ6DcU0hKpdE0SsRHsdSUmDVuIYrUmbb2TnAiCZ/ikE76cL+Is/of&#13;
-/fz/L9F5C08EXUflYHg6uh2sKibbpUGnqLir6/PQRO63uSdzAhmZQdDNkVVAyqn8L7V/OeKyLwVX&#13;
-A5EgDeXko36AfIetVJzUz9A60fLo/gJQdomumQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c8763f7e-520c-4848-ace5-8621627116c5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0Waa+2+0t0G3h4h8fGgJzAi3V2HGCcl4aiFKKijiKK0HTuA19IYFUkNOvL66zEcX4vxI7Y0vjfTN&#13;
+gSZyfB37uw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6a142b56-42c8-4090-96c7-3c3bc3eea521"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LIuTE0T6+30V0W8Fqds+AGRIKtOfiFW/8LIydSYxm4TBA7cwk+zYQChakIi6CZsZkaNitN65CQRc&#13;
++7V9H8PVzA==</DigestValue></Reference></SignedInfo><SignatureValue>hHEFUmX9MR/M069FTHcLU7PZH7vs7wQlbxk8h1KYR/JzQV+XaddGG9QfmrF/n9c/jQzBC5ntnn6r&#13;
++mP4jnY4HSuQqjncngWZC5xmJNFVZskOI2TXb6HmGyFCeHX9A0fJZ27weJW9fRVgocvciBKXqHTo&#13;
+qQu+hbK3bEhOIFT7IE3OTn7JxAI9fPz0ZgQN5HDEed5pMZdm683hP15l94ndYoNXI0rUsKBW6VTh&#13;
+oVOHrsKNValv3iQ4xTO4ZluxjALBJ28JJo2HBB043aIuKlKZollOdtzzXNBSNj0SBH5Qlac/ov+W&#13;
+FxVrcIH5120tl5slvVyVXVrisflwv4AGZv1kgA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -689,4 +703,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c1400e7a-e7eb-4bec-902b-e4aaf41c8986" Target="#_e83a8021-c7c8-4663-850d-0f9595bdc55d"><Timestamp>2025-08-29 09:30:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6a142b56-42c8-4090-96c7-3c3bc3eea521" Target="#_c8763f7e-520c-4848-ace5-8621627116c5"><Timestamp>2025-08-29 09:34:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
