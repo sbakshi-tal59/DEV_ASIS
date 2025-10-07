@@ -1580,41 +1580,6 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBSP_2"/>
   </node>
-  <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1792">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_13"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
-    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="HOST" value="context.msrs_misown_host"/>
-    <elementParameter field="TEXT" name="PORT" value="context.msrs_misown_port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.msrs_misown_database"/>
-    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.msrs_misown_schema"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
-    <elementParameter field="TEXT" name="USER" value="context.msrs_misown_username"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:FvAp36xcRwfTQU/wZW9Ur3FdDY9gow9lf0EXzAev8lRoEY9bkjbht2MPW1b+QcM2okwS+1ExiUk="/>
-    <elementParameter field="TEXT" name="SP_NAME" value="&quot;CREATE_PRE_PROC_STIM&quot;"/>
-    <elementParameter field="CHECK" name="IS_FUNCTION" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="RETURN" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="RETURN_BDTYPE" show="false" value="AUTOMAPPING"/>
-    <elementParameter field="TABLE" name="SP_ARGS"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="CLOSED_LIST" name="NLS_LANGUAGE" value="NONE"/>
-    <elementParameter field="CLOSED_LIST" name="NLS_TERRITORY" value="NONE"/>
-    <elementParameter field="CHECK" name="SUPPORT_NLS" show="false" value="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="tDBSP_CREATE_PRE_PROC_STIM"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;CREATE_PRE_PROC_STIM&lt;/b&gt;&lt;br&gt;Call CREATE_PRE_PROC_STIM stored procedure"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBSP_13"/>
-  </node>
   <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
@@ -2063,12 +2028,6 @@
     <elementParameter field="TEXT" name="RESUMLABEL" value="Stg Daily Count Restart"/>
     <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value="Restart the Job"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBSP_12" offsetLabelX="0" offsetLabelY="0" source="tDBSP_12" target="tDBSP_13">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk43"/>
-    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="true"/>
-    <elementParameter field="TEXT" name="RESUMLABEL" value="Create Pre Proc Stim Restart"/>
-    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value="Restart the Job"/>
-  </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_34" offsetLabelX="0" offsetLabelY="0" source="tRunJob_34" target="tDBSP_11">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk39"/>
     <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="true"/>
@@ -2121,7 +2080,7 @@
     <elementParameter field="TEXT" name="RESUMLABEL" value="MSRS Update Msrs Ref MIS Restart"/>
     <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value="Restart the Job"/>
   </connection>
-  <note opaque="true" posX="480" posY="0" sizeHeight="225" sizeWidth="513" text="Developer: James Adams&#13;&#10;Date: 18-Aug-2021&#13;&#10;JIRA: BM-5005&#13;&#10;Description: MSRS MISOWN Incremental Load Process Flow.&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 26-Jul-2022&#13;&#10;JIRA: BM-8416&#13;&#10;Description: Added new subjob STAG_TO_DAT_33_LOT_AP_MAP&#13;&#10;&#13;&#10;Developer: Stuart Smith 24/11/2022 BM-8749 CR308&#13;&#10;Description: Add Run Job component STAG_TO_DAT_33_AUDIT_HISTORY&#13;&#10;&#13;&#10;Developer: Stuart Smith 16/03/2023 BM-9593 CR332&#13;&#10;Description: Renamed Job component STAG_TO_DAT_33_AUDIT_HISTORY to STAG_TO_DAT_34_AUDIT_HISTORY due to conflict in numbers from CR283 changes&#13;&#10;&#13;&#10;Developer: Stuart Smith 12/10/2023 BM-10413 CR334&#13;&#10;Description: Add Run Job component STAG_TO_DAT_35_BUSINESS_EXCEPTIONS"/>
+  <note opaque="true" posX="480" posY="0" sizeHeight="225" sizeWidth="513" text="Developer: James Adams&#13;&#10;Date: 18-Aug-2021&#13;&#10;JIRA: BM-5005&#13;&#10;Description: MSRS MISOWN Incremental Load Process Flow.&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 26-Jul-2022&#13;&#10;JIRA: BM-8416&#13;&#10;Description: Added new subjob STAG_TO_DAT_33_LOT_AP_MAP&#13;&#10;&#13;&#10;Developer: Stuart Smith 24/11/2022 BM-8749 CR308&#13;&#10;Description: Add Run Job component STAG_TO_DAT_33_AUDIT_HISTORY&#13;&#10;&#13;&#10;Developer: Stuart Smith 16/03/2023 BM-9593 CR332&#13;&#10;Description: Renamed Job component STAG_TO_DAT_33_AUDIT_HISTORY to STAG_TO_DAT_34_AUDIT_HISTORY due to conflict in numbers from CR283 changes&#13;&#10;&#13;&#10;Developer: Stuart Smith 12/10/2023 BM-10413 CR334&#13;&#10;Description: Add Run Job component STAG_TO_DAT_35_BUSINESS_EXCEPTIONS&#13;&#10;&#13;&#10;Developer: Stuart Smith 05/09/2025 BM-11507&#13;&#10;Description: Remove tDBSP_CREATE_PRE_PROC_STIM component"/>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
@@ -2373,11 +2332,6 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_13"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
     <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Import MSRS_Context.xlsx"/>
@@ -2404,13 +2358,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1144128c-f646-4208-8a0f-0c53172c0f0e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ThR54BNA8a4kKFrd6FSvX3wB0rPB+W2Eb2Oa44wcmjc0eMFo/1cO++PbQkA72jBdylAuwoK/dz9Q&#13;
-BT3DuZ+mmQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_de251655-2c8d-4ce7-9ef2-156ff153bbaa"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GhFYDZrC1S/euZfCw37zwT30HDh4a0ssMuwxE/bfrcXAmfmgB8u5ClbbnC78OK3+bHjjeahSLHMH&#13;
-STWMd5kpOg==</DigestValue></Reference></SignedInfo><SignatureValue>PLa4+jTK10hClnYY682hbZ85gSpaD5S3kUty5S2hTaBlURc2W5RKKJly1Xmi2pVcj0yMuUYBVigm&#13;
-4PEF0a1osHTvv18SXrpzP3+zR5B7Td5JJ/sTyjdKJREMbCvU0jlAjNzBSGn9yJg3+uxqAXYpQQVW&#13;
-BSCPIlUJZAWwso+Li+hViO5Wq41DxXw5ZKOu8aY7ux2s8y9pPn6RiDo+eOssooRA+LpSkpGrNDqm&#13;
-K8VBYhooi3EZgBiytzt9yQvbWPt575e7/koYWj1BLbsEtIHmlnCyhGtPE5pQ3BmLtNmw51dWGCYh&#13;
-fTr2U8hIcS8MkCgETt/xc82Q8eRKZZlGukGYqw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f59e2d34-b0bc-4c36-bd21-8b2ebe2afe3e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PTebgAvPiS5F7R/FuG6ZG6YwNKmBbvpFPHNp6X6X/NgQ3mx5FXtOFDTIL6xVvJ0Nf4IjYcDfWu5z&#13;
+JIMY+t/P0A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9ceba68a-5144-46a7-9e1d-b06c104a7c95"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+QwIf3OZRMSpnx3Qva5HjAdGXvzY9H3j2SrvlhSEANgu4GDl5VyTTT6hnFUlw0T0sFQjkteqE73t&#13;
++kbJ9LwH8g==</DigestValue></Reference></SignedInfo><SignatureValue>A+bOycaKurrFyMpaD+43dLzKzI9b9njkHq43SeORUU0MqVzG5vbTQRBhphJBc5wHUeFafaiuHq7/&#13;
+yIuL89MjA9Sd5LnokYVa68sO1pqhh1z6dv/utHBrHpdzdsomCVCxsh+QNoDfSNZDdYxg9QodAVUZ&#13;
+j+d29ovnOL0G7TeEbX1FMHzVicHr/rgq36NnfCXQUB6mUloaLYCJytNN9zkyIja6nLlwqPlqlbIw&#13;
+Rlc6shEcjtk4/4lDBXwIymkshiCQQJthd9++HWz22UKoCy4o4Bs4L5DClgCakr4pR/8XrKyvwFRg&#13;
+aOdNLlFEq0HhOeXmsEVP2H53nZUAR6C7tVnTHg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2432,4 +2386,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_de251655-2c8d-4ce7-9ef2-156ff153bbaa" Target="#_1144128c-f646-4208-8a0f-0c53172c0f0e"><Timestamp>2024-10-11 09:17:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9ceba68a-5144-46a7-9e1d-b06c104a7c95" Target="#_f59e2d34-b0bc-4c36-bd21-8b2ebe2afe3e"><Timestamp>2025-10-07 09:45:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
