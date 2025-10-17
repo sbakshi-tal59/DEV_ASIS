@@ -703,6 +703,71 @@
       <column comment="" key="false" length="-1" name="CURRENT_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="1184">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_9"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="CURRENT_LOAD_DATE"/>
+      <elementValue elementRef="VALUE" value="TalendDate.getCurrentDate()"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" show="false" value=""/>
+    <elementParameter field="TEXT" name="LABEL" value="tFFFI_Variables_9"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;Variables&lt;/b&gt;&lt;br&gt;Sets CURRENT_LOAD_DATE Variable to Current Date"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_9">
+      <column comment="" key="false" length="-1" name="CURRENT_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="1184">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_9"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_11"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.ads_misown_host"/>
+    <elementParameter field="TEXT" name="PORT" value="context.ads_misown_port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.ads_misown_database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.ads_misown_schema"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
+    <elementParameter field="TEXT" name="USER" value="context.ads_misown_username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:xUhQ/jeJSnC5wQiNdUCvAWTVjLqzqW5/qlUVSzDT9W6RrDXsWBPxhcmHaowASE+go3k1ZGCIyw=="/>
+    <elementParameter field="TEXT" name="SP_NAME" value="&quot;MIS_UPDATE_PURGE_API&quot;"/>
+    <elementParameter field="CHECK" name="IS_FUNCTION" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RETURN" show="false" value="CURRENT_LOAD_DATE"/>
+    <elementParameter field="CLOSED_LIST" name="RETURN_BDTYPE" show="false" value="AUTOMAPPING"/>
+    <elementParameter field="TABLE" name="SP_ARGS">
+      <elementValue elementRef="COLUMN" value="CURRENT_LOAD_DATE"/>
+      <elementValue elementRef="TYPE" value="IN"/>
+      <elementValue elementRef="DBTYPE" value="AUTOMAPPING"/>
+      <elementValue elementRef="ISCUSTOME" value="false"/>
+      <elementValue elementRef="CUSTOME_TYPE" value="STRUCT"/>
+      <elementValue elementRef="CUSTOMENAME" value=""/>
+    </elementParameter>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="NLS_LANGUAGE" value="NONE"/>
+    <elementParameter field="CLOSED_LIST" name="NLS_TERRITORY" value="NONE"/>
+    <elementParameter field="CHECK" name="SUPPORT_NLS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBSP_MIS_UPDATE_PURGE_API"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;MIS_UPDATE_PURGE_TREND&lt;/b&gt;&lt;br&gt;Deletes Records from DW_TREND which are more than 2 years old"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBSP_9">
+      <column comment="" key="false" length="-1" name="CURRENT_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="ln_PURGE_SMART" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tDBSP_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_PURGE_SMART"/>
@@ -784,7 +849,14 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_PURGE_TREND"/>
   </connection>
-  <note opaque="false" posX="480" posY="96" sizeHeight="193" sizeWidth="385" text="Developer: Shaili Bakshi&#13;&#10;Date: 23-Mar-2021&#13;&#10;JIRA: BM-7164&#13;&#10;Description: Purge MISOWN Load Process Flow.&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 14-Sep-2021&#13;&#10;JIRA: BM-7681&#13;&#10;Description: Added Smart Practitioners Purge.&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 23-Mar-2023&#13;&#10;JIRA: BM-9591&#13;&#10;Description: CR320 Added MSRS Purge.&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 23-Mar-2023&#13;&#10;JIRA: BM-9592&#13;&#10;Description: CR320 Added SIEBEL Purge.&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 15-July-2025&#13;&#10;JIRA: BM-11624&#13;&#10;Description: R 1_4 Added Trend Purge."/>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_8" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_8" target="tFixedFlowInput_9">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk10"/>
+  </connection>
+  <connection connectorName="FLOW" label="ln_PURGE_API" lineStyle="0" metaname="tFixedFlowInput_9" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_9" target="tDBSP_9">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_PURGE_API"/>
+  </connection>
+  <note opaque="false" posX="480" posY="96" sizeHeight="193" sizeWidth="385" text="Developer: Shaili Bakshi&#13;&#10;Date: 23-Mar-2021&#13;&#10;JIRA: BM-7164&#13;&#10;Description: Purge MISOWN Load Process Flow.&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 14-Sep-2021&#13;&#10;JIRA: BM-7681&#13;&#10;Description: Added Smart Practitioners Purge.&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 23-Mar-2023&#13;&#10;JIRA: BM-9591&#13;&#10;Description: CR320 Added MSRS Purge.&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 23-Mar-2023&#13;&#10;JIRA: BM-9592&#13;&#10;Description: CR320 Added SIEBEL Purge.&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 15-July-2025&#13;&#10;JIRA: BM-11624&#13;&#10;Description: R 1_4 Added Trend Purge.&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 17-Oct-2025&#13;&#10;JIRA: BM-13295&#13;&#10;Description: R 1_5 Added API Purge."/>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
@@ -832,13 +904,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9cbf7e72-00df-42e6-b1ca-2c58d9e48d4b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KgIcBOiIVtjBik7hjXAM/xqBRD0s6meCKFf9hjwjofXK9taPXIicP4p73Onj9FvKGN4jMKxORkGu&#13;
-tTxPHlXLFw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fe4b5863-54e5-4592-bbd6-c118d2aab29b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OzF6pjUFzwYOWnDtOJdGyX3OQXcOValcUlBfnRz4VkqMI+v15JVy2TQIAKWsho2C7Vpq4jgA/Ebj&#13;
-r6bE5vecLg==</DigestValue></Reference></SignedInfo><SignatureValue>L8zSFbUUUIHN8Vkl/cgONFxiLUh4TKJCLvbcLFVdTSseg8neuEQnf11FLhe7Kn8UoGTLge9xo6Ay&#13;
-D52tONLuza4DPiNwE4uzo9BQYbC27MbcieOP6oabjrCNCjO5reMuHDFN3/QcVvCzEJgK+QJ6XhdJ&#13;
-N3ZwTZV5SYEDhiuaC4otTGbyZmEsgFQbAy0Lc1a/t/WAE1O+SDhtMXFC9lmN7Iz1lmPc15mmm8iM&#13;
-cW0PDls1nBYFS52ug1FvrdbJ0OXdSFLs+pG5aYMFO55b5RDy+F8U9XQVfZ/aB1nsMwdfrpr1uZWy&#13;
-UoMe8/Kua0XU5EVLJKhVYEaAjr/5V81hZdgDAg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFixedFlowInput_9"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1c9aa6b0-bd5a-4850-ba45-03f9ffb2829e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dxC2PEdd8sw83la7496rf4nbO/BucSGyEDi3Kky4JFH6ZGuOMG6oxZIQBFQaU81kqVJg5ilBKGUF&#13;
+kuBY38YTAw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b1d64995-2d9d-4460-a9e4-fa774b71d1f9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vTdIUpleo4r9GwkADsZtweMpWbfUjZ5uev+Yef/jjE8Er5+XEZCB5hnD4s1/aY/C2LUq7tZ2Ij3T&#13;
+5TBeXH8lhg==</DigestValue></Reference></SignedInfo><SignatureValue>FAOyqjZ2hlpl5kK6lE0w+VyfxyvcqJqmVd/3CZZdrk+bgJpFRmgi2Y6SR0takRKHUY4SyQxJhKLZ&#13;
+EF64mzlI82u+Fjhp2LneQTM2xw1pynpunP5GEyYI83+zKd8mXe0whDVAHCHXAkIC3zh4yPKpLoNq&#13;
+gnV1VdN1QboPtueWyHClUJ/kgxERiXpLsnkaA3qdZ/PlXXCmXsM0J+GFQyRDC0MJ7/db1QHZTJ7Y&#13;
+zJAv18a/0H6j0z7vzFfWI2Q43lofKJ/gSTDHlNrzzgJ/3bytlGqe54UyBzw17Jn2frpdISIAXKO7&#13;
+aRSaUt/x99yBcm4mWcR82W6DN6WjMMcfTNCZGQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -860,4 +937,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fe4b5863-54e5-4592-bbd6-c118d2aab29b" Target="#_9cbf7e72-00df-42e6-b1ca-2c58d9e48d4b"><Timestamp>2025-07-15 09:53:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b1d64995-2d9d-4460-a9e4-fa774b71d1f9" Target="#_1c9aa6b0-bd5a-4850-ba45-03f9ffb2829e"><Timestamp>2025-10-17 09:29:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
