@@ -1692,7 +1692,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBSP_14"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="1664">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1664">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_9"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" show="false" value=""/>
@@ -1721,7 +1721,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_9"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1664">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="352" posY="1664">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_37"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" show="false" value=""/>
@@ -1749,6 +1749,35 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;STAG_TO_DAT_34_AUDIT_HISTORY&lt;/b&gt;&lt;br&gt;Insert data into MISOWN from STG"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_37"/>
+  </node>
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="672" posY="1664">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_38"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
+    <elementParameter field="TEXT" name="CONTEXT_JOB" show="false" value=""/>
+    <elementParameter field="PROCESS_TYPE" name="PROCESS" value="STAG_TO_DAT_35_BUSINESS_EXCEPTIONS"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_CONTEXT" value="Default"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_PROCESS" value="DWPASIS_FAS_INT:_5qaJEGjkEe6BPNqQ4ajW_A"/>
+    <elementParameter field="TECHNICAL" name="PROCESS:PROCESS_TYPE_VERSION" value="Latest"/>
+    <elementParameter field="TEXT" name="CONTEXT_NAME" show="false" value="Default"/>
+    <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS"/>
+    <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" show="false" value="true"/>
+    <elementParameter field="RADIO" name="USE_CHILD_JVM_SETTING" show="false" value="true"/>
+    <elementParameter field="RADIO" name="USE_CUSTOM_JVM_SETTING" show="false" value="false"/>
+    <elementParameter field="TABLE" name="JVM_ARGUMENTS" show="false"/>
+    <elementParameter field="CHECK" name="USE_DYNAMIC_CONTEXT" value="false"/>
+    <elementParameter field="TEXT" name="DYNAMIC_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_EXTRA_CLASSPATH" show="false" value="false"/>
+    <elementParameter field="TEXT" name="EXTRA_CLASSPATH" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="LOAD_CONTEXT_FROM_FILE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tRJ_STAG_TO_DAT_35_BUSINESS_EXCEPTIONS"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;STAG_TO_DAT_35_BUSINESS_EXCEPTIONS&lt;/b&gt;&lt;br&gt;Insert data into MISOWN from STG"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tRunJob_38"/>
   </node>
   <connection connectorName="PARALLELIZE" label="Parallelize" lineStyle="13" metaname="tParallelize_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tParallelize_1" target="tRunJob_2">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="Parallelize"/>
@@ -1963,8 +1992,11 @@
     <elementParameter field="TEXT" name="RESUMLABEL" value="Appointee Restart"/>
     <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value="Restart the Job"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_33" offsetLabelX="0" offsetLabelY="0" source="tRunJob_33" target="tRunJob_37">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_33" offsetLabelX="0" offsetLabelY="0" source="tRunJob_33" target="tRunJob_9">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk33"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="true"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value="Lot Ap Map Restart"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value="Restart the Job"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBSP_7" offsetLabelX="0" offsetLabelY="0" source="tDBSP_7" target="tDBSP_8">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk34"/>
@@ -2030,11 +2062,23 @@
     <elementParameter field="TEXT" name="RESUMLABEL" value="View to Staging, View to Staging 2 and Examination Id Check Restart"/>
     <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value="Restart the Job"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_9" offsetLabelX="0" offsetLabelY="0" source="tRunJob_9" target="tDBSP_7">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk48"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_37" offsetLabelX="0" offsetLabelY="0" source="tRunJob_37" target="tRunJob_9">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_9" offsetLabelX="0" offsetLabelY="0" source="tRunJob_9" target="tRunJob_37">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk47"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="true"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value="Audit History Restart"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value="Restart the Job"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_37" offsetLabelX="0" offsetLabelY="0" source="tRunJob_37" target="tRunJob_38">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk48"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="true"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value="Business Exceptions Restart"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value="Restart the Job"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRunJob_38" offsetLabelX="0" offsetLabelY="0" source="tRunJob_38" target="tDBSP_7">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk49"/>
+    <elementParameter field="CHECK" name="RESUMING_CHECKPOINT" value="true"/>
+    <elementParameter field="TEXT" name="RESUMLABEL" value="Update MSRS Ref MIS Restart"/>
+    <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value="Restart the Job"/>
   </connection>
   <note opaque="false" posX="480" posY="0" sizeHeight="225" sizeWidth="513" text="Developer: James Adams&#13;&#10;Date: 18-Aug-2021&#13;&#10;JIRA: BM-5005&#13;&#10;Description: MSRS MISOWN Incremental Load Process Flow.&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 26-Jul-2022&#13;&#10;JIRA: BM-8416&#13;&#10;Description: Added new subjob STAG_TO_DAT_33_LOT_AP_MAP&#13;&#10;&#13;&#10;Developer: Stuart Smith 24/11/2022 BM-8749 CR308&#13;&#10;Description: Add Run Job component STAG_TO_DAT_33_AUDIT_HISTORY&#13;&#10;&#13;&#10;Developer: Stuart Smith 16/03/2023 BM-9593 CR332&#13;&#10;Description: Renamed Job component STAG_TO_DAT_33_AUDIT_HISTORY to STAG_TO_DAT_34_AUDIT_HISTORY due to conflict in numbers from CR283 changes&#13;&#10;&#13;&#10;Developer: Stuart Smith 12/10/2023 BM-10413 CR334&#13;&#10;Description: Add Run Job component STAG_TO_DAT_35_BUSINESS_EXCEPTIONS&#13;&#10;&#13;&#10;Developer: Stuart Smith 05/09/2025 BM-11507&#13;&#10;Description: Remove tDBSP_CREATE_PRE_PROC_STIM component&#13;&#10;&#13;&#10;**********Updated to match prod version, will need to be replaced by prod version via change*****************"/>
   <subjob>
@@ -2309,13 +2353,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_06f844f0-8dbc-409a-9320-b8b04f375ab7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>uScKkRiTryoY0WnR1m9RGbFjQor24vY+flgrY60VB8EeQOiJUiHSP7Oohh47gbdNuYjV5u8/1fUE&#13;
-l1RHcAmKhA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_aa692271-d63a-4eef-a3d2-ab78d69cfad7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>9SpdzO8jc4x1ERUtVkBihyxwCrCeI2xficrbFfC0f6rx8zC1vbNHsGy5jytIOZ3XbBLfX1a2D6h0&#13;
-pL6NlhWIRQ==</DigestValue></Reference></SignedInfo><SignatureValue>LAZ2EWjJRyyjY/1BqF6KNlH8u5poxLHYGtARmT2DxXCX+VK9KijPQ2RmnsxZ4TSh4KMEnQKg8eLJ&#13;
-Bo9obdL5ZBok380q4eTW9tY8bjSbVQ1ga8g1aVCPje/5p0dKBkbPwJ4wnDdfm/tXIafn6oeN9Xxo&#13;
-PwoKC2IOjKChjfJszGPjzOt+J/bZY+6VD4rQzWIGOstDn1/pq/ogBeFe/aSQIya1p8z5hSiJsww+&#13;
-1JBvPW6fsHfVQXt4UcW3ODMmPz4wnS6WkeZS5+bolvHOcxYz7AnlqWsIC0hsZplFMQ0S+SD2AVCn&#13;
-g8ccp8jINJpycR99/fWgDErzjC0XpzyOPAjS3w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRunJob_38"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c294ce3e-4c8b-481f-b2db-3449a370f38a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rOEGafQSG0S7FfL9Hu7b1IzAAw6IdsCdJyrHa0AI3zBGASEKPIwC6LamFoRNwW4oA7RlGc/38mNF&#13;
+fWA6razR5w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ae649c12-e43f-4874-90e7-41056061cfcd"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Hb1cpooy05fzdrJJe697/zDCzmM97aReQgVxNMP5QgMOWEvt66pR+f+cMOD/s8PMzyhpQKIMRjCZ&#13;
+EiUK2xvcNg==</DigestValue></Reference></SignedInfo><SignatureValue>aiuQmy+nfj69E5Q5dPZvyl8JKgjdr57w0104Anyh7drAXjNaUJixNh9XkjL52+qtbfeDhCfwPuEk&#13;
+YX4kd63mzOitqodcZowAIYwBcZ/pyc7yBy0+Pqd1/T5Uw+8ju07CKsA/20RDZ3EXNgUaB5WNwTt4&#13;
+QWu4Myr754fHV9hyR2atgAkjclDCDZmj7UXiw6Ahwgydlvmdxrz+zPQlRAaJDLujgO6zv5y33j6z&#13;
+EEuc6YmX8hYjgQn3m8uJ5JlB52IAxEahsXWMFGHOYTvMxofx+JAaUf79seH4P1V791T6FsiTgZIP&#13;
+jznJMNvC3cO77BvpSj0AHAF/jQA08eyGo1HmMA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2337,4 +2386,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_aa692271-d63a-4eef-a3d2-ab78d69cfad7" Target="#_06f844f0-8dbc-409a-9320-b8b04f375ab7"><Timestamp>2025-11-13 17:11:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ae649c12-e43f-4874-90e7-41056061cfcd" Target="#_c294ce3e-4c8b-481f-b2db-3449a370f38a"><Timestamp>2025-12-04 17:21:01</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
