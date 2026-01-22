@@ -112,7 +112,7 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
   </parameters>
-  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="416">
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="704">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
     <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;D:/Globalscape_Inbound&quot;"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
@@ -136,7 +136,7 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILELIST_HISTORY&lt;/b&gt;&lt;br&gt;Gets a list of files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="416">
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="704">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
@@ -436,12 +436,12 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="256">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_C0nVkLewEe-Eb8MOVP0CkQ-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_ehiesPd6EfCyz5QjpMdZjQ-tMap_2-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -611,7 +611,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="256">
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="544">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -1033,7 +1033,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSchemaComplianceCheck" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="416">
+  <node componentName="tSchemaComplianceCheck" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="704">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSchemaComplianceCheck_1"/>
     <elementParameter field="RADIO" name="CHECK_ALL" value="true"/>
     <elementParameter field="RADIO" name="CUSTOMER" value="false"/>
@@ -1444,12 +1444,12 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="416">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="768" posY="704">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_C0nVkLewEe-Eb8MOVP0CkQ-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_ehiesPd6EfCyz5QjpMdZjQ-tMap_1-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -1509,7 +1509,7 @@
       <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_STG_PEOPLE_HISTORY" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ln_tMAP_HISTORY.COLLEAGUE_ID " name="STG_COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
@@ -1605,7 +1605,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="416">
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="992" posY="704">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_4"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -1985,12 +1985,12 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="320">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_3"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_C0nVkLewEe-Eb8MOVP0CkQ-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_ehiesPd6EfCyz5QjpMdZjQ-tMap_3-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -2160,7 +2160,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="320">
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -2582,12 +2582,12 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="416">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="704">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_6"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_C0nVkLewEe-Eb8MOVP0CkQ-tMap_6-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_ehiesPd6EfCyz5QjpMdZjQ-tMap_6-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -2659,7 +2659,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="416">
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1376" posY="704">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -2893,7 +2893,7 @@
       <column comment="" key="false" length="80" name="OWB_MAPPING_NAME" nullable="true" originalLength="80" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="544">
+  <node componentName="tRowGenerator" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="832">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRowGenerator_2"/>
     <elementParameter field="TEXT" name="NB_ROWS" show="false" value="1"/>
     <elementParameter field="TABLE" name="VALUES" show="false">
@@ -2910,7 +2910,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="544">
+  <node componentName="tOracleSP" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="832">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBSP_2"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -2953,6 +2953,505 @@
     <metadata connector="FLOW" name="tDBSP_2">
       <column comment="" key="false" length="200" name="LOAD_TYPE" nullable="true" originalLength="200" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
+  </node>
+  <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_2"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;D:/Globalscape_Inbound&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
+    <elementParameter field="CHECK" name="INCLUDSUBDIR" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="YES"/>
+    <elementParameter field="CHECK" name="ERROR" value="false"/>
+    <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
+    <elementParameter field="TABLE" name="FILES">
+      <elementValue elementRef="FILEMASK" value="&quot;People*.csv&quot;"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_BY_FILESIZE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_BY_MODIFIEDDATE" value="false"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_ASC" value="true"/>
+    <elementParameter field="RADIO" name="ORDER_ACTION_DESC" value="false"/>
+    <elementParameter field="CHECK" name="IFEXCLUDE" value="false"/>
+    <elementParameter field="TEXT" name="EXCLUDEFILEMASK" show="false" value="&quot;*.txt&quot;"/>
+    <elementParameter field="CHECK" name="FORMAT_FILEPATH_TO_SLASH" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFL_HISTORY_FILES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILELIST_HISTORY&lt;/b&gt;&lt;br&gt;Gets a list of files"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputDelimited_2"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
+    <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEPATH&quot;)) "/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HEADER" value="1"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="false"/>
+    <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="DIRECTORY" name="TEMP_DIR" show="false" value="&quot;D:/ASIS/DEV_Workspace&quot;"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="CHECK" name="RANDOM" value="false"/>
+    <elementParameter field="TEXT" name="NB_RANDOM" show="false" value="10"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="COLLEAGUE_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COLLEAGUE_PRN"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TITLE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FORENAME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SURNAME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SITE_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COMPANY_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LINE_MANAGER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FTE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="JOB_ROLE_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="START_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="REGISTERED_BODY"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LEAVING_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LEAVING_REASON_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MON_WORKING_HOURS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MON_START_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MON_END_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TUE_WORKING_HOURS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TUE_START_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TUE_END_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WED_WORKING_HOURS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WED_START_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WED_END_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="THU_WORKING_HOURS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="THU_START_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="THU_END_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FRI_WORKING_HOURS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FRI_START_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FRI_END_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAT_WORKING_HOURS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAT_START_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAT_END_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUN_WORKING_HOURS"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUN_START_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUN_END_TIME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TRAINING_COMPLETION_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EXPERIENCE_COHORT_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VA_APPROVAL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TA_APPROVAL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F2F_APPROVAL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PBA_APPROVAL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EFFECTIVE_START_DATE"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="true"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="SPLITRECORD" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DECODE" value="false"/>
+    <elementParameter field="TABLE" name="DECODE_COLS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="COLLEAGUE_ID"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COLLEAGUE_PRN"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TITLE"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FORENAME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SURNAME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SITE_ID"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COMPANY_ID"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LINE_MANAGER"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FTE"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="JOB_ROLE_ID"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="START_DATE"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="REGISTERED_BODY"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LEAVING_DATE"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LEAVING_REASON_ID"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MON_WORKING_HOURS"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MON_START_TIME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MON_END_TIME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TUE_WORKING_HOURS"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TUE_START_TIME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TUE_END_TIME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WED_WORKING_HOURS"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WED_START_TIME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WED_END_TIME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="THU_WORKING_HOURS"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="THU_START_TIME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="THU_END_TIME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FRI_WORKING_HOURS"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FRI_START_TIME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FRI_END_TIME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAT_WORKING_HOURS"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAT_START_TIME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SAT_END_TIME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUN_WORKING_HOURS"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUN_START_TIME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SUN_END_TIME"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TRAINING_COMPLETION_DATE"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EXPERIENCE_COHORT_ID"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="VA_APPROVAL"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TA_APPROVAL"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F2F_APPROVAL"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PBA_APPROVAL"/>
+      <elementValue elementRef="DECODE" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EFFECTIVE_START_DATE"/>
+      <elementValue elementRef="DECODE" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DESTINATION" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_HEADER_AS_IS" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFID_FILE_DELIMITED"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FILE_HISTORY&lt;/b&gt;&lt;br&gt;Specifies the File Format"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileInputDelimited_2">
+      <column comment="" key="false" length="-1" name="COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TITLE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="FORENAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SURNAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SITE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="COMPANY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="LINE_MANAGER" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FTE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="START_DATE" nullable="true" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="REGISTERED_BODY" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LEAVING_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LEAVING_REASON_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="MON_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="MON_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TUE_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="TUE_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="TUE_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WED_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="WED_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="WED_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="THU_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="THU_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="THU_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FRI_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="FRI_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="FRI_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SAT_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SAT_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SAT_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SUN_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SUN_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SUN_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TRAINING_COMPLETION_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EXPERIENCE_COHORT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="VA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="F2F_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PBA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EFFECTIVE_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="-1" name="COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TITLE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="FORENAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="SURNAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SITE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="COMPANY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="LINE_MANAGER" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FTE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="START_DATE" nullable="true" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="REGISTERED_BODY" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LEAVING_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="LEAVING_REASON_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="MON_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="MON_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TUE_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="TUE_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="TUE_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="WED_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="WED_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="WED_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="THU_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="THU_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="THU_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="FRI_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="FRI_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="FRI_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SAT_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SAT_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SAT_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="SUN_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SUN_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="SUN_END_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="TRAINING_COMPLETION_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EXPERIENCE_COHORT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="VA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="TA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="F2F_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="PBA_APPROVAL" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="EFFECTIVE_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="256">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_4"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_ehiesPd6EfCyz5QjpMdZjQ-tMap_4-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="tMap_FILE_ERRORS"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;HISTORY_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps File Format Errors"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="copyOfln_AUD_PEOPLE_HISTORY1">
+      <column comment="" key="false" length="-1" name="AUD_COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_TITLE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_FORENAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_SURNAME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_AP_PRACTITIONER_SITE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_COMPANY_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_LINE_MANAGER" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_FTE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_JOB_ROLE_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_START_DATE" nullable="true" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_REGISTERED_BODY" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_LEAVING_DATE" nullable="true" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_LEAVING_REASON_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_MON_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_MON_START_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_MON_END_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_TUE_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_TUE_START_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_TUE_END_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_WED_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_WED_START_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_WED_END_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_THU_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_THU_START_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_THU_END_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_FRI_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_FRI_START_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_FRI_END_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_SAT_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_SAT_START_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_SAT_END_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_SUN_WORKING_HOURS" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_SUN_START_TIME" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_SUN_END_TIME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_TRAINING_COMPLETION_DATE" nullable="true" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_EXPERIENCE_COHORT_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_VA_APPROVAL" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_TA_APPROVAL" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_F2F_APPROVAL" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_PBA_APPROVAL" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_EFFECTIVE_START_DATE" nullable="true" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column key="false" length="4000" name="AUD_ERROR_TYPE" nullable="true" originalLength="4000" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="4000" name="AUD_ERROR_DESCRIPTION" nullable="true" originalLength="4000" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_ERROR_FIELD_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="4000" name="AUD_ERROR_FIELD_VALUE" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="AUD_ORACLE_ERROR_CODE" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="copyOfln_AUD_PEOPLE_HISTORY1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row2.COLLEAGUE_ID " name="AUD_COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.COLLEAGUE_PRN " name="AUD_COLLEAGUE_PRN" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.TITLE " name="AUD_TITLE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.FORENAME " name="AUD_FORENAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.SURNAME " name="AUD_SURNAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.SITE_ID " name="AUD_AP_PRACTITIONER_SITE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.COMPANY_ID " name="AUD_COMPANY_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.LINE_MANAGER " name="AUD_LINE_MANAGER" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.FTE " name="AUD_FTE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.JOB_ROLE_ID " name="AUD_JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.START_DATE " name="AUD_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row2.REGISTERED_BODY " name="AUD_REGISTERED_BODY" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.LEAVING_DATE " name="AUD_LEAVING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row2.LEAVING_REASON_ID " name="AUD_LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.MON_WORKING_HOURS " name="AUD_MON_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.MON_START_TIME " name="AUD_MON_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.MON_END_TIME " name="AUD_MON_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.TUE_WORKING_HOURS " name="AUD_TUE_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.TUE_START_TIME " name="AUD_TUE_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.TUE_END_TIME " name="AUD_TUE_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.WED_WORKING_HOURS " name="AUD_WED_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.WED_START_TIME " name="AUD_WED_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.WED_END_TIME " name="AUD_WED_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.THU_WORKING_HOURS " name="AUD_THU_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.THU_START_TIME " name="AUD_THU_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.THU_END_TIME " name="AUD_THU_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.FRI_WORKING_HOURS " name="AUD_FRI_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.FRI_START_TIME " name="AUD_FRI_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.FRI_END_TIME " name="AUD_FRI_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.SAT_WORKING_HOURS " name="AUD_SAT_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.SAT_START_TIME " name="AUD_SAT_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.SAT_END_TIME " name="AUD_SAT_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.SUN_WORKING_HOURS " name="AUD_SUN_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.SUN_START_TIME " name="AUD_SUN_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.SUN_END_TIME " name="AUD_SUN_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.TRAINING_COMPLETION_DATE " name="AUD_TRAINING_COMPLETION_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row2.EXPERIENCE_COHORT_ID " name="AUD_EXPERIENCE_COHORT_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.VA_APPROVAL " name="AUD_VA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.TA_APPROVAL " name="AUD_TA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.F2F_APPROVAL " name="AUD_F2F_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.PBA_APPROVAL " name="AUD_PBA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.EFFECTIVE_START_DATE " name="AUD_EFFECTIVE_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="StringHandling.LEFT((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;)) " name="AUD_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;, StringHandling.RIGHT(StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;),10),8)); " name="AUD_FILE_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)); " name="AUD_LOAD_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?3:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?4:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?5:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?6:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?7:-1 " name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="&quot;File Error&quot; " name="AUD_ERROR_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.errorMessage " name="AUD_ERROR_DESCRIPTION" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_ERROR_FIELD_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_ERROR_FIELD_VALUE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_ORACLE_ERROR_CODE" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="AUD_ORACLE_ERROR_DESC" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="COLLEAGUE_PRN" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TITLE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="FORENAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SURNAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SITE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="COMPANY_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="LINE_MANAGER" nullable="true" type="id_String"/>
+        <mapperTableEntries name="FTE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="REGISTERED_BODY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="LEAVING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="MON_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="MON_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="MON_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TUE_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="TUE_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TUE_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="WED_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="WED_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="WED_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="THU_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="THU_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="THU_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="FRI_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="FRI_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="FRI_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SAT_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="SAT_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SAT_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SUN_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="SUN_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SUN_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TRAINING_COMPLETION_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="EXPERIENCE_COHORT_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="VA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="TA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="F2F_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="PBA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="EFFECTIVE_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="errorCode" nullable="true" type="id_String"/>
+        <mapperTableEntries name="errorMessage" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
   </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileInputDelimited_1">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
@@ -3653,12 +4152,18 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_MIS_START_TIME"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tRowGenerator_1" offsetLabelX="0" offsetLabelY="0" source="tRowGenerator_1" target="tFileList_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk2"/>
-  </connection>
   <connection connectorName="FLOW" label="ln_MIS_END_TIME" lineStyle="0" metaname="tRowGenerator_2" offsetLabelX="0" offsetLabelY="0" source="tRowGenerator_2" target="tDBSP_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_MIS_END_TIME"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_2" offsetLabelX="0" offsetLabelY="0" source="tFileList_2" target="tFileInputDelimited_2">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate2"/>
+  </connection>
+  <connection connectorName="REJECT" label="row2" lineStyle="0" metaname="tFileInputDelimited_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_2" target="tMap_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <note opaque="false" posX="672" posY="-32" sizeHeight="161" sizeWidth="417" text="Developer: Stuart Smith&#13;&#10;Date: 20-Dec-2024&#13;&#10;JIRA: BM-12258&#13;&#10;Description: Insert People History data into Staging Table from Flat File and Error-Trapping into Audit Table&#13;&#10;&#13;&#10;"/>
   <subjob>
@@ -3689,13 +4194,20 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="192;192;192"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5232c110-0dfe-4610-adf7-d05e1c477020"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aiLAI7kb5PGgkicRoV87mJRCtqqFintUigEmgKUFHPoLEhS5WKDQhuIhaYhjtWyvJS9DXPxy/83S&#13;
-2uHLzeLw/A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_79c0ace2-8036-4c30-a665-41ec76b4b9bd"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>05N8jBOP4FCgip6px/JFwXMmYLl8l59ZQ5stLDKnXsGgfxWAseWz1ocjwAjqGVxmrsRLmIh2PPQU&#13;
-APAe3ypIuQ==</DigestValue></Reference></SignedInfo><SignatureValue>gSlln+rneq/buPmkrEZHeW5CF7ODrO7Imae2wgbzCJKTVS3tYE6xl6uOH8EWG27PhuBm1qqxyuhA&#13;
-e06PKso+lI/WupOBIr1miVzQzMD3Vc0fwixischpog7VdvrLVbEcdKa4gMfThjbu+4PSvb8TSMbO&#13;
-qIuPEHIdDe7/L+OE0v25Au03EzzeYpbojN75fR28KMt3KitCN2T8O7orHupkmml6JsV/k6rJCu0U&#13;
-jvWXO8B619m9V1gq71nKnb9cuFNMoskHw5zZOGnf0QjYUqOtYaIl/Zfm0JuAszCff0itQkB21+cO&#13;
-d1tWAMt/EKyM1XzA7tWe4ZxE2DOcd4CCaxVV/g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_2"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Reject History csv Files if all records are invalid"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c66a2b2c-e1ce-4fc9-af56-d6b1596d8b4b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tTpfcsvVOJl85C2Fod9nDnrJebILlihVVugZK2ccISxDbvxxT2ifLAyUW/Jwn+s4qoUv61RCVL4l&#13;
+olDzAkmyXA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cc5260b5-7a45-4bae-8d1a-8c9ce64ae0d9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>W5hgCgWdpEQ1XZqphqPZ0eEonlHPvsL1yktSWnTg1O4Shwg32AwKjxYVsrap3NejPf+CLyx0ewXt&#13;
+CEIkhjrzAw==</DigestValue></Reference></SignedInfo><SignatureValue>bj94OLvrsObkWzcmrVug0CNXKj0GCbhynwwgF7ijumJglaIjlM3gX88+XnvVk4rwSyKhqxoZ0xVR&#13;
+nwVOdOCpVi94nzeQzAKz5C/7hOTBrBLM3wxfQpqwcUq3qP15kay7DK7x8mziuE6zOYtDz10NXK5a&#13;
+o+4p+Vi3x3u+KT5QBlDfdva0hRurrE6mvCvKowFpii40rDvNbgsu0RYY2EKW30O26IBnRiXKQFHs&#13;
+GV/23Fls0Z+uaLQug9c1VDcSd3Fnf+ymRsUTEja3I64DlaF59TynFZXYsk7SohclEP6t2qS6p2JU&#13;
+JBupA3LJYSOl3HDp3c+OGl2cnXyi6mnT2IoI3A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3717,4 +4229,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_79c0ace2-8036-4c30-a665-41ec76b4b9bd" Target="#_5232c110-0dfe-4610-adf7-d05e1c477020"><Timestamp>2026-01-22 11:09:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cc5260b5-7a45-4bae-8d1a-8c9ce64ae0d9" Target="#_c66a2b2c-e1ce-4fc9-af56-d6b1596d8b4b"><Timestamp>2026-01-22 11:35:17</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
