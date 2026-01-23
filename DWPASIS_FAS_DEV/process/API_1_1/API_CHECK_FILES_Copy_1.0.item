@@ -2784,7 +2784,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="1056">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;reject_count&quot;, row1.reject_count);&#10;System.out.println(&quot;DEBUG → Reject count = &quot; + row1.reject_count);&#10;globalMap.put(&quot;ASSESSMENT_PROVIDER&quot;, copyOfln_PEOPLE_ERR.STG_ASSESSMENT_PROVIDER_ID);&#10;System.out.println(&quot;DEBUG → AP = &quot; + copyOfln_PEOPLE_ERR.STG_ASSESSMENT_PROVIDER_ID);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;reject_count&quot;, row1.reject_count);&#10;System.out.println(&quot;DEBUG → Reject count = &quot; + row1.reject_count);&#10;globalMap.put(&quot;ASSESSMENT_PROVIDER_REJECT&quot;, copyOfln_PEOPLE_ERR.STG_ASSESSMENT_PROVIDER_ID);&#10;System.out.println(&quot;DEBUG → AP = &quot; + copyOfln_PEOPLE_ERR.STG_ASSESSMENT_PROVIDER_ID);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_1">
@@ -3136,14 +3136,14 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="1184">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_2"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;valid_count&quot;, row4.valid_count);&#10;System.out.println(&quot;DEBUG → Valid count = &quot; + row4.valid_count);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;valid_count&quot;, row4.valid_count);&#10;System.out.println(&quot;DEBUG → Valid count = &quot; + row4.valid_count);&#10;globalMap.put(&quot;ASSESSMENT_PROVIDER_VALID&quot;, copyOfln_PEOPLE_ERR.STG_ASSESSMENT_PROVIDER_ID);&#10;System.out.println(&quot;DEBUG → AP = &quot; + copyOfcopyOfln_PEOPLE_ERR.STG_ASSESSMENT_PROVIDER_ID);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_2"/>
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="992" posY="1120">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;Integer valid  = (Integer)globalMap.get(&quot;valid_count&quot;);&#10;Integer invalid = (Integer)globalMap.get(&quot;reject_count&quot;);&#10;&#10;if (valid == null) valid = 0;&#10;if (invalid == null) invalid = 0;&#10;&#10;boolean fullReject = (valid == 0 &amp;&amp; invalid &gt; 0);&#10;&#10;globalMap.put(&quot;full_reject&quot;, Boolean.valueOf(fullReject));&#10;&#10;System.out.println(&quot;DEBUG → valid=&quot; + valid +&#10;                   &quot; invalid=&quot; + invalid +&#10;                   &quot; fullReject=&quot; + fullReject);&#10;&#10;System.out.println(&quot;AP in Java Component = &quot; + globalMap.get(&quot;ASSESSMENT_PROVIDER&quot;));"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;Integer valid  = (Integer)globalMap.get(&quot;valid_count&quot;);&#10;Integer invalid = (Integer)globalMap.get(&quot;reject_count&quot;);&#10;&#10;if (valid == null) valid = 0;&#10;if (invalid == null) invalid = 0;&#10;&#10;boolean fullReject = (valid == 0 &amp;&amp; invalid &gt; 0);&#10;&#10;globalMap.put(&quot;full_reject&quot;, Boolean.valueOf(fullReject));&#10;&#10;System.out.println(&quot;DEBUG → valid=&quot; + valid +&#10;                   &quot; invalid=&quot; + invalid +&#10;                   &quot; fullReject=&quot; + fullReject);&#10;&#10;System.out.println(&quot;AP in Java Component = &quot; + globalMap.get(&quot;ASSESSMENT_PROVIDER_REJECT&quot;));"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1">
@@ -3163,7 +3163,7 @@
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" show="false" value="&quot;D:/ASIS/Development_Workspace&quot;"/>
     <elementParameter field="DIRECTORY" name="DESTINATION" value="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),1,23) + &quot;Archive/&quot; + StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20)"/>
     <elementParameter field="CHECK" name="RENAME" value="true"/>
-    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="globalMap.get(&quot;ASSESSMENT_PROVIDER&quot;)+&quot;_ERR_&quot;+TalendDate.getDate(&quot;yyyyMMdd_HHmmss&quot;)+&quot;_&quot;+((String)globalMap.get(&quot;tFileList_4_CURRENT_FILE&quot;))"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="globalMap.get(&quot;ASSESSMENT_PROVIDER_REJECT&quot;)+&quot;_ERR_&quot;+TalendDate.getDate(&quot;yyyyMMdd_HHmmss&quot;)+&quot;_&quot;+((String)globalMap.get(&quot;tFileList_4_CURRENT_FILE&quot;))"/>
     <elementParameter field="CHECK" name="REMOVE_FILE" value="true"/>
     <elementParameter field="CHECK" name="REPLACE_FILE" value="false"/>
     <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="false"/>
@@ -4151,13 +4151,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8d4d0307-a42b-4c82-9ab3-97219f18cd09"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2c4X28qs56q6t0knscZabPMWkWRY0AXt+mb0LWvOXFSC9EOS24p1vcxyU/eiKXnAtAAntfGPRqEC&#13;
-GDH6RGII/Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c457063e-9d0d-460b-bb16-b99a5553ae9f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zn76std2eJ4Fd8vJgp3e/wir52fo6FLr3xlVAJVDNQPXAaXeInrNzsrpiCd/iTwdZwkiWiufSWVz&#13;
-gAgestHwwA==</DigestValue></Reference></SignedInfo><SignatureValue>jHubAmGq0ZKvr3xuFwdoVRpLJdrF7bEqo82klL9qWYmsKp4IdvYW9Pquy6sggSsZHy0q66OMfQtL&#13;
-KmLNzAbqSqPvSQqFb7YMU199804hgwVo3UGDtt4vwMU4FheBnNTq6uL0KPb/IIRK1AStR4YTzI+C&#13;
-0s5ePf1AhgPrkTcJeavg8o1aEvCbAlwjkY/AlAzi5+AJ4WpGPS4czBVWN1h/vCaAXcixYIfb28lj&#13;
-v1rY6+hB9GX0B38VQHHcNgRJK1h/2UEuPg0WNQV0ndyat217zsi8QivezkrYecLTbTBC/NAWpDRS&#13;
-VU6FZAvWM2pwRsPvwLSTCFctwVric2ZimXHgIQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6e004b1c-d66d-4bb5-aab4-d1f607b008fa"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7mTSJdopYhGAxJm5AThFXx43LTqUbBKf8mkFT3dcEMeMqmv1Iz7P2RE/Wt+xASHgYhuwGLlSBUHS&#13;
+vcL3jm1jMg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_84aa1946-211a-4e3d-8f11-c7293cb4c90c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZpBYzIZP3ZDFxcI/ksiplsBqXqc1IaRiyIR19bzNdcEMd/3LQXwX5q/Ke11vtL6rryvpXZLwwk50&#13;
+PkVZmyC3Lw==</DigestValue></Reference></SignedInfo><SignatureValue>jfOgR0ZA+MI/vaz5XBo4fntOcCeTGQTUwaWK0ecQJ5TUx1q+zF3vzL6NXE1AF09yig7aHo3yUQe3&#13;
+CU97T98nW/y6zrBOCDIHCJlxOf6K3PpBTTk2bY03YoJMZHvQ9c0ZitJhBOsQkbYc/FnPAr/DnduX&#13;
+nS0ckehmPi1MWBTx7aBi/kjy0+CkrwhsPpVzllw17ZCHvOlX+RKwY3EuRRkm6HVfF9rQQB1uFbSC&#13;
+gl4wO+6k6swTAY+PDTgBHq/ke8IQaEgqM/k+TYECzWfv4oCmjARJ40Y1Hv/yw5ufp18ND2QvaFvN&#13;
+zc5LqdwxvSOJZVRuFtPsZesbWOT9sqLfJPIi0Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -4179,4 +4179,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c457063e-9d0d-460b-bb16-b99a5553ae9f" Target="#_8d4d0307-a42b-4c82-9ab3-97219f18cd09"><Timestamp>2026-01-23 15:26:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_84aa1946-211a-4e3d-8f11-c7293cb4c90c" Target="#_6e004b1c-d66d-4bb5-aab4-d1f607b008fa"><Timestamp>2026-01-23 15:34:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
