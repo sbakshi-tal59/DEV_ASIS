@@ -2868,7 +2868,7 @@
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfln_AUD_PEOPLE_HISTORY1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row3.COLLEAGUE_ID " name="COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
@@ -3066,7 +3066,7 @@
       <column comment="" key="false" length="255" name="STG_ERROR_DESCRIPTION" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfcopyOfln_PEOPLE_ERR" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row4.AUD_SOURCE_FILE_NAME " name="STG_FILE_NAME" nullable="true" type="id_String"/>
@@ -3154,6 +3154,34 @@
       <column comment="" key="false" length="1" name="STG_FILE_LOADED_FLAG" nullable="true" originalLength="1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STG_ERROR_TYPE" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="STG_ERROR_DESCRIPTION" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileCopy" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="1120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_4"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEDIRECTORY&quot;))+&quot;/&quot;+((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;))"/>
+    <elementParameter field="CHECK" name="ENABLE_COPY_DIRECTORY" value="false"/>
+    <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" show="false" value="&quot;D:/ASIS/Development_Workspace&quot;"/>
+    <elementParameter field="DIRECTORY" name="DESTINATION" value="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEDIRECTORY&quot;)),1,23) + &quot;Archive/&quot; + StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_2_CURRENT_FILEDIRECTORY&quot;)),24,20)"/>
+    <elementParameter field="CHECK" name="RENAME" value="true"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="ln_Filter_Errors.Assessment_Provider+&quot;_ERR_&quot;+TalendDate.getDate(&quot;yyyyMMdd_HHmmss&quot;)+&quot;_&quot;+((String)globalMap.get(&quot;tFileList_2_CURRENT_FILE&quot;))"/>
+    <elementParameter field="CHECK" name="REMOVE_FILE" value="true"/>
+    <elementParameter field="CHECK" name="REPLACE_FILE" value="false"/>
+    <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="false"/>
+    <elementParameter field="CHECK" name="FAILON" value="false"/>
+    <elementParameter field="CHECK" name="FORCE_COPY_DELETE" value="false"/>
+    <elementParameter field="CHECK" name="PRESERVE_LAST_MODIFIED_TIME" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tFC_COPY_TO_ARCHIVE"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FC_COPY_TO_ARCHIVE&lt;/b&gt;&lt;br&gt;Copies to Archive Folder"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFileCopy_4">
+      <column comment="" key="false" length="-1" name="Source" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Directory" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prefix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Prefix_Check" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Suffix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Suffix_Check" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Suffix_Check_LEN" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Assessment_Provider" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileProperties_2">
@@ -4043,6 +4071,10 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_2" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_2" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
   </connection>
+  <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tFileCopy_4">
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="(Boolean)globalMap.get(&quot;fullreject&quot;) == true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If1"/>
+  </connection>
   <note opaque="false" posX="608" posY="64" sizeHeight="161" sizeWidth="417" text="Developer: Stuart Smith&#13;&#10;Date: 10-Dec-2024&#13;&#10;JIRA: BM-12332&#13;&#10;Description: Check if Flat files from Individual Provider folders have been loaded or are blank, if so copy them to Archive folder and delete flat files from Source Folder.&#13;&#10;"/>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
@@ -4103,13 +4135,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5b5c9933-bb63-4085-92a6-616bc1612b7b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BPcL9/VWhu5y/NbugaYZ2F6ws0qgGgZ/8+hclzb1xFdRUAVRTUsqPqoZPUaAcTdWGz+SqNEHodjv&#13;
-X9gwDnz3oA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_14d9185a-0fb1-48b4-bfd8-2d926e3ac596"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0AGfRGghltYj8A5MLQntuh+HW2OU3IBK5cgVhapkdm7fIdIM9Jwm6VZDB0+Sr1ptWd+onw88sjGR&#13;
-hxNIi4nlXg==</DigestValue></Reference></SignedInfo><SignatureValue>i+ntFK6rRIVP8oBp0pHH4OYUFVrZKfwK5MgPpH2V/O2g+UHVtCaCKsmnoBX39YV4wV5XUbWI5g+E&#13;
-Aus3B8wyrw8yE66wvf10FlLtr1aK+v6/Z3+6tJZPZzrH7FTx4l4p4KoD57wF/Wu2+NP3DBvRy/Xh&#13;
-Zgfw+1LP/aiAaAjr9vk/FLS+d8Zrvkc7ent22+cUcszqjfDRJEYhalpiGtaW6qM3RXMKe9K4h45M&#13;
-maf7mM0PuuD7U/+8oVGkuwX5Yy/a6HrocDb2K0KoxRgkBkMN6vfOlosEZj4i/7MoYHW6mKvhdUrC&#13;
-xN2APC6swoQdeDKGGF1M5ug9ZxbhfW6px9i15A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileCopy_4"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d769e88d-4be1-47a1-9492-2c979e8fe895"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KSz/UkxrOztUWHLIkmciQZ0BnhlrSF5wN2jaIHUXHryLXie9F7J1YnmHC2dDyfHSuVlyVOQruf31&#13;
+qdvhhD40Qw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_afa4fa1d-5480-465d-a010-c6d263908213"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sSiKzuKmyLhbxdV7HNcSxcAYhQU4SSmnVgmfXgHdif2lI9/Tb/o8IWosC6JFin0zeY5pGv87qUOM&#13;
+ZvWLLQ9ZWA==</DigestValue></Reference></SignedInfo><SignatureValue>ktXo+ZxqALih1VlTgxUUSJtVXiyJIKJkgxr8FCYRKvV0yrUyvLmi9LD/yoIXXFsWoAmDacQKI2rY&#13;
+CAv7+VPCdW629WbWYjLU44QtPgJHucc/br4/NCfun5Xkv5amA+zVRc9/O2xH33HSM7Uesc+3NUVq&#13;
+XuGUDL8U8RNvi7XTwbBH2OI4qMrZKpd1O7aIrAA+OS3sg5puUtvdTgAYOvQMYx4b1RURTEZK7GRB&#13;
+p9E+3mi+uxlJdv/dYw542doWGNI43EPZ2UbK4Gxa765uJiUKiDweFxy/DAbRIjEKQkcde+0JElin&#13;
+QhlfTj1eSU1mjOFoFbOAQRNdJLA7tt0HMTS86w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -4131,4 +4168,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_14d9185a-0fb1-48b4-bfd8-2d926e3ac596" Target="#_5b5c9933-bb63-4085-92a6-616bc1612b7b"><Timestamp>2026-01-23 12:57:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_afa4fa1d-5480-465d-a010-c6d263908213" Target="#_d769e88d-4be1-47a1-9492-2c979e8fe895"><Timestamp>2026-01-23 13:42:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
