@@ -2973,7 +2973,7 @@
       <column comment="" key="false" length="4000" name="AUD_ERROR_FIELD_VALUE" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="AUD_ORACLE_ERROR_CODE" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="reject_count" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="valid_count" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -3031,7 +3031,7 @@
         <mapperTableEntries name="AUD_ERROR_FIELD_VALUE" nullable="true" type="id_String"/>
         <mapperTableEntries name="AUD_ORACLE_ERROR_CODE" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="AUD_ORACLE_ERROR_DESC" nullable="true" type="id_String"/>
-        <mapperTableEntries name="reject_count" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="valid_count" nullable="true" type="id_Integer"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
         <mapperTableEntries name="COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
@@ -3083,7 +3083,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_2"/>
     <elementParameter field="TABLE" name="GROUPBYS"/>
     <elementParameter field="TABLE" name="OPERATIONS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="reject_count"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="valid_count"/>
       <elementValue elementRef="FUNCTION" value="count"/>
       <elementValue elementRef="INPUT_COLUMN" value="AUD_COLLEAGUE_ID"/>
       <elementValue elementRef="IGNORE_NULL" value="false"/>
@@ -3146,8 +3146,109 @@
       <column comment="" key="false" length="4000" name="AUD_ERROR_FIELD_VALUE" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="10" name="AUD_ORACLE_ERROR_CODE" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="reject_count" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="valid_count" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="672" posY="1184">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_14"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_m8UbMPeREfC7hMaWxU4coA-tMap_14-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="tMap_PEOPLE_FILES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Filters History Files"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="copyOfcopyOfln_PEOPLE_ERR">
+      <column comment="" key="false" length="4000" name="STG_FILE_NAME" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_PROCESSED_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_PROCESSED_TIME" nullable="true" originalLength="5" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="STG_FILE_LOADED_FLAG" nullable="true" originalLength="1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_ERROR_TYPE" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_ERROR_DESCRIPTION" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="copyOfcopyOfln_PEOPLE_ERR" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row4.AUD_SOURCE_FILE_NAME " name="STG_FILE_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)) " name="STG_PROCESSED_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="TalendDate.TO_CHAR(TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)),&quot;HH24:mm&quot;) " name="STG_PROCESSED_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?3:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?4:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?5:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?6:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?7:-1 " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="&quot;Y&quot; " name="STG_FILE_LOADED_FLAG" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;Correct Format&quot; + row4.valid_count " name="STG_ERROR_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;The file is in correct format&quot; " name="STG_ERROR_DESCRIPTION" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row4" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="AUD_COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AUD_COLLEAGUE_PRN" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_TITLE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_FORENAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_SURNAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_AP_PRACTITIONER_SITE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AUD_COMPANY_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AUD_LINE_MANAGER" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_FTE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AUD_JOB_ROLE_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AUD_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="AUD_REGISTERED_BODY" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_LEAVING_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="AUD_LEAVING_REASON_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AUD_MON_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AUD_MON_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_MON_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_TUE_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AUD_TUE_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_TUE_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_WED_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AUD_WED_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_WED_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_THU_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AUD_THU_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_THU_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_FRI_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AUD_FRI_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_FRI_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_SAT_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AUD_SAT_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_SAT_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_SUN_WORKING_HOURS" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AUD_SUN_START_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_SUN_END_TIME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_TRAINING_COMPLETION_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="AUD_EXPERIENCE_COHORT_ID" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries name="AUD_VA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_TA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_F2F_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_PBA_APPROVAL" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_EFFECTIVE_START_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="AUD_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_FILE_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="AUD_LOAD_DATE" nullable="true" type="id_Date"/>
+        <mapperTableEntries name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="AUD_ERROR_TYPE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_ERROR_DESCRIPTION" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_ERROR_FIELD_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_ERROR_FIELD_VALUE" nullable="true" type="id_String"/>
+        <mapperTableEntries name="AUD_ORACLE_ERROR_CODE" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="AUD_ORACLE_ERROR_DESC" nullable="true" type="id_String"/>
+        <mapperTableEntries name="valid_count" nullable="true" type="id_Integer"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="800" posY="1184">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_2"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;valid_count&quot;, row4.valid_count);&#10;System.out.println(&quot;DEBUG → Valid count = &quot; + row4.valid_count);"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_2"/>
   </node>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileProperties_2">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
@@ -3918,6 +4019,14 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfln_AUD_PEOPLE_HISTORY1"/>
   </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tAggregateRow_2" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_2" target="tMap_14">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+  </connection>
+  <connection connectorName="FLOW" label="copyOfcopyOfln_PEOPLE_ERR" lineStyle="0" metaname="copyOfcopyOfln_PEOPLE_ERR" offsetLabelX="0" offsetLabelY="0" source="tMap_14" target="tJavaRow_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfcopyOfln_PEOPLE_ERR"/>
+  </connection>
   <note opaque="false" posX="608" posY="64" sizeHeight="161" sizeWidth="417" text="Developer: Stuart Smith&#13;&#10;Date: 10-Dec-2024&#13;&#10;JIRA: BM-12332&#13;&#10;Description: Check if Flat files from Individual Provider folders have been loaded or are blank, if so copy them to Archive folder and delete flat files from Source Folder.&#13;&#10;"/>
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
@@ -3973,13 +4082,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_93c5a518-f72d-4fd6-8603-683fa85ce950"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DMoExsf1vyRB4s6cl+t6lD1iyxKPa3aywc86jI+sZ/JN5b+WNBAkf97mVGuwp0A68xhZoOkdrhUW&#13;
-aJwnqwnzeQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ebc8fc24-3676-405a-8c6f-893fb82f7af7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SdAkOlLJlDpi9kWHcye5vUzZHtprXIh2c6Guyj+xtiLEBa2XO/PB1q6w5MpskYsrjr9Fp/4RpGPw&#13;
-/LN7dWfl5A==</DigestValue></Reference></SignedInfo><SignatureValue>A7zqAM2sV36LZt+cJW5/1xwLQkZLFo0kldyoVknV02doyC9jctmvQyuUux2lJ3jmXVeP6E4aRFOs&#13;
-Y5cM4OMaurb5ejW+a8Hv7ZzaVMqgF6PZLziMTolKY0ATSdy6JBqFWH828kbuG6dMWrTpdyWUOBw6&#13;
-f7bPmM+CPdo22R/7DIIfn1zd3E27vrv9MYRLcWM+GXH2qd8jjAChqJhOB47wpzPeTslPUrNKbQ2q&#13;
-JIuQmbNYvan6/PHK2OqRs6uVfX3q1wmCemKsVtKMV90kmM8NTcVcTOh9g/2dwG/vDEhqvghjaIUX&#13;
-wm+Hzry6jH93jr5uThpqoH9iMeJHGQuC/8mNnQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fe2a8b4a-0fd6-44f9-998d-a8383cf76f7c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BwOYvk3KYlvwpy7SdSymstQuu1zsQi1Au84o1dFQQEy2AZHlZoDMyRkTgRnXHq0qfcePchH1pj6z&#13;
+4P3HEwhFWQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fc624655-5d8a-4436-b6e6-9d13eb17f8a6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bwGYgWnX6vup/oE7cCdv0drft7JBjrWprbX5RsY+XnEWpqbr3+Qf0X8lc8gtgA2/eSpe92F6F+uJ&#13;
+jwOZ3pmV7g==</DigestValue></Reference></SignedInfo><SignatureValue>hMOQTICXUQXAIKXSjHdd2JZ6Iein+GGmdKF6LKoBd1PDOclFqNji++P1z9AJqDVZfE6F5WN7myAz&#13;
+A1fGBDSF4NMyM+ESKk8iTFzZYekVGTu7KLARlKX0nFKP//dgPzr0DwKwLnwzEA+FPG129tdgd8JA&#13;
+36ccAn4qopx10nj8FoNJRcIgr/whQAj9r3lKYuc0L4uK9BvWT2BTvDZ6l4jdL7w6GRN4VeM9z76T&#13;
+4LFkgzxQ5iJdcuQntvt2QfsePIfWHNVdcEQSVc+b0SQt+zD5ZcOQb1IhKgTwCFEhpJyDAb8Rg4cz&#13;
+DUwFHOAElbsTtxMK8xlb2LClvUg6YD3IL88GfQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -4001,4 +4110,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ebc8fc24-3676-405a-8c6f-893fb82f7af7" Target="#_93c5a518-f72d-4fd6-8603-683fa85ce950"><Timestamp>2026-01-23 11:45:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fc624655-5d8a-4436-b6e6-9d13eb17f8a6" Target="#_fe2a8b4a-0fd6-44f9-998d-a8383cf76f7c"><Timestamp>2026-01-23 12:17:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
