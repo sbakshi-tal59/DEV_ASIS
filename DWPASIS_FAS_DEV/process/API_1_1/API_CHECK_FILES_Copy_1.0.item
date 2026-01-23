@@ -2782,7 +2782,22 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="896" posY="1056">
+  <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="1056">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;reject_count&quot;, ((Integer)row1.reject_count));&#10;System.out.println(&quot;Reject count = &quot; + globalMap.get(&quot;reject_count&quot;));"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJava_1">
+      <column comment="" key="false" length="4000" name="STG_FILE_NAME" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_PROCESSED_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="5" name="STG_PROCESSED_TIME" nullable="true" originalLength="5" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="1" name="STG_FILE_LOADED_FLAG" nullable="true" originalLength="1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_ERROR_TYPE" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="STG_ERROR_DESCRIPTION" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="1056">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_7"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -3357,9 +3372,13 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="FLOW" label="copyOfln_PEOPLE_ERR" lineStyle="0" metaname="copyOfln_PEOPLE_ERR" offsetLabelX="0" offsetLabelY="0" source="tMap_12" target="tDBOutput_7">
+  <connection connectorName="FLOW" label="copyOfln_PEOPLE_ERR" lineStyle="0" metaname="copyOfln_PEOPLE_ERR" offsetLabelX="0" offsetLabelY="0" source="tMap_12" target="tJava_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfln_PEOPLE_ERR"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tJava_1" offsetLabelX="0" offsetLabelY="0" source="tJava_1" target="tDBOutput_7">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <note opaque="false" posX="608" posY="64" sizeHeight="161" sizeWidth="417" text="Developer: Stuart Smith&#13;&#10;Date: 10-Dec-2024&#13;&#10;JIRA: BM-12332&#13;&#10;Description: Check if Flat files from Individual Provider folders have been loaded or are blank, if so copy them to Archive folder and delete flat files from Source Folder.&#13;&#10;"/>
   <subjob>
@@ -3416,13 +3435,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_08394da5-a6b3-41eb-ac47-474de93c67a9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3e/I/qiC4QxLukmr6fAJ4EmZA6w2PVZ3fPC71P+CHbR7V+fMT/qCcgB+iNXWpeNCQS85T8kRHVZl&#13;
-jPvfFdaPSw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b87098b2-dc3c-4a63-9f34-37965da82168"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ONZ8fK1Wc1xBszbLUWupuGJlIUUA6dNOaHiuAhGjd3o17swYgP4dJOx5kXWO1aJeW2AKlbeennv5&#13;
-+iFNXsK/fA==</DigestValue></Reference></SignedInfo><SignatureValue>WeKzZm07Sfxb0JRCG428x4F5N68WHviLplZc55u+OdLnp1IeYfepdhPNsoqOvRNOfSLowSYQ5LTh&#13;
-MXxSoEFwwLyzJsKKQ2m5SO5y6rMIHi+ccm41UnoreEPBypr5HmyjFnnXIKlc9mkkRpmz8uzqnAhe&#13;
-HfKsqPeu4CvmVpy4Q8ox4UvNqFbeZWcRmleo+Iyo2MHPx8z12E1yTGIncoR+QxvinpHQnff8lziD&#13;
-+1UAeJjE1YLL2tliG92ODn9eJ+0gPCToTq7hgFUpg0dCqeO5RgajMailk8yunyK5Lm7Jv3CGRXqM&#13;
-CAGoj31whxlZh4Uzkkr9p8qukGX74v/lOZPMLg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_03d7c271-5ce3-47de-8241-ef76d5e0088f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NSlDaj0HYOCFyHdQw4/Cvqwf7hS7Cv6e8QJBgXjf18/d5PuhcAyeHgrZk76FQ/wOEUUAQDMh8LEz&#13;
+q2aFOnVgCA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_001273da-de6d-40c4-a38e-4373c97984fd"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WiVU+zDDoVeBVzBZ5tTDvduvS8IGWopybuCaGKHUJQdwzYSQDkYQyUDS5BLw159qsgpAR2cAoQ+P&#13;
+vWHC1gKxJQ==</DigestValue></Reference></SignedInfo><SignatureValue>UphdTPJc17m//tup/mAS6P9Ekq5MmWZoyi4WT3oZmlpO8i3x5DA2prMPMuXSNTy2ndQ73oyinv8f&#13;
+tPKOe2yQsqwDBhHMrI/WDR5XxXFZNeYKC9H6JRmk0PbiiEu5BSzJNezGW/BOrb9uPGVPzYVU4lZQ&#13;
+QN0JES9H5fKwxeMyVFOxxBcHVKlnGqxe7yNQrD19hhKoWa3K+N8lDiOdTk22ZxJyADoV/tbOxdDM&#13;
+1BoZ0W3cHDk/n+smiTJteTgOr2XdkI3VLZpJ+bqLveZeT9M0Z2ypx6YtZQWKuT3VwvbJCrGznEDO&#13;
+YyiOdHvWprhByKO8C8cLfoHqXAQ29zZA0ntQNQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -3444,4 +3463,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b87098b2-dc3c-4a63-9f34-37965da82168" Target="#_08394da5-a6b3-41eb-ac47-474de93c67a9"><Timestamp>2026-01-23 09:10:14</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_001273da-de6d-40c4-a38e-4373c97984fd" Target="#_03d7c271-5ce3-47de-8241-ef76d5e0088f"><Timestamp>2026-01-23 09:11:29</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
