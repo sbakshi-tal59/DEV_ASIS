@@ -2502,19 +2502,11 @@
       <column comment="" key="false" length="4000" name="AUD_F2F_APPROVAL" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_PBA_APPROVAL" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_EFFECTIVE_START_DATE" nullable="true" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="4000" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column key="false" length="4000" name="AUD_ERROR_TYPE" nullable="true" originalLength="4000" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="4000" name="AUD_ERROR_DESCRIPTION" nullable="true" originalLength="4000" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4000" name="AUD_ERROR_FIELD_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4000" name="AUD_ERROR_FIELD_VALUE" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="AUD_ORACLE_ERROR_CODE" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_AUD_PEOPLE_HISTORY1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ln_Format_Rejections.COLLEAGUE_ID " name="AUD_COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
@@ -2559,16 +2551,8 @@
         <mapperTableEntries expression="ln_Format_Rejections.F2F_APPROVAL " name="AUD_F2F_APPROVAL" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Format_Rejections.PBA_APPROVAL " name="AUD_PBA_APPROVAL" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Format_Rejections.EFFECTIVE_START_DATE " name="AUD_EFFECTIVE_START_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="StringHandling.LEFT((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;)) " name="AUD_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyyMMdd&quot;, StringHandling.RIGHT(StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;)),StringHandling.INDEX((String)globalMap.get(&quot;tFileList_1_CURRENT_FILE&quot;), &quot;_&quot;),10),8)); " name="AUD_FILE_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)); " name="AUD_LOAD_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?3:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?4:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?5:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?6:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?7:-1 " name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="&quot;File Error&quot; " name="AUD_ERROR_TYPE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Format_Rejections.errorMessage " name="AUD_ERROR_DESCRIPTION" nullable="true" type="id_String"/>
-        <mapperTableEntries name="AUD_ERROR_FIELD_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries name="AUD_ERROR_FIELD_VALUE" nullable="true" type="id_String"/>
-        <mapperTableEntries name="AUD_ORACLE_ERROR_CODE" nullable="true" type="id_Integer"/>
-        <mapperTableEntries expression="" name="AUD_ORACLE_ERROR_DESC" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_Format_Rejections" sizeState="INTERMEDIATE">
         <mapperTableEntries name="COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
@@ -2675,16 +2659,8 @@
       <column comment="" key="false" length="4000" name="AUD_F2F_APPROVAL" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_PBA_APPROVAL" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="AUD_EFFECTIVE_START_DATE" nullable="true" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="4000" name="AUD_SOURCE_FILE_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_FILE_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_LOAD_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
       <column key="false" length="4000" name="AUD_ERROR_TYPE" nullable="true" originalLength="4000" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="4000" name="AUD_ERROR_DESCRIPTION" nullable="true" originalLength="4000" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4000" name="AUD_ERROR_FIELD_NAME" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4000" name="AUD_ERROR_FIELD_VALUE" nullable="true" originalLength="4000" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="10" name="AUD_ORACLE_ERROR_CODE" nullable="true" originalLength="10" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="512" name="AUD_ORACLE_ERROR_DESC" nullable="true" originalLength="512" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="reject_count" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
@@ -2756,16 +2732,8 @@
         <mapperTableEntries name="AUD_F2F_APPROVAL" nullable="true" type="id_String"/>
         <mapperTableEntries name="AUD_PBA_APPROVAL" nullable="true" type="id_String"/>
         <mapperTableEntries name="AUD_EFFECTIVE_START_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="AUD_SOURCE_FILE_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries name="AUD_FILE_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="AUD_LOAD_DATE" nullable="true" type="id_Date"/>
-        <mapperTableEntries name="AUD_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="AUD_ERROR_TYPE" nullable="true" type="id_String"/>
         <mapperTableEntries name="AUD_ERROR_DESCRIPTION" nullable="true" type="id_String"/>
-        <mapperTableEntries name="AUD_ERROR_FIELD_NAME" nullable="true" type="id_String"/>
-        <mapperTableEntries name="AUD_ERROR_FIELD_VALUE" nullable="true" type="id_String"/>
-        <mapperTableEntries name="AUD_ORACLE_ERROR_CODE" nullable="true" type="id_Integer"/>
-        <mapperTableEntries name="AUD_ORACLE_ERROR_DESC" nullable="true" type="id_String"/>
         <mapperTableEntries name="reject_count" nullable="true" type="id_Integer"/>
       </inputTables>
     </nodeData>
@@ -3970,6 +3938,9 @@
       <elementValue elementRef="TRACE_COLUMN" value="ASSESSMENT_PROVIDER"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="reject_count"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -4225,13 +4196,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7da0f2a0-dc94-493a-9545-4df68dd40961"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>enaajcgxT47d9ar5gRdAGFHyL3WhWNe0CcdvTfxQ1TFd5dW0yzqxSIm9Q0p3cpjf3UD4dvrXy1v8&#13;
-XNPBEAxbTQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c9bc67eb-ab80-4866-b82d-cdefee72623e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>j0f10uHM7tMC0x936BOwNnHkgE9KAxxJRE+KkVuUmRzrINPrKr1x/GzAPE0o8/BI5yQL9ZOGlrhk&#13;
-HDUatz17Vg==</DigestValue></Reference></SignedInfo><SignatureValue>gflURL2Rd89R18lH07aNxFbHfpQ/RTwuMn2Jf/t4aWLHHENueELQ5nPMlr5xYwcpdgZGNy7ppdl0&#13;
-je+PyEIvrUBobLbG1/1QuaqGI0A6cJ5Qhh/m2NgWFvwLKv5cSNLd57PI5c1t2fBq1SmOuTzN9z6H&#13;
-JkaZxVVEmFN2Z9vHxZiYtwtSrgzc3gQSb7S9bXJRHEGSVMJaVHSzGwFj57MpEOA/B3KkTuaNE8iz&#13;
-Iu1KQTSRZNJPxq9OqTiSt99JfGCNsLW/EJbwZgI4OTQb7B/QC7JQ3xJKCFn+XpaYTNDJxWpK0FmP&#13;
-asuQqHMtNXcrdrCvGieUBIWUbsSd8EXrBK5N9g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8632b68f-cbea-4137-993a-ad782383e884"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>To0uUtIqg6KCWGI12TGow8TXpdt1n6E/ndNjLQlJALDbSYB85Oi35QtKGyiZk9hnLAXOsiPXwlw6&#13;
+BYMAPL8UuA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_51012091-0813-422e-ae07-5fe568116d79"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sHMMM1YkQ9/PIvP0wRsyDFVWts9xLVn5Z3CxpiGbK3GQiUD1IVqfhUlUXjV34iMKdcufCxWYKko9&#13;
+HyEUsE9kdA==</DigestValue></Reference></SignedInfo><SignatureValue>QUAOL2UIEB9csUnPAM4DCSkuqqxbvpOCxGjVoWvVXzLrKuqlEzveKDKGGDeuDU/NfzlUTt0IV/YT&#13;
+MLGFrw3FK3yTgga/9k5wJ5q0PIFyPtufp3DgGxd7fpazZFr8wkIlnynmKQos/SZD5WV8cT4hOMsa&#13;
+KDqqm8GBvVy/5Qoq+/pRJRboOP1vASTY1rkhfkjjvr2X9jHBm/nVEOGUH65J3rep0JGO90NEphPE&#13;
+G1EMHngtVfydBSenPxsHNGJBtvjT9stPIoJOtyISxdJ+k6wEKZl/ufjcpD8yqCUkrxTzFceFKr+7&#13;
+X3wh/qFm9H17zrdtTGM0FgAt27R+C2I5PRj7gg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -4253,4 +4224,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c9bc67eb-ab80-4866-b82d-cdefee72623e" Target="#_7da0f2a0-dc94-493a-9545-4df68dd40961"><Timestamp>2026-01-27 13:47:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_51012091-0813-422e-ae07-5fe568116d79" Target="#_8632b68f-cbea-4137-993a-ad782383e884"><Timestamp>2026-01-27 13:54:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
