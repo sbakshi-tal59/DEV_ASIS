@@ -2506,7 +2506,7 @@
       <column key="false" length="4000" name="AUD_ERROR_DESCRIPTION" nullable="true" originalLength="4000" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_AUD_PEOPLE_HISTORY1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ln_Format_Rejections.COLLEAGUE_ID " name="AUD_COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
@@ -2684,7 +2684,7 @@
       <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfln_PEOPLE_ERR" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?3:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?4:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?5:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?6:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?7:-1 " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
@@ -2814,7 +2814,7 @@
       <column comment="" key="false" length="-1" name="EFFECTIVE_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfln_AUD_PEOPLE_HISTORY1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row3.COLLEAGUE_ID " name="COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
@@ -2975,7 +2975,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="1120">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;Integer valid  = (Integer)globalMap.get(&quot;valid_count&quot;);&#10;Integer invalid = (Integer)globalMap.get(&quot;reject_count&quot;);&#10;Integer schema_invalid = (Integer)globalMap.get(&quot;schema_reject_count&quot;);&#10;&#10;if (valid == null) valid = 0;&#10;if (invalid == null) invalid = 0;&#10;if (schema_invalid == null) schema_invalid = 0;&#10;&#10;boolean fullReject = (valid == 0 &amp;&amp; (invalid &gt; 0 || schema_invalid &gt; 0));&#10;&#10;globalMap.put(&quot;full_reject&quot;, Boolean.valueOf(fullReject));&#10;&#10;System.out.println(&quot;DEBUG → valid=&quot; + valid +&#10;                   &quot; invalid=&quot; + invalid +&#10;                   &quot; schema_invalid=&quot; + schema_invalid +&#10;                   &quot; fullReject=&quot; + fullReject);&#10;&#10;System.out.println(&quot;AP in Java Component REJECT = &quot; + globalMap.get(&quot;ASSESSMENT_PROVIDER_REJECT&quot;));&#10;&#10;System.out.println(&quot;AP in Java Component VALID = &quot; + globalMap.get(&quot;ASSESSMENT_PROVIDER_VALID&quot;));&#10;&#10;System.out.println(&quot;AP in Java Component SCHEMA REJECT = &quot; + globalMap.get(&quot;ASSESSMENT_PROVIDER_SCHEMA_REJECT&quot;));"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;Integer valid  = (Integer)globalMap.get(&quot;valid_count&quot;);&#10;Integer invalid = (Integer)globalMap.get(&quot;reject_count&quot;);&#10;&#10;if (valid == null) valid = 0;&#10;if (invalid == null) invalid = 0;&#10;&#10;boolean fullReject = (valid == 0 &amp;&amp; invalid &gt; 0);&#10;&#10;globalMap.put(&quot;full_reject&quot;, Boolean.valueOf(fullReject));&#10;&#10;System.out.println(&quot;DEBUG → valid=&quot; + valid +&#10;                   &quot; invalid=&quot; + invalid +&#10;                   &quot; fullReject=&quot; + fullReject);&#10;&#10;System.out.println(&quot;AP in Java Component REJECT = &quot; + globalMap.get(&quot;ASSESSMENT_PROVIDER_REJECT&quot;));&#10;&#10;System.out.println(&quot;AP in Java Component VALID = &quot; + globalMap.get(&quot;ASSESSMENT_PROVIDER_VALID&quot;));&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1">
@@ -4171,13 +4171,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0556270d-000c-4984-804f-b2dfbdd6e029"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>E5rPpGjuN2gqEKPdfAo6ZQpGYE1wCN9AelcU5FY0+mu+y1KkQnWpkkyJdet6UpJ1BJ5hjtMATbvg&#13;
-bNyxuJDhEQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4c4c49c4-3bf7-4ee6-8265-8a3abf62e326"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rGEr64XJuGyDuhZU9yauhkv4prVQQ06aGdvjJ5mJDWyyg3Tv2GuM8LAU63WWKx4WTs3bG8E9Gxzt&#13;
-dRPATKz67A==</DigestValue></Reference></SignedInfo><SignatureValue>ToZlUpKeLMO2CuAqJuMFDdE5wOBfAHgCSXVj44FkrmQz57huKE4RmeWMRVKL2ZAvyqGS9nCMSXND&#13;
-8pLOYCm8RNE5dnSO/TtOfddpSzMNzdkS/DYP9zJ7gahQg0Z3ZFCgiCy+2FmyFhebiUYhtMc4Mr1p&#13;
-dXZ1XwrGY6IyFDPx5apnSpPDJOl2vpWjDzvJkRq++MjVPB9eJpaG7GWcqQHQigBigO+hdAzbK4wD&#13;
-RwJSs1PtQs9ga8iDhVJAdFuaw/pTWkZx/+++eXsmH5+xmTtKOC5rf5fU79dT3MeFdW0EoMixBx0l&#13;
-72XWwJFhYZEYAgMmWRpaTDM1pOov1kOdu1Qu4g==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9e691ce3-a678-447d-a130-351279472f74"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>6ra1O1VE1Ui0UiNjiXfKu2MR7haQruRJVcDCYzHlUEeWxcDvebwD+DqESirUtBXK26mfuySpk2rr&#13;
+AVK/1AY8Mw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d3bb9d82-dc42-4caf-8738-1119b21be693"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nnH55soMTQBhi/B652GS8aCEVG4pUKuf/N9lrd8/NDydPh7UUqcwmEAPZVQdsBsIFvc/2ZF2q06l&#13;
+xcGsXVRA/A==</DigestValue></Reference></SignedInfo><SignatureValue>dI+76xvJCPDGY+h8kTMWsMmHjpvzoO3QHeR56WnvPJUXPv6UNNG8dbrh4K6qU9dGYOycNlXIB15i&#13;
+r9g18JZTU+h/4T7q6GmhEW0oY3BjzHtMmZtsgCv8QECdDd9RK6G0SsYzDjz7bRUUeVVhL3L0bTyD&#13;
+ze0wf79hcQhW/3vujO4+DGGQzipvMqmn5RAawEhpOQKqov/4wZqOEvdtP88MmL2sIduhyyndYFpI&#13;
+MdNygg8ZLMMigBddwfga6u96d27yVmeuzyQeSydegoAdpBcv03OdgTefVcnAwK8oYANEr7h/Xz5B&#13;
+01Ce0dMEtKTcQeh2QzsjYCtytDcbVMb/bsmyMA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -4199,4 +4199,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4c4c49c4-3bf7-4ee6-8265-8a3abf62e326" Target="#_0556270d-000c-4984-804f-b2dfbdd6e029"><Timestamp>2026-01-27 14:25:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d3bb9d82-dc42-4caf-8738-1119b21be693" Target="#_9e691ce3-a678-447d-a130-351279472f74"><Timestamp>2026-01-28 14:18:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
