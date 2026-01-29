@@ -2459,7 +2459,7 @@
     <elementParameter field="TEXT" name="LABEL" value="tMap_FILE_ERRORS"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;HISTORY_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps File Format Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="ln_AUD_PEOPLE_HISTORY1">
+    <metadata connector="FLOW" name="ln_Invalid_Rows">
       <column comment="" key="false" length="-1" name="AUD_COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="4000" name="AUD_TITLE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -2508,7 +2508,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="ln_AUD_PEOPLE_HISTORY1" sizeState="INTERMEDIATE">
+      <outputTables name="ln_Invalid_Rows" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ln_Format_Rejections.COLLEAGUE_ID " name="AUD_COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="ln_Format_Rejections.COLLEAGUE_PRN " name="AUD_COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_Format_Rejections.TITLE " name="AUD_TITLE" nullable="true" type="id_String"/>
@@ -2615,6 +2615,7 @@
     <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
     <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
     <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="t_Aggregate_Reject_Count"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tAggregateRow_1">
       <column comment="" key="false" length="-1" name="AUD_COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -2680,16 +2681,16 @@
     <elementParameter field="TEXT" name="LABEL" value="tMap_PEOPLE_FILES"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Filters History Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="copyOfln_PEOPLE_ERR">
+    <metadata connector="FLOW" name="ln_Reject_count">
       <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="copyOfln_PEOPLE_ERR" sizeState="INTERMEDIATE">
+      <outputTables name="ln_Reject_count" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?3:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?4:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?5:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?6:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?7:-1 " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_Aggregate_Reject" sizeState="INTERMEDIATE">
         <mapperTableEntries name="AUD_COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="AUD_COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries name="AUD_TITLE" nullable="true" type="id_String"/>
@@ -2740,7 +2741,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="1056">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;reject_count&quot;, row1.reject_count);&#10;System.out.println(&quot;DEBUG → Reject count = &quot; + row1.reject_count);&#10;globalMap.put(&quot;ASSESSMENT_PROVIDER_REJECT&quot;, copyOfln_PEOPLE_ERR.STG_ASSESSMENT_PROVIDER_ID);&#10;System.out.println(&quot;DEBUG → AP REJECT= &quot; + copyOfln_PEOPLE_ERR.STG_ASSESSMENT_PROVIDER_ID);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;reject_count&quot;, ln_Aggregate_Reject.reject_count);&#10;System.out.println(&quot;DEBUG → Reject count = &quot; + ln_Aggregate_Reject.reject_count);&#10;globalMap.put(&quot;ASSESSMENT_PROVIDER_REJECT&quot;, ln_Reject_count.STG_ASSESSMENT_PROVIDER_ID);&#10;System.out.println(&quot;DEBUG → AP REJECT= &quot; + ln_Reject_count.STG_ASSESSMENT_PROVIDER_ID);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_1">
@@ -2769,7 +2770,7 @@
     <elementParameter field="TEXT" name="LABEL" value="tMap_FILE_INSERT"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;HISTORY_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps File Format Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="copyOfln_AUD_PEOPLE_HISTORY1">
+    <metadata connector="FLOW" name="ln_Valid_Rows">
       <column comment="" key="false" length="-1" name="COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="TITLE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -2816,7 +2817,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="copyOfln_AUD_PEOPLE_HISTORY1" sizeState="INTERMEDIATE">
+      <outputTables name="ln_Valid_Rows" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row3.COLLEAGUE_ID " name="COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="row3.COLLEAGUE_PRN " name="COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row3.TITLE " name="TITLE" nullable="true" type="id_String"/>
@@ -2919,6 +2920,7 @@
     <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
     <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
     <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="t_Aggregate_Valid_Count"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tAggregateRow_2">
       <column comment="" key="false" length="-1" name="COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -2968,7 +2970,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="1152">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_2"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;valid_count&quot;, row2.valid_count);&#10;System.out.println(&quot;DEBUG → Valid count = &quot; + row2.valid_count);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;valid_count&quot;, ln_Aggregate_valid.valid_count);&#10;System.out.println(&quot;DEBUG → Valid count = &quot; + ln_Aggregate_valid.valid_count);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_2"/>
@@ -2977,6 +2979,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
     <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;Integer valid  = (Integer)globalMap.get(&quot;valid_count&quot;);&#10;Integer invalid = (Integer)globalMap.get(&quot;reject_count&quot;);&#10;&#10;if (valid == null) valid = 0;&#10;if (invalid == null) invalid = 0;&#10;&#10;boolean fullReject = (valid == 0 &amp;&amp; invalid &gt; 0);&#10;&#10;globalMap.put(&quot;full_reject&quot;, Boolean.valueOf(fullReject));&#10;&#10;System.out.println(&quot;DEBUG → valid=&quot; + valid +&#10;                   &quot; invalid=&quot; + invalid +&#10;                   &quot; fullReject=&quot; + fullReject);&#10;&#10;System.out.println(&quot;AP in Java Component REJECT = &quot; + globalMap.get(&quot;ASSESSMENT_PROVIDER_REJECT&quot;));&#10;&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="LABEL" value="t_Java_Compare"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1">
       <column comment="" key="false" length="4000" name="STG_FILE_NAME" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -3025,7 +3028,7 @@
     <elementParameter field="TEXT" name="LABEL" value="tMap_ERROR_FILES"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Copies Error Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="copyOfln_NAME_ERR">
+    <metadata connector="FLOW" name="ln_STG_PEOPLE_FILE_LOG_Invalid_File">
       <column comment="" key="false" length="4000" name="STG_FILE_NAME" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="STG_PROCESSED_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="STG_PROCESSED_TIME" nullable="true" originalLength="5" pattern="&quot;dd/mm/yyyy&quot;" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -3035,18 +3038,18 @@
       <column comment="" key="false" length="255" name="STG_ERROR_DESCRIPTION" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="copyOfln_NAME_ERR" sizeState="INTERMEDIATE">
+      <outputTables name="ln_STG_PEOPLE_FILE_LOG_Invalid_File" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="((String)globalMap.get(&quot;tFileList_4_CURRENT_FILE&quot;)) " name="STG_FILE_NAME" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)) " name="STG_PROCESSED_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="TalendDate.TO_CHAR(TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)),&quot;HH24:mm&quot;) " name="STG_PROCESSED_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row4.Assessment_Provider " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="ln_Copy_Invalid_File.Assessment_Provider " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="&quot;N&quot; " name="STG_FILE_LOADED_FLAG" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;Incorrect Records in File&quot; " name="STG_ERROR_TYPE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;The file is in an incorrect format. The contents of the file are wrong.&quot; " name="STG_ERROR_DESCRIPTION" nullable="true" type="id_String"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row4" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_Copy_Invalid_File" sizeState="INTERMEDIATE">
         <mapperTableEntries name="Assessment_Provider" nullable="true" type="id_Integer"/>
       </inputTables>
     </nodeData>
@@ -3954,7 +3957,7 @@
       <column comment="" key="false" length="-1" name="EFFECTIVE_START_DATE" nullable="true" originalLength="-1" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfcopyOfln_AUD_PEOPLE_HISTORY1" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row6.COLLEAGUE_ID " name="COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
@@ -4176,7 +4179,7 @@
       <column key="false" length="4000" name="AUD_ERROR_DESCRIPTION" nullable="true" originalLength="4000" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfln_AUD_PEOPLE_HISTORY1_0" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row10.COLLEAGUE_ID " name="COLLEAGUE_ID" nullable="true" type="id_BigDecimal"/>
@@ -4354,7 +4357,7 @@
       <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfcopyOfln_PEOPLE_ERR" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_5_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?3:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_5_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?4:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_5_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?5:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_5_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?6:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_5_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?7:-1 " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
@@ -4485,7 +4488,7 @@
       <column comment="" key="false" length="255" name="STG_ERROR_DESCRIPTION" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfcopyOfln_NAME_ERR" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="((String)globalMap.get(&quot;tFileList_5_CURRENT_FILE&quot;)) " name="STG_FILE_NAME" nullable="true" type="id_String"/>
@@ -5072,7 +5075,7 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Format_Rejections"/>
   </connection>
-  <connection connectorName="FLOW" label="ln_AUD_PEOPLE_HISTORY1" lineStyle="0" metaname="ln_AUD_PEOPLE_HISTORY1" offsetLabelX="0" offsetLabelY="0" source="tMap_11" target="tAggregateRow_1">
+  <connection connectorName="FLOW" label="ln_Invalid_Rows" lineStyle="0" metaname="ln_Invalid_Rows" offsetLabelX="0" offsetLabelY="0" source="tMap_11" target="tAggregateRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="SAT_END_TIME"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -5208,9 +5211,9 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_AUD_PEOPLE_HISTORY1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Invalid_Rows"/>
   </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tMap_12">
+  <connection connectorName="FLOW" label="ln_Aggregate_Reject" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tMap_12">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="SAT_END_TIME"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -5352,21 +5355,21 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Aggregate_Reject"/>
   </connection>
-  <connection connectorName="FLOW" label="copyOfln_PEOPLE_ERR" lineStyle="0" metaname="copyOfln_PEOPLE_ERR" offsetLabelX="0" offsetLabelY="0" source="tMap_12" target="tJavaRow_1">
+  <connection connectorName="FLOW" label="ln_Reject_count" lineStyle="0" metaname="ln_Reject_count" offsetLabelX="0" offsetLabelY="0" source="tMap_12" target="tJavaRow_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="ASSESSMENT_PROVIDER"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfln_PEOPLE_ERR"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Reject_count"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_1" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_1" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
   </connection>
-  <connection connectorName="FLOW" label="copyOfln_AUD_PEOPLE_HISTORY1" lineStyle="0" metaname="copyOfln_AUD_PEOPLE_HISTORY1" offsetLabelX="0" offsetLabelY="0" source="tMap_13" target="tAggregateRow_2">
+  <connection connectorName="FLOW" label="ln_Valid_Rows" lineStyle="0" metaname="ln_Valid_Rows" offsetLabelX="0" offsetLabelY="0" source="tMap_13" target="tAggregateRow_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="SAT_END_TIME"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -5499,16 +5502,16 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfln_AUD_PEOPLE_HISTORY1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Valid_Rows"/>
   </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tAggregateRow_2" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_2" target="tJavaRow_2">
+  <connection connectorName="FLOW" label="ln_Aggregate_valid" lineStyle="0" metaname="tAggregateRow_2" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_2" target="tJavaRow_2">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="schema_valid_count"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Aggregate_valid"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_2" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_2" target="tJava_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk2"/>
@@ -5517,11 +5520,11 @@
     <elementParameter field="MEMO_JAVA" name="CONDITION" value="Boolean.TRUE.equals(globalMap.get(&quot;full_reject&quot;))"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If1"/>
   </connection>
-  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFileCopy_4" offsetLabelX="0" offsetLabelY="0" source="tFileCopy_4" target="tMap_14">
+  <connection connectorName="FLOW" label="ln_Copy_Invalid_File" lineStyle="0" metaname="tFileCopy_4" offsetLabelX="0" offsetLabelY="0" source="tFileCopy_4" target="tMap_14">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Copy_Invalid_File"/>
   </connection>
-  <connection connectorName="FLOW" label="copyOfln_NAME_ERR" lineStyle="0" metaname="copyOfln_NAME_ERR" offsetLabelX="0" offsetLabelY="0" source="tMap_14" target="tDBOutput_7">
+  <connection connectorName="FLOW" label="ln_STG_PEOPLE_FILE_LOG_Invalid_File" lineStyle="0" metaname="ln_STG_PEOPLE_FILE_LOG_Invalid_File" offsetLabelX="0" offsetLabelY="0" source="tMap_14" target="tDBOutput_7">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="STG_FILE_NAME"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
@@ -5543,7 +5546,7 @@
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfln_NAME_ERR"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_STG_PEOPLE_FILE_LOG_Invalid_File"/>
   </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_5" offsetLabelX="0" offsetLabelY="0" source="tFileList_5" target="tFileInputDelimited_2">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
@@ -6118,13 +6121,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f05c4478-d10d-4b1d-b66b-e020027d4a66"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>W9ieJciZ5+dqK/iwheKNF7MzVGTMaC0nXj/GX8W95DH7gfkQXXWtWqdAxVSwaxrmBk0oSQWfbkaR&#13;
-wt8DAo8H8w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d9d558e4-9ed1-4e54-9172-8e5d51beb9d7"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>igZtCO4Qjjoh7COLsBcOsZaIBczOnbgQUqstRPR8f9sxk/MGtA2D3gtqk86nEGaz4HW7CRYB4xGw&#13;
-zxhubFPWYA==</DigestValue></Reference></SignedInfo><SignatureValue>efE6179TrywSgH9lLF8F211F9202etYDydyKDO8T0zje/PUESvCeDLijfaR7+8M9ElOxmIe11lRC&#13;
-Hk9wRlHmWSfCtZu7tYo/fOpz7CMMsDZ9Tf+HqPSeB+qjkdF4UTb7dcRyCja0EKjdTI7PUCh93Ct3&#13;
-HrdScibKVHWH2ZTfUR4LBdldiAIm8/JlySpF645q2Vtq02ymo/Fxrvaj0i0SBEqA9Q8Jw1lVqIzl&#13;
-d9he65plbEytiB7Nbg+4dnyeIQESLftDRsve6HdCJnQxqB4B4hNPjKMBcLLH8WRdY6fPBct4SFLz&#13;
-EH/5DSncMeQyg7tfPzrteykKTkDudl2MJn1qCQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_23ede338-0b79-4978-b536-aa92c0e0d99b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>glFR5cCIzNFHnUANjAuI4+/iZxGDOAicgqcuJ0WerLz0dm6fD6Sw7KijD85L/CyU8k1TaHSEqjHq&#13;
+dgcbnYiEqw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6a92be66-e757-42d4-b7fa-b44a15022d4b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WMs12J2VzeTDTZR9RsnkOpHocQEyD1JoiE5GzzqoiVj81xsf6vHu1KUIeuYi7luH67dPO4QsQ67P&#13;
+Rxnz9sKy9Q==</DigestValue></Reference></SignedInfo><SignatureValue>iBKHBRQzWIHZnu9XjNA5spVkq2rDjdL40UpT078NZoLAgAZ/dk2HZpGuySNR4nFnaMS/ZHyUT2e8&#13;
+wHoBrdXRpXJHmadcqv6pe+5eesWfC6Arhv7wB6z3SIRGFd8xI7slYSb+3wearBDodx7Y2ArxMbWD&#13;
+nt93emNHoixLI48NpZq1mGsJapVI7lBtRffEpSj0FDp+vyKVnT6g4N/byq0YvpGvYYR0H/h89CZ4&#13;
+msiIA0gWQz3zz7ywQTLO1Xbp5liA63ivfxWaFDQeDUDULnb1U6YwquuexZXNAplzfoIr5lFu2CI3&#13;
+GM3tyTjRPf7T9KJvbx0EU3yQSLjYYo/v4HM0Pw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -6146,4 +6149,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d9d558e4-9ed1-4e54-9172-8e5d51beb9d7" Target="#_f05c4478-d10d-4b1d-b66b-e020027d4a66"><Timestamp>2026-01-29 10:31:57</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6a92be66-e757-42d4-b7fa-b44a15022d4b" Target="#_23ede338-0b79-4978-b536-aa92c0e0d99b"><Timestamp>2026-01-29 10:50:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
