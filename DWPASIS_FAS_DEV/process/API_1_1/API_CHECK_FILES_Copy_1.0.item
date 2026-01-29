@@ -2741,7 +2741,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="1056">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;reject_count&quot;, ln_Aggregate_Reject.reject_count);&#10;System.out.println(&quot;DEBUG → Reject count = &quot; + ln_Aggregate_Reject.reject_count);&#10;globalMap.put(&quot;ASSESSMENT_PROVIDER_REJECT&quot;, ln_Reject_count.STG_ASSESSMENT_PROVIDER_ID);&#10;System.out.println(&quot;DEBUG → AP REJECT= &quot; + ln_Reject_count.STG_ASSESSMENT_PROVIDER_ID);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;reject_count&quot;, ln_Aggregate_Reject.reject_count);&#10;globalMap.put(&quot;ASSESSMENT_PROVIDER_REJECT&quot;, ln_Reject_count.STG_ASSESSMENT_PROVIDER_ID);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="t_JavaRow_Reject_Count"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -2971,7 +2971,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="1152">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_2"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;valid_count&quot;, ln_Aggregate_valid.valid_count);&#10;System.out.println(&quot;DEBUG → Valid count = &quot; + ln_Aggregate_valid.valid_count);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;valid_count&quot;, ln_Aggregate_valid.valid_count);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="tJavaRow_Valid_Count"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -2979,7 +2979,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="1120">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;Integer valid  = (Integer)globalMap.get(&quot;valid_count&quot;);&#10;Integer invalid = (Integer)globalMap.get(&quot;reject_count&quot;);&#10;&#10;if (valid == null) valid = 0;&#10;if (invalid == null) invalid = 0;&#10;&#10;boolean fullReject = (valid == 0 &amp;&amp; invalid &gt; 0);&#10;&#10;globalMap.put(&quot;full_reject&quot;, Boolean.valueOf(fullReject));&#10;&#10;System.out.println(&quot;DEBUG → valid=&quot; + valid +&#10;                   &quot; invalid=&quot; + invalid +&#10;                   &quot; fullReject=&quot; + fullReject);&#10;&#10;System.out.println(&quot;AP in Java Component REJECT = &quot; + globalMap.get(&quot;ASSESSMENT_PROVIDER_REJECT&quot;));&#10;&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;Integer valid  = (Integer)globalMap.get(&quot;valid_count&quot;);&#10;Integer invalid = (Integer)globalMap.get(&quot;reject_count&quot;);&#10;&#10;if (valid == null) valid = 0;&#10;if (invalid == null) invalid = 0;&#10;&#10;boolean fullReject = (valid == 0 &amp;&amp; invalid &gt; 0);&#10;&#10;globalMap.put(&quot;full_reject&quot;, Boolean.valueOf(fullReject));&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="t_Java_Compare"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -4114,7 +4114,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="864" posY="1376">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_4"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;schema_valid_count&quot;, ln_Aggregate_Valid_Schema.schema_valid_count);&#10;System.out.println(&quot;DEBUG → Valid count = &quot; + ln_Aggregate_Valid_Schema.schema_valid_count);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;schema_valid_count&quot;, ln_Aggregate_Valid_Schema.schema_valid_count);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="t_JavaRow_Valid_Schema_Count"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -4418,7 +4418,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="1280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_3"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;schema_reject_count&quot;, ln_Aggregate_Reject_Schema.schema_reject_count);&#10;System.out.println(&quot;DEBUG → Reject count = &quot; + ln_Aggregate_Reject_Schema.schema_reject_count);&#10;globalMap.put(&quot;ASSESSMENT_PROVIDER_SCHEMA_REJECT&quot;, ln_Reject_Schema_Count.STG_ASSESSMENT_PROVIDER_ID);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;schema_reject_count&quot;, ln_Aggregate_Reject_Schema.schema_reject_count);&#10;globalMap.put(&quot;ASSESSMENT_PROVIDER_SCHEMA_REJECT&quot;, ln_Reject_Schema_Count.STG_ASSESSMENT_PROVIDER_ID);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="t_JavaRow_Reject_Schema_Count"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -6128,13 +6128,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_baf8584f-df4b-4f4d-b83b-06b0670d6076"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>POYV4S4/74FSbUV6lsJv3DIxeTel/48p/SAgWrO7AsA02ggzuFudgY1QGxHs7IcJS7jURs2EXU2n&#13;
-N7MagcKj/g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7f8e0159-0c30-4403-9991-958ce06ada98"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hXkhBpIsWLev5cUBYa+A51FL7dNcCP1qnzvABqol/fvSbBNmgVtjnLtAZDO0/+3GzTRK7kIrUEDw&#13;
-qmdurb9PSw==</DigestValue></Reference></SignedInfo><SignatureValue>eI0eEXgGg0oilJVdRQgfLVUbT3ysxHKf2BMKi/nmK4mGs9/uqpf1Aht20dBYtifhyP3BeczZnPOK&#13;
-YGkKCN4F84tiuqcdjcjQnEs10PxphcpS5QY1kUabc6YLY9UVxp+YfGx4NhFm9Jp0iE2R17j9VsBD&#13;
-HXaoF/ImO+klYYNVTVi77ihRSKpJlCrUt4mC9Hc/XADosZU3VOAY/jQXqVP98suaJHaxDtPGFhPL&#13;
-uzhiaMym+zTGSXcKSHdXo0cPjIsjN8V/ZH46OUG2J9DNZCENrEwgj/k6/0jvzxVseiayIq4m5Cq4&#13;
-Z0TxoPf34m9REqTrURW9pNjEUoqKwsRq0fXYdg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_679d13c7-a359-4185-8d43-6f28b3a5a20c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LMuZ925U20jUPHHKgdUYzC7zO5b0cnL3yONIFDI2Cz18/4LYFnxvMmrDArpC0ftkIndOLwIMuVw9&#13;
+hwIFWve/qA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_00be56b4-fa21-4e66-86ae-1cb7a0056fa3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vwNngsOmqTkzzzzMxYdKA4KJQM9W9r8WR4eZ6y4OQTKwHJogDzzYTTqEP4XbeR6GcHcLHMbLEeMq&#13;
+L14LmGi6Lw==</DigestValue></Reference></SignedInfo><SignatureValue>Ti/KaDgIOxxLl5wYTB7LKBt4MtzplD5HfJ5GedHmlYvVk/JTG683rRqCqk8YtezQmKMYZI+Fhi3M&#13;
+w88hvTWoQof5I5q2MsN1z4wlX/razDKfrsZ5qzb6/5y0dfefpzJEapzQPTRYTLi5ryxIuBdKILg2&#13;
+aAJU9QypPfstdYKRzaoDcN2ORRhY9t2l5IKf1bO0hGu24Lebe/iFqbzPe1IxelDuYEwRPdkTzB1E&#13;
+QLL1ByflYcxi5BRtUebtLvoAjG5OpPXyu6W0onI3A184RQzXY7uH9flUFUds0VBcvGCEMThW7g8k&#13;
+XfhvqF3bqd5zcgpvacaODGwXYKSdU8VDaxJ6ug==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -6156,4 +6156,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7f8e0159-0c30-4403-9991-958ce06ada98" Target="#_baf8584f-df4b-4f4d-b83b-06b0670d6076"><Timestamp>2026-01-29 11:06:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_00be56b4-fa21-4e66-86ae-1cb7a0056fa3" Target="#_679d13c7-a359-4185-8d43-6f28b3a5a20c"><Timestamp>2026-01-29 11:09:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
