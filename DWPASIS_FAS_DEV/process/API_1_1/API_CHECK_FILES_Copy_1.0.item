@@ -4470,13 +4470,6 @@
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;FC_COPY_TO_ARCHIVE&lt;/b&gt;&lt;br&gt;Copies to Archive Folder"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileCopy_5">
-      <column comment="" key="false" length="-1" name="Source" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Directory" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Prefix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Prefix_Check" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Suffix" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Suffix_Check" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="Suffix_Check_LEN" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="Assessment_Provider" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
@@ -4518,13 +4511,6 @@
         <mapperTableEntries expression="&quot;The file is in an incorrect format. The schema of the file is wrong.&quot; " name="STG_ERROR_DESCRIPTION" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row9" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="Source" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Directory" type="id_String"/>
-        <mapperTableEntries name="Prefix" type="id_String"/>
-        <mapperTableEntries name="Prefix_Check" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Suffix" type="id_String"/>
-        <mapperTableEntries name="Suffix_Check" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Suffix_Check_LEN" nullable="true" type="id_String"/>
         <mapperTableEntries name="Assessment_Provider" nullable="true" type="id_Integer"/>
       </inputTables>
     </nodeData>
@@ -6146,13 +6132,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_29099728-c1ea-4f8e-a3d0-0676a8614390"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>aJ+cNGuQwemXyJ7z7kzZLVynL7Xfv+upu6SUkN/LG5TddgCaV4l2A0+zmkW/cou/xh87vfC/OYEM&#13;
-wodei1JbFA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fb8751c2-aa36-43e2-b65e-7c87e7288d17"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Qy86ZOTYujVmtPd3HHGFdinXXdyz3ynJGCSp7URVmTfR6A0dfilk2Is75y5ArLj8uAyNKYAjul9d&#13;
-st5w7FmOyg==</DigestValue></Reference></SignedInfo><SignatureValue>Q+h6Ppw2zb5roZfH42WWYV47IeaSz3amnzpQYE6jcfFbsfRplxVuRjsX9nkIWyUH4AVOENN54RMX&#13;
-TR18AYFcJcH8m+ZN3xIsb9+JknFPBJBnUbUK+ap8vL1poQQU5Ypw7MqKrqbmRlq3A9FhUBXw5q6h&#13;
-74EPScmrqJ5dBlDa0NPPZ+siVhW5wEcMhyTHP9yv1Oy1ARtggcHyN16Zou7KMoHHgJqhhVyf5HJJ&#13;
-gU38ojwTGMAP2jFT+U/RK+z39bL+iDY5PG86B5iGZfILcWe+8BOLm5YIYJ+YXJErNr8UsuNi5GYH&#13;
-iHOj+LT6LT4ox/CV0UgImAv1Ged83hNxBknYLQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7fee7fa0-5872-4f93-82f9-8d07f22f42c2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Xd04yFzANlf9Og6J+JTiv17QTXuYbnWNDfr2ZpWBTHOKSYjBPtOvecUOJFTvRpxWpK/m+fkSXbA9&#13;
+V54H7vrojg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_32c6db9b-edf8-4555-a696-f9786538caeb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TMj2+58wkdgG6QBJq23P2U9JO5Upy5xldzh9OJnMWP7XHO2OyD2XRyXzS5bkTFkILjsXZ8nNgaUx&#13;
+b0DeGnJL+w==</DigestValue></Reference></SignedInfo><SignatureValue>asG26FXlPA61/0IHl4u4YNtWgtGkGWl3dnCkTQcVBF5vCGzbB2LYxXdcD5tA+iE64O3XNxaoZzOP&#13;
+g4G+PvnlnCEcmpvioZopRqe9FjdB0DtDD154bBqq1zthJ87o/a7mApYwomRKmIOhJTLnnCBZSV7D&#13;
+8jJUuIfpWyFmmQ121ndMa81CqOxqmvaswS9KjYokoasefv44WY4wRslin+LzPUlUXXzucJIRPSDb&#13;
+4UBxlxDl8tkjAekLgqCI1OLuAlMn5DmOwnviQe1toRyX548O5FKvzAXHxNR+zrJn3hjItHxfpUan&#13;
+q9FJ1WOj8Y0oOZBXjV+oQ82n1BYfqEr/evC9Eg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -6174,4 +6160,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fb8751c2-aa36-43e2-b65e-7c87e7288d17" Target="#_29099728-c1ea-4f8e-a3d0-0676a8614390"><Timestamp>2026-01-29 10:25:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_32c6db9b-edf8-4555-a696-f9786538caeb" Target="#_7fee7fa0-5872-4f93-82f9-8d07f22f42c2"><Timestamp>2026-01-29 10:30:46</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
