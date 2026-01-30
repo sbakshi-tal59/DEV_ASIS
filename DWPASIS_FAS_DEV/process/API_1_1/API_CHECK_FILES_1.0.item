@@ -2616,6 +2616,7 @@
     <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
     <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="t_Aggregate_Reject_Count"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;Aggregate count of Invalid Rows&lt;/b&gt;&lt;br&gt;Aggregate count of Invalid Rows for History File"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tAggregateRow_1">
       <column comment="" key="false" length="-1" name="AUD_COLLEAGUE_ID" nullable="true" originalLength="7" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -2744,6 +2745,7 @@
     <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;reject_count&quot;, ln_Aggregate_Reject.reject_count);&#10;globalMap.put(&quot;ASSESSMENT_PROVIDER_REJECT&quot;, ln_Reject_count.STG_ASSESSMENT_PROVIDER_ID);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="t_JavaRow_Reject_Count"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;Assigns variable&lt;/b&gt;&lt;br&gt;Assigns Variable to Reject Count"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_1">
       <column comment="" key="false" length="4000" name="STG_FILE_NAME" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -4251,6 +4253,7 @@
     <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;Integer valid  = (Integer)globalMap.get(&quot;valid_count&quot;);&#10;Integer invalid = (Integer)globalMap.get(&quot;reject_count&quot;);&#10;&#10;if (valid == null) valid = 0;&#10;if (invalid == null) invalid = 0;&#10;&#10;boolean fullReject = (valid == 0 &amp;&amp; invalid &gt; 0);&#10;&#10;globalMap.put(&quot;full_reject&quot;, Boolean.valueOf(fullReject));&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="t_Java_Compare"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;Compare&lt;/b&gt;&lt;br&gt;Compares valid and invalid counts"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_1">
       <column comment="" key="false" length="4000" name="STG_FILE_NAME" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -4409,7 +4412,7 @@
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBO_STG_PEOPLE_FILE_LOG"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_ABSENCE&lt;/b&gt;&lt;br&gt;Inserts Error records in AUD_PEOPLE_ABSENCE"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;STG_PEOPLE_FILE_LOG&lt;/b&gt;&lt;br&gt;Inserts Error records in STG_PEOPLE_FILE_LOG"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_7">
       <column comment="" key="false" length="4000" name="STG_FILE_NAME" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -7708,13 +7711,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_446d9d51-323f-4e70-9308-d2fcc9104f61"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>u2n0PbtZ0uR6WYf0dwEz8JAyttSbOnCONihyySAJIjaQjzI6BueEPt52PWouamsKRhoBwr/B8IiP&#13;
-GRC+xVfDcQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e2e4e14f-d003-4abe-97b7-26ecdbf79d5e"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>X44YZM4cdCny8gPph32d2R7HPLx24TauvmR8mAOAFbxW5dJZ+UfU2K5m6tFMAfv6SMjjMX1gSDdl&#13;
-JVcZvdCKJw==</DigestValue></Reference></SignedInfo><SignatureValue>PyQZqeAlsrw4sdq1LLjQC2lZr2ETva18mYX4NReceA/JZbIf1zruoIs7jMsthVF44SQSNo6q8Ssc&#13;
-WyqiV/NBbxpRvS71SZYedbsoW6QZe/Ee3NppZaeDHaClQNQcaU3aCNm1dpo3L7tvy61LDXkOxTRL&#13;
-zwY8JV32s6zrNLFmU9oBRGopd1LvQJR8WdOYK66eovSnjjFNi5RpjXhc/FzDl3EcFsHI9ixRPiI1&#13;
-V+zTstz7m25k6Xp5gSbc8BC18iAxVhnjaP0UCw6nhalqoG52nUgKxNv5roUUKypSQ3WD/H0zf/VY&#13;
-9OWnA8BBJZTRJKGBh1DpTpEBAKVrSAB9imvuyw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6795304e-439f-4263-99a5-d8e648af94cd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>v/vLsNqskbu181fITvHd/8tjfjjenU6Ncmn7T0nXYW/KLBzS2qCboUKgaInFvPe30CrZVhLxxMVF&#13;
+ci49w3eQZQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5d0b6b9a-a37f-4e4c-82e6-fa2b703200a2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VyQheysQSU0zy3o6TBMqjLx452Rg2XWEjWCO15gKw0qSyDnVMJGX/JtyF0NnDSLifCPKJKJOPhdp&#13;
+W5eCHtUEAw==</DigestValue></Reference></SignedInfo><SignatureValue>MP1K9nVe7kvLIy6tKAB8/3Fg4vcD/WNtvsNS/yIUa/QjyUh4DPj0M+Lzl4apvNdnJf2pq2kIKKoj&#13;
++oPVIWJxOHmzc0ftThbgrm1r3aumktNXLj6QVBdCt2PW0/1qsF4Seuz6OtreauwH5m0xyeES/1qb&#13;
+TCA/4FLzYdTQSt5LX5h5QKaF6ljdtt8APeYk9z0XuXmipic1SUL18vQ/fRe/3JABeGYklFNVcUij&#13;
+qs73chGepK5k58F0C04gWYr8kgWxPYQ97Y964HsFrkPpPLRZ72Q063QdoFIWjhgZ4Ti8w+5ZQEw8&#13;
+vQ7CQGZNJ7dL5tRnIH3Mn6S6S0teEjxYkWMy+Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -7736,4 +7739,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e2e4e14f-d003-4abe-97b7-26ecdbf79d5e" Target="#_446d9d51-323f-4e70-9308-d2fcc9104f61"><Timestamp>2026-01-30 12:53:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5d0b6b9a-a37f-4e4c-82e6-fa2b703200a2" Target="#_6795304e-439f-4263-99a5-d8e648af94cd"><Timestamp>2026-01-30 12:57:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
