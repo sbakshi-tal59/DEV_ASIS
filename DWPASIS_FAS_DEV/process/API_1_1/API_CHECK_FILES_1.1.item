@@ -2686,7 +2686,7 @@
       <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_Reject_count" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?3:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?4:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?5:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?6:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?7:-1 " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
@@ -4318,13 +4318,13 @@
       <column comment="" key="false" length="255" name="STG_ERROR_DESCRIPTION" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="ln_STG_PEOPLE_FILE_LOG_Invalid_File" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="((String)globalMap.get(&quot;tFileList_4_CURRENT_FILE&quot;)) " name="STG_FILE_NAME" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)) " name="STG_PROCESSED_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="TalendDate.TO_CHAR(TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)),&quot;HH24:mm&quot;) " name="STG_PROCESSED_TIME" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="ln_Copy_Invalid_File.Assessment_Provider " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
+        <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?3:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?4:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?5:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?6:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_4_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?7:-1 " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="&quot;N&quot; " name="STG_FILE_LOADED_FLAG" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;Incorrect Records in File&quot; " name="STG_ERROR_TYPE" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;The file is in an incorrect format. The contents of the file are wrong.&quot; " name="STG_ERROR_DESCRIPTION" nullable="true" type="id_String"/>
@@ -7730,13 +7730,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2ac9a80e-1e6f-48af-b93c-351426be8709"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>OipYm2KNG9AS/Yjxu9SrxD2ggXyMT8nKyMxYlJTXnuxLa5/awBzqsTqvicr78VT/fw3ew27hb9bd&#13;
-HID6Sp3yKQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1b853566-11a8-4d5a-a8c3-40dae2bdd345"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>/UPR3K7zmleGxfHyZmE1XLhoEY3Y2ceUTFI9/bQvTAialoUAR02Lxxc/jAGDBgRDLTbd3nmx0RRw&#13;
-M0AfnmXMdw==</DigestValue></Reference></SignedInfo><SignatureValue>jw5kLLXGu+MQ50nCmBkKVNBhxmgQaVBJfLuE7axWyUOFxqK2nyqQSKOUEEJCiDRMM6qvPxzzzgay&#13;
-EdSw4FR8y+k/gmMO30U0kFPE0Ln2i5tMlJL1te55aJRuWt4x11Rr30eObCo8BrIG8B9QgXXr+pkf&#13;
-Vr6pl/QFtUwQt2HuAZVFRNZWqLlYL5/5SKYBNrGu7+r01j2BXsFDl5dLH3jmXFkYcjIJMsisUXLy&#13;
-0HhvSw1h6a2/JDwfWiZ5UGtyZMuexPDsAsWJYCco2FS2b09OyyR7C+2f6R66FAS/+ZMxNhZgQELF&#13;
-zHi9Fej4E+FMebLsdAs7ZWSpwO1sdKaSdqLtyQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6127f39f-0617-47bf-a6b4-20da73d5e467"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>QxtxRphWZi3T8pbXEoDEjU39Ymes2vmpU/pNCwEphyDxFKvOmh4EP9mYxHX1J4L4aycTcszMKaq3&#13;
+2vFw5Rz6lw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_64f80a87-a1ff-4bcf-a26a-51f9d093dcaf"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+nMAlno+OCgofWZBQUQLc1BljXvZkdHBXGwnmaG99zHgY7xE5GcLsG0sov+UGejuzoAiPP2JPc0C&#13;
+ogwFHl8Kzw==</DigestValue></Reference></SignedInfo><SignatureValue>CRgs+NCBbG/MI3HTeeO28vINNZg0fs7Cf6N4GZvyzlx/uGFSZUD50XsZpv4y8fmN+MJFIsDf91yu&#13;
+jFkiEzVu2Hh3jWItZxSjhVaE8KqH45W/wAXk/9ZEd3hYw86NlphEdEf8S1ZS8fHTP0gphvicnZJ9&#13;
+JcX8XVRnCvQ2Imfhswx9U5NI+103NcjPNZxVFq70RU/NQXTSXSWv34XApGvjuYhg1PCCTYvU9qSk&#13;
+7Wt9JeWpDR4v4CwK6fP5wOL/THWA1/1T6BnidOj0nWJVfF1jPMe2J9VsN3UqTukeWt/VA9hjWYBk&#13;
+1cBJwyuQPiYeFv7cgcF24xDbncVBJnvE1b9B0Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -7758,4 +7758,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1b853566-11a8-4d5a-a8c3-40dae2bdd345" Target="#_2ac9a80e-1e6f-48af-b93c-351426be8709"><Timestamp>2026-01-30 14:21:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_64f80a87-a1ff-4bcf-a26a-51f9d093dcaf" Target="#_6127f39f-0617-47bf-a6b4-20da73d5e467"><Timestamp>2026-01-30 14:46:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
