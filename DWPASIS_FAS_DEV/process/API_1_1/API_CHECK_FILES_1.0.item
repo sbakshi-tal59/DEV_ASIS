@@ -4647,7 +4647,7 @@
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
-    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;)) "/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_6_CURRENT_FILEPATH&quot;)) "/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
@@ -5133,7 +5133,7 @@
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="DYNAMIC" show="false" value=""/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
-    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;)) "/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_7_CURRENT_FILEPATH&quot;)) "/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
@@ -5289,7 +5289,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_Gfy-wL6_Ee-OgYLcFLoN6A-tMap_21-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_Gfy-wL6_Ee-OgYLcFLoN6A-tMap_23-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -5308,14 +5308,14 @@
       <column comment="" key="false" length="-1" name="OTHER_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfcopyOfln_Valid_Rows" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row6.MONTH " name="MONTH" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row6.COLLEAGUE_PRN " name="COLLEAGUE_PRN" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row6.SICK_LEAVE " name="SICK_LEAVE" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="row6.ANNUAL_LEAVE " name="ANNUAL_LEAVE" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="row6.OTHER_LEAVE " name="OTHER_LEAVE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row7.MONTH " name="MONTH" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row7.COLLEAGUE_PRN " name="COLLEAGUE_PRN" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row7.SICK_LEAVE " name="SICK_LEAVE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row7.ANNUAL_LEAVE " name="ANNUAL_LEAVE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row7.OTHER_LEAVE " name="OTHER_LEAVE" nullable="true" type="id_BigDecimal"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row7" sizeState="INTERMEDIATE">
         <mapperTableEntries name="MONTH" nullable="true" type="id_Date"/>
@@ -5363,7 +5363,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_Gfy-wL6_Ee-OgYLcFLoN6A-tMap_19-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_Gfy-wL6_Ee-OgYLcFLoN6A-tMap_24-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -5382,16 +5382,16 @@
       <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfout1" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row7.MONTH " name="MONTH" nullable="true" type="id_Date"/>
-        <mapperTableEntries expression="row7.COLLEAGUE_PRN " name="COLLEAGUE_PRN" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row7.SICK_LEAVE " name="SICK_LEAVE" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="row7.ANNUAL_LEAVE " name="ANNUAL_LEAVE" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="row7.OTHER_LEAVE " name="OTHER_LEAVE" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="&quot;File Error&quot; " name="errorCode" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="row7.errorMessage " name="errorMessage" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row11.MONTH " name="MONTH" nullable="true" type="id_Date"/>
+        <mapperTableEntries expression="row11.COLLEAGUE_PRN " name="COLLEAGUE_PRN" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row11.SICK_LEAVE " name="SICK_LEAVE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row11.ANNUAL_LEAVE " name="ANNUAL_LEAVE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row11.OTHER_LEAVE " name="OTHER_LEAVE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="&quot;Data Type Error&quot; " name="errorCode" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row11.errorMessage " name="errorMessage" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row11" sizeState="INTERMEDIATE">
         <mapperTableEntries name="MONTH" nullable="true" type="id_Date"/>
@@ -5408,7 +5408,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_8"/>
     <elementParameter field="TABLE" name="GROUPBYS"/>
     <elementParameter field="TABLE" name="OPERATIONS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="Absence_reject_count"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="Absence_schema_reject_count"/>
       <elementValue elementRef="FUNCTION" value="count"/>
       <elementValue elementRef="INPUT_COLUMN" value="MONTH"/>
       <elementValue elementRef="IGNORE_NULL" value="false"/>
@@ -5426,7 +5426,7 @@
       <column comment="" key="false" length="-1" name="OTHER_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Absence_reject_count" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Absence_schema_reject_count" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="864" posY="1760">
@@ -5434,7 +5434,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_Gfy-wL6_Ee-OgYLcFLoN6A-tMap_20-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_Gfy-wL6_Ee-OgYLcFLoN6A-tMap_25-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -5462,13 +5462,13 @@
         <mapperTableEntries name="OTHER_LEAVE" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries name="errorCode" nullable="true" type="id_String"/>
         <mapperTableEntries name="errorMessage" nullable="true" type="id_String"/>
-        <mapperTableEntries name="Absence_reject_count" nullable="true" type="id_Integer"/>
+        <mapperTableEntries name="Absence_schema_reject_count" nullable="true" type="id_Integer"/>
       </inputTables>
     </nodeData>
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="1760">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_8"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;Absence_reject_count&quot;, row9.Absence_reject_count);&#10;globalMap.put(&quot;ABSENCE_ASSESSMENT_PROVIDER_REJECT&quot;, copyOfcopyOfln_Reject_count.STG_ASSESSMENT_PROVIDER_ID);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;Absence_schema_reject_count&quot;, row9.Absence_schema_reject_count);&#10;globalMap.put(&quot;ABSENCE_SCHEMA_ASSESSMENT_PROVIDER_REJECT&quot;, copyOfcopyOfln_Reject_count.STG_ASSESSMENT_PROVIDER_ID);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="t_JavaRow_Reject_Count"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -5484,7 +5484,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1248" posY="1824">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_5"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;Integer Absence_valid  = (Integer)globalMap.get(&quot;Absence_valid_count&quot;);&#10;Integer Absence_invalid = (Integer)globalMap.get(&quot;Absence_reject_count&quot;);&#10;&#10;if (Absence_valid == null) Absence_valid = 0;&#10;if (Absence_invalid == null) Absence_invalid = 0;&#10;&#10;boolean Absence_fullReject = (Absence_valid == 0 &amp;&amp; Absence_invalid &gt; 0);&#10;&#10;globalMap.put(&quot;Absence_full_reject&quot;, Boolean.valueOf(Absence_fullReject));&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;Integer Absence_valid  = (Integer)globalMap.get(&quot;Absence_valid_count&quot;);&#10;Integer Absence_schema_invalid = (Integer)globalMap.get(&quot;Absence_schema_reject_count&quot;);&#10;&#10;if (Absence_valid == null) Absence_valid = 0;&#10;if (Absence_schema_invalid == null) Absence_schema_invalid = 0;&#10;&#10;boolean Absence_schema_fullReject = (Absence_valid == 0 &amp;&amp; Absence_schema_invalid &gt; 0);&#10;&#10;globalMap.put(&quot;Absence_schema_full_reject&quot;, Boolean.valueOf(Absence_schema_fullReject));&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="t_Java_Compare"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -5505,7 +5505,7 @@
     <elementParameter field="DIRECTORY" name="SOURCE_DERECTORY" show="false" value="&quot;D:/ASIS/Development_Workspace&quot;"/>
     <elementParameter field="DIRECTORY" name="DESTINATION" value="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_7_CURRENT_FILEDIRECTORY&quot;)),1,23) + &quot;Archive/&quot; + StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_7_CURRENT_FILEDIRECTORY&quot;)),24,20)"/>
     <elementParameter field="CHECK" name="RENAME" value="true"/>
-    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="globalMap.get(&quot;ABSENCE_ASSESSMENT_PROVIDER_REJECT&quot;)+&quot;_ERR_&quot;+TalendDate.getDate(&quot;yyyyMMdd_HHmmss&quot;)+&quot;_&quot;+((String)globalMap.get(&quot;tFileList_7_CURRENT_FILE&quot;))"/>
+    <elementParameter field="TEXT" name="DESTINATION_RENAME" value="globalMap.get(&quot;ABSENCE_SCHEMA_ASSESSMENT_PROVIDER_REJECT&quot;)+&quot;_ERR_&quot;+TalendDate.getDate(&quot;yyyyMMdd_HHmmss&quot;)+&quot;_&quot;+((String)globalMap.get(&quot;tFileList_7_CURRENT_FILE&quot;))"/>
     <elementParameter field="CHECK" name="REMOVE_FILE" value="true"/>
     <elementParameter field="CHECK" name="REPLACE_FILE" value="false"/>
     <elementParameter field="CHECK" name="CREATE_DIRECTORY" value="false"/>
@@ -5524,7 +5524,7 @@
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
     <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
-    <elementParameter field="IMAGE" name="PREVIEW" value="_Gfy-wL6_Ee-OgYLcFLoN6A-tMap_22-PREVIEW.bmp"/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_Gfy-wL6_Ee-OgYLcFLoN6A-tMap_26-PREVIEW.bmp"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
     <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
     <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
@@ -5545,16 +5545,16 @@
       <column comment="" key="false" length="255" name="STG_ERROR_DESCRIPTION" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="copyOfcopyOfln_STG_PEOPLE_FILE_LOG_Invalid_File" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="((String)globalMap.get(&quot;tFileList_6_CURRENT_FILE&quot;)) " name="STG_FILE_NAME" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="((String)globalMap.get(&quot;tFileList_7_CURRENT_FILE&quot;)) " name="STG_FILE_NAME" nullable="true" type="id_String"/>
         <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)) " name="STG_PROCESSED_DATE" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="TalendDate.TO_CHAR(TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;, TalendDate.getDate(&quot;yyyy-MM-dd HH:mm:ss&quot;)),&quot;HH24:mm&quot;) " name="STG_PROCESSED_TIME" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row10.Assessment_Provider " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="&quot;N&quot; " name="STG_FILE_LOADED_FLAG" nullable="true" type="id_String"/>
         <mapperTableEntries expression="&quot;Incorrect Records in File&quot; " name="STG_ERROR_TYPE" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="&quot;The file is in an incorrect format. The contents of the file are wrong.&quot; " name="STG_ERROR_DESCRIPTION" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="&quot;The file is in an incorrect format. The schema of the file is wrong.&quot; " name="STG_ERROR_DESCRIPTION" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row10" sizeState="INTERMEDIATE">
         <mapperTableEntries name="Assessment_Provider" nullable="true" type="id_Integer"/>
@@ -7549,7 +7549,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk9"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tJava_5" offsetLabelX="0" offsetLabelY="0" source="tJava_5" target="tFileCopy_7">
-    <elementParameter field="MEMO_JAVA" name="CONDITION" value="Boolean.TRUE.equals(globalMap.get(&quot;Absence_full_reject&quot;))"/>
+    <elementParameter field="MEMO_JAVA" name="CONDITION" value="Boolean.TRUE.equals(globalMap.get(&quot;Absence_schema_full_reject&quot;))"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If4"/>
   </connection>
   <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tFileCopy_7" offsetLabelX="0" offsetLabelY="0" source="tFileCopy_7" target="tMap_26">
@@ -7684,7 +7684,7 @@
   <subjob>
     <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_7"/>
-    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Checks Absence files and rejects them in case of Errors within the file"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Checks Absence files and rejects them in case of wrong schema within the file"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
@@ -7698,13 +7698,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3a7c9f5d-b502-4bba-ac5e-06a038afab57"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VHswd1OOFi3kWgDeHAVwcn5qoFTmZQiCNSZb3J2DSkLjiv2YyFd6Rs9CycHv9gvTIrEoG9gG5gHN&#13;
-i1Epc7VnuA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3ba76099-bbff-4689-9bc9-3baf1f06cfdb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>A66e0QVu4umGE7djLB+pzwg8FtdIwEPp/lGvKRokNFtdN5uo4fPrlqTBVKYANSlR4sQihqCyOdnI&#13;
-E8okPfc3bg==</DigestValue></Reference></SignedInfo><SignatureValue>onFQ64TgO+UDqMBsG9Ggw5qMPin4t95i4HB4SI/30JzLsUUGu0+8+syyuq/iqi7uIkjKp7oy8Ttg&#13;
-Pex8Gs5xLrUiaapCyuj/2QGPXq/YpxKDC9XOr7IoHof6RyxTLncpasBclDblEmMo8e26TbK0yN2/&#13;
-oxZtznKsUVJDK1fiZEKumjIMqhb7AVLw3YjN4ZQ8hzZ+6DxqGKxv0pCHtLH7oY1Hp38iNc6QuE45&#13;
-G2+HZaNbAJIYdcAfZ8srw5eqIT32FbLPKr9BD4r8fOY9msLN4xn2s1o5OHP6BsvtqjixjajXR75u&#13;
-oU/Wi3j1ZWleI0/mXhSq79WHLtVRFlpeRJOLAw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d1d2cf38-6de2-452e-86a5-a80b894f8f60"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pIMGvIFaRS4xz28K1hB86yRZgKCXynrnP5PLZuYV9J6sxYb3VCDsnXuuY5ScwGwrVEoR+j8sS7KB&#13;
+/C6iA3pm5Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_92597916-c960-4108-9423-0a3c83a860a2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8Q9sfoNFTducD0zEXgfh0KZPAT7EV8pj7ZzgbM5ElE+8m6uZqkHgPc8g+votboL7qq6oaRlepzII&#13;
+5IDvyYVVdw==</DigestValue></Reference></SignedInfo><SignatureValue>BET8bg82EQJ9NzEWrnRKrNP0CRRCuC9JgURHXmKhN9qe0+U1cGZ+5D2Hy7ARiyEVyff7VzqAE0p4&#13;
+HNVsiXTOymPCL1DAno+PnTJzYyJ/VMkPhOenYY9cxNYzoRB+vXJpFOCx+ShiOECeZfcYhp89yWyV&#13;
+XytCo85QRnhgOZnEQoV35EWYaEeWVIgtrfz1iF+OVHivbYIIXZACaqiaYpGXGMX2Ktb+PgssV1M+&#13;
+Bs5u0bV6RVPJ607SSxmGj3KqVdK+9dJQEkBfqCjAlZ3k3dcofKr6PdB3EJyJ3xwrn9ifZb4Mm/ZD&#13;
+kNTfwC4GsQamumZJ2N6fFneCnXoJ/ZMXgxZWjQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -7726,4 +7726,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3ba76099-bbff-4689-9bc9-3baf1f06cfdb" Target="#_3a7c9f5d-b502-4bba-ac5e-06a038afab57"><Timestamp>2026-01-30 08:54:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_92597916-c960-4108-9423-0a3c83a860a2" Target="#_d1d2cf38-6de2-452e-86a5-a80b894f8f60"><Timestamp>2026-01-30 09:05:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
