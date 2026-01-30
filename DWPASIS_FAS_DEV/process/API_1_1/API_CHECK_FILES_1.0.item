@@ -4809,7 +4809,7 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="t_Map_File_Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="ln_Reject_Rows_Absence1">
+    <metadata connector="FLOW" name="ln_Reject_Rows_Absence">
       <column comment="" key="false" length="-1" name="MONTH" nullable="true" originalLength="7" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
       <column comment="" key="false" length="255" name="COLLEAGUE_PRN" nullable="true" originalLength="255" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
@@ -4821,7 +4821,7 @@
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="ln_Reject_Rows_Absence1" sizeState="INTERMEDIATE">
+      <outputTables name="ln_Reject_Rows_Absence" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="ln_File_Invalid_Absence.MONTH " name="MONTH" nullable="true" type="id_Date"/>
         <mapperTableEntries expression="ln_File_Invalid_Absence.COLLEAGUE_PRN " name="COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries expression="ln_File_Invalid_Absence.SICK_LEAVE " name="SICK_LEAVE" nullable="true" type="id_BigDecimal"/>
@@ -4883,16 +4883,16 @@
     <elementParameter field="TEXT" name="LABEL" value="tMap_ABSENCE_FILES"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Filters History Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="copyOfln_Reject_count">
+    <metadata connector="FLOW" name="ln_Absence_Reject_count">
       <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
-      <outputTables name="copyOfln_Reject_count" sizeState="INTERMEDIATE">
+      <outputTables name="ln_Absence_Reject_count" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_6_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Maximus&quot;)?3:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_6_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_GB&quot;)?4:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_6_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Serco&quot;)?5:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_6_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Ingeus&quot;)?6:&#13;&#10;StringHandling.SUBSTR(((String)globalMap.get(&quot;tFileList_6_CURRENT_FILEDIRECTORY&quot;)),24,20).equals(&quot;Capita_NI&quot;)?7:-1 " name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" type="id_Integer"/>
       </outputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="ln_Aggr_Rejects_Count" sizeState="INTERMEDIATE">
         <mapperTableEntries name="MONTH" nullable="true" type="id_Date"/>
         <mapperTableEntries name="COLLEAGUE_PRN" nullable="true" type="id_String"/>
         <mapperTableEntries name="SICK_LEAVE" nullable="true" type="id_BigDecimal"/>
@@ -4906,7 +4906,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1024" posY="1504">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_5"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;Absence_reject_count&quot;, row3.Absence_reject_count);&#10;globalMap.put(&quot;ABSENCE_ASSESSMENT_PROVIDER_REJECT&quot;, copyOfln_Reject_count.STG_ASSESSMENT_PROVIDER_ID);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;Absence_reject_count&quot;, ln_Aggr_Rejects_Count.Absence_reject_count);&#10;globalMap.put(&quot;ABSENCE_ASSESSMENT_PROVIDER_REJECT&quot;, ln_Absence_Reject_count.STG_ASSESSMENT_PROVIDER_ID);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="t_JavaRow_Reject_Count"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -7290,22 +7290,22 @@
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_6" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_6" target="tJava_4">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk6"/>
   </connection>
-  <connection connectorName="FLOW" label="ln_Reject_Rows_Absence1" lineStyle="0" metaname="ln_Reject_Rows_Absence1" offsetLabelX="0" offsetLabelY="0" source="tMap_19" target="tAggregateRow_5">
+  <connection connectorName="FLOW" label="ln_Reject_Rows_Absence" lineStyle="0" metaname="ln_Reject_Rows_Absence" offsetLabelX="0" offsetLabelY="0" source="tMap_19" target="tAggregateRow_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Reject_Rows_Absence1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Reject_Rows_Absence"/>
   </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tAggregateRow_5" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_5" target="tMap_20">
+  <connection connectorName="FLOW" label="ln_Aggr_Rejects_Count" lineStyle="0" metaname="tAggregateRow_5" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_5" target="tMap_20">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Aggr_Rejects_Count"/>
   </connection>
-  <connection connectorName="FLOW" label="copyOfln_Reject_count" lineStyle="0" metaname="copyOfln_Reject_count" offsetLabelX="0" offsetLabelY="0" source="tMap_20" target="tJavaRow_5">
+  <connection connectorName="FLOW" label="ln_Absence_Reject_count" lineStyle="0" metaname="ln_Absence_Reject_count" offsetLabelX="0" offsetLabelY="0" source="tMap_20" target="tJavaRow_5">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="ASSESSMENT_PROVIDER"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="copyOfln_Reject_count"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="ln_Absence_Reject_count"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJavaRow_5" offsetLabelX="0" offsetLabelY="0" source="tJavaRow_5" target="tJava_4">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk5"/>
@@ -7706,13 +7706,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d861ab16-e539-495e-8b1d-216bedb00d84"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nrgOI5KA6/VIGmUB1UM/NICz+crzRIJG00DNLLT6fWd8cv+khQ3Duh4oSeqTDYvx3sVkpQT7R3nY&#13;
-2j7Nh992zA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c26ffb0c-ffa7-447a-8cd0-1708647de0a4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Sasj6xUitPEQQXiHWN1dUAGZIpiEFJVuo4J94vPykFsM3l+lMRkwpGA6cbbotoGjFKbbuzNBQ3NV&#13;
-QLnWeLeq/w==</DigestValue></Reference></SignedInfo><SignatureValue>igB8CUqV6ZXBEvc4yHx0HNrc7AJVl5wWMce5tG9bQ4r+4s02YqJAs7Xb7Ngm+ToWHTRTt1Sjse9y&#13;
-BPlPW6l8M8/QAuwPADHRgO/Rnw1BnuoFiOriWWeAtGKYxmZkokSjr7Kh/qNdW3vH8uu70Y7o343T&#13;
-6ia2Kfd9MzVeOtgZ8pFaHz4UqXHvPZFW91Q2JG1PzzGr66oEh50Ikk2uUiPP7/OoNGTTkpoYmUSN&#13;
-J55yqCQ5Vy0YuGNstamu57F2s7uuB+7B56pyCROxqWTb7EcOw1rQ46M2QPW5N3uvhe6/0ItF006+&#13;
-3Zq3nRccbpkV8Gz43qJfOMms5oDTntPbKagnBw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c02205c0-7b3d-470e-88de-a1e581a6d901"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SKmNzrigIo2B1p56MJOP9zN8ZcV5iw3vQ0L6GKv1bP1uXq9yx4gQ5+6MWDnmRRxiubw19ErtScLQ&#13;
+0bF2DPjKzw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8e3d1616-c4d3-436b-bef4-fe990616876d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>KAZd7UD9szY/2EbV6ZE751XTJRKNKjfqCuF80mHYD2gT+YExbKp71+RNskrbyLz0AMe1PfwRwA94&#13;
+xYisD77xLw==</DigestValue></Reference></SignedInfo><SignatureValue>HY1VlIcUwsYtrBaWRGNFT9owahPeQJv2jQTRx8qILVOMlnLVbPTHswNMOgQGghXc5c6E4DEgdKeO&#13;
+saWZhrHDfpPpWctCvIgPx5g3xyjYSwO5b1Cp9KK1+pucK0QfJ+GxU1tMyG15sZclOGmOlODPN6Bq&#13;
+v5j7M9OJQsXaFIoLANwCVn3+2vKUQP8HPOOkm+Bl130InCUe/qUaCfO2H1oOEPkibLRSNDpY70vq&#13;
+8Q2yoBWsaewQl7xfjApCu/jiEIVjEskE/cxaaHhyAqFQLAWn5AbDBQrK47CESTKcw6ZbCJKO6I+9&#13;
+wkEYvEv5JowZoja50M9SJwoKuR3elWHwKdplTw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -7734,4 +7734,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c26ffb0c-ffa7-447a-8cd0-1708647de0a4" Target="#_d861ab16-e539-495e-8b1d-216bedb00d84"><Timestamp>2026-01-30 12:34:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8e3d1616-c4d3-436b-bef4-fe990616876d" Target="#_c02205c0-7b3d-470e-88de-a1e581a6d901"><Timestamp>2026-01-30 12:42:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
