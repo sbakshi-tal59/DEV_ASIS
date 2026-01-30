@@ -5330,7 +5330,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_7"/>
     <elementParameter field="TABLE" name="GROUPBYS"/>
     <elementParameter field="TABLE" name="OPERATIONS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="Absence_valid_count"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="Absence_schema_valid_count"/>
       <elementValue elementRef="FUNCTION" value="count"/>
       <elementValue elementRef="INPUT_COLUMN" value="MONTH"/>
       <elementValue elementRef="IGNORE_NULL" value="false"/>
@@ -5347,12 +5347,12 @@
       <column comment="" key="false" length="-1" name="SICK_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="ANNUAL_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="OTHER_LEAVE" nullable="true" originalLength="5" pattern="" precision="-1" sourceType="" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="50" name="Absence_valid_count" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Absence_schema_valid_count" nullable="true" originalLength="50" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="1888">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_7"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;Absence_valid_count&quot;, row8.Absence_valid_count);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;Absence_schema_valid_count&quot;, row8.Absence_schema_valid_count);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="tJavaRow_Valid_Count"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -5484,7 +5484,7 @@
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1248" posY="1824">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJava_5"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;Integer Absence_valid  = (Integer)globalMap.get(&quot;Absence_valid_count&quot;);&#10;Integer Absence_schema_invalid = (Integer)globalMap.get(&quot;Absence_schema_reject_count&quot;);&#10;&#10;if (Absence_valid == null) Absence_valid = 0;&#10;if (Absence_schema_invalid == null) Absence_schema_invalid = 0;&#10;&#10;boolean Absence_schema_fullReject = (Absence_valid == 0 &amp;&amp; Absence_schema_invalid &gt; 0);&#10;&#10;globalMap.put(&quot;Absence_schema_full_reject&quot;, Boolean.valueOf(Absence_schema_fullReject));&#10;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;Integer Absence_schema_valid  = (Integer)globalMap.get(&quot;Absence_schema_valid_count&quot;);&#10;Integer Absence_schema_invalid = (Integer)globalMap.get(&quot;Absence_schema_reject_count&quot;);&#10;&#10;if (Absence_schema_valid == null) Absence_schema_valid = 0;&#10;if (Absence_schema_invalid == null) Absence_schema_invalid = 0;&#10;&#10;boolean Absence_schema_fullReject = (Absence_schema_valid == 0 &amp;&amp; Absence_schema_invalid &gt; 0);&#10;&#10;globalMap.put(&quot;Absence_schema_full_reject&quot;, Boolean.valueOf(Absence_schema_fullReject));&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="t_Java_Compare"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -7269,7 +7269,7 @@
       <elementValue elementRef="TRACE_COLUMN" value="ANNUAL_LEAVE"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="Absence_valid_count"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Absence_schema_valid_count"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="SICK_LEAVE"/>
@@ -7512,7 +7512,7 @@
       <elementValue elementRef="TRACE_COLUMN" value="ANNUAL_LEAVE"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
-      <elementValue elementRef="TRACE_COLUMN" value="Absence_valid_count"/>
+      <elementValue elementRef="TRACE_COLUMN" value="Absence_schema_valid_count"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
       <elementValue elementRef="TRACE_COLUMN" value="SICK_LEAVE"/>
@@ -7698,13 +7698,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d1d2cf38-6de2-452e-86a5-a80b894f8f60"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pIMGvIFaRS4xz28K1hB86yRZgKCXynrnP5PLZuYV9J6sxYb3VCDsnXuuY5ScwGwrVEoR+j8sS7KB&#13;
-/C6iA3pm5Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_92597916-c960-4108-9423-0a3c83a860a2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8Q9sfoNFTducD0zEXgfh0KZPAT7EV8pj7ZzgbM5ElE+8m6uZqkHgPc8g+votboL7qq6oaRlepzII&#13;
-5IDvyYVVdw==</DigestValue></Reference></SignedInfo><SignatureValue>BET8bg82EQJ9NzEWrnRKrNP0CRRCuC9JgURHXmKhN9qe0+U1cGZ+5D2Hy7ARiyEVyff7VzqAE0p4&#13;
-HNVsiXTOymPCL1DAno+PnTJzYyJ/VMkPhOenYY9cxNYzoRB+vXJpFOCx+ShiOECeZfcYhp89yWyV&#13;
-XytCo85QRnhgOZnEQoV35EWYaEeWVIgtrfz1iF+OVHivbYIIXZACaqiaYpGXGMX2Ktb+PgssV1M+&#13;
-Bs5u0bV6RVPJ607SSxmGj3KqVdK+9dJQEkBfqCjAlZ3k3dcofKr6PdB3EJyJ3xwrn9ifZb4Mm/ZD&#13;
-kNTfwC4GsQamumZJ2N6fFneCnXoJ/ZMXgxZWjQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_dc770a0b-922c-4225-9a13-747c5b4039de"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BD9VG4vXgmOm5gzb7v5wrduJmdVHpXJB7AcIk+ildiIDtJnWU2nfcGTGZGFDOA0M9e5LYwwp8iRg&#13;
+R0uVR+t/eg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_acb3df01-9bd8-4bf0-a0fe-5a062d362c2c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>iNc19XGnK1zgjDB0yZT9b0ifTYLy744SynEGS3kHfgTBnfYf0VBWewTWsO9ErmODwmukL1I7zPfX&#13;
+235Fl/SIZw==</DigestValue></Reference></SignedInfo><SignatureValue>QTt4QStgKYimLwhGiU6ReMP5gfpyeYlXmieetbY9EHOx9aAQm0uDoNlFgset0yd526rGk1ApYnhM&#13;
+MllhrLcYa9T43P8EGUXCK4auOePt89l3IaPWnY1bItQsPo0CJjz3AiiSSGsswG7nWQeV3vidAmpN&#13;
+QVR2h+aU2SJ3W4kw/LUgdYJ7L1Mn5d3ighjnj8lFOumOTZKQUsaE03i/zwf3Wejd2sQTz3wQfjWv&#13;
+PGSsjftK3V4QM4vn/asesh+IPRv5naPoJDG88dmIUm833mEqihwocA0h9vEQV1zfYXiURpF2Cbc8&#13;
+Tr/FlywGn2fqA+J5SEpsyOwHaEMx7p5LfDJuPA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -7726,4 +7726,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_92597916-c960-4108-9423-0a3c83a860a2" Target="#_d1d2cf38-6de2-452e-86a5-a80b894f8f60"><Timestamp>2026-01-30 09:05:40</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_acb3df01-9bd8-4bf0-a0fe-5a062d362c2c" Target="#_dc770a0b-922c-4225-9a13-747c5b4039de"><Timestamp>2026-01-30 09:11:02</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
