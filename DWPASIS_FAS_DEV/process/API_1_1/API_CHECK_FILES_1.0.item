@@ -4744,7 +4744,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tMap_FILE_INSERT"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;HISTORY_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps File Format Errors"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ABSENCE_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps File Format Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_Valid_Rows_Absence">
       <column comment="" key="false" length="-1" name="MONTH" nullable="true" originalLength="7" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
@@ -4786,6 +4786,7 @@
     <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
     <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="t_Aggregate_Valid_Count"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;Aggregate count of valid Rows&lt;/b&gt;&lt;br&gt;Aggregate count of valid Rows for Absence File"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tAggregateRow_6">
       <column comment="" key="false" length="-1" name="MONTH" nullable="true" originalLength="7" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
@@ -4801,6 +4802,7 @@
     <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;Absence_valid_count&quot;, ln_Aggr_Valid_count.Absence_valid_count);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="tJavaRow_Valid_Count"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;Assigns variable&lt;/b&gt;&lt;br&gt;Assigns Variable to Valid Count"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_6"/>
   </node>
@@ -4818,6 +4820,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="t_Map_File_Errors"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ABSENCE_FILE_ERROR&lt;/b&gt;&lt;br&gt;Traps Schema Errors"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_Reject_Rows_Absence">
       <column comment="" key="false" length="-1" name="MONTH" nullable="true" originalLength="7" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
@@ -4865,6 +4868,7 @@
     <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
     <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="t_Aggregate_Reject_Count"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;Aggregate count of Invalid Rows&lt;/b&gt;&lt;br&gt;Aggregate count of Invalid Rows for Absence File"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tAggregateRow_5">
       <column comment="" key="false" length="-1" name="MONTH" nullable="true" originalLength="7" pattern="&quot;dd/MM/yyyy&quot;" precision="-1" sourceType="" type="id_Date" usefulColumn="true"/>
@@ -4891,7 +4895,7 @@
     <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tMap_ABSENCE_FILES"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Filters History Files"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;TMAP&lt;/b&gt;&lt;br&gt;Filters Absence Files"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="ln_Absence_Reject_count">
       <column comment="" key="false" length="-1" name="STG_ASSESSMENT_PROVIDER_ID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Integer" usefulColumn="true"/>
@@ -4919,6 +4923,7 @@
     <elementParameter field="MEMO_JAVA" name="CODE" value="globalMap.put(&quot;Absence_reject_count&quot;, ln_Aggr_Rejects_Count.Absence_reject_count);&#10;globalMap.put(&quot;ABSENCE_ASSESSMENT_PROVIDER_REJECT&quot;, ln_Absence_Reject_count.STG_ASSESSMENT_PROVIDER_ID);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="t_JavaRow_Reject_Count"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;Assigns variable&lt;/b&gt;&lt;br&gt;Assigns Variable to Reject Count"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_5">
       <column comment="" key="false" length="4000" name="STG_FILE_NAME" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -4935,6 +4940,7 @@
     <elementParameter field="MEMO_JAVA" name="CODE" value="&#10;Integer Absence_valid  = (Integer)globalMap.get(&quot;Absence_valid_count&quot;);&#10;Integer Absence_invalid = (Integer)globalMap.get(&quot;Absence_reject_count&quot;);&#10;&#10;if (Absence_valid == null) Absence_valid = 0;&#10;if (Absence_invalid == null) Absence_invalid = 0;&#10;&#10;boolean Absence_fullReject = (Absence_valid == 0 &amp;&amp; Absence_invalid &gt; 0);&#10;&#10;globalMap.put(&quot;Absence_full_reject&quot;, Boolean.valueOf(Absence_fullReject));&#10;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="LABEL" value="t_Java_Compare"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;Compare&lt;/b&gt;&lt;br&gt;Compares valid and invalid counts"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJava_4">
       <column comment="" key="false" length="4000" name="STG_FILE_NAME" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -5093,7 +5099,7 @@
     <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBO_STG_PEOPLE_FILE_LOG"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;AUD_PEOPLE_ABSENCE&lt;/b&gt;&lt;br&gt;Inserts Error records in AUD_PEOPLE_ABSENCE"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;STG_PEOPLE_FILE_LOG&lt;/b&gt;&lt;br&gt;Inserts Error records in STG_PEOPLE_FILE_LOG"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_9">
       <column comment="" key="false" length="4000" name="STG_FILE_NAME" nullable="true" originalLength="30" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
@@ -7718,13 +7724,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_71e4fea3-27ba-4274-8847-ffd668078919"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0gu4BRcruxVAWHt+spT+f3hutdERfsNmtH2le+g0Zw4Nl+RZF3J4Go7L3anqf49Py5prQ8ILEh7N&#13;
-Wi7A4mWxuA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_04d79b00-a587-41e6-9bb3-75f9fdee7986"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>SiTqo8oMLX9bTm27YygjJcgyzDcJ0I94aax7OjrbW6CDdho2/9Plqcwwlf9fPmQ9v5wk+R1kyVef&#13;
-ZXYUKK5dDg==</DigestValue></Reference></SignedInfo><SignatureValue>ZqP6RZ2DnMW1rKJW0TdE3mtm3aQjtgUdS9+86rdMVYUjqNcPoenRZ8WFgnMtDADCxYbGfl97SzEf&#13;
-4B7f504MTjolXFT7t2dsPKe74irzoziw537/gdBYDUB1SDQechk1yKPvVoT1FpoxkufBM9L2MRZi&#13;
-B1FLwhXEBRcetZ0nhTh4lwJpoyK41/END80ycI51qpYQ+Yg0OqoujEwTQORFlxrZZtKXy3IOdbaq&#13;
-4px40q2Te+pV/Qw2Mx9Q+2tmxtU+VKWY+4ly/oLG54+vNoqIVFGhzEHMr5j0YomKvhZ3RNhaVieo&#13;
-suK92CZXqz9CS/ApzgjXaGZV1JiQo4dATSb9/w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9241787e-a114-4d09-81b1-a150a373bb16"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DrQxjy+jyi7ShGtzg6cv5k5zLAFHQcFMZs/03du6yWqOUQP8ZYDhxt7DxZAT7xCGtEw0TFrbgTGj&#13;
+4kcGkBdVoA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d59d91a8-73ca-4d6c-8b6b-70cb114c81ec"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>IzcxHsLG/GQLFJvIUPNXecreZIV1IEWmpr9701t/+MtEevE2MaAshaZ5ERPMsfgbVMPYd8vA448E&#13;
+4hscRaeDdA==</DigestValue></Reference></SignedInfo><SignatureValue>IUWoR5etHVY/9aqOcBvWZHVRBkUMVgggjOJQxA/K1Vhe4mf8bmGB3piSUpVA54sMdAp/Vh2+Yi3K&#13;
+g1q0bij0d+SFuvTwGnTVavWzUva3b5dDat65Wvw6octNvG+2fNTdaW3FEgPzNqhmTDjrrGqh160u&#13;
+tKmVYS84quQ/5Y2XB3HK8ah7jvP8rk4K53KpUzNOuzfwQlGe5urR+J81vtW2lfbOcyUjZ93hjCfX&#13;
+R8elgdCrct73IPQAyLCgOs5y2EW+Ff1ydQKsVWVWKblyhn8BfOVohZ6NTxPse9eZ1GUEWwULtEMw&#13;
+x0LDWXzE0F0vDIA1RvXcvzFkEPgeMKUyOuFAvg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -7746,4 +7752,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_04d79b00-a587-41e6-9bb3-75f9fdee7986" Target="#_71e4fea3-27ba-4274-8847-ffd668078919"><Timestamp>2026-01-30 13:01:23</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d59d91a8-73ca-4d6c-8b6b-70cb114c81ec" Target="#_9241787e-a114-4d09-81b1-a150a373bb16"><Timestamp>2026-01-30 13:05:18</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
