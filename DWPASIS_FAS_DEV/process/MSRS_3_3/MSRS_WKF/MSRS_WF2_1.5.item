@@ -23,7 +23,7 @@
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="4"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -122,7 +122,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_1"/>
     <elementParameter field="CLOSED_LIST" name="WAIT_FOR" value="All"/>
     <elementParameter field="TEXT" name="SLEEPTIME" value="100"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tPA_MSRS_PARALLELIZE_1"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;MSRS_PARALLELIZE&lt;/b&gt;&lt;br&gt;Parallelize mappings"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -503,7 +503,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_2"/>
     <elementParameter field="CLOSED_LIST" name="WAIT_FOR" value="All"/>
     <elementParameter field="TEXT" name="SLEEPTIME" value="100"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tPA_MSRS_PARALLELIZE_2"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;MSRS_PARALLELIZE&lt;/b&gt;&lt;br&gt;Parallelize mappings"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -802,7 +802,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_3"/>
     <elementParameter field="CLOSED_LIST" name="WAIT_FOR" value="All"/>
     <elementParameter field="TEXT" name="SLEEPTIME" value="100"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tPA_MSRS_PARALLELIZE_3"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;MSRS_PARALLELIZE&lt;/b&gt;&lt;br&gt;Parallelize mappings"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -2080,7 +2080,7 @@
     <elementParameter field="TEXT" name="RESUMLABEL" value="MSRS Update Msrs Ref MIS Restart"/>
     <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value="Restart the Job"/>
   </connection>
-  <note opaque="false" posX="480" posY="0" sizeHeight="225" sizeWidth="513" text="Developer: James Adams&#13;&#10;Date: 18-Aug-2021&#13;&#10;JIRA: BM-5005&#13;&#10;Description: MSRS MISOWN Incremental Load Process Flow.&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 26-Jul-2022&#13;&#10;JIRA: BM-8416&#13;&#10;Description: Added new subjob STAG_TO_DAT_33_LOT_AP_MAP&#13;&#10;&#13;&#10;Developer: Stuart Smith 24/11/2022 BM-8749 CR308&#13;&#10;Description: Add Run Job component STAG_TO_DAT_33_AUDIT_HISTORY&#13;&#10;&#13;&#10;Developer: Stuart Smith 16/03/2023 BM-9593 CR332&#13;&#10;Description: Renamed Job component STAG_TO_DAT_33_AUDIT_HISTORY to STAG_TO_DAT_34_AUDIT_HISTORY due to conflict in numbers from CR283 changes&#13;&#10;&#13;&#10;Developer: Stuart Smith 12/10/2023 BM-10413 CR334&#13;&#10;Description: Add Run Job component STAG_TO_DAT_35_BUSINESS_EXCEPTIONS&#13;&#10;&#13;&#10;Developer: Stuart Smith 05/09/2025 BM-11507&#13;&#10;Description: Remove tDBSP_CREATE_PRE_PROC_STIM component"/>
+  <note opaque="false" posX="480" posY="0" sizeHeight="225" sizeWidth="513" text="Developer: James Adams&#13;&#10;Date: 18-Aug-2021&#13;&#10;JIRA: BM-5005&#13;&#10;Description: MSRS MISOWN Incremental Load Process Flow.&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 26-Jul-2022&#13;&#10;JIRA: BM-8416&#13;&#10;Description: Added new subjob STAG_TO_DAT_33_LOT_AP_MAP&#13;&#10;&#13;&#10;Developer: Stuart Smith 24/11/2022 BM-8749 CR308&#13;&#10;Description: Add Run Job component STAG_TO_DAT_33_AUDIT_HISTORY&#13;&#10;&#13;&#10;Developer: Stuart Smith 16/03/2023 BM-9593 CR332&#13;&#10;Description: Renamed Job component STAG_TO_DAT_33_AUDIT_HISTORY to STAG_TO_DAT_34_AUDIT_HISTORY due to conflict in numbers from CR283 changes&#13;&#10;&#13;&#10;Developer: Stuart Smith 12/10/2023 BM-10413 CR334&#13;&#10;Description: Add Run Job component STAG_TO_DAT_35_BUSINESS_EXCEPTIONS&#13;&#10;&#13;&#10;Developer: Stuart Smith 05/09/2025 BM-11507&#13;&#10;Description: Remove tDBSP_CREATE_PRE_PROC_STIM component&#13;&#10;&#13;&#10;Developer: Shaili Bakshi 04/02/2026 MPT-2976&#13;&#10;Description: Option ticked in t_Parallelize component to make it fail when one of the subjob fails"/>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
@@ -2358,13 +2358,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_96f3bc9f-5e6f-4ba7-b004-662f0d939efc"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>J2DEUNYZ2zss6iwXibaUfuaX0zHISKACykOGB/Adt7vOj4FXlAEYC4WgpfsWSR0KvdPdYs9f9l7D&#13;
-SyOfQlweUA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_01b2f0ce-1e54-45a5-af1c-e517e3650154"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kYpKoIZrGf+9GcBC+waS8aPNN7zxgYocz518UhFXHwXOLTHEfPhH36ll5Udi9CzpkINmw7R47R2b&#13;
-pHGU9G2U2w==</DigestValue></Reference></SignedInfo><SignatureValue>gpSN7ZYQwKzo8yEU/kkDjQMyTT/Mwyst+EJh9UwldaWg3DL2dfClO+Y8hIqsTMw1FA+bPGotonGJ&#13;
-YP+fMBEp094sum+4A11OhgvlFKnQRGFkhKXc0h8GOAaxO/efOvxzv3UtA3qAVJIuVGYbqfMzIiwH&#13;
-TYWMgQCT/mOFSKae5E7ko/bgqJ7JD8Jc6csdoLY5e7wR8/saA700/h62Vn89sR9QX1kj0gllFW4T&#13;
-mVSkNQvhzoFPCnCmKFI9z9gIzxgpRwhUGVCN0EZ4abtd9daPj05GEHIZeqn9PVeWnkH+ZK5ktdc7&#13;
-fKRwDo3Hr6xHeumnTqs61of/OZ9BATzd1S8QmA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9c6ae941-958c-4a4e-8a72-aa4b7c4f57d5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>COTbKQ+E1AHtbQ30nA+kXOn7AS2baBigkZXNyuQ2sA8N5sPv/eM9ZQ5Nf5GriGuQfeGJQZleX+EQ&#13;
+32epGU60hQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d48eb0c1-ac49-4e0b-868b-5e6f3fa69e5b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wu1qirS606WnbdYFNluqY3kmU7gyQVK7IDFhFAyThlr5R/beSyT2WpQCpOdwuKlCMI8/TIZ6FMAD&#13;
+B4vxQm5a5g==</DigestValue></Reference></SignedInfo><SignatureValue>F+rrxOmfhwANUVPAQJqPw9aPL0gOqcKZYzaQszIKVxvsiTQNzcEtj0Ky0DSguOPxPDGLMXCR9osG&#13;
+w1rftLSojevvFphIpS7WxDYPJ419Z24mI4AJH6TmbjatkGvN2X0FPgcUUWw+SG29r0TzUqXvNJMk&#13;
+69aS8HUS7nCvjf/KH/f+bzD58jEtKcDPBqhrHzMRmdAofAHmEw7/O3/FH7420+J1WALpE7kVqYyG&#13;
+mdq2AtHu3Dx2vtpn80uoiLlLIBujZkw0t9RQSK2yoOQtZNvgPy/epOu/iuA0UaIL97T9S27t5Wa+&#13;
+qk4khf6kKMMYZVjOEf6OkARthmAGNEuTfG7OFg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2386,4 +2386,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_01b2f0ce-1e54-45a5-af1c-e517e3650154" Target="#_96f3bc9f-5e6f-4ba7-b004-662f0d939efc"><Timestamp>2026-02-05 10:26:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d48eb0c1-ac49-4e0b-868b-5e6f3fa69e5b" Target="#_9c6ae941-958c-4a4e-8a72-aa4b7c4f57d5"><Timestamp>2026-02-05 10:30:41</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
