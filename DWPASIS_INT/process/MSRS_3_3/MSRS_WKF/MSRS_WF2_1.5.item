@@ -122,7 +122,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_1"/>
     <elementParameter field="CLOSED_LIST" name="WAIT_FOR" value="All"/>
     <elementParameter field="TEXT" name="SLEEPTIME" value="100"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tPA_MSRS_PARALLELIZE_1"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;MSRS_PARALLELIZE&lt;/b&gt;&lt;br&gt;Parallelize mappings"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -503,7 +503,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_2"/>
     <elementParameter field="CLOSED_LIST" name="WAIT_FOR" value="All"/>
     <elementParameter field="TEXT" name="SLEEPTIME" value="100"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tPA_MSRS_PARALLELIZE_2"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;MSRS_PARALLELIZE&lt;/b&gt;&lt;br&gt;Parallelize mappings"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -802,7 +802,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_3"/>
     <elementParameter field="CLOSED_LIST" name="WAIT_FOR" value="All"/>
     <elementParameter field="TEXT" name="SLEEPTIME" value="100"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="tPA_MSRS_PARALLELIZE_3"/>
     <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;MSRS_PARALLELIZE&lt;/b&gt;&lt;br&gt;Parallelize mappings"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
@@ -2080,7 +2080,7 @@
     <elementParameter field="TEXT" name="RESUMLABEL" value="MSRS Update Msrs Ref MIS Restart"/>
     <elementParameter field="MEMO" name="FAILURE_INSTRUCTIONS" value="Restart the Job"/>
   </connection>
-  <note opaque="true" posX="480" posY="0" sizeHeight="225" sizeWidth="513" text="Developer: James Adams&#13;&#10;Date: 18-Aug-2021&#13;&#10;JIRA: BM-5005&#13;&#10;Description: MSRS MISOWN Incremental Load Process Flow.&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 26-Jul-2022&#13;&#10;JIRA: BM-8416&#13;&#10;Description: Added new subjob STAG_TO_DAT_33_LOT_AP_MAP&#13;&#10;&#13;&#10;Developer: Stuart Smith 24/11/2022 BM-8749 CR308&#13;&#10;Description: Add Run Job component STAG_TO_DAT_33_AUDIT_HISTORY&#13;&#10;&#13;&#10;Developer: Stuart Smith 16/03/2023 BM-9593 CR332&#13;&#10;Description: Renamed Job component STAG_TO_DAT_33_AUDIT_HISTORY to STAG_TO_DAT_34_AUDIT_HISTORY due to conflict in numbers from CR283 changes&#13;&#10;&#13;&#10;Developer: Stuart Smith 12/10/2023 BM-10413 CR334&#13;&#10;Description: Add Run Job component STAG_TO_DAT_35_BUSINESS_EXCEPTIONS&#13;&#10;&#13;&#10;Developer: Stuart Smith 05/09/2025 BM-11507&#13;&#10;Description: Remove tDBSP_CREATE_PRE_PROC_STIM component"/>
+  <note opaque="true" posX="480" posY="0" sizeHeight="225" sizeWidth="513" text="Developer: James Adams&#13;&#10;Date: 18-Aug-2021&#13;&#10;JIRA: BM-5005&#13;&#10;Description: MSRS MISOWN Incremental Load Process Flow.&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 26-Jul-2022&#13;&#10;JIRA: BM-8416&#13;&#10;Description: Added new subjob STAG_TO_DAT_33_LOT_AP_MAP&#13;&#10;&#13;&#10;Developer: Stuart Smith 24/11/2022 BM-8749 CR308&#13;&#10;Description: Add Run Job component STAG_TO_DAT_33_AUDIT_HISTORY&#13;&#10;&#13;&#10;Developer: Stuart Smith 16/03/2023 BM-9593 CR332&#13;&#10;Description: Renamed Job component STAG_TO_DAT_33_AUDIT_HISTORY to STAG_TO_DAT_34_AUDIT_HISTORY due to conflict in numbers from CR283 changes&#13;&#10;&#13;&#10;Developer: Stuart Smith 12/10/2023 BM-10413 CR334&#13;&#10;Description: Add Run Job component STAG_TO_DAT_35_BUSINESS_EXCEPTIONS&#13;&#10;&#13;&#10;Developer: Stuart Smith 05/09/2025 BM-11507&#13;&#10;Description: Remove tDBSP_CREATE_PRE_PROC_STIM component&#13;&#10;&#13;&#10;Developer: Shaili Bakshi 04/02/2026 MPT-2976&#13;&#10;Description: Option ticked in t_Parallelize component to make it fail when one of the subjob fails"/>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tParallelize_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
@@ -2358,13 +2358,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_344b9f9c-b0b1-4a26-ba73-de8c91ff6dd4"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YcfI5PaVQ4w4JvRd7ckUEtkLu0fFh3OPyCJKGg0VpbRohAY0VNhN7P0WyRSiRLljMHCC74A7iff8&#13;
-lwglKi/AHg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_8335d334-0e33-4211-b796-13295235c741"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BUNpixzdD7zMolT5wMd5ogcjD8NRGwRkBQ2OOORyT+9/MuvbwhuwzSCkVKAgY57Llie0Px+BeIxx&#13;
-5C84vdgNfg==</DigestValue></Reference></SignedInfo><SignatureValue>MzNLqO153vsluL5dX8HdczzaybKJ01TvROqzdLAnFUI9/nXXQ6lpV84IUHmjSJvMQnVSLKbhq/Ns&#13;
-i4XV8EZBdW98yaYVs1pNZnFvTwQuUIiT6e99XAMpsLpwEvOrVym9QT68OEe8DxRawTdofV1hJnY6&#13;
-jpBOlYrj6rairU7GrtyeRWJ+VcE3vP9SY8PpYUdus37AkluicYtvni+jNspzYRpaWUT43yAiWIJu&#13;
-3tXNzOhbzzUC3eT/L74APERYS/VrTSLjFJtvH9P7MJNwn9Bxs22egDL/no4zaWlgmzHg4eQ+p23P&#13;
-D3qOvmFQ1Qnzceu9UIzzMt3SD0ns7ii/q+Yh0Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f08e4754-2b62-459b-b3a0-ec05834d90f8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>W9xWcm/Djv4P3sG1C8iKyiv9XuX5D2mbeb+VUtvUjNOFS8j1LdXhvazrXLxYSB5Caj62n13MvS7Q&#13;
+5AnGebspwg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5ed2a562-5667-4956-a473-9aa9cefea62b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qZuiN6eUXo3QPXnmGUYUMaAMbpxc8tyy/PE/dOjbakEtxSPFgO1c9px/EF6yAViDrYVffVHl7i/0&#13;
+QYSm/uUy4g==</DigestValue></Reference></SignedInfo><SignatureValue>KAA2z/5NDKEp0D0osidpCX9kmXMcjKxQ6vjCKKvlZpWpYWhK6o+Gt9MrVvyFiLdOVkDfjGIzOfi7&#13;
+DIux7CV0vxGjsLK6wsFR6AlMK8kQ5+0+KkgF6cyMWSNBfDp58ZfySJtAVUZ/o3G0dWqJaP0a2bgA&#13;
+vulHGNWctEg9BvYaKjpROz/QMELEdJgGwdAeyZ2yW0J+6LeKoBA9xhE/QRBDgSpHdUjU3+YA2xdQ&#13;
+8dciPdlJW7GRooUWOSOp+gnOZclMwDKeg9h4+2trSPbU6pFWMzG04adTXmdwL9xM5ByWvqrmDLNA&#13;
+pn9AHM5RvUcmcFo50Jiyv+aW9HDAg+0rYTFodw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2386,4 +2386,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_8335d334-0e33-4211-b796-13295235c741" Target="#_344b9f9c-b0b1-4a26-ba73-de8c91ff6dd4"><Timestamp>2025-10-08 10:04:08</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5ed2a562-5667-4956-a473-9aa9cefea62b" Target="#_f08e4754-2b62-459b-b3a0-ec05834d90f8"><Timestamp>2026-02-05 13:32:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
