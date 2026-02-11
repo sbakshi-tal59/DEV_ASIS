@@ -1371,7 +1371,7 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tOracleRow" componentVersion="0.102" offsetLabelX="2" offsetLabelY="-8" posX="3296" posY="736">
+  <node componentName="tOracleRow" componentVersion="0.102" offsetLabelX="2" offsetLabelY="-8" posX="3616" posY="736">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_30"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
@@ -2443,9 +2443,54 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="tDBSP_ADS_UPDATE_EXPENSES"/>
-    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DIM_UPDATE_PRACTITIONER_TYPE&lt;/b&gt;&lt;br&gt;Call DIM_UPDATE_PRACTITIONER_TYPE stored procedure"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;ADS_UPDATE_EXPENSES&lt;/b&gt;&lt;br&gt;Call ADS_UPDATE_EXPENSES stored procedure"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_50"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tOracleRow" componentVersion="0.102" offsetLabelX="2" offsetLabelY="-8" posX="3264" posY="736">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_51"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="context.ads_misown_host"/>
+    <elementParameter field="TEXT" name="PORT" value="context.ads_misown_port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.ads_misown_database"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context.ads_misown_schema"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="Oracle"/>
+    <elementParameter field="TEXT" name="USER" value="context.ads_misown_username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Ar/E8afFWbgT1gNuXCEraYtd/UDIwgppYPKn1toYJNRsgHyzMmpFGy4lQgjj8MebKbJiBH3feQ=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;MIS_PARAMETERS&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;BEGIN&#13;&#10;&quot;+context.ads_misown_schema+&quot;.DW_UPDATE_EXPENSES;&#13;&#10;END;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="USE_NB_LINE" value="NONE"/>
+    <elementParameter field="LABEL" name="USE_NB_LINE_NOTE" value="* Only used if the query is an insert, an update or a delete."/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="tDBSP_DW_UPDATE_EXPENSES"/>
+    <elementParameter field="TEXT" name="HINT" value="&lt;b&gt;DW_UPDATE_EXPENSES&lt;/b&gt;&lt;br&gt;Call DW_UPDATE_EXPENSES stored procedure"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBRow_51"/>
     <metadata connector="REJECT" name="REJECT">
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
@@ -2569,7 +2614,7 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_28" offsetLabelX="0" offsetLabelY="0" source="tDBRow_28" target="tDBRow_29">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk27"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_29" offsetLabelX="0" offsetLabelY="0" source="tDBRow_29" target="tDBRow_50">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_29" offsetLabelX="21" offsetLabelY="0" source="tDBRow_29" target="tDBRow_50">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk28"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_31" offsetLabelX="0" offsetLabelY="0" source="tDBRow_31" target="tDBRow_32">
@@ -2656,8 +2701,11 @@
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_36" offsetLabelX="0" offsetLabelY="0" source="tDBRow_36" target="tDBRow_17">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk55"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_50" offsetLabelX="0" offsetLabelY="0" source="tDBRow_50" target="tDBRow_30">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_50" offsetLabelX="20" offsetLabelY="2" source="tDBRow_50" target="tDBRow_51">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk56"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tDBRow_51" offsetLabelX="-14" offsetLabelY="1" source="tDBRow_51" target="tDBRow_30">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk57"/>
   </connection>
   <note opaque="true" posX="1184" posY="32" sizeHeight="129" sizeWidth="481" text="Developer: James Adams&#13;&#10;Date: 07-Oct-2021&#13;&#10;JIRA: BM-7662&#13;&#10;Description: ADS DW Process Flow.&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 20-Jun-2023&#13;&#10;JIRA: BM-6139&#13;&#10;Description: Add stored procedure calls for ADS &amp; DW Complaint Corres &amp; Complaint Issue&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 24-Jul-2023&#13;&#10;JIRA: BM-10040&#13;&#10;Description: Replaced ADS_UPDATE_DIMS with 5 new procedures&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 19-Sep-2023&#13;&#10;JIRA: BM-10341&#13;&#10;Description: Add stored procedure calls for ADS &amp; DW Appointment Request, Client Contact&#13;&#10;&#13;&#10;Developer: Stuart Smith&#13;&#10;Date: 31-Jul-2024&#13;&#10;JIRA: BM-11442&#13;&#10;Description: v1.3 Add stored procedure calls for ADS &amp; DW Scheduling Activity&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 06-Sep-2024&#13;&#10;JIRA: BM-10936 &#13;&#10;Description: v1.4 CR335 - Tranche 2 - Remove stored procedure calls to DW_UPDATE_TREND_NI, DW_UPDATE_NI_WIP, MED_FW_LOAD_COMPLETE, MED_FW_STG_TO_DAT, ADS_ENABLE_INDEXES, ADS_DISABLE_INDEXES, DW_GLOBALSCAPE_EXPORT&#13;&#10;Added COGNOS_START_TIGGER procedure call&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 24-Oct-2024&#13;&#10;JIRA: BM-12099&#13;&#10;Description: v1.5 CR351 - P5 - Added ADS_UPDATE_CAPABILITY, DW_UPDATE_CAPABILITY procedure call&#13;&#10;&#13;&#10;Developer: Dharmendra Jagjivan&#13;&#10;Date: 16-May-2025&#13;&#10;JIRA: BM-12623&#13;&#10;Description: Added ADS_UPDATE_AUDIT_INSTANCE, DW_UPDATE_AUDIT_INSTANCE procedure call&#13;&#10;&#13;&#10;Developer: Shaili Bakshi&#13;&#10;Date: 07-July-2025&#13;&#10;JIRA: BM-12881&#13;&#10;Description: Moved ADS_UPDATE_AUDIT_INSTANCE, DW_UPDATE_AUDIT_INSTANCE procedure call before ADS_UPDATE_AUDIT&#13;&#10;&#13;&#10;Developer: Dharmendra Jagjivan&#13;&#10;Date: 10-Feb-2026&#13;&#10;JIRA: BM-13533&#13;&#10;Description: Added ads_update_expenses procedure call before dim_update_practitioner_type"/>
   <subjob>
@@ -2927,13 +2975,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_6fb0f409-3e1e-4bbc-9ae0-ac7e3dc6397c"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>q0rrMGO4szpxmXSflGTF9n6ZCSt69C0LC3dEMTy/ngQ3b9Vd4ScHuiIeCx9Rje2a+dz8YQApUnvD&#13;
-0wWQ41Cm+A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_49ed0b55-9f15-4199-98c2-143d6b069326"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>w4eFaKihWrta+q5pY9Wy+O80DIj+WjnODVY3JpQw5YzCTE/KczH3uAwIY7RCRGeqpmYVd3zCRxxQ&#13;
-Ds9WBTjcJQ==</DigestValue></Reference></SignedInfo><SignatureValue>nh88in0RzdCb5cF1VWK5bM9EEl2b22o5LKjDKQfE8DLksgFEiv0qzyrp5uw+MRAAplYthWll0gKR&#13;
-amSuKrW3PrLuVcjmV9Shw3fTZdEQ68BmGdcidkOmK9JhaDWMLk8pAKnkLsm0QUhIn3JelfbJYbCi&#13;
-Ip0I/Yi7cAT49J9k7c/oW8coiRZZFamfNvJ79JlpX51p6qVWrGV//Hx3y6YhIsrcJmER+5RPXzv4&#13;
-eGf6x7m5sAxuWyX7RWSydqpYvYs/uZm3YYKR8xvOmLshZH4CHOTRNP0aXdWWMoxKSxb+N17Dl6gI&#13;
-dEYLW40/HcJo8JQWO67re18lvQVESaIn6Ro48A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBRow_51"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8bf592f0-f7b2-477e-8235-9dacf14e1d85"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5Z1eNqywmbcLw9PRiOMnfqR8Prvtww8PBBFil3hUx1c+erUn0xY2J2GawfebjKQNfIHrvukxtW59&#13;
+LUcLNqakfw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_152445cb-5d41-4a3a-a5f1-c415aecd8e82"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qfhRBgcpSWh/S58j4Kt5iGAOwf5a8IEC26lU0vp+gZAywGKjCGQ0AgJQAJ1FinRnJVlACsHOtJC7&#13;
+npSMSbCLjg==</DigestValue></Reference></SignedInfo><SignatureValue>oxpjsT6hyVk7Eoxe8RlZEzpLX0o3kSWIwRsR6mY1Ai/LqDy+/U/5CILlXc1NgWZla0JBGrz7d7ss&#13;
+yw4bOuPyk9aZdz5ma2VIo8sSbdsVDH3sGGKkbWp+8ptb3iwUpOjGfIZZF6/aMMhOfCIrAPtKQ+aj&#13;
+xzgRNYPPGu4YVfDo87GYK0UsLK2NaJYrlsWomXuZo/K6UDnCcMPD4daYNx8JzvKTFdsN2VQuvJsi&#13;
+yWPxGflTlKCqRkp1Ig5t9/r2Q+GqjGoAGogamqd/hcIjGN21QjOj/WjCeoquvpfcXi7j2kUa/MFy&#13;
+gTUaMfiHWNIN9V6c/uRg5XFPTbssdZ8LF1g0nw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -2955,4 +3008,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_49ed0b55-9f15-4199-98c2-143d6b069326" Target="#_6fb0f409-3e1e-4bbc-9ae0-ac7e3dc6397c"><Timestamp>2026-02-10 14:37:58</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_152445cb-5d41-4a3a-a5f1-c415aecd8e82" Target="#_8bf592f0-f7b2-477e-8235-9dacf14e1d85"><Timestamp>2026-02-11 12:09:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
